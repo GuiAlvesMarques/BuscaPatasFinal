@@ -1,0 +1,425 @@
+/* Hide all steps by default */
+.form-step {
+    display: none; /* Steps are hidden unless active */
+}
+
+/* Display the active step */
+.form-step-active {
+    display: block; /* Only active step is visible */
+}
+
+.d-none {
+    display: none !important;
+}
+
+.quiz {
+    margin-top: 2%;
+    background-color: #FFEBCE;
+    padding: 1%;
+}
+
+.progressbar {
+    display: none; /* Hidden by default */
+    justify-content: space-between;
+    margin: 20px 0;
+    position: relative;
+    counter-reset: step;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.progressbar .progress-step {
+    width: 20px;
+    height: 20px;
+    background-color: #FFCD89;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.progressbar .progress-step:before {
+    counter-increment: step;
+    content: attr(data-title);
+    position: absolute;
+    top: 30px;
+    font-size: 17px;
+    color: #FF8C05;
+}
+
+@media screen and (max-width: 1000px) {
+    .progressbar .progress-step:before {
+        content: counter(step); /* Switch to step count */
+        font-size: 16px;
+    }
+
+    .progressbar {
+        margin-top: 5%;
+        margin-bottom: 50px;
+    }
+}
+
+.progressbar .progress-step-active {
+    font-weight: bold;
+    background-color: #FF8C05;
+}
+
+.progressbar .progress {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 5px;
+    background-color: #FF8C05;
+    z-index: 1;
+    transition: width 0.5s;
+    transform: translateY(-50%);
+}
+
+.form-step-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #181307;
+    margin-bottom: 5px;
+    margin-top: 80px;
+}
+
+.form-step-description {
+    font-size: 16px;
+    color: #3F392B;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.form-step-footer {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 20px;
+    padding: 10px; 
+    border: 1px solid #FFCD89;
+    border-radius: 8px;
+    background-color: #FFFFFF; 
+}
+
+.form-step-footer .btn {
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.form-step-footer .btn-prev {
+    background-color: #F3F0F0; 
+    color: #3F392B; 
+}
+
+.form-step-footer .btn-prev:hover {
+    background-color: #D8D4D4;
+}
+
+.form-step-footer .btn-next {
+    background-color: #FF8C05; 
+    color: #FFFFFF; 
+}
+
+.form-step-footer .btn-next:hover {
+    background-color: #FFCD89; 
+}
+
+.form-step-footer .btn-submit {
+    background-color: #FF8C05; 
+    color: #FFFFFF; 
+}
+
+.form-step-footer .btn-submit:hover {
+    background-color: #FFCD89; 
+}
+
+.form-step-footer .btn-pre-submit {
+    background-color: #FFFFFF;
+    border: 2px solid #FF8C05; 
+    color: #3F392B; 
+}
+.form-step-footer .btn-pre-submit:hover {
+    background-color: #FFCD89; 
+}
+
+#quizResults {
+    display: none;
+    background-color: #FFFFFF;
+    padding: 40px;
+    text-align: center;
+}
+
+#quizResults h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF8C05;
+    margin-bottom: 20px;
+}
+
+#quizResults p {
+    font-size: 16px;
+    color: #3F392B;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+#resultsContainer {
+    background: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #FFCD89;
+    border-radius: 8px;
+    max-height: 1000px;
+    overflow-y: auto;
+}
+
+#resultsContainer div span {
+    font-weight: bold;
+    color: #FF8C05;
+}
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.action-buttons .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.species-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    border: 1px solid #FFCD89;
+    border-radius: 8px;
+    padding: 15px;
+    width: 180px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.species-select img {
+    height: 100px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.species-select:hover {
+    background-color: #FFCD89;
+    color: #FFFFFF;
+    border-color: #FFCD89;
+}
+
+.species-select:hover img {
+    transform: scale(1.05);
+}
+
+/* Style for Radio Buttons and Checkboxes */
+.form-check input[type="radio"],
+.form-check input[type="checkbox"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.form-check label {
+    font-size: 16px;
+    color: #181307;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.question {
+    margin-bottom: 20px; 
+    padding: 15px;
+    border: 1px solid #FFCD89; 
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    text-align: left;
+}
+
+@media screen and (max-width: 1000px) {
+    .question {
+        padding: 10px;
+    }
+
+    .question h5 {
+        font-size: 18px;
+    }
+
+    .question p {
+        font-size: 16px;
+    }
+    
+}
+
+.question h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FF8C05; 
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: left;
+    border-left: 4px solid #FFB550;
+    padding-left: 10px;
+    font-family: "Nunito", sans-serif;
+}
+
+#species-selection {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+#species-selection .form-step-title {
+    margin-top: 0px !important;
+}
+
+#species-selection .form-step-header {
+    margin-bottom: 20px;
+}
+
+#species-selection .form-step-body {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#species-selection .species-select {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    border: 2px solid #F3F0F0;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+#species-selection .species-select img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+#species-selection .species-select:hover {
+    background-color: #FFB550;
+    color: #FFFFFF;
+    border-color: #FFB550;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#species-selection .species-select:hover img {
+    transform: scale(1.05);
+}
+
+#quizResults .form-step-title {
+    margin-top: 0px !important;
+}
+
+#retakeQuizBtn {
+    background-color: #F3F0F0; 
+    color: #3F392B; 
+}
+
+#retakeQuizBtn:hover {
+    background-color: #D8D4D4;
+}
+
+#saveResultsBtn {
+    background-color: #FF8C05; 
+    color: #FFFFFF; 
+}
+
+#saveResultsBtn:hover {
+    background-color: #FFCD89; 
+}
+
+#quizResults .form-step-footer {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 20px;
+    padding: 10px; 
+    border: 1px solid #FFCD89;
+    border-radius: 8px;
+    background-color: #FFFFFF; 
+}
+
+@media screen and (max-width: 1000px) {
+    #species-selection{
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #species-selection .species-select img {
+        margin-bottom: 5px;
+    }
+
+    .form-step-footer .btn-pre-submit {
+        padding: 10px 15px;
+
+    }
+}
+
+@media (max-width: 1000px) {
+    .species-select {
+        width: 150px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .species-img {
+        width: 150px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .breed-select-box {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .breed-select-box {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+}

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscapatas</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <ul class="offcanvas__widget">
+            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
+            </li>
+            <li><span class="icon_search search-switch"></span></li>
+            <li><a href="#"><span class="icon_heart_alt"></span>
+                    <div class="tip">2</div>
+                </a></li>
+        </ul>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-1 col-lg-1">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="./page-caes.html">Cães</a></li>
+                                    <li><a href="./page-gatos.html">Gatos</a></li>
+                                    <li><a href="./matchmaking.html">Matchmaking</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="./perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                            <li><a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="./breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="./faq.html">Perguntas Frequentes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./partners.html">Parceiros</a></li>
+                            <li><a href="./ajuda.html">Apoiar</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <ul class="header__right__widget">
+
+                            <li><span class="icon_search search-switch"></span></li>
+                            <li><a href="#"><span class="icon_heart_alt"></span>
+                                    <div class="tip">2</div>
+                                </a></li>
+                            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal"
+                                        data-bs-target="#authModal"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Login and Register Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body d-flex p-0">
+                    <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
+                        aria-label="Close">&times;</button>
+
+                    <!-- Left Side - Login/Register Form -->
+                    <div class="w-50 p-5">
+
+                        <form id="loginForm">
+                            <h3 class="mb-4 text-center" id="authModalLabel">Login</h3>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="Enter your password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Login</button>
+                            <div class="text-center mt-3">
+                                <small>Don't have an account? <a href="#" id="switchToRegister">Register</a></small>
+                            </div>
+                        </form>
+
+                        <form id="registerForm" class="d-none">
+                            <h3 class="mb-4 text-center">Register</h3>
+                            <div class="mb-3">
+                                <label for="registerName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="registerName"
+                                    placeholder="Enter your full name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="registerEmail"
+                                    placeholder="Enter your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="registerPassword"
+                                    placeholder="Create a password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Register</button>
+                            <div class="text-center mt-3">
+                                <small>Already have an account? <a href="#" id="switchToLogin">Login</a></small>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Right Side - Image -->
+                    <div class="w-50 d-none d-md-block">
+                        <img src="img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
+                            style="object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- Custom Close Button -->
+                <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <!-- Login Register Model Ends -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                        <span>Aprender</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Learning Section Begin -->
+    <section class="learning spad">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Aprender é Cuidar Melhor</h2>
+            </div>
+            <p>
+                Descubra tudo o que precisa saber para garantir o bem-estar do seu animal de estimação. Desde as
+                perguntas mais frequentes até informações detalhadas sobre raças e cuidados, a nossa plataforma reúne o
+                conhecimento necessário para ajudá-lo a oferecer uma vida saudável e feliz ao seu companheiro.
+            </p>
+            <div class="support__item breeds">
+                <h3>Raças e Cuidados</h3>
+                <p>
+                    Conheça as características, necessidades e curiosidades das diferentes raças. Descubra dicas
+                    personalizadas para proporcionar os melhores cuidados ao seu animal de estimação, garantindo uma
+                    relação harmoniosa e saudável.
+                </p>
+                <a href="breed-info.html" class="btn btn_lf">Saiba Mais</a>
+            </div>
+            <div class="support__item faq">
+                <h3>Perguntas Frequentes</h3>
+                <p>
+                    Esclareça as suas dúvidas com respostas claras e objetivas às questões mais comuns sobre cuidados,
+                    adoção, saúde e muito mais. Utilize também o nosso chatbot para obter informações rápidas e
+                    personalizadas.
+                </p>
+                <a href="faq.html" class="btn btn_lf">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+    <!-- Learning Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-7">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-5">
+                    <div class="footer__widget">
+                        <h6>Serviços</h6>
+                        <ul>
+                            <li><a href="adotar.html">Adotar</a></li>
+                            <li><a href="entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="breed-info.html">Espécies e Raças</a></li>
+                            <li><a href="perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer__widget">
+                        <h6>Sobre Nós</h6>
+                        <ul>
+                            <li><a href="about-us.html">Dinflux</a></li>
+                            <li><a href="team.html">Equipa BuscaPatas</a></li>
+                            <li><a href="partners.html">Nossos Parceiros</a></li>
+                            <li><a href="termos-politicas.html">Termos e Políticas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer__widget">
+                        <h6>Apoio</h6>
+                        <ul>
+                            <li><a href="ajuda.html">Ajuda</a></li>
+                            <li><a href="abrigos.html">Abrigos</a></li>
+                            <li><a href="merch.html">Merchandise</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-8 col-sm-8">
+                    <div class="footer__newsletter">
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Procure aqui...">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="js/donation.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/dist/ol.js"></script>
+    <script type="module" src="js/map.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.js"></script>
+
+</body>
+
+</html>

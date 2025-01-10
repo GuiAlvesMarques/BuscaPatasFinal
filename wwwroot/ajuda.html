@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscapatas</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <ul class="offcanvas__widget">
+            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
+            </li>
+            <li><span class="icon_search search-switch"></span></li>
+            <li><a href="#"><span class="icon_heart_alt"></span>
+                    <div class="tip">2</div>
+                </a></li>
+        </ul>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-1 col-lg-1">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="./page-caes.html">Cães</a></li>
+                                    <li><a href="./page-gatos.html">Gatos</a></li>
+                                    <li><a href="./matchmaking.html">Matchmaking</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="./perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                            <li><a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="./breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="./faq.html">Perguntas Frequentes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./partners.html">Parceiros</a></li>
+                            <li><a href="./ajuda.html">Apoiar</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <ul class="header__right__widget">
+
+                            <li><span class="icon_search search-switch"></span></li>
+                            <li><a href="#"><span class="icon_heart_alt"></span>
+                                    <div class="tip">2</div>
+                                </a></li>
+                            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal"
+                                        data-bs-target="#authModal"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Login and Register Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-header">
+                <div class="modal-body d-flex p-0">
+                    <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
+                        aria-label="Close">&times;</button>
+
+                    <!-- Left Side - Login/Register Form -->
+                    <div class="w-50 p-5">
+
+                        <form id="loginForm">
+                            <h3 class="mb-4 text-center" id="authModalLabel">Iniciar Sessão</h3>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Endereço de Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Insira o seu email"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Palavra-passe</label>
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="Insira a sua palavra-passe" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                            <div class="text-center mt-3">
+                                <small>Não tem conta? <a href="#" id="switchToRegister">Registar</a></small>
+                            </div>
+                        </form>
+
+                        <form id="registerForm" class="d-none">
+                            <h3 class="mb-4 text-center">Registar</h3>
+                            <div class="mb-3">
+                                <label for="registerName" class="form-label">Nome Completo</label>
+                                <input type="text" class="form-control" id="registerName"
+                                    placeholder="Insira o seu nome completo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerEmail" class="form-label">Endereço de Email</label>
+                                <input type="email" class="form-control" id="registerEmail"
+                                    placeholder="Insira o seu email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label">Palavra-passe</label>
+                                <input type="password" class="form-control" id="registerPassword"
+                                    placeholder="Crie uma palavra-passe" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Registar</button>
+                            <div class="text-center mt-3">
+                                <small>Já tem conta? <a href="#" id="switchToLogin">Iniciar Sessão</a></small>
+                            </div>
+                        </form>
+
+
+                    </div>
+
+                    <!-- Right Side - Image -->
+                    <div class="w-50 d-none d-md-block">
+                        <img src="img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
+                            style="object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- Custom Close Button -->
+                <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <!-- Login Register Model Ends -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                        <span>Apoiar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Help Section Begin -->
+    <section class="support spad">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Apoiar o Projeto</h2>
+            </div>
+            <p>
+                O BuscaPatas é um projeto sem fins lucrativos que tem como objetivo ajudar animais a
+                encontrar um lar e ajudar tutores a cuidar dos seus pets. Se gostaria de apoiar o projeto,
+                existem várias formas de o fazer.
+            </p>
+            <div class="support__item adoption">
+                <h3>Adotar um Animal</h3>
+                <p>
+                    Ao adotar um animal, estás a dar-lhe uma segunda oportunidade e a ajudar a diminuir o número
+                    de animais abandonados em Portugal.
+                </p>
+                <a href="adotar.html" class="btn btn_lf">Adotar</a>
+            </div>
+            <div class="support__item donation">
+                <h3>Donativos</h3>
+                <p>
+                    Faz um donativo para o projeto BuscaPatas ou seleciona um abrigo ou associação para apoiar.
+                </p>
+                <p>
+                    Para garantir a sustentabilidade financeira da plataforma BuscaPatas, uma percentagem do
+                    total dos donativos feitos para nossos parceiros será destinada para a manutenção do site.
+                </p>
+                <button class="btn details" id="details">Saber Mais</button>
+                <div id="moreDetails" class="d-none">
+                    <p>
+                        Este processo será conduzido de forma justa e transparente:
+                    </p>
+                    <ul>
+                        <li>
+                            Para assegurar que este processo é justo para todos os abrigos e associações parceiras,
+                            10% de todos os donativos recebidos ao longo do mês serão retidos até o final desse
+                            período.
+                        </li>
+                        <li>
+                            Apenas o montante necessário será utilizado, sendo este igual ou inferior aos totais
+                            retidos. O valor que não for utilizado para a manutenção será dividido de forma
+                            equitativa entre todas as associações beneficiárias.
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn btn_lf" id="donation_button">Doar</button>
+                <!-- Donations -->
+                <div id="donationModal" class="modal-overlay d-none">
+                    <div class="modal-content modal-header">
+                        <button class="close-button" id="closeModal">&times;</button>
+                        <section class="donations">
+                            <div class="container mt-5">
+                                <div class="donation-section">
+                                    <h2>Donativos</h2>
+                                    <h5>Escolha um Valor</h5>
+                                    <div class="donation-buttons">
+                                        <div class="row">
+                                            <div class="col-4 col-sm-3 mb-3">
+                                                <button class="btn donation-btn">5€</button>
+                                            </div>
+                                            <div class="col-4 col-sm-3 mb-3">
+                                                <button class="btn donation-btn">10€</button>
+                                            </div>
+                                            <div class="col-4 col-sm-3 mb-3">
+                                                <button class="btn donation-btn">25€</button>
+                                            </div>
+                                            <div class="col-4 col-sm-3 mb-3">
+                                                <button class="btn donation-btn">50€</button>
+                                            </div>
+                                            <div class="col-4 col-sm-3 mb-3">
+                                                <button class="btn donation-btn">100€</button>
+                                            </div>
+                                            <div class="col-4 col-sm-3 mb-3">
+                                                <button class="btn donation-btn">250€</button>
+                                            </div>
+                                            <div class="col-4 col-sm-3 mb-3">
+                                                <button class="btn donation-btn">500€</button>
+                                            </div>
+                                            <div class="col-4 col-sm-3 mb-3">
+                                                <button class="btn donation-btn">1000€</button>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-top mt-3">
+                                            <div class="form-group position-relative flex-grow-1">
+                                                <input type="text" id="shelterFilter" class="form-control"
+                                                    placeholder="Escolha o parceiro...">
+                                                <ul class="list-group position-absolute w-100 d-none" id="shelterList">
+                                                    <li class="list-group-item">Animal Haven</li>
+                                                    <li class="list-group-item">Pet Haven</li>
+                                                    <li class="list-group-item">SPCA</li>
+                                                    <li class="list-group-item">Best Friends Animal Society</li>
+                                                    <li class="list-group-item">Humane Society</li>
+                                                </ul>
+                                            </div>
+                                            <div class="form-check ms-auto" id="selectDirect">
+                                                <input type="checkbox" class="form-check-input custom-checkbox"
+                                                    id="directBuscaPatas">
+                                                <label class="form-check-label custom-label" for="directBuscaPatas">Doar
+                                                    diretamente à BuscaPatas</label>
+                                            </div>
+                                        </div>
+                                        <div class="custom-amount d-flex align-items-center mt-3">
+                                            <input type="number" id="customAmount" class="form-control me-3"
+                                                placeholder="Inserir valor personalizado">
+                                        </div>
+                                        <button class="btn btn-donate">Donate</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+            <div class="support__item merch">
+                <h3>Comprar Produtos</h3>
+                <p>
+                    50% dos lucros obtidos com a venda dos produtos serão destinados à manutenção da plataforma,
+                    enquanto os outros 50% serão encaminhados para uma associação escolhida pelo utilizador.
+                </p>
+                <p>
+                    No final do ano, qualquer valor remanescente que não tenha sido utilizado para a manutenção da
+                    plataforma será doado, de forma equitativa, a todos os abrigos e associações parceiras.
+                </p>
+                <a href="merch.html" class="btn btn_lf">Comprar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-7">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-5">
+                    <div class="footer__widget">
+                        <h6>Serviços</h6>
+                        <ul>
+                            <li><a href="adotar.html">Adotar</a></li>
+                            <li><a href="entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="breed-info.html">Espécies e Raças</a></li>
+                            <li><a href="perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer__widget">
+                        <h6>Sobre Nós</h6>
+                        <ul>
+                            <li><a href="about-us.html">Dinflux</a></li>
+                            <li><a href="team.html">Equipa BuscaPatas</a></li>
+                            <li><a href="partners.html">Nossos Parceiros</a></li>
+                            <li><a href="termos-politicas.html">Termos e Políticas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer__widget">
+                        <h6>Apoio</h6>
+                        <ul>
+                            <li><a href="ajuda.html">Ajuda</a></li>
+                            <li><a href="abrigos.html">Abrigos</a></li>
+                            <li><a href="merch.html">Merchandise</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-8 col-sm-8">
+                    <div class="footer__newsletter">
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Procure aqui...">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="js/donation.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/dist/ol.js"></script>
+    <script type="module" src="js/map.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.js"></script>
+    <script src="js/login-register.js"></script>
+</body>
+
+</html>

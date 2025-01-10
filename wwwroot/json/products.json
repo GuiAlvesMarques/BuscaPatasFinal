@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "name": "Camisola (preto)",
+        "price": 59.0,
+        "image": "img/Merch1.png"
+    },
+    {
+        "id": 2,
+        "name": "Camisola (cinzento)",
+        "price": 49.0,
+        "image": "img/Merch2.png"
+    },
+    {
+        "id": 3,
+        "name": "T-Shirt (preto)",
+        "price": 59.0,
+        "image": "img/Merch3.png"
+    },
+    {
+        "id": 4,
+        "name": "T-Shirt (cinzento)",
+        "price": 59.0,
+        "image": "img/Merch4.png"
+    },
+    {
+        "id": 5,
+        "name": "T-Shirt criança",
+        "price": 59.0,
+        "image": "img/child_clothes1.png"
+    },
+    {
+        "id": 6,
+        "name": "T-Shirt criança2",
+        "price": 59.0,
+        "image": "img/child_clothes2.png"
+    },
+    {
+        "id": 7,
+        "name": "Conjunto Gato",
+        "price": 59.0,
+        "image": "img/Merch5.png"
+    },
+    {
+        "id": 8,
+        "name": "Camisola Cão",
+        "price": 49.0,
+        "image": "img/Merch7.png",
+        "original_price": 59.0
+    },
+    {
+        "id": 9,
+        "name": "Brinquedo Gato",
+        "price": 59.0,
+        "image": "img/Merch6.png"
+    },
+    {
+        "id": 10,
+        "name": "Brinquedo Cão",
+        "price": 49.0,
+        "image": "img/Merch8.png",
+        "original_price": 59.0
+    }
+]
