@@ -129,17 +129,15 @@
                     <!-- Left Side - Login/Register Form -->
                     <div class="w-50 p-5">
 
-                        <form id="loginForm">
+                        <form id="loginForm" method="post" action="/Account/Login">
                             <h3 class="mb-4 text-center" id="authModalLabel">Iniciar Sessão</h3>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Endereço de Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Insira o seu email"
-                                       required>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Insira o seu email" required>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Palavra-passe</label>
-                                <input type="password" class="form-control" id="password"
-                                       placeholder="Insira a sua palavra-passe" required>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Insira a sua palavra-passe" required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Entrar</button>
                             <div class="text-center mt-3">

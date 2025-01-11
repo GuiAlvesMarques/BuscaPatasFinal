@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Ashion Template">
+        <meta name="keywords" content="Ashion, unica, creative, html">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Buscapatas</title>
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+                rel="stylesheet">
+
+        <!-- Css Styles -->
+        <link rel="stylesheet" href="css/quiz.css" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+        <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+        <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.css">
+</head>
+
+<body>
+        <!-- Page Preloder -->
+        <div id="preloder">
+                <div class="loader"></div>
+        </div>
+
+        <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <ul class="offcanvas__widget">
+            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
+            </li>
+            <li><span class="icon_search search-switch"></span></li>
+            <li><a href="#"><span class="icon_heart_alt"></span>
+                    <div class="tip">2</div>
+                </a></li>
+        </ul>
+        <div class="offcanvas__logo">
+            <a href="./Admin_index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-1 col-lg-1">
+                    <div class="header__logo">
+                        <a href="./Admin_index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="./Admin_adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="./Admin_page-caes.html">Cães</a></li>
+                                    <li><a href="./Admin_page-gatos.html">Gatos</a></li>
+                                    <li><a href="./Admin_matchmaking.html">Matchmaking</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./Admin_entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="./Admin_perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                            <li><a href="./Admin_learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="./Admin_breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="./Admin_faq.html">Perguntas Frequentes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./Admin_partners.html">Parceiros</a></li>
+                            <li><a href="./Admin_ajuda.html">Apoiar</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <ul class="header__right__widget">
+
+                            <li><span class="icon_search search-switch"></span></li>
+                            <li><a href="#"><span class="icon_heart_alt"></span>
+                                    <div class="tip">2</div>
+                                </a></li>
+                            <li><a href="Admin_user-profile.html"><span class="icon_profile" data-bs-toggle="modal"
+                                        data-bs-target="#authModal"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+        <!-- Breadcrumb Begin -->
+        <div class="breadcrumb-option">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-lg-12">
+                                        <div class="breadcrumb__links">
+                                                <a href="./Admin_index.html"><i class="fa fa-home"></i> Home</a>
+                                                <span>Matchmaking</span>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <!-- Breadcrumb End -->
+
+        <!-- Title Section Begin -->
+        <section class="title-section-quiz text-center">
+                <div class="container">
+                        <h2>Matchmaking</h2>
+                        <p>Encontra o seu animal de estimação ideal respondendo a algumas perguntas.</p>
+                </div>
+        </section>
+        <!-- Title Section End -->
+
+        <!-- Quiz Section Begin -->
+        <section class="quiz">
+                <div id="matchmakingquiz" class="container text-center">
+                        <form action="#" class="form-quiz">
+
+                                <!-- Progress Bar -->
+                                <div class="progressbar">
+                                        <div class="progress" id="progress"></div>
+                                        <div class="progress-step progress-step-active" data-title="Espécie"></div>
+                                        <div class="progress-step" data-title="Características"></div>
+                                        <div class="progress-step" data-title="Estilo de Vida"></div>
+                                        <div class="progress-step" data-title="Responsabilidade"></div>
+                                        <div class="progress-step" data-title="Relacionamento"></div>
+                                        <div class="progress-step" data-title="Resultados"></div>
+                                </div>
+                                <!-- Progress Bar Ends -->
+
+                                <!-- Steps -->
+
+                                <!-- Species Selection Step -->
+                                <div class="form-step form-step-active" id="species-selection">
+                                        <div class="form-step-header">
+                                                <h3 class="form-step-title">Espécie</h3>
+                                                <p class="form-step-description">Seleciona a espécie que deseja adotar
+                                                </p>
+                                        </div>
+                                        <div class="form-step-body" data="species" id="species-img">
+                                                <a href="#" class="btn species-select" data-attribute="dog"><img
+                                                                src="img/Dog 3.png" alt="Cão">Cão</a>
+                                                <a href="#" class="btn species-select" data-attribute="cat"><img
+                                                                src="img/Cat 3.png" alt="Gato">Gato</a>
+                                        </div>
+                                </div>
+                                <!-- Species Selection Step Ends -->
+
+                                <!-- Characteristics Selection Step -->
+                                <!-- Dog Characteristics Selection Step -->
+                                <div class="form-step d-none" id="petCharacteristicsDog">
+                                        <!-- Add class d-none to hide like "form-step d-none"-->
+                                        <div class="form-step-header">
+                                                <h3 class="form-step-title">Características</h3>
+                                                <p class="form-step-description">Seleciona as características que deseja
+                                                        no seu cão</p>
+                                        </div>
+                                        <div class="form-step-body">
+                                                <!-- Question: Porte ideal para o seu cão -->
+                                                <div class="question">
+                                                        <h5>Porte ideal para o seu cão</h5>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="size" value="1">Mini: até 5
+                                                                        kg</label></div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="size" value="2">Pequeno: 5-10
+                                                                        kg</label></div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="size" value="3">Médio: 10-20
+                                                                        kg</label></div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="size" value="4">Grande: 20-35
+                                                                        kg</label></div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="size" value="5">Gigante: acima de
+                                                                        35
+                                                                        kg</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="sizePreference"
+                                                                                value="no-preference">Sem
+                                                                        preferência</label></div>
+                                                </div>
+                                                <!-- Question: Faixa etária ideal para o seu cão -->
+                                                <div class="question">
+                                                        <h5>Faixa etária ideal para o seu cão</h5>
+                                                        <div class="form-check"><label><input type="checkbox" name="age"
+                                                                                value="1">Filhote: 0-1
+                                                                        ano</label></div>
+                                                        <div class="form-check"><label><input type="checkbox" name="age"
+                                                                                value="2">Jovem adulto: 1-3
+                                                                        anos</label></div>
+                                                        <div class="form-check"><label><input type="checkbox" name="age"
+                                                                                value="3">Adulto: 3-8
+                                                                        anos</label></div>
+                                                        <div class="form-check"><label><input type="checkbox" name="age"
+                                                                                value="4">Sénior: 8+
+                                                                        anos</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="agePreference"
+                                                                                value="no-preference">Sem
+                                                                        preferência</label></div>
+                                                </div>
+                                                <!-- Question: Nível de energia ideal para o seu cão -->
+                                                <div class="question">
+                                                        <h5>Nível de energia ideal para o seu cão</h5>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="energy" value="1">Baixo: relaxado,
+                                                                        requer mínimo de exercício</label></div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="energy" value="2">Médio:
+                                                                        equilibrado
+                                                                        entre atividade e descanso</label></div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="energy" value="3">Alto: muito
+                                                                        ativo,
+                                                                        precisa de muito exercício</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="energyPreference"
+                                                                                value="no-preference">Sem
+                                                                        preferência</label></div>
+                                                </div>
+                                                <!-- Question: Comprimento de pelo ideal para o seu cão -->
+                                                <div class="question">
+                                                        <h5>Comprimento de pelo ideal para o seu cão</h5>
+                                                        <div class="form-check"><label><input type="checkbox" name="fur"
+                                                                                value="1">Curto</label></div>
+                                                        <div class="form-check"><label><input type="checkbox" name="fur"
+                                                                                value="2">Médio</label></div>
+                                                        <div class="form-check"><label><input type="checkbox" name="fur"
+                                                                                value="3">Longo</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="furPreference"
+                                                                                value="no-preference">Sem
+                                                                        preferência</label></div>
+                                                </div>
+                                                <!-- Question: Estaria confortável com a queda de pelo? -->
+                                                <div class="question">
+                                                        <h5>Estaria confortável com a queda de pelo?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="shedding" value="1">Prefiro queda
+                                                                        mínima.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="shedding" value="2">Alguma queda é
+                                                                        aceitável.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="shedding" value="3">Queda intensa
+                                                                        é
+                                                                        aceitável.</label></div>
+                                                </div>
+                                                <!-- Question: Estaria confortável com um cão com problemas de saúde? -->
+                                                <div class="question">
+                                                        <h5>Estaria confortável com um cão com problemas de saúde?</h5>
+                                                        <div class="form-check"><label><input type="radio" name="health"
+                                                                                value="1">Não estou confortável
+                                                                        em ter um cão com problemas de saúde.</label>
+                                                        </div>
+                                                        <div class="form-check"><label><input type="radio" name="health"
+                                                                                value="2">Posso lidar com
+                                                                        problemas de saúde não graves. (exemplo:
+                                                                        alergias)</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="health"
+                                                                                value="3">Tenho preparação para
+                                                                        lidar com problemas de saúde graves. (exemplo:
+                                                                        deficiências, condições crónicas)</label>
+                                                        </div>
+                                                </div>
+                                                <!-- Question: O cão precisa se dar bem com outros animais? -->
+                                                <div class="question">
+                                                        <h5>O cão precisa se dar bem com outros animais?</h5>
+                                                        <div class="form-check"><label><input type="radio" name="social"
+                                                                                value="1">Sim, deve se dar bem
+                                                                        com outros cães.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="social"
+                                                                                value="2">Sim, deve se dar bem
+                                                                        com cães e gatos.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="social"
+                                                                                value="3">Não importa.</label>
+                                                        </div>
+                                                </div>
+                                                <!-- Question: O cão precisa saber lidar com crianças? -->
+                                                <div class="question">
+                                                        <h5>O cão precisa saber lidar com crianças?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="children" value="1">Sim, deve ser
+                                                                        amigável com crianças.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="children" value="2">Não há
+                                                                        crianças em
+                                                                        casa.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="children" value="3">Tanto
+                                                                        faz.</label>
+                                                        </div>
+                                                </div>
+                                                <!-- Question: Personalidade ideal para o seu cão -->
+                                                <div class="question">
+                                                        <h5>Personalidade ideal para o seu cão</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="personality" value="1">Muito
+                                                                        afetuoso e
+                                                                        apegado.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="personality"
+                                                                                value="2">Independente,
+                                                                        mas gosta de atenção ocasional.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="personality" value="3">Brincalhão
+                                                                        e
+                                                                        enérgico.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="personality" value="4">Calmo e
+                                                                        reservado.</label></div>
+                                                </div>
+                                                <!-- Question: Qual o nível de vocalização que tolera? -->
+                                                <div class="question">
+                                                        <h5>Qual o nível de vocalização que tolera?</h5>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="vocalization" value="1">Prefiro um
+                                                                        cão silencioso.</label></div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="vocalization" value="2">Alguma
+                                                                        vocalização é aceitável.</label></div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="vocalization"
+                                                                                value="3">Vocalização
+                                                                        frequente é aceitável.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vocalizationPreference"
+                                                                                value="no-preference">Sem
+                                                                        preferência</label></div>
+                                                </div>
+                                                <!-- Question: Tem alergias a cães? -->
+                                                <div class="question">
+                                                        <h5>Tem alergias a cães?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="allergies" value="1">Sim, a raças
+                                                                        de
+                                                                        pelo comprido.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="allergies" value="2">Sim, mas
+                                                                        ligeiras,
+                                                                        controláveis com cães de pelo curto.</label>
+                                                        </div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="allergies" value="3">Não.</label>
+                                                        </div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="allergies" value="4">Incerto, mas
+                                                                        preferia um cão hipoalergénico.</label></div>
+                                                </div>
+                                        </div>
+                                        <div class="form-step-footer">
+                                                <button type="button" class="btn btn-prev">Anterior</button>
+                                                <button type="submit" class="btn btn-pre-submit">Concluir</button>
+                                                </button>
+                                                <button type="button" class="btn btn-next">Próximo</button>
+                                        </div>
+                                </div>
+                                <!-- Dog Characteristics Selection Step Ends -->
+                                <!-- Cat Characteristics Selection Step -->
+                                <div class="form-step d-none" id="petCharacteristicsCat">
+                                        <!-- Add class d-none to hide -->
+                                        <div class="form-step-header">
+                                                <h3 class="form-step-title">Características</h3>
+                                                <p class="form-step-description">Seleciona as características que deseja
+                                                        no seu gato</p>
+                                        </div>
+                                        <div class="form-step-body">
+                                                <!-- Question: Porte ideal para o seu gato -->
+                                                <div class="question">
+                                                        <h5>Porte ideal para o seu gato</h5>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="size" value="1">Pequeno: até 3
+                                                                        kg</label></div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="size" value="2">Médio: 3-5
+                                                                        kg</label></div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="size" value="3">Grande: 5-7
+                                                                        kg</label></div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="size" value="4">Gigante: acima de
+                                                                        7
+                                                                        kg</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="sizePreference"
+                                                                                value="no-preference">Sem
+                                                                        preferência</label></div>
+                                                </div>
+                                                <!-- Question: Faixa etária ideal para o seu gato -->
+                                                <div class="question">
+                                                        <h5>Faixa etária ideal para o seu gato</h5>
+                                                        <div class="form-check"><label><input type="checkbox" name="age"
+                                                                                value="1">Filhote: 0-1
+                                                                        ano</label></div>
+                                                        <div class="form-check"><label><input type="checkbox" name="age"
+                                                                                value="2">Jovem adulto: 1-3
+                                                                        anos</label></div>
+                                                        <div class="form-check"><label><input type="checkbox" name="age"
+                                                                                value="3">Adulto: 3-8
+                                                                        anos</label></div>
+                                                        <div class="form-check"><label><input type="checkbox" name="age"
+                                                                                value="4">Sénior: 8+
+                                                                        anos</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="agePreference"
+                                                                                value="no-preference">Sem
+                                                                        preferência</label></div>
+                                                </div>
+                                                <!-- Question: Nível de energia ideal para o seu gato -->
+                                                <div class="question">
+                                                        <h5>Nível de energia ideal para o seu gato</h5>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="energy" value="1">Baixo: calmo e
+                                                                        relaxado</label></div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="energy" value="2">Médio:
+                                                                        brincalhão,
+                                                                        mas calmo quando está dentro de casa</label>
+                                                        </div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="energy" value="3">Alto: ativo,
+                                                                        adora
+                                                                        brincar e escalar</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="energyPreference"
+                                                                                value="no-preference">Sem
+                                                                        preferência</label></div>
+                                                </div>
+                                                <!-- Question: Comprimento de pelo ideal para o seu gato -->
+                                                <div class="question">
+                                                        <h5>Comprimento de pelo ideal para o seu gato</h5>
+                                                        <div class="form-check"><label><input type="checkbox" name="fur"
+                                                                                value="1">Curto</label></div>
+                                                        <div class="form-check"><label><input type="checkbox" name="fur"
+                                                                                value="2">Médio</label></div>
+                                                        <div class="form-check"><label><input type="checkbox" name="fur"
+                                                                                value="3">Longo</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="furPreference"
+                                                                                value="no-preference">Sem
+                                                                        preferência</label></div>
+                                                </div>
+                                                <!-- Question: Estaria confortável com a queda de pelo? -->
+                                                <div class="question">
+                                                        <h5>Estaria confortável com a queda de pelo?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="shedding" value="1">Prefiro queda
+                                                                        de
+                                                                        pelo mínima.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="shedding" value="2">Não me importo
+                                                                        com
+                                                                        queda de pelo moderada.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="shedding" value="3">Não me importo
+                                                                        de
+                                                                        todo com queda de pelo.</label></div>
+                                                </div>
+                                                <!-- Question: Estaria confortável com um gato que requer cuidados de higiene? -->
+                                                <div class="question">
+                                                        <h5>Estaria confortável com um gato que requer cuidados de
+                                                                higiene?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="grooming" value="1">Não, prefiro
+                                                                        baixa
+                                                                        manutenção.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="grooming" value="2">Sim, tenho
+                                                                        disposição para cuidar regularmente da higiene
+                                                                        do gato.</label></div>
+                                                </div>
+                                                <!-- Question: Estaria confortável com um gato com problemas de saúde? -->
+                                                <div class="question">
+                                                        <h5>Estaria confortável com um gato com problemas de saúde?</h5>
+                                                        <div class="form-check"><label><input type="radio" name="health"
+                                                                                value="1">Não estou confortável
+                                                                        em ter um gato com problemas de saúde.</label>
+                                                        </div>
+                                                        <div class="form-check"><label><input type="radio" name="health"
+                                                                                value="2">Posso lidar com
+                                                                        problemas de saúde não graves. (exemplo:
+                                                                        alergias)</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="health"
+                                                                                value="3">Tenho preparação para
+                                                                        lidar com problemas de saúde graves. (exemplo:
+                                                                        deficiências, condições crónicas)</label>
+                                                        </div>
+                                                </div>
+                                                <!-- Question: O gato precisa se dar bem com outros animais? -->
+                                                <div class="question">
+                                                        <h5>O gato precisa se dar bem com outros animais?</h5>
+                                                        <div class="form-check"><label><input type="radio" name="social"
+                                                                                value="1">Sim, deve se dar bem
+                                                                        com outros gatos.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="social"
+                                                                                value="2">Sim, deve se dar bem
+                                                                        com cães e gatos.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="social"
+                                                                                value="3">Não importa.</label>
+                                                        </div>
+                                                </div>
+                                                <!-- Question: O gato precisa saber lidar com crianças? -->
+                                                <div class="question">
+                                                        <h5>O gato precisa saber lidar com crianças?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="children" value="1">Sim, deve ser
+                                                                        amigável com crianças.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="children" value="2">Não há
+                                                                        crianças em
+                                                                        casa.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="children" value="3">Tanto
+                                                                        faz.</label>
+                                                        </div>
+                                                </div>
+                                                <!-- Question: Personalidade ideal para o seu gato -->
+                                                <div class="question">
+                                                        <h5>Personalidade ideal para o seu gato</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="personality" value="1">Muito
+                                                                        afetuoso e
+                                                                        apegado.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="personality"
+                                                                                value="2">Independente,
+                                                                        mas gosta de atenção ocasional.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="personality" value="3">Brincalhão
+                                                                        e
+                                                                        enérgico.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="personality" value="4">Calmo e
+                                                                        reservado.</label></div>
+                                                </div>
+                                                <!-- Question: Qual o nível de vocalização que tolera? -->
+                                                <div class="question">
+                                                        <h5>Qual o nível de vocalização que tolera?</h5>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="vocalization" value="1">Prefiro um
+                                                                        gato silencioso.</label></div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="vocalization" value="2">Alguma
+                                                                        vocalização é aceitável.</label></div>
+                                                        <div class="form-check"><label><input type="checkbox"
+                                                                                name="vocalization"
+                                                                                value="3">Vocalização
+                                                                        frequente é aceitável.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vocalizationPreference"
+                                                                                value="no-preference">Sem
+                                                                        preferência</label></div>
+                                                </div>
+                                                <!-- Question: Tem alergias a gatos? -->
+                                                <div class="question">
+                                                        <h5>Tem alergias a gatos?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="allergies" value="1">Sim, a raças
+                                                                        de
+                                                                        pelo comprido.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="allergies" value="2">Sim, mas
+                                                                        ligeiras,
+                                                                        controláveis com gatos de pelo curto.</label>
+                                                        </div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="allergies" value="3">Não.</label>
+                                                        </div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="allergies" value="4">Incerto, mas
+                                                                        preferia um gato hipoalergénico.</label></div>
+                                                </div>
+                                        </div>
+                                        <div class="form-step-footer">
+                                                <button type="button" class="btn btn-prev">Anterior</button>
+                                                <button type="submit" class="btn btn-pre-submit">Concluir</button>
+                                                <button type="button" class="btn btn-next">Próximo</button>
+                                        </div>
+                                </div>
+                                <!-- Cat Characteristics Selection Step Ends -->
+                                <!-- Characteristics Selection Step Ends -->
+
+                                <!-- Lifestyle Step -->
+                                <!-- Dog Lifestyle Step -->
+                                <div class="form-step d-none" id="petLifestyleDog"> <!-- Add class d-none to hide -->
+                                        <div class="form-step-header">
+                                                <h3 class="form-step-title">Estilo de Vida</h3>
+                                                <p class="form-step-description">Seleciona o estilo de vida que deseja
+                                                        para o seu cão</p>
+                                        </div>
+                                        <div class="form-step-body">
+                                                <!-- Question: Quanto tempo pode dedicar para exercitar o seu cão? -->
+                                                <div class="question">
+                                                        <h5>Quanto tempo pode dedicar para exercitar o seu cão?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="exercise" value="1">Menos de 30
+                                                                        minutos
+                                                                        por dia.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="exercise" value="2">30 minutos a 1
+                                                                        hora
+                                                                        por dia.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="exercise" value="3">1-2 horas por
+                                                                        dia.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="exercise" value="4">Mais de 2
+                                                                        horas por
+                                                                        dia.</label></div>
+                                                </div>
+                                                <!-- Question: O quão ativo é o seu estilo de vida? -->
+                                                <div class="question">
+                                                        <h5>O quão ativo é o seu estilo de vida?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="outdoors" value="1">Sedentário
+                                                                        (Pouca
+                                                                        atividade, o cão vai passar a maior parte do dia
+                                                                        em casa.)</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="outdoors" value="2">Moderado
+                                                                        (Vamos
+                                                                        fazer caminhadas ou atividades leves
+                                                                        diariamente.)</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="outdoors" value="3">Ativo (Vamos
+                                                                        correr
+                                                                        e fazer exercícios algumas vezes por semana,
+                                                                        além das caminhadas diárias.)</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="outdoors" value="4">Muito ativo
+                                                                        (Vamos
+                                                                        fazer atividades regulares ao ar livre,
+                                                                        caminhadas, corridas.)</label></div>
+                                                </div>
+                                                <!-- Question: Qual será o nível de atividade ou estímulos diários? -->
+                                                <div class="question">
+                                                        <h5>Qual será o nível de atividade ou estímulos diários?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="activities" value="1">Mínimo
+                                                                        (Ambiente
+                                                                        relaxado.)</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="activities" value="2">Moderado
+                                                                        (Algum
+                                                                        tempo de brincadeira.)</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="activities" value="3">Alto
+                                                                        (Brincadeiras diárias e atividades para
+                                                                        estimulação mental.)</label></div>
+                                                </div>
+                                                <!-- Question: Como é a moradia? -->
+                                                <div class="question">
+                                                        <h5>Como é a moradia? Escolha a opção mais semelhante.</h5>
+                                                        <div class="form-check"><label><input type="radio" name="home"
+                                                                                value="1">Apartamento ou casa
+                                                                        pequena (menos de 50 m²).</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="home"
+                                                                                value="2">Apartamento ou casa de
+                                                                        tamanho médio (50-100 m²).</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="home"
+                                                                                value="3">Apartamento ou casa
+                                                                        grande (mais de 100 m²).</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="home"
+                                                                                value="4">Espaço grande com
+                                                                        jardim ou quintal.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="home"
+                                                                                value="5">Quinta com muita área
+                                                                        exterior.</label></div>
+                                                </div>
+                                                <!-- Question: Há fácil acesso a espaços exteriores para exercício? -->
+                                                <div class="question">
+                                                        <h5>Há fácil acesso a espaços exteriores para exercício?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="outdoor-access" value="1">Sim, um
+                                                                        quintal privado.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="outdoor-access" value="2">Sim,
+                                                                        parques
+                                                                        ou espaços abertos próximos.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="outdoor-access" value="3">Não,
+                                                                        acesso
+                                                                        limitado a espaços exteriores.</label></div>
+                                                </div>
+                                                <!-- Question: Passa quanto tempo fora de casa diariamente? -->
+                                                <div class="question">
+                                                        <h5>Passa quanto tempo fora de casa diariamente?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="away-time" value="1">Menos de 2
+                                                                        horas.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="away-time" value="2">2-4
+                                                                        horas.</label>
+                                                        </div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="away-time" value="3">4-8
+                                                                        horas.</label>
+                                                        </div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="away-time" value="4">Mais de 8
+                                                                        horas.</label></div>
+                                                </div>
+                                                <!-- Question: Com que frequência viaja? -->
+                                                <div class="question">
+                                                        <h5>Com que frequência viaja?</h5>
+                                                        <div class="form-check"><label><input type="radio" name="travel"
+                                                                                value="1">Raramente, quase
+                                                                        nunca.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="travel"
+                                                                                value="2">Ocasionalmente,
+                                                                        viagens curtas.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="travel"
+                                                                                value="3">Frequentemente. Vou
+                                                                        levar o cão em viagens.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="travel"
+                                                                                value="4">Frequentemente. Vou
+                                                                        deixar o cão a cuidado de terceiros.</label>
+                                                        </div>
+                                                </div>
+                                                <!-- Question: O ambiente em casa é geralmente silencioso ou barulhento? -->
+                                                <div class="question">
+                                                        <h5>O ambiente em casa é geralmente silencioso ou barulhento?
+                                                        </h5>
+                                                        <div class="form-check"><label><input type="radio" name="noise"
+                                                                                value="1">Muito silencioso (sem
+                                                                        trânsito ou barulho alto).</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="noise"
+                                                                                value="2">Moderadamente
+                                                                        silencioso.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="noise"
+                                                                                value="3">Barulhento (centro da
+                                                                        cidade, barulho frequente).</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="noise"
+                                                                                value="4">Variável (depende do
+                                                                        horário ou dia).</label></div>
+                                                </div>
+                                        </div>
+                                        <div class="form-step-footer">
+                                                <button type="button" class="btn btn-prev">Anterior</button>
+                                                <button type="submit" class="btn btn-pre-submit">Concluir</button>
+                                                <button type="button" class="btn btn-next">Próximo</button>
+                                        </div>
+                                </div>
+                                <!-- Dog Lifestyle Step Ends -->
+                                <!-- Cat Lifestyle Step -->
+                                <div class="form-step d-none" id="petLifestyleCat"> <!-- Add class d-none to hide -->
+                                        <div class="form-step-header">
+                                                <h3 class="form-step-title">Estilo de Vida</h3>
+                                                <p class="form-step-description">Seleciona o estilo de vida que deseja
+                                                        para o seu gato</p>
+                                        </div>
+                                        <div class="form-step-body">
+                                                <!-- Question: Quanto tempo pode dedicar para brincar com o seu gato? -->
+                                                <div class="question">
+                                                        <h5>Quanto tempo pode dedicar para brincar com o seu gato?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="playtime" value="1">Menos de 30
+                                                                        minutos
+                                                                        por dia.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="playtime" value="2">30 minutos a 1
+                                                                        hora
+                                                                        por dia.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="playtime" value="3">1-2 horas por
+                                                                        dia.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="playtime" value="4">Mais de 2
+                                                                        horas por
+                                                                        dia.</label></div>
+                                                </div>
+                                                <!-- Question: Qual será o nível de atividade ou estímulos diários? -->
+                                                <div class="question">
+                                                        <h5>Qual será o nível de atividade ou estímulos diários?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="activities" value="1">Mínimo
+                                                                        (Ambiente
+                                                                        relaxado.)</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="activities" value="2">Moderado
+                                                                        (Algum
+                                                                        tempo de brincadeira.)</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="activities" value="3">Alto
+                                                                        (Brincadeiras diárias e atividades para
+                                                                        estimulação mental.)</label></div>
+                                                </div>
+                                                <!-- Question: Como é a moradia? -->
+                                                <div class="question">
+                                                        <h5>Como é a moradia? Escolha a opção mais semelhante.</h5>
+                                                        <div class="form-check"><label><input type="radio" name="home"
+                                                                                value="1">Apartamento ou casa
+                                                                        pequena (menos de 50 m²).</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="home"
+                                                                                value="2">Apartamento ou casa de
+                                                                        tamanho médio (50-100 m²).</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="home"
+                                                                                value="3">Apartamento ou casa
+                                                                        grande (mais de 100 m²).</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="home"
+                                                                                value="4">Espaço grande com
+                                                                        jardim ou quintal.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="home"
+                                                                                value="5">Quinta com muita área
+                                                                        exterior.</label></div>
+                                                </div>
+                                                <!-- Question: O gato terá acesso a espaços exteriores? -->
+                                                <div class="question">
+                                                        <h5>O gato terá acesso a espaços exteriores?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="outdoor-access" value="1">Não,
+                                                                        apenas
+                                                                        interior.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="outdoor-access" value="2">Sim, mas
+                                                                        apenas um espaço pequeno e fechado (ex:
+                                                                        varanda).</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="outdoor-access" value="3">Sim,
+                                                                        acesso a
+                                                                        uma área exterior segura (jardim,
+                                                                        quintal).</label></div>
+                                                </div>
+                                                <!-- Question: Passa quanto tempo fora de casa diariamente? -->
+                                                <div class="question">
+                                                        <h5>Passa quanto tempo fora de casa diariamente?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="away-time" value="1">Menos de 2
+                                                                        horas.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="away-time" value="2">2-4
+                                                                        horas.</label>
+                                                        </div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="away-time" value="3">4-8
+                                                                        horas.</label>
+                                                        </div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="away-time" value="4">Mais de 8
+                                                                        horas.</label></div>
+                                                </div>
+                                                <!-- Question: Com que frequência viaja? -->
+                                                <div class="question">
+                                                        <h5>Com que frequência viaja?</h5>
+                                                        <div class="form-check"><label><input type="radio" name="travel"
+                                                                                value="1">Raramente, quase
+                                                                        nunca.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="travel"
+                                                                                value="2">Ocasionalmente,
+                                                                        viagens curtas.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="travel"
+                                                                                value="3">Frequentemente. Vou
+                                                                        levar o gato em viagens.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="travel"
+                                                                                value="4">Frequentemente. Vou
+                                                                        deixar o gato a cuidado de terceiros.</label>
+                                                        </div>
+                                                </div>
+                                                <!-- Question: O ambiente em casa é geralmente silencioso ou barulhento? -->
+                                                <div class="question">
+                                                        <h5>O ambiente em casa é geralmente silencioso ou barulhento?
+                                                        </h5>
+                                                        <div class="form-check"><label><input type="radio" name="noise"
+                                                                                value="1">Muito silencioso (sem
+                                                                        trânsito ou barulho alto).</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="noise"
+                                                                                value="2">Moderadamente
+                                                                        silencioso.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="noise"
+                                                                                value="3">Barulhento (centro da
+                                                                        cidade, barulho frequente).</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="noise"
+                                                                                value="4">Variável (depende do
+                                                                        horário ou dia).</label></div>
+                                                </div>
+                                        </div>
+                                        <div class="form-step-footer">
+                                                <button type="button" class="btn btn-prev">Anterior</button>
+                                                <button type="submit" class="btn btn-pre-submit">Concluir</button>
+                                                <button type="button" class="btn btn-next">Próximo</button>
+                                        </div>
+                                </div>
+                                <!-- Cat Lifestyle Step Ends -->
+                                <!-- Lifestyle Step Ends -->
+
+                                <!-- Commitment Step -->
+                                <!-- Dog Commitment Step -->
+                                <div class="form-step d-none" id="petCommitmentDog"> <!-- Add class d-none to hide -->
+                                        <div class="form-step-header">
+                                                <h3 class="form-step-title">Responsabilidade</h3>
+                                                <p class="form-step-description">Seleciona o nível de responsabilidade
+                                                        que
+                                                        deseja ter com o seu cão</p>
+                                        </div>
+                                        <div class="form-step-body">
+                                                <!-- Question: Tem tempo para treinar o seu cão? -->
+                                                <div class="question">
+                                                        <h5>Tem tempo para treinar o seu cão?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="training" value="1">Não, prefiro
+                                                                        um cão
+                                                                        que já saiba comandos básicos.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="training" value="2">Sim, tenho
+                                                                        disposição para treinar comandos
+                                                                        básicos.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="training" value="3">Sim, gosto de
+                                                                        treinar e ensinar novos truques.</label></div>
+                                                </div>
+                                                <!-- Question: O cão precisa estar treinado para fazer as necessidades fora de casa? -->
+                                                <div class="question">
+                                                        <h5>O cão precisa estar treinado para fazer as necessidades fora
+                                                                de casa?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="house-training" value="1">Sim,
+                                                                        deve
+                                                                        estar treinado.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="house-training" value="2">Tenho
+                                                                        disposição para o treinar.</label></div>
+                                                </div>
+                                                <!-- Question: Estaria confortável com um cão com problemas de comportamento? -->
+                                                <div class="question">
+                                                        <h5>Estaria confortável com um cão com problemas de
+                                                                comportamento? (ex: ansiedade, dificuldades
+                                                                de socialização)</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="behaviour" value="1">Não, prefiro
+                                                                        um
+                                                                        cão bem comportado.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="behaviour" value="2">Problemas
+                                                                        menos
+                                                                        graves são aceitáveis.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="behaviour" value="3">Sim, estou
+                                                                        disposto a ajudar com problemas de
+                                                                        comportamento.</label></div>
+                                                </div>
+                                                <!-- Question: Quanto está disposto a gastar em cuidados veterinários por mês? -->
+                                                <div class="question">
+                                                        <h5>Quanto está disposto a gastar em cuidados veterinários por
+                                                                mês?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vet-costs" value="1">Menos de
+                                                                        50€</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vet-costs" value="2">50€ a
+                                                                        100€</label>
+                                                        </div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vet-costs" value="3">100€ a
+                                                                        200€</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vet-costs" value="4">Mais de
+                                                                        200€</label></div>
+                                                </div>
+                                                <!-- Question: Com que frequência pode levar o cão ao veterinário? -->
+                                                <div class="question">
+                                                        <h5>Com que frequência pode levar o cão ao veterinário?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vet-visits" value="1">Uma vez por
+                                                                        ano</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vet-visits" value="2">A cada 6
+                                                                        meses</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vet-visits" value="3">Conforme
+                                                                        necessário</label></div>
+                                                </div>
+                                                <!-- Question: Estaria confortável com um cão que requer uma dieta especial? -->
+                                                <div class="question">
+                                                        <h5>Estaria confortável com um cão que requer uma dieta
+                                                                especial?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="special-diet" value="1">Dieta
+                                                                        simples
+                                                                        (ração normal)</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="special-diet" value="2">Disposto a
+                                                                        gerir uma dieta especial</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="special-diet" value="3">Posso
+                                                                        fornecer
+                                                                        refeições caseiras ou especializadas</label>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="form-step-footer">
+                                                <button type="button" class="btn btn-prev">Anterior</button>
+                                                <button type="submit" class="btn btn-pre-submit">Concluir</button>
+                                                <button type="button" class="btn btn-next">Próximo</button>
+                                        </div>
+                                </div>
+                                <!-- Dog Commitment Step Ends -->
+                                <!-- Cat Commitment Step -->
+                                <div class="form-step d-none" id="petCommitmentCat"> <!-- Add class d-none to hide -->
+                                        <div class="form-step-header">
+                                                <h3 class="form-step-title">Responsabilidade</h3>
+                                                <p class="form-step-description">Seleciona o nível de responsabilidade
+                                                        que
+                                                        deseja ter com o seu gato</p>
+                                        </div>
+                                        <div class="form-step-body">
+                                                <!-- Question: O gato precisa estar treinado para fazer as necessidades na caixa de areia? -->
+                                                <div class="question">
+                                                        <h5>O gato precisa estar treinado para fazer as necessidades na
+                                                                caixa de areia?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="litter-training" value="1">Sim,
+                                                                        deve
+                                                                        estar treinado.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="litter-training" value="2">Tenho
+                                                                        disposição para o treinar.</label></div>
+                                                </div>
+                                                <!-- Question: Estaria confortável com um gato com problemas de comportamento? -->
+                                                <div class="question">
+                                                        <h5>Estaria confortável com um gato com problemas de
+                                                                comportamento? (ex: ansiedade, dificuldades
+                                                                de socialização)</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="behaviour" value="1">Não, prefiro
+                                                                        um
+                                                                        gato bem comportado.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="behaviour" value="2">Problemas
+                                                                        menos
+                                                                        graves são aceitáveis.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="behaviour" value="3">Sim, estou
+                                                                        disposto a ajudar com problemas de
+                                                                        comportamento.</label></div>
+                                                </div>
+                                                <!-- Question: Quanto está disposto a gastar em cuidados veterinários por mês? -->
+                                                <div class="question">
+                                                        <h5>Quanto está disposto a gastar em cuidados veterinários por
+                                                                mês?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vet-costs" value="1">Menos de
+                                                                        50€</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vet-costs" value="2">50€ a
+                                                                        100€</label>
+                                                        </div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vet-costs" value="3">100€ a
+                                                                        200€</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vet-costs" value="4">Mais de
+                                                                        200€</label></div>
+                                                </div>
+                                                <!-- Question: Com que frequência pode levar o gato ao veterinário? -->
+                                                <div class="question">
+                                                        <h5>Com que frequência pode levar o gato ao veterinário?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vet-visits" value="1">Uma vez por
+                                                                        ano</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vet-visits" value="2">A cada 6
+                                                                        meses</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="vet-visits" value="3">Conforme
+                                                                        necessário</label></div>
+                                                </div>
+                                                <!-- Question: Estaria confortável com um gato que requer uma dieta especial? -->
+                                                <div class="question">
+                                                        <h5>Estaria confortável com um gato que requer uma dieta
+                                                                especial?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="special-diet" value="1">Dieta
+                                                                        simples
+                                                                        (ração normal)</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="special-diet" value="2">Disposto a
+                                                                        gerir uma dieta especial</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="special-diet" value="3">Posso
+                                                                        fornecer
+                                                                        refeições caseiras ou especializadas</label>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="form-step-footer">
+                                                <button type="button" class="btn btn-prev">Anterior</button>
+                                                <button type="submit" class="btn btn-pre-submit">Concluir</button>
+                                                <button type="button" class="btn btn-next">Próximo</button>
+                                        </div>
+                                </div>
+                                <!-- Cat Commitment Step Ends -->
+                                <!-- Commitment Step Ends -->
+
+                                <!-- Relationship Step -->
+                                <!-- Dog Relationship Step -->
+                                <div class="form-step d-none" id="petRelationshipDog"> <!-- Add class d-none to hide -->
+                                        <div class="form-step-header">
+                                                <h3 class="form-step-title">Relacionamento</h3>
+                                                <p class="form-step-description">Mostra o relacionamento que deseja ter
+                                                        com o seu cão</p>
+                                        </div>
+                                        <div class="form-step-body">
+                                                <!-- Question: Qual o nível de interação que espera ter com o seu cão diariamente? -->
+                                                <div class="question">
+                                                        <h5>Qual o nível de interação que espera ter com o seu cão
+                                                                diariamente?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="interaction" value="1">Muito.
+                                                                        Quero
+                                                                        companhia constante.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="interaction" value="2">Moderado.
+                                                                        Quero
+                                                                        algumas horas de interação.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="interaction" value="3">Mínimo. Em
+                                                                        momentos de descanso em casa.</label></div>
+                                                </div>
+                                                <!-- Question: Qual o papel que espera que o cão desempenhe na sua vida? -->
+                                                <div class="question">
+                                                        <h5>Qual o papel que espera que o cão desempenhe na sua vida?
+                                                        </h5>
+                                                        <div class="form-check"><label><input type="radio" name="role"
+                                                                                value="1">Companheiro para
+                                                                        relaxar.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="role"
+                                                                                value="2">Presença
+                                                                        brincalhona.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="role"
+                                                                                value="3">Independente, que
+                                                                        aprecie a sua própria companhia.</label></div>
+                                                </div>
+                                                <!-- Question: Como espera que o cão passe a maior parte do dia? -->
+                                                <div class="question">
+                                                        <h5>Como espera que o cão passe a maior parte do dia?</h5>
+                                                        <div class="form-check"><label><input type="radio" name="day"
+                                                                                value="1">A dormir dentro de
+                                                                        casa.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="day"
+                                                                                value="2">A brincar ou
+                                                                        exercitar-se ao ar livre.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="day"
+                                                                                value="3">A acompanhar-me durante
+                                                                        o dia.</label></div>
+                                                </div>
+                                        </div>
+                                        <div class="form-step-footer">
+                                                <button type="button" class="btn btn-prev">Anterior</button>
+                                                <button type="submit" class="btn btn-submit">Submeter</button>
+                                        </div>
+                                </div>
+                                <!-- Dog Relationship Step Ends -->
+                                <!-- Cat Relationship Step -->
+                                <div class="form-step d-none" id="petRelationshipCat"> <!-- Add class d-none to hide -->
+                                        <div class="form-step-header">
+                                                <h3 class="form-step-title">Relacionamento</h3>
+                                                <p class="form-step-description">Mostra o relacionamento que deseja ter
+                                                        com o seu gato</p>
+                                        </div>
+                                        <div class="form-step-body">
+                                                <!-- Question: Qual o nível de interação que espera ter com o seu gato diariamente? -->
+                                                <div class="question">
+                                                        <h5>Qual o nível de interação que espera ter com o seu gato
+                                                                diariamente?</h5>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="interaction" value="1">Muito.
+                                                                        Quero
+                                                                        companhia constante.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="interaction" value="2">Moderado.
+                                                                        Quero
+                                                                        algumas horas de interação.</label></div>
+                                                        <div class="form-check"><label><input type="radio"
+                                                                                name="interaction" value="3">Mínimo. Em
+                                                                        momentos de descanso em casa.</label></div>
+                                                </div>
+                                                <!-- Question: Qual o papel que espera que o gato desempenhe na sua vida? -->
+                                                <div class="question">
+                                                        <h5>Qual o papel que espera que o gato desempenhe na sua vida?
+                                                        </h5>
+                                                        <div class="form-check"><label><input type="radio" name="role"
+                                                                                value="1">Companheiro para
+                                                                        relaxar.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="role"
+                                                                                value="2">Presença
+                                                                        brincalhona.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="role"
+                                                                                value="3">Independente, que
+                                                                        aprecie a sua própria companhia.</label></div>
+                                                </div>
+                                                <!-- Question: Como espera que o gato passe a maior parte do dia? -->
+                                                <div class="question">
+                                                        <h5>Como espera que o gato passe a maior parte do dia?</h5>
+                                                        <div class="form-check"><label><input type="radio" name="day"
+                                                                                value="1">A dormir dentro de
+                                                                        casa.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="day"
+                                                                                value="2">Uma mistura de descanso
+                                                                        e brincadeiras.</label></div>
+                                                        <div class="form-check"><label><input type="radio" name="day"
+                                                                                value="3">A acompanhar-me durante
+                                                                        o dia.</label></div>
+                                                </div>
+                                        </div>
+                                        <div class="form-step-footer">
+                                                <button type="button" class="btn btn-prev">Anterior</button>
+                                                <button type="submit" class="btn btn-submit">Submeter</button>
+                                        </div>
+                                </div>
+
+                </div>
+        </section>
+        <!-- Cat Relationship Step Ends -->
+        <!-- Relationship Step Ends -->
+
+        <!-- Results Section -->
+        <div id="quizResults" class="form-step d-none">
+                <div class="form-step-header">
+                        <h3 class="form-step-title">Resultados</h3>
+                        <p class="form-step-description">Aqui estão os animais mais compatíveis
+                        </p>
+                </div>
+                <div class="form-step-body">
+                        <div id="resultsContainer">
+                                <!-- Results will be dynamically inserted here -->
+                                <p>A carregar...</p>
+                        </div>
+                </div>
+                <div class="form-step-footer">
+                        <button type="button" class="btn btn-secondary" id="retakeQuizBtn">Refazer o
+                                Quiz</button>
+                        <button type="button" class="btn btn-primary" id="saveResultsBtn">Salvar
+                                Resultados</button>
+                </div>
+        </div>
+        <!-- Results Section Ends -->
+
+        <!-- Steps End -->
+        </form>
+        </div>
+
+        <!-- Quiz Species Selection Ends -->
+
+        <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-7">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="./Admin_index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-5">
+                    <div class="footer__widget">
+                        <h6>Serviços</h6>
+                        <ul>
+                            <li><a href="Admin_adotar.html">Adotar</a></li>
+                            <li><a href="Admin_entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="Admin_breed-info.html">Espécies e Raças</a></li>
+                            <li><a href="Admin_perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer__widget">
+                        <h6>Sobre Nós</h6>
+                        <ul>
+                            <li><a href="Admin_about-us.html">Dinflux</a></li>
+                            <li><a href="Admin_team.html">Equipa BuscaPatas</a></li>
+                            <li><a href="Admin_partners.html">Nossos Parceiros</a></li>
+                            <li><a href="Admin_termos-politicas.html">Termos e Políticas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer__widget">
+                        <h6>Apoio</h6>
+                        <ul>
+                            <li><a href="Admin_ajuda.html">Ajuda</a></li>
+                            <li><a href="Admin_abrigos.html">Abrigos</a></li>
+                            <li><a href="Admin_merch.html">Merchandise</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-8 col-sm-8">
+                    <div class="footer__newsletter">
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+        <!-- Search Begin -->
+        <div class="search-model">
+                <div class="h-100 d-flex align-items-center justify-content-center">
+                        <div class="search-close-switch">+</div>
+                        <form class="search-model-form">
+                                <input type="text" id="search-input" placeholder="Procure aqui...">
+                        </form>
+                </div>
+        </div>
+        <!-- Search End -->
+
+        <!-- Js Plugins -->
+        <script src="js/matchmaking.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/mixitup.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+        <script src="js/jquery.slicknav.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.nicescroll.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/dist/ol.js"></script>
+        <script type="module" src="js/map.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/login-register.js"></script>
+</body>
+
+</html>

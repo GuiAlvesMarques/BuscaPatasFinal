@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscapatas</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <ul class="offcanvas__widget">
+            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
+            </li>
+            <li><span class="icon_search search-switch"></span></li>
+            <li><a href="#"><span class="icon_heart_alt"></span>
+                    <div class="tip">2</div>
+                </a></li>
+        </ul>
+        <div class="offcanvas__logo">
+            <a href="./Admin_index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-1 col-lg-1">
+                    <div class="header__logo">
+                        <a href="./Admin_index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="./Admin_adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="./Admin_page-caes.html">Cães</a></li>
+                                    <li><a href="./Admin_page-gatos.html">Gatos</a></li>
+                                    <li><a href="./Admin_matchmaking.html">Matchmaking</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./Admin_entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="./Admin_perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                            <li><a href="./Admin_learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="./Admin_breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="./Admin_faq.html">Perguntas Frequentes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./Admin_partners.html">Parceiros</a></li>
+                            <li><a href="./Admin_ajuda.html">Apoiar</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <ul class="header__right__widget">
+
+                            <li><span class="icon_search search-switch"></span></li>
+                            <li><a href="#"><span class="icon_heart_alt"></span>
+                                    <div class="tip">2</div>
+                                </a></li>
+                            <li><a href="Admin_user-profile.html"><span class="icon_profile" data-bs-toggle="modal"
+                                        data-bs-target="#authModal"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Categories Section Begin -->
+    <section class="homepage-carousel">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="carousel-slide slide-welcome">
+                    <div class="carousel-text-1">
+                        <h2>Explora a BuscaPatas!</h2>
+                        <p>Entrega responsável de animais</p>
+                        <p>Conectar adotantes a seus companheiros</p>
+                        <p>Suporte para localizar pets perdidos</p>
+                        <p>Informações sobre cuidado animal</p>
+                        <a href="Admin_about-us.html" class="btn btn-primary">Sobre Nós</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="carousel-slide slide-matchmaking">
+                    <div class="carousel-text-2">
+                        <h2>Encontra o Animal Perfeito</h2>
+                        <p>Responda ao nosso questionário para descobrir o companheiro perfeito para sua casa.</p>
+                        <a href="Admin_matchmaking.html" class="btn btn-primary">Iniciar Quiz</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="carousel-slide slide-surrender">
+                    <div class="carousel-text-3">
+                        <h2>Entregar um Animal</h2>
+                        <p>Preencha o formulário para entregar um animal a um dos nossos abrigos parceiros.</p>
+                        <a href="Admin_entrega-animal.html" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="carousel-slide slide-lost-found">
+                    <div class="carousel-text-4">
+                        <h2>Perdidos e Encontrados</h2>
+                        <p>Ajuda a reunir animais perdidos com seus donos.</p>
+                        <div class="carousel-buttons">
+                            <a href="Admin_reportar-perdido.html" class="btn btn-primary">Perdi um Animal</a>
+                            <a href="Admin_reportar-encontrado.html" class="btn btn-primary">Encontrei um Animal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="carousel-slide slide-adoption">
+                    <div class="carousel-text-5">
+                        <h2>Adota um Amigo de Quatro Patas</h2>
+                        <p>Encontra o companheiro perfeito e ofereça-lhe uma casa cheia de amor.</p>
+                        <a href="Admin_adotar.html" class="btn btn-primary">Adotar Agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Categories Section End -->
+
+    <!-- Services Locations -->
+    <section class="index_map spad">
+        <div class="container">
+            <div class="section-title-subtitle">
+                <div class="text">
+                <h1>Mapa de Serviços</h1>
+                <h3>Encontra abrigos, pet shops e hospitais veterinários próximos!</h3>
+                <p>Filtra por tipo de serviço e encontra o local mais próximo de você.
+                </p>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Filtrar por
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">Abrigos</a></li>
+                            <li><a class="dropdown-item" href="#">Pet Shops</a></li>
+                            <li><a class="dropdown-item" href="#">Hospitais Veterinários</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="index-map" class="col-lg-12 col-md-12 col-sm-12 p-0">
+                    <div class="categories__item_map">
+                        <div id="map" class="map">
+                            <div id="popup"></div>
+                        </div>
+                        <div class="pin_text"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suggestions Section Begin -->
+    <section class="suggestion spad">
+        <div class="container">
+            <h1 class="text-center">Sugestões</h1>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="suggestion__content">
+                        <div class="section-title">
+                            <h4>Novas Entradas</h4>
+                        </div>
+                        <div class="suggestion__item">
+                            <div class="suggestion__item__pic">
+                                <img src="img/product/details/luna4.png" alt="">
+                            </div>
+                            <div class="suggestion__item__text">
+                                <h6>Luna</h6>
+                                <h4>2 anos</h4>
+                                <a href="Admin_details-cao.html"><button class="btn btn_sug">Ver</button></a>
+                            </div>
+                        </div>
+                        <div class="suggestion__item">
+                            <div class="suggestion__item__pic">
+                                <img src="img/dogtest3.jpeg" alt="">
+                            </div>
+                            <div class="suggestion__item__text">
+                                <h6>Muffin</h6>
+                                <h4>9 anos</h4>
+                                <button class="btn btn_sug">Ver</button>
+                            </div>
+                        </div>
+                        <div class="suggestion__item">
+                            <div class="suggestion__item__pic">
+                                <img src="img/dogtest2.jpeg" alt="">
+                            </div>
+                            <div class="suggestion__item__text">
+                                <h6>Patins</h6>
+                                <h4>4 anos</h4>
+                                <button class="btn btn_sug">Ver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="suggestion__content">
+                        <div class="section-title">
+                            <h4>Mais Velhos</h4>
+                        </div>
+                        <div class="suggestion__item">
+                            <div class="suggestion__item__pic">
+                                <img src="img/cats/maine-coon.png" alt="">
+                            </div>
+                            <div class="suggestion__item__text">
+                                <h6>Ben Hur</h6>
+                                <h4>15 anos</h4>
+                                <button class="btn btn_sug">Ver</button>
+                            </div>
+                        </div>
+                        <div class="suggestion__item">
+                            <div class="suggestion__item__pic">
+                                <img src="img/product/details/dachshund.png" alt="">
+                            </div>
+                            <div class="suggestion__item__text">
+                                <h6>Sprite</h6>
+                                <h4>13 anos</h4>
+                                <button class="btn btn_sug">Ver</button>
+                            </div>
+                        </div>
+                        <div class="suggestion__item">
+                            <div class="suggestion__item__pic">
+                                <img src="img/cats/siames.png" alt="">
+                            </div>
+                            <div class="suggestion__item__text">
+                                <h6>Milhas</h6>
+                                <h4>13 anos</h4>
+                                <button class="btn btn_sug">Ver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="suggestion__content">
+                        <div class="section-title">
+                            <h4>Mais Novos</h4>
+                        </div>
+                        <div class="suggestion__item">
+                            <div class="suggestion__item__pic">
+                                <img src="img/product/details/bulldog.png" alt="">
+                            </div>
+                            <div class="suggestion__item__text">
+                                <h6>Bingo</h6>
+                                <h4>5 meses</h4>
+                                <button class="btn btn_sug">Ver</button>
+                            </div>
+                        </div>
+                        <div class="suggestion__item">
+                            <div class="suggestion__item__pic">
+                                <img src="img/dogtest4.jpeg" alt="">
+                            </div>
+                            <div class="suggestion__item__text">
+                                <h6>Chuchu</h6>
+                                <h4>7 meses</h4>
+                                <button class="btn btn_sug">Ver</button>
+                            </div>
+                        </div>
+                        <div class="suggestion__item">
+                            <div class="suggestion__item__pic">
+                                <img src="img/product/details/husky.png" alt="">
+                            </div>
+                            <div class="suggestion__item__text">
+                                <h6>Piritin</h6>
+                                <h4>8 meses</h4>
+                                <button class="btn btn_sug">Ver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Suggestions Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-7">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="./Admin_index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-5">
+                    <div class="footer__widget">
+                        <h6>Serviços</h6>
+                        <ul>
+                            <li><a href="Admin_adotar.html">Adotar</a></li>
+                            <li><a href="Admin_entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="Admin_breed-info.html">Espécies e Raças</a></li>
+                            <li><a href="Admin_perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer__widget">
+                        <h6>Sobre Nós</h6>
+                        <ul>
+                            <li><a href="Admin_about-us.html">Dinflux</a></li>
+                            <li><a href="Admin_team.html">Equipa BuscaPatas</a></li>
+                            <li><a href="Admin_partners.html">Nossos Parceiros</a></li>
+                            <li><a href="Admin_termos-politicas.html">Termos e Políticas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer__widget">
+                        <h6>Apoio</h6>
+                        <ul>
+                            <li><a href="Admin_ajuda.html">Ajuda</a></li>
+                            <li><a href="Admin_abrigos.html">Abrigos</a></li>
+                            <li><a href="Admin_merch.html">Merchandise</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-8 col-sm-8">
+                    <div class="footer__newsletter">
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+     
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Procure aqui...">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/dist/ol.js"></script>
+    <script type="module" src="js/map.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.js"></script>
+</body>
+
+</html>

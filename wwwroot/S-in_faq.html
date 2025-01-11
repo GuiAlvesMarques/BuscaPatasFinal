@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscapatas</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.css">
+
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <ul class="offcanvas__widget">
+            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
+            </li>
+            <li><span class="icon_search search-switch"></span></li>
+            <li><a href="#"><span class="icon_heart_alt"></span>
+                    <div class="tip">2</div>
+                </a></li>
+        </ul>
+        <div class="offcanvas__logo">
+            <a href="./S-in_index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-1 col-lg-1">
+                    <div class="header__logo">
+                        <a href="./S-in_index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="./S-in_adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="./S-in_page-caes.html">Cães</a></li>
+                                    <li><a href="./S-in_page-gatos.html">Gatos</a></li>
+                                    <li><a href="./S-in_matchmaking.html">Matchmaking</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./S-in_entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="./S-in_perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                            <li><a href="./S-in_learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="./S-in_breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="./S-in_faq.html">Perguntas Frequentes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./S-in_partners.html">Parceiros</a></li>
+                            <li><a href="./S-in_ajuda.html">Apoiar</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <ul class="header__right__widget">
+
+                            <li><span class="icon_search search-switch"></span></li>
+                            <li><a href="#"><span class="icon_heart_alt"></span>
+                                    <div class="tip">2</div>
+                                </a></li>
+                            <li><a href="S-in_user-profile.html"><span class="icon_profile" data-bs-toggle="modal"
+                                        data-bs-target="#authModal"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="./S-in_index.html"><i class="fa fa-home"></i> Home</a>
+                        <a href="S-in_learn.html">Aprender</a>
+                        <span>FAQ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Faq Section Begin -->
+    <!-- FAQ Section with Chatbot -->
+    <section class="faq-and-chatbot spad">
+        <div class="container">
+            <div class="row">
+                <!-- FAQ Section -->
+                <div class="col-lg-8">
+                    <div class="faq-section">
+                        <h2 class="section-title">Perguntas Frequentes</h2>
+                        <p>Encontre respostas para as perguntas mais frequentes ou interaja com o nosso chatbot para
+                            ajuda personalizada!</p>
+                        <div class="accordion" id="faqAccordion">
+                            <!-- Question 1 -->
+                            <div class="card">
+                                <div class="card-header" id="questionOne" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#answerOne" aria-expanded="true" aria-controls="answerOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-faq">
+                                            Como adotar um animal?
+                                        </button>
+                                        <i class="fa fa-chevron-down toggle-icon"></i>
+                                    </h5>
+                                </div>
+                                <div id="answerOne" class="collapse show" aria-labelledby="questionOne"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Para adotar um animal, visite a nossa página de <a
+                                            href="S-in_adotar.html">Adoção</a>. Escolha o animal que deseja e clique em
+                                        "Adotar". Você será redirecionado para o contato do abrigo ou da pessoa
+                                        responsável pelo animal. Todo o processo de adoção será organizado diretamente
+                                        com eles. Garantimos que as informações do animal sejam claras e atualizadas
+                                        para facilitar o processo.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 2 -->
+                            <div class="card">
+                                <div class="card-header" id="questionTwo" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#answerTwo" aria-expanded="false" aria-controls="answerTwo">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-faq collapsed">
+                                            O que fazer se eu encontrar um animal perdido?
+                                        </button>
+                                        <i class="fa fa-chevron-down toggle-icon"></i>
+                                    </h5>
+                                </div>
+                                <div id="answerTwo" class="collapse" aria-labelledby="questionTwo"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Se encontrar um animal perdido, acesse a página <a
+                                            href="S-in_reportar-encontrado.html">Reportar Encontrado</a>. Preencha as
+                                        informações sobre o animal, como espécie, características físicas e
+                                        comportamento, e adicione seu número de telefone. Assim, o dono do animal poderá
+                                        entrar em contato diretamente com você. O objetivo é facilitar a comunicação
+                                        para que o animal retorne rapidamente à sua família.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 3 -->
+                            <div class="card">
+                                <div class="card-header" id="questionThree" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#answerThree" aria-expanded="false" aria-controls="answerThree">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-faq collapsed">
+                                            Posso visitar o abrigo antes de adotar?
+                                        </button>
+                                        <i class="fa fa-chevron-down toggle-icon"></i>
+                                    </h5>
+                                </div>
+                                <div id="answerThree" class="collapse" aria-labelledby="questionThree"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Sim! Na página do perfil do animal que deseja adotar, encontrará o contato
+                                        do abrigo ou da pessoa responsável. Entre em contato diretamente para combinar
+                                        uma visita ao local onde o animal está. Recomendamos essa etapa para garantir
+                                        que você e o animal sejam compatíveis.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 4 -->
+                            <div class="card">
+                                <div class="card-header" id="questionFour" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#answerFour" aria-expanded="false" aria-controls="answerFour">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-faq collapsed">
+                                            Como funciona o processo de adoção?
+                                        </button>
+                                        <i class="fa fa-chevron-down toggle-icon"></i>
+                                    </h5>
+                                </div>
+                                <div id="answerFour" class="collapse" aria-labelledby="questionFour"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Normalmente, o processo de adoção começa com a escolha do animal. Você pode
+                                        navegar pelo
+                                        nosso catálogo online e selecionar o animal que deseja. Depois será
+                                        reencaminhado para o website ou número de telefone dos abrigos ou atual tutor.
+                                        Nosso objetivo é
+                                        garantir que o animal seja adotado por um lar amoroso e responsável.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 5 -->
+                            <div class="card">
+                                <div class="card-header" id="questionFive" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#answerFive" aria-expanded="false" aria-controls="answerFive">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-faq collapsed">
+                                            Preciso pagar para adotar um animal?
+                                        </button>
+                                        <i class="fa fa-chevron-down toggle-icon"></i>
+                                    </h5>
+                                </div>
+                                <div id="answerFive" class="collapse" aria-labelledby="questionFive"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Depende do resposável pelo animal. No caso de uma entrega de animal, não
+                                        aceitamos que cobrem pela adoção. Alguns abrigos cobram uma taxa de
+                                        adoção para cobrir os custos de vacinação, esterilização e cuidados veterinários
+                                        do animal. Outros abrigos oferecem a adoção gratuita.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Question 6 -->
+                            <div class="card">
+                                <div class="card-header" id="questionSix" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#answerSix" aria-expanded="false" aria-controls="answerSix">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-faq collapsed">
+                                            Que tipos de animais posso adotar?
+                                        </button>
+                                        <i class="fa fa-chevron-down toggle-icon"></i>
+                                    </h5>
+                                </div>
+                                <div id="answerSix" class="collapse" aria-labelledby="questionSix"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Atualmente, nossa plataforma oferece a adoção de cães e gatos. Temos uma ampla
+                                        variedade de raças, tamanhos e idades disponíveis, desde filhotes até animais
+                                        mais velhos. Para explorar todas as opções, visite nossas páginas dedicadas a <a
+                                            href="S-in_page-caes.html">Cães</a> e <a href="S-in_page-gatos.html">Gatos</a>.
+                                        Atualizamos nosso catálogo regularmente, então não deixe de verificar
+                                        frequentemente.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chatbot Section -->
+                <div class="col-lg-4">
+                    <div class="chatbot-section">
+                        <div class="chatbot-header">
+                            <img src="img/faq.jpg" alt="Chatbot Icon" class="chatbot-icon">
+                            <h4>Rufus AI</h4>
+                        </div>
+                        <div class="chatbot-body">
+                            <div class="chatbot-conversation">
+                                <div class="chatbot-message bot-message">
+                                    Olá! Eu sou o Rufus. Tem alguma pergunta específica?
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chatbot-footer">
+                            <input type="text" class="chatbot-input" placeholder="Digite sua pergunta...">
+                            <button class="btn btn-primary">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Faq Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-7">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="./S-in_index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-5">
+                    <div class="footer__widget">
+                        <h6>Serviços</h6>
+                        <ul>
+                            <li><a href="S-in_adotar.html">Adotar</a></li>
+                            <li><a href="S-in_entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="S-in_breed-info.html">Espécies e Raças</a></li>
+                            <li><a href="S-in_perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer__widget">
+                        <h6>Sobre Nós</h6>
+                        <ul>
+                            <li><a href="S-in_about-us.html">Dinflux</a></li>
+                            <li><a href="S-in_team.html">Equipa BuscaPatas</a></li>
+                            <li><a href="S-in_partners.html">Nossos Parceiros</a></li>
+                            <li><a href="S-in_termos-politicas.html">Termos e Políticas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer__widget">
+                        <h6>Apoio</h6>
+                        <ul>
+                            <li><a href="S-in_ajuda.html">Ajuda</a></li>
+                            <li><a href="S-in_abrigos.html">Abrigos</a></li>
+                            <li><a href="S-in_merch.html">Merchandise</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-8 col-sm-8">
+                    <div class="footer__newsletter">
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Procure aqui...">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/login-register.js"></script>
+</body>
+
+</html>

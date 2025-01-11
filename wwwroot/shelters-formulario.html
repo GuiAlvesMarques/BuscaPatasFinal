@@ -7,11 +7,11 @@
     <meta name="keywords" content="Ashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Buscapatas</title>
+    <title>Entrega Animal</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap""
         rel="stylesheet">
 
     <!-- Css Styles -->
@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.css">
 </head>
 
 <body>
@@ -185,7 +184,7 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
                         <a href="./index.html"><i class="fa fa-home"></i> Home</a>
-                        <span>Apoiar</span>
+                        <span>Entrega Animal</span>
                     </div>
                 </div>
             </div>
@@ -193,135 +192,171 @@
     </div>
     <!-- Breadcrumb End -->
 
-    <!-- Help Section Begin -->
-    <section class="support spad">
+    <!-- Formulário de Entrega de Animal -->
+    <section class="spad-sheltered-form">
         <div class="container">
-            <div class="section-title text-center">
-                <h2>Apoiar o Projeto</h2>
-            </div>
-            <p>
-                O BuscaPatas é um projeto sem fins lucrativos que tem como objetivo ajudar animais a
-                encontrar um lar e ajudar tutores a cuidar dos seus pets. Se gostaria de apoiar o projeto,
-                existem várias formas de o fazer.
-            </p>
-            <div class="support__item adoption">
-                <h3>Adotar um Animal</h3>
-                <p>
-                    Ao adotar um animal, estás a dar-lhe uma segunda oportunidade e a ajudar a diminuir o número
-                    de animais abandonados em Portugal.
-                </p>
-                <a href="adotar.html" class="btn btn_lf">Adotar</a>
-            </div>
-            <div class="support__item donation">
-                <h3>Donativos</h3>
-                <p>
-                    Faz um donativo para o projeto BuscaPatas ou seleciona um abrigo ou associação para apoiar.
-                </p>
-                <p>
-                    Para garantir a sustentabilidade financeira da plataforma BuscaPatas, uma percentagem do
-                    total dos donativos feitos para nossos parceiros será destinada para a manutenção do site.
-                </p>
-                <button class="btn details" id="details">Saber Mais</button>
-                <div id="moreDetails" class="d-none">
-                    <p>
-                        Este processo será conduzido de forma justa e transparente:
-                    </p>
-                    <ul>
-                        <li>
-                            Para assegurar que este processo é justo para todos os abrigos e associações parceiras,
-                            10% de todos os donativos recebidos ao longo do mês serão retidos até o final desse
-                            período.
-                        </li>
-                        <li>
-                            Apenas o montante necessário será utilizado, sendo este igual ou inferior aos totais
-                            retidos. O valor que não for utilizado para a manutenção será dividido de forma
-                            equitativa entre todas as associações beneficiárias.
-                        </li>
-                    </ul>
-                </div>
-                <button class="btn btn_lf" id="donation_button">Doar</button>
-                <!-- Donations -->
-                <div id="donationModal" class="modal-overlay d-none">
-                    <div class="modal-content modal-header">
-                        <button class="close-button" id="closeModal">&times;</button>
-                        <section class="donations">
-                            <div class="container mt-5">
-                                <div class="donation-section">
-                                    <h2>Donativos</h2>
-                                    <h5>Escolha um Valor</h5>
-                                    <div class="donation-buttons">
-                                        <div class="row">
-                                            <div class="col-4 col-sm-3 mb-3">
-                                                <button class="btn donation-btn">5€</button>
-                                            </div>
-                                            <div class="col-4 col-sm-3 mb-3">
-                                                <button class="btn donation-btn">10€</button>
-                                            </div>
-                                            <div class="col-4 col-sm-3 mb-3">
-                                                <button class="btn donation-btn">25€</button>
-                                            </div>
-                                            <div class="col-4 col-sm-3 mb-3">
-                                                <button class="btn donation-btn">50€</button>
-                                            </div>
-                                            <div class="col-4 col-sm-3 mb-3">
-                                                <button class="btn donation-btn">100€</button>
-                                            </div>
-                                            <div class="col-4 col-sm-3 mb-3">
-                                                <button class="btn donation-btn">250€</button>
-                                            </div>
-                                            <div class="col-4 col-sm-3 mb-3">
-                                                <button class="btn donation-btn">500€</button>
-                                            </div>
-                                            <div class="col-4 col-sm-3 mb-3">
-                                                <button class="btn donation-btn">1000€</button>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-top mt-3">
-                                            <div class="form-group position-relative flex-grow-1">
-                                                <input type="text" id="shelterFilter" class="form-control"
-                                                    placeholder="Escolha o parceiro...">
-                                                <ul class="list-group position-absolute w-100 d-none" id="shelterList">
-                                                    <li class="list-group-item">Animal Haven</li>
-                                                    <li class="list-group-item">Pet Haven</li>
-                                                    <li class="list-group-item">SPCA</li>
-                                                    <li class="list-group-item">Best Friends Animal Society</li>
-                                                    <li class="list-group-item">Humane Society</li>
-                                                </ul>
-                                            </div>
-                                            <div class="form-check ms-auto" id="selectDirect">
-                                                <input type="checkbox" class="form-check-input custom-checkbox"
-                                                    id="directBuscaPatas">
-                                                <label class="form-check-label custom-label" for="directBuscaPatas">Doar
-                                                    diretamente à BuscaPatas</label>
-                                            </div>
-                                        </div>
-                                        <div class="custom-amount d-flex align-items-center mt-3">
-                                            <input type="number" id="customAmount" class="form-control me-3"
-                                                placeholder="Inserir valor personalizado">
-                                        </div>
-                                        <button class="btn btn-donate">Donate</button>
-                                    </div>
-                                </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2>Formulário de Registro de Animal na Plataforma</h2>
+                    <p>Preencha os detalhes abaixo para registrar o animal no sistema do BuscpaPatas.</p>
+                    <form action="/Sheltered/RegisterSheltered" method="post" enctype="multipart/form-data" class="contact-form">
+                        <div class="row">
+                            <!-- Informações Gerais -->
+                            <div class="col-lg-12">
+                                <h4>Informações Gerais</h4>
                             </div>
-                        </section>
-                    </div>
-                </div>
+                            <div>
 
-            </div>
-            <div class="support__item merch">
-                <h3>Comprar Produtos</h3>
-                <p>
-                    50% dos lucros obtidos com a venda dos produtos serão destinados à manutenção da plataforma,
-                    enquanto os outros 50% serão encaminhados para uma associação escolhida pelo utilizador.
-                </p>
-                <p>
-                    No final do ano, qualquer valor remanescente que não tenha sido utilizado para a manutenção da
-                    plataforma será doado, de forma equitativa, a todos os abrigos e associações parceiras.
-                </p>
-                <a href="merch-cover.html" class="btn btn_lf">Comprar</a>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="id_species">Qual é a Espécie?</label>
+                                <select name="IDSpecies" id="id_species" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="1">Cão</option>
+                                    <option value="2">Gato</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="id_animal">Animal (ID)</label>
+                                <input type="number" name="IDAnimal" id="id_animal" placeholder="ID do Animal"
+                                       required>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="id_editor">Editor (ID)</label>
+                                <input type="number" name="IDEditor" id="id_editor" placeholder="ID do Editor"
+                                       required>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="id_sector">Setor (ID)</label>
+                                <input type="text" name="IDSector" id="id_sector" placeholder="Setor (ex: A01)"
+                                       required>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="history">Histórico</label>
+                                <textarea name="History" id="history"
+                                          placeholder="Breve histórico do animal"></textarea>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="sponsors">Patrocinadores</label>
+                                <textarea name="Sponsors" id="sponsors"
+                                          placeholder="Informações sobre patrocinadores"></textarea>
+                            </div>
+
+                            <!-- Informações sobre Disponibilidade -->
+                            <div class="col-lg-12">
+                                <h4>Disponibilidade</h4>
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="is_for_adoption">Está para adoção?</label>
+                                <select name="IsForAdoption" id="is_for_adoption" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="true">Sim</option>
+                                    <option value="false">Não</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="is_for_fostering">Está para lar temporário?</label>
+                                <select name="IsForFostering" id="is_for_fostering" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="true">Sim</option>
+                                    <option value="false">Não</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="is_being_fostered">Está em lar temporário?</label>
+                                <select name="IsBeingfostered" id="is_being_fostered" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="true">Sim</option>
+                                    <option value="false">Não</option>
+                                </select>
+                            </div>
+
+                            <!-- Detalhes do Animal -->
+                            <div class="col-lg-12">
+                                <h4>Detalhes do Animal</h4>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="animal_name">Nome do Animal</label>
+                                <input type="text" name="AnimalName" id="animal_name" placeholder="Nome do Animal"
+                                       required>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="sex">Sexo</label>
+                                <select name="Sex" id="sex" required>
+                                    <option value="" disabled selected>Selecione o Sexo</option>
+                                    <option value="M">Macho</option>
+                                    <option value="F">Fêmea</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="age_range">Faixa Etária</label>
+                                <select name="AgeRange" id="age_range" required>
+                                    <option value="" disabled selected>Selecione a Faixa Etária</option>
+                                    <option value="Filhote">Filhote (0-2 anos)</option>
+                                    <option value="Adulto">Adulto (2-7 anos)</option>
+                                    <option value="Senior">Sénior (7+ anos)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="UploadedImage">Foto do Animal</label>
+                                <input type="file" name="UploadedImage" id="UploadedImage" class="form-control" accept="image/*">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="age">Idade (em anos)</label>
+                                <input type="number" name="Age" id="age" placeholder="Idade do Animal" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="birthday">Data de Nascimento</label>
+                                <input type="date" name="Birthday" id="birthday">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="size">Porte do Animal</label>
+                                <select name="Size" id="Size" required>
+                                    <option value="" disabled selected>Selecione o Porte do Animal</option>
+                                    <option value="Pequeno">Pequeno</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Grande">Grande</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="breed">Raça</label>
+                                <input type="text" name="Breed" id="breed" placeholder="Raça do Animal">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="personality">Personalidade</label>
+                                <textarea name="Personality" id="personality"
+                                          placeholder="Descrição da Personalidade"></textarea>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="health_status">Estado de Saúde</label>
+                                <textarea name="HealthStatus" id="health_status"
+                                          placeholder="Descrição da Saúde"></textarea>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="diet">Dieta</label>
+                                <textarea name="Diet" id="diet" placeholder="Descrição da Dieta"></textarea>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="care">Cuidados</label>
+                                <textarea name="Care" id="care" placeholder="Cuidados Necessários"></textarea>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="location">Localização</label>
+                                <textarea name="Location" id="location"
+                                          placeholder="Local onde está o animal"></textarea>
+                            </div>
+
+                            <!-- Botão de Envio -->
+                            <div class="col-lg-12 text-center">
+                                <button type="submit" class="site-btn">Registrar Animal</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
+    <!-- End of the Form -->
 
     <!-- Footer Section Begin -->
     <footer class="footer">
@@ -390,8 +425,8 @@
     </div>
     <!-- Search End -->
 
+
     <!-- Js Plugins -->
-    <script src="js/donation.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
@@ -402,8 +437,6 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/dist/ol.js"></script>
-    <script type="module" src="js/map.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.js"></script>
     <script src="js/login-register.js"></script>
