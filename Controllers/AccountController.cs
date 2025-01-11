@@ -55,5 +55,76 @@ namespace BuscaPatasFinal.Controllers
 
             return Json(new { success = false, message = "Invalid registration details." });
         }
+
+        [HttpPost]
+        public IActionResult Login(string email, string password)
+        {
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            {
+                return BadRequest(new { error = "Email and password are required." });
+            }
+
+            try
+            {
+                // Find the user in the database by email
+                var user = _context.Users.FirstOrDefault(u => u.Email == email);
+
+                if (user == null)
+                {
+                    return Unauthorized(new { error = "Invalid email or password." });
+                }
+
+                // Verify the password (assuming it's stored securely as a hash)
+                if (!VerifyPassword(password, user.Password))
+                {
+                    return Unauthorized(new { error = "Invalid email or password." });
+                }
+
+                // Save user data in session
+                HttpContext.Session.SetString("UserId", user.Id.ToString());
+                HttpContext.Session.SetString("Email", user.Email);
+                HttpContext.Session.SetString("Username", user.Username);
+                HttpContext.Session.SetString("PhoneNumber", user.PhoneNumber);
+
+
+                // Successful login
+                return Redirect("/S-in_index.html"); // Redirect to a secured page
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine($"Inner Exception: {ex.InnerException.Message}");
+                }
+                return Json(new { error = $"Error: {ex.Message}" });
+            }
+        }
+
+        // Utility method to verify a hashed password
+        private bool VerifyPassword(string enteredPassword, string storedHash)
+        {
+            // Replace this with your actual password hashing mechanism (e.g., BCrypt or PBKDF2)
+            return enteredPassword == storedHash; // Simplified for demonstration
+        }
+
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            // Clear session data
+            HttpContext.Session.Clear();
+
+            // Redirect to login page
+            return RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult UserProfile()
+        {
+            ViewBag.UserName = HttpContext.Session.GetString("Username") ?? "Unknown User";
+            ViewBag.UserEmail = HttpContext.Session.GetString("Email") ?? "No Email";
+            ViewBag.UserPhone = HttpContext.Session.GetString("PhoneNumber") ?? "No Phone";
+
+            return View();
+        }
     }
 }

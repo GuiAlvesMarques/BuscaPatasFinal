@@ -15,6 +15,17 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
     new MySqlServerVersion(new Version(8, 0, 21))));
 
+// Add session services
+builder.Services.AddDistributedMemoryCache(); // Required for session
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Session timeout duration
+    options.Cookie.HttpOnly = true; // Prevent JavaScript access to cookies
+    options.Cookie.IsEssential = true; // Ensures cookies are always sent
+});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,6 +39,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+// Use session middleware
+app.UseSession();
 
 app.UseAuthorization();
 
