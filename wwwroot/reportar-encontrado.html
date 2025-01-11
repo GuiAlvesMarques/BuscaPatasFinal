@@ -36,12 +36,16 @@
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__close">+</div>
         <ul class="offcanvas__widget">
-            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
+            <li>
+                <a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
             </li>
             <li><span class="icon_search search-switch"></span></li>
-            <li><a href="#"><span class="icon_heart_alt"></span>
+            <li>
+                <a href="#">
+                    <span class="icon_heart_alt"></span>
                     <div class="tip">2</div>
-                </a></li>
+                </a>
+            </li>
         </ul>
         <div class="offcanvas__logo">
             <a href="./index.html"><img src="img/logo.png" alt=""></a>
@@ -51,7 +55,6 @@
         </div>
     </div>
     <!-- Offcanvas Menu End -->
-
     <!-- Header Section Begin -->
     <header class="header">
         <div class="container-fluid">
@@ -64,7 +67,8 @@
                 <div class="col-xl-9 col-lg-9">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                            <li>
+                                <a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
                                     <li><a href="./page-caes.html">Cães</a></li>
                                     <li><a href="./page-gatos.html">Gatos</a></li>
@@ -73,7 +77,8 @@
                             </li>
                             <li><a href="./entrega-animal.html">Entrega Animal</a></li>
                             <li><a href="./perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
-                            <li><a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                            <li>
+                                <a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
                                     <li><a href="./breed-info.html">Raças & Cuidados</a></li>
                                     <li><a href="./faq.html">Perguntas Frequentes</a></li>
@@ -90,11 +95,18 @@
                         <ul class="header__right__widget">
 
                             <li><span class="icon_search search-switch"></span></li>
-                            <li><a href="#"><span class="icon_heart_alt"></span>
+                            <li>
+                                <a href="#">
+                                    <span class="icon_heart_alt"></span>
                                     <div class="tip">2</div>
-                                </a></li>
-                            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal"
-                                        data-bs-target="#authModal"></span></a></li>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon_profile" data-bs-toggle="modal"
+                                          data-bs-target="#authModal"></span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -105,14 +117,15 @@
         </div>
     </header>
     <!-- Header Section End -->
-
     <!-- Login and Register Modal -->
     <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content modal-header">
                 <div class="modal-body d-flex p-0">
                     <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
-                        aria-label="Close">&times;</button>
+                            aria-label="Close">
+                        &times;
+                    </button>
 
                     <!-- Left Side - Login/Register Form -->
                     <div class="w-50 p-5">
@@ -122,12 +135,12 @@
                             <div class="mb-3">
                                 <label for="email" class="form-label">Endereço de Email</label>
                                 <input type="email" class="form-control" id="email" placeholder="Insira o seu email"
-                                    required>
+                                       required>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Palavra-passe</label>
                                 <input type="password" class="form-control" id="password"
-                                    placeholder="Insira a sua palavra-passe" required>
+                                       placeholder="Insira a sua palavra-passe" required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Entrar</button>
                             <div class="text-center mt-3">
@@ -140,17 +153,17 @@
                             <div class="mb-3">
                                 <label for="registerName" class="form-label">Nome Completo</label>
                                 <input type="text" class="form-control" id="registerName"
-                                    placeholder="Insira o seu nome completo" required>
+                                       placeholder="Insira o seu nome completo" required>
                             </div>
                             <div class="mb-3">
                                 <label for="registerEmail" class="form-label">Endereço de Email</label>
                                 <input type="email" class="form-control" id="registerEmail"
-                                    placeholder="Insira o seu email" required>
+                                       placeholder="Insira o seu email" required>
                             </div>
                             <div class="mb-3">
                                 <label for="registerPassword" class="form-label">Palavra-passe</label>
                                 <input type="password" class="form-control" id="registerPassword"
-                                    placeholder="Crie uma palavra-passe" required>
+                                       placeholder="Crie uma palavra-passe" required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Registar</button>
                             <div class="text-center mt-3">
@@ -164,18 +177,17 @@
                     <!-- Right Side - Image -->
                     <div class="w-50 d-none d-md-block">
                         <img src="img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
-                            style="object-fit: cover;">
+                             style="object-fit: cover;">
                     </div>
                 </div>
 
                 <!-- Custom Close Button -->
                 <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+                        aria-label="Close"></button>
             </div>
         </div>
     </div>
     <!-- Login Register Model Ends -->
-
     <!-- Breadcrumb Begin -->
     <div class="breadcrumb-option">
         <div class="container">
@@ -191,7 +203,6 @@
         </div>
     </div>
     <!-- Breadcrumb End -->
-
     <!-- Reportar Encontrado Section Begin -->
     <div class="found-form-container">
         <h2 class="text-center mb-4">Reportar Animal Encontrado</h2>
@@ -202,68 +213,78 @@
             Além disso, poderá adicionar uma foto para facilitar a identificação.
             O nosso objetivo é ajudar este animal a retornar à sua família o mais rápido possível!
         </p>
-        <div class="row found-form-row">
-            <div class="col-md-6">
-                <label for="foundPetType" class="found-form-label">Tipo de Animal</label>
-                <select id="foundPetType" class="form-select" required>
-                    <option value="">Selecionar</option>
-                    <option value="Cão">Cão</option>
-                    <option value="Gato">Gato</option>
-                </select>
+        <form action="/LostFound/RegisterFound" method="post" id=foundForm" enctype="multipart/form-data">
+            <div class="row found-form-row">
+                <div class="col-lg-6">
+                    <label for="id_animal">Animal (ID)</label>
+                    <input type="number" name="IDAnimal" id="id_animal" placeholder="ID do Animal" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="foundPetType" class="found-form-label">Tipo de Animal</label>
+                    <select name="IDSpecies" id="foundPetType" class="form-select" required>
+                        <option value="">Selecionar</option>
+                        <option value="1">Cão</option>
+                        <option value="2">Gato</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="foundPetSize" class="found-form-label">Tamanho</label>
+                    <select name="Size" id="foundPetSize" class="form-select" required>
+                        <option value="">Selecionar</option>
+                        <option value="Pequeno">Pequeno</option>
+                        <option value="Médio">Médio</option>
+                        <option value="Grande">Grande</option>
+                    </select>
+                </div>
+                <div class="col-lg-6">
+                    <label for="age_range" class="found-form-label">Idade Aproximada</label>
+                    <select name="AgeRange" id="age_range" class="form-select" required>
+                        <option value="" disabled selected>Selecione a Faixa Etária</option>
+                        <option value="Filhote">Filhote (0-2 anos)</option>
+                        <option value="Adulto">Adulto (2-7 anos)</option>
+                        <option value="Senior">Sénior (7+ anos)</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="foundPetBreed" class="found-form-label">Raça (se souber)</label>
+                    <input name="Breed" type="text" id="foundPetBreed" class="form-control" placeholder="Digite a raça (opcional)">
+                </div>
+                <div class="col-md-6">
+                    <label for="foundLocation" class="found-form-label">Local Onde Foi Encontrado</label>
+                    <input name="Location" type="text" id="foundLocation" class="form-control" placeholder="Digite a localização" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="foundDate" class="found-form-label">Data em que Foi Encontrado</label>
+                    <input name="FoundDate" type="date" id="foundDate" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="foundPhoto" class="found-form-label">Foto do Animal</label>
+                    <input name="UploadedImage" type="file" id="foundPhoto" class="form-control" accept="image/*" required>
+                </div>
             </div>
-            <div class="col-md-6">
-                <label for="foundPetSize" class="found-form-label">Tamanho</label>
-                <select id="foundPetSize" class="form-select" required>
-                    <option value="">Selecionar</option>
-                    <option value="Pequeno">Pequeno</option>
-                    <option value="Médio">Médio</option>
-                    <option value="Grande">Grande</option>
-                </select>
+            <div class="mt-4">
+                <label for="foundDescription" class="found-form-label">Descrição</label>
+                <textarea name="Description" id="foundDescription" class="form-control" rows="4"
+                          placeholder="Descreva detalhes sobre o animal (comportamento, características físicas, etc.)"
+                          required></textarea>
             </div>
-            <div class="col-md-6">
-                <label for="foundPetAge" class="found-form-label">Idade Aproximada</label>
-                <input type="number" id="foundPetAge" class="form-control" placeholder="Digite a idade aproximada">
+            <div class="row found-form-row">
+                <div class="col-md-6">
+                    <label for="email" class="found-form-label">Email</label>
+                    <input name="FoundEmail" type="email" id="email" class="form-control" placeholder="Digite o email" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="telefone" class="found-form-label">Telefone</label>
+                    <input name="FoundPhone" type="tel" id="telefone" class="form-control input-tel"
+                           placeholder="Digite o telefone" required>
+                </div>
             </div>
-            <div class="col-md-6">
-                <label for="foundPetBreed" class="found-form-label">Raça (se souber)</label>
-                <input type="text" id="foundPetBreed" class="form-control" placeholder="Digite a raça (opcional)">
+            <div class="text-right mt-4">
+                <button type="submit" class="btn btn-primary">Submeter</button>
             </div>
-            <div class="col-md-6">
-                <label for="foundLocation" class="found-form-label">Local Onde Foi Encontrado</label>
-                <input type="text" id="foundLocation" class="form-control" placeholder="Digite a localização" required>
-            </div>
-            <div class="col-md-6">
-                <label for="foundDate" class="found-form-label">Data em que Foi Encontrado</label>
-                <input type="date" id="foundDate" class="form-control" required>
-            </div>
-            <div class="col-md-6">
-                <label for="foundPhoto" class="found-form-label">Foto do Animal</label>
-                <input type="file" id="foundPhoto" class="form-control" accept="image/*">
-            </div>
-        </div>
-        <div class="mt-4">
-            <label for="foundDescription" class="found-form-label">Descrição</label>
-            <textarea id="foundDescription" class="form-control" rows="4"
-                placeholder="Descreva detalhes sobre o animal (comportamento, características físicas, etc.)"
-                required></textarea>
-        </div>
-        <div class="row found-form-row">
-            <div class="col-md-6">
-                <label for="email" class="found-form-label">Email</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Digite o email" required>
-            </div>
-            <div class="col-md-6">
-                <label for="telefone" class="found-form-label">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" class="form-control input-tel"
-                    placeholder="Digite o telefone" required>
-            </div>
-        </div>
-        <div class="text-right mt-4">
-            <button type="submit" class="btn btn-primary">Submeter</button>
-        </div>
+        </form>
     </div>
     <!-- Reportar Encontrado Section End -->
-
     <!-- Footer Section Begin -->
     <footer class="footer">
         <div class="container">
@@ -319,7 +340,6 @@
         </div>
     </footer>
     <!-- Footer Section End -->
-
     <!-- Search Begin -->
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
@@ -330,8 +350,6 @@
         </div>
     </div>
     <!-- Search End -->
-
-
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
