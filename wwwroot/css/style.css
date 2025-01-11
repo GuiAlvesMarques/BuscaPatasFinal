@@ -3205,6 +3205,172 @@ ol {
 }
 
 /*---------------------
+  Merch Cover
+-----------------------*/
+
+#merch-cover-breadcrumbs{
+	margin-bottom: 30px;
+}
+
+.hero {
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    height: 100vh; /* Fullscreen height */
+    width: 100%; /* Fullscreen width */
+    display: flex; /* Enables flexbox for child elements */
+    flex-direction: column; /* Aligns child elements vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    color: white; /* Text color */
+    text-align: center; /* Centers text */
+    padding: 20px; /* Adds padding for smaller screens */
+}
+
+.hero2 {
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    height: 80vh; /* Fullscreen height */
+    width: 100%; /* Fullscreen width */
+    display: flex; /* Enables flexbox for child elements */
+    flex-direction: column; /* Aligns child elements vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    color: white; /* Text color */
+    text-align: center; /* Centers text */
+    padding: 20px; /* Adds padding for smaller screens */
+}
+
+.hero h1 {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.hero p {
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+.hero button {
+	background: #000;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.text-cover a {
+	background-color: #fcbc64;
+	color: black;
+	transition: all 0.3s ease;
+	width: 40%;
+	height: 24%;
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin-top: 2.5%;
+	margin-right:15px;
+}
+
+.text-cover a:hover {
+	background-color: #FFCD89;
+	color: black;
+	transform: scale(1.05);
+}
+
+.text-cover a:active {
+	background-color: #fc980c;
+	color: #ffffff;
+}
+
+.text-cover2 a {
+	background-color: black;
+	color: white;
+	transition: all 0.3s ease;
+	width: 30%;
+	height: 23%;
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin-top: 2.5%;
+	margin-right: 35px;
+}
+
+.text-cover2 a:hover {
+	background-color: #459ca9;
+	color: white;
+	transform: scale(1.05);
+}
+
+.text-cover2 a:active {
+	background-color: black;
+	color: white;
+}
+
+.text-cover p{
+	margin-left: 50px;
+}
+
+.text-cover2 p{
+	margin-left: 40px;
+	font-size: 23px;
+}
+
+.text-cover2{
+	margin-left: 750px;
+	
+}
+
+.text-cover{
+	margin-right: px;
+	margin-bottom: 220px;
+}
+
+
+.collection-section {
+	margin: 3rem 0;
+}
+
+.collection-section h2 {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.product-card {
+	text-align: center;
+}
+
+.product-card img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.product-card h5 {
+	margin-top: 1rem;
+	font-size: 1.1rem;
+}
+
+.featured-section {
+	background: url('img/featured-banner.jpg') center/cover no-repeat;
+	height: 50vh;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.featured-section h2 {
+	font-size: 2rem;
+}
+
+
+
+/*---------------------
   Merch
 -----------------------*/
 
@@ -4979,6 +5145,18 @@ body.showCart .container{
 	font-size: 1.2rem;
 	color: #333;
 	cursor: pointer;
+}
+.logout-button {
+	color: red;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s ease;
+	position: relative;
+	top: 10px;
+}
+
+.logout-button:hover {
+	color: darkred;
 }
 
 /*---------------------
@@ -7073,7 +7251,7 @@ button.btn-secondary:hover {
 	.container {
 		max-width: 1170px;
 	}
-}
+	
 
 /* Medium Device = 1200px */
 
