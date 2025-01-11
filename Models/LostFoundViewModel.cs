@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace testbuscapatas.Models
+namespace BuscaPatasFinal.Models
 {
     public class LostFoundViewModel
     {

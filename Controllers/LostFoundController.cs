@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using testbuscapatas.Data;
-using testbuscapatas.Models;
+using BuscaPatasFinal.Data;
+using BuscaPatasFinal.Models;
 using System;
 using System.IO;
 using System.Linq;
 
-namespace testbuscapatas.Controllers
+namespace BuscaPatasFinal.Controllers
 {
     public class LostFoundController : Controller
     {

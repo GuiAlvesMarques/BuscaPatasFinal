@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace testbuscapatas.Models
+namespace BuscaPatasFinal.Models
 {
     public class Found
     {

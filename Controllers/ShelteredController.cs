@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using testbuscapatas.Data;
-using testbuscapatas.Models;
+using BuscaPatasFinal.Data;
+using BuscaPatasFinal.Models;
 using System;
 using System.Linq;
 using static System.Net.Mime.MediaTypeNames; 
 
-namespace testbuscapatas.Controllers
+namespace BuscaPatasFinal.Controllers
 {
     public class ShelteredController : Controller
     {

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection.Metadata;
 
-namespace testbuscapatas.Models
+namespace BuscaPatasFinal.Models
 {
     public class Sheltered
     {
