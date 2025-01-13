@@ -374,15 +374,14 @@ function generateLostFormPDF() {
     }
 
     // Captura os valores do formulário
-    const petType = document.getElementById("lostPetType")?.value || "N/A";
-    const petSize = document.getElementById("lostPetSize")?.value || "N/A";
     const petName = document.getElementById("lostPetName")?.value || "N/A";
+    const petSize = document.getElementById("lostPetSize")?.value || "N/A";
     const petAge = document.getElementById("lostPetAge")?.value || "N/A";
     const petBreed = document.getElementById("lostPetBreed")?.value || "N/A";
     const lastSeen = document.getElementById("lostLastSeen")?.value || "N/A";
     const lostDate = document.getElementById("lostDate")?.value || "N/A";
     const description = document.getElementById("lostDescription")?.value || "N/A";
-    const email = document.getElementById("email")?.value || "N/A";
+    const emailInput = document.getElementById("emailInput")?.value || "N/A";
     const phone = document.getElementById("telefone")?.value || "N/A";
 
     // Manipula a imagem carregada
@@ -401,6 +400,10 @@ function generateLostFormPDF() {
     pdf.setFontSize(22);
     pdf.text("Animal Desaparecido", 105, 20, { align: "center" });
 
+    // Nome do Animal - Centralizado, em negrito e maior
+    pdf.setFontSize(26); // Aumenta o tamanho da fonte
+    pdf.text(petName, 105, 40, { align: "center" });
+
     // Processa a imagem, se fornecida
     if (photoFile) {
         const reader = new FileReader();
@@ -411,16 +414,16 @@ function generateLostFormPDF() {
             // Adiciona a imagem dinamicamente, ajustando o tamanho
             const imgWidth = 150;
             const imgHeight = 90;
-            pdf.addImage(imgData, imgFormat, 30, 30, imgWidth, imgHeight);
+            pdf.addImage(imgData, imgFormat, 30, 50, imgWidth, imgHeight);
 
             // Adiciona os detalhes do animal
-            addPetDetails(pdf, 130); // Ajusta a posição inicial com base na imagem
+            addPetDetails(pdf, 150); // Ajusta a posição inicial com base na imagem
             pdf.save(`${petName}_Animal_Desaparecido.pdf`);
         };
         reader.readAsDataURL(photoFile); // Converte a imagem para Base64
     } else {
         // Caso não tenha imagem, continua com os detalhes
-        addPetDetails(pdf, 40); // Inicia os detalhes mais abaixo sem imagem
+        addPetDetails(pdf, 60); // Inicia os detalhes mais abaixo sem imagem
         pdf.save("Animal_Desaparecido.pdf");
     }
 }
@@ -430,22 +433,21 @@ function addPetDetails(pdf, startY) {
     pdf.setFont("helvetica", "normal");
     pdf.setFontSize(14);
 
-    pdf.text(`Nome: ${document.getElementById("lostPetName")?.value || "N/A"}`, 20, startY);
-    pdf.text(`Tipo: ${document.getElementById("lostPetType")?.value || "N/A"}`, 20, startY + 10);
-    pdf.text(`Tamanho: ${document.getElementById("lostPetSize")?.value || "N/A"}`, 20, startY + 20);
-    pdf.text(`Idade: ${document.getElementById("lostPetAge")?.value || "N/A"}`, 20, startY + 30);
-    pdf.text(`Raça: ${document.getElementById("lostPetBreed")?.value || "N/A"}`, 20, startY + 40);
-    pdf.text(`Última Localização Vista: ${document.getElementById("lostLastSeen")?.value || "N/A"}`, 20, startY + 50);
-    pdf.text(`Data do Desaparecimento: ${document.getElementById("lostDate")?.value || "N/A"}`, 20, startY + 60);
-    pdf.text(`Descrição:`, 20, startY + 70);
-    pdf.text(document.getElementById("lostDescription")?.value || "N/A", 20, startY + 80, { maxWidth: 170 });
+    pdf.text(`Tamanho: ${document.getElementById("lostPetSize")?.value || "N/A"}`, 20, startY);
+    pdf.text(`Idade: ${document.getElementById("lostPetAge")?.value || "N/A"}`, 20, startY + 10);
+    pdf.text(`Raça: ${document.getElementById("lostPetBreed")?.value || "N/A"}`, 20, startY + 20);
+    pdf.text(`Última Localização Vista: ${document.getElementById("lostLastSeen")?.value || "N/A"}`, 20, startY + 30);
+    pdf.text(`Data do Desaparecimento: ${document.getElementById("lostDate")?.value || "N/A"}`, 20, startY + 40);
+    pdf.text(`Descrição:`, 20, startY + 50);
+    pdf.text(document.getElementById("lostDescription")?.value || "N/A", 20, startY + 60, { maxWidth: 170 });
 
     pdf.setFont("helvetica", "bold");
-    pdf.text(`Informação de Contacto:`, 20, startY + 100);
+    pdf.text(`Informação de Contacto:`, 20, startY + 80);
     pdf.setFont("helvetica", "normal");
-    pdf.text(`Email: ${document.getElementById("email")?.value || "N/A"}`, 20, startY + 110);
-    pdf.text(`Telefone: ${document.getElementById("telefone")?.value || "N/A"}`, 20, startY + 120);
+    pdf.text(`Email: ${document.getElementById("emailInput")?.value || "N/A"}`, 20, startY + 90);
+    pdf.text(`Telefone: ${document.getElementById("telefone")?.value || "N/A"}`, 20, startY + 100);
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const searchOverlay = document.querySelector(".search-model");

@@ -294,6 +294,10 @@
                                                 <ul>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="size"
+                                                               value="Mini"> Mini
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="size"
                                                                value="Pequeno"> Pequeno
                                                     </li>
                                                     <li>
@@ -303,6 +307,10 @@
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="size"
                                                                value="Grande"> Grande
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="size"
+                                                               value="Gigante"> Gigante
                                                     </li>
                                                 </ul>
                                             </div>
@@ -357,7 +365,15 @@
                                     <div class="product__item__text">
                                         <h6><a href="#">@dog.AnimalName</a></h6>
                                         <p>Raça: @dog.Breed | Idade: @dog.AgeRange | Porte: @dog.Size</p>
-                                        <button href="/Sheltered/Details/@dog.IDAnimal" class="adopt-btn">Adotar</button></div>
+                                        @if (dog.IsForAdoption)
+                                        {
+                                            <button onclick="window.location.href='/Sheltered/Details/@dog.IDAnimal'" class="adopt-btn">Adotar</button>
+                                        }
+                                        else
+                                        {
+                                            <button class="btn btn-secondary" disabled>Não Disponível para Adoção</button>
+                                        }
+                                    </div>
                                     </div>
                                 </div>
                         }

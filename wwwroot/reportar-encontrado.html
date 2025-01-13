@@ -231,9 +231,11 @@
                     <label for="foundPetSize" class="found-form-label">Tamanho</label>
                     <select name="Size" id="foundPetSize" class="form-select" required>
                         <option value="">Selecionar</option>
+                        <option value="Mini">Mini</option>
                         <option value="Pequeno">Pequeno</option>
                         <option value="Médio">Médio</option>
                         <option value="Grande">Grande</option>
+                        <option value="Gigante">Gigante</option>
                     </select>
                 </div>
                 <div class="col-lg-6">
@@ -283,6 +285,18 @@
                 <button type="submit" class="btn btn-primary">Submeter</button>
             </div>
         </form>
+        <script>
+            document.getElementById('foundForm').addEventListener('submit', function (event) {
+                const foundDate = document.getElementById('foundDate').value;
+                const today = new Date().toISOString().split('T')[0];
+
+                // Validar se a data está dentro do intervalo permitido
+                if (foundDate > today || foundDate < '2000-01-01') {
+                    alert('Por favor, insira uma data válida entre 01/01/2000 e hoje.');
+                    event.preventDefault(); // Impede o envio do formulário
+                }
+            });
+        </script>
     </div>
     <!-- Reportar Encontrado Section End -->
     <!-- Footer Section Begin -->
