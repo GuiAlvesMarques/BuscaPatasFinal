@@ -133,65 +133,90 @@
             Além disso, poderá adicionar uma foto para facilitar a identificação.
             O nosso objetivo é ajudar este animal a retornar à sua família o mais rápido possível!
         </p>
-        <div class="row found-form-row">
-            <div class="col-md-6">
-                <label for="foundPetType" class="found-form-label">Tipo de Animal</label>
-                <select id="foundPetType" class="form-select" required>
-                    <option value="">Selecionar</option>
-                    <option value="Cão">Cão</option>
-                    <option value="Gato">Gato</option>
-                </select>
+        <form action="/LostFound/RegisterFound" method="post" id=foundForm" enctype="multipart/form-data">
+            <div class="row found-form-row">
+                <div class="col-lg-6">
+                    <label for="id_animal">Animal (ID)</label>
+                    <input type="number" name="IDAnimal" id="id_animal" placeholder="ID do Animal" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="foundPetType" class="found-form-label">Tipo de Animal</label>
+                    <select name="IDSpecies" id="foundPetType" class="form-select" required>
+                        <option value="">Selecionar</option>
+                        <option value="1">Cão</option>
+                        <option value="2">Gato</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="foundPetSize" class="found-form-label">Tamanho</label>
+                    <select name="Size" id="foundPetSize" class="form-select" required>
+                        <option value="">Selecionar</option>
+                        <option value="Mini">Mini</option>
+                        <option value="Pequeno">Pequeno</option>
+                        <option value="Médio">Médio</option>
+                        <option value="Grande">Grande</option>
+                        <option value="Gigante">Gigante</option>
+                    </select>
+                </div>
+                <div class="col-lg-6">
+                    <label for="age_range" class="found-form-label">Idade Aproximada</label>
+                    <select name="AgeRange" id="age_range" class="form-select" required>
+                        <option value="" disabled selected>Selecione a Faixa Etária</option>
+                        <option value="Filhote">Filhote (0-2 anos)</option>
+                        <option value="Adulto">Adulto (2-7 anos)</option>
+                        <option value="Senior">Sénior (7+ anos)</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="foundPetBreed" class="found-form-label">Raça (se souber)</label>
+                    <input name="Breed" type="text" id="foundPetBreed" class="form-control" placeholder="Digite a raça (opcional)">
+                </div>
+                <div class="col-md-6">
+                    <label for="foundLocation" class="found-form-label">Local Onde Foi Encontrado</label>
+                    <input name="Location" type="text" id="foundLocation" class="form-control" placeholder="Digite a localização" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="foundDate" class="found-form-label">Data em que Foi Encontrado</label>
+                    <input name="FoundDate" type="date" id="foundDate" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="foundPhoto" class="found-form-label">Foto do Animal</label>
+                    <input name="UploadedImage" type="file" id="foundPhoto" class="form-control" accept="image/*" required>
+                </div>
             </div>
-            <div class="col-md-6">
-                <label for="foundPetSize" class="found-form-label">Tamanho</label>
-                <select id="foundPetSize" class="form-select" required>
-                    <option value="">Selecionar</option>
-                    <option value="Pequeno">Pequeno</option>
-                    <option value="Médio">Médio</option>
-                    <option value="Grande">Grande</option>
-                </select>
+            <div class="mt-4">
+                <label for="foundDescription" class="found-form-label">Descrição</label>
+                <textarea name="Description" id="foundDescription" class="form-control" rows="4"
+                          placeholder="Descreva detalhes sobre o animal (comportamento, características físicas, etc.)"
+                          required></textarea>
             </div>
-            <div class="col-md-6">
-                <label for="foundPetAge" class="found-form-label">Idade Aproximada</label>
-                <input type="number" id="foundPetAge" class="form-control" placeholder="Digite a idade aproximada">
+            <div class="row found-form-row">
+                <div class="col-md-6">
+                    <label for="email" class="found-form-label">Email</label>
+                    <input name="FoundEmail" type="email" id="email" class="form-control" placeholder="Digite o email" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="telefone" class="found-form-label">Telefone</label>
+                    <input name="FoundPhone" type="tel" id="telefone" class="form-control input-tel"
+                           placeholder="Digite o telefone" required>
+                </div>
             </div>
-            <div class="col-md-6">
-                <label for="foundPetBreed" class="found-form-label">Raça (se souber)</label>
-                <input type="text" id="foundPetBreed" class="form-control" placeholder="Digite a raça (opcional)">
+            <div class="text-right mt-4">
+                <button type="submit" class="btn btn-primary">Submeter</button>
             </div>
-            <div class="col-md-6">
-                <label for="foundLocation" class="found-form-label">Local Onde Foi Encontrado</label>
-                <input type="text" id="foundLocation" class="form-control" placeholder="Digite a localização" required>
-            </div>
-            <div class="col-md-6">
-                <label for="foundDate" class="found-form-label">Data em que Foi Encontrado</label>
-                <input type="date" id="foundDate" class="form-control" required>
-            </div>
-            <div class="col-md-6">
-                <label for="foundPhoto" class="found-form-label">Foto do Animal</label>
-                <input type="file" id="foundPhoto" class="form-control" accept="image/*">
-            </div>
-        </div>
-        <div class="mt-4">
-            <label for="foundDescription" class="found-form-label">Descrição</label>
-            <textarea id="foundDescription" class="form-control" rows="4"
-                placeholder="Descreva detalhes sobre o animal (comportamento, características físicas, etc.)"
-                required></textarea>
-        </div>
-        <div class="row found-form-row">
-            <div class="col-md-6">
-                <label for="email" class="found-form-label">Email</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Digite o email" required>
-            </div>
-            <div class="col-md-6">
-                <label for="telefone" class="found-form-label">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" class="form-control input-tel"
-                    placeholder="Digite o telefone" required>
-            </div>
-        </div>
-        <div class="text-right mt-4">
-            <button type="submit" class="btn btn-primary">Submeter</button>
-        </div>
+        </form>
+        <script>
+            document.getElementById('foundForm').addEventListener('submit', function (event) {
+                const foundDate = document.getElementById('foundDate').value;
+                const today = new Date().toISOString().split('T')[0];
+
+                // Validar se a data está dentro do intervalo permitido
+                if (foundDate > today || foundDate < '2000-01-01') {
+                    alert('Por favor, insira uma data válida entre 01/01/2000 e hoje.');
+                    event.preventDefault(); // Impede o envio do formulário
+                }
+            });
+        </script>
     </div>
     <!-- Reportar Encontrado Section End -->
 

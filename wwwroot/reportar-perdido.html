@@ -233,9 +233,11 @@
                     <label for="lostPetSize" class="lost-form-label">Tamanho</label>
                     <select name="Size" id="lostPetSize" class="form-select" required>
                         <option value="">Selecionar</option>
+                        <option value="Mini">Mini</option>
                         <option value="Pequeno">Pequeno</option>
                         <option value="Médio">Médio</option>
                         <option value="Grande">Grande</option>
+                        <option value="Gigante">Gigante</option>
                     </select>
                 </div>
                 <div class="col-md-6">
@@ -283,6 +285,18 @@
                 <button type="button" class="btn btn-secondary" onclick="generateLostFormPDF()">Gerar PDF</button>
             </div>
         </form>
+        <script>
+            document.getElementById('lostForm').addEventListener('submit', function (event) {
+                const lostDate = document.getElementById('lostDate').value;
+                const today = new Date().toISOString().split('T')[0];
+
+                // Validar se a data está dentro do intervalo permitido
+                if (lostDate > today || lostDate < '2000-01-01') {
+                    alert('Por favor, insira uma data válida entre 01/01/2000 e hoje.');
+                    event.preventDefault(); // Impede o envio do formulário
+                }
+            });
+        </script>
     </div>
     <!-- Reportar Perdido Section End -->
     <!-- Footer Section Begin -->

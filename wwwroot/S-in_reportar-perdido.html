@@ -125,75 +125,97 @@
     <!-- Reportar Perdido Section Begin -->
     <div class="lost-form-container">
         <h2 class="text-center mb-4">Reportar Animal Perdido</h2>
-        <p>Se perdeu o seu animal de estimação, sabemos que este é um momento difícil e queremos ajudá-lo a encontrá-lo
+        <p>
+            Se perdeu o seu animal de estimação, sabemos que este é um momento difícil e queremos ajudá-lo a encontrá-lo
             o mais rápido possível. Nesta página, poderá reportar o desaparecimento do seu animal, fornecendo
             informações detalhadas como o nome, raça, idade, localização onde foi visto pela última vez e uma descrição
             adicional. Além disso, poderá adicionar uma foto para facilitar a identificação. O nosso sistema permite
             ainda guardar os dados num ficheiro PDF para partilhar facilmente com outras pessoas ou entidades. Estamos
-            aqui para ajudá-lo a reunir-se com o seu amigo de quatro patas! </p>
-        <div class="row lost-form-row">
-            <div class="col-md-6">
-                <label for="lostPetType" class="lost-form-label">Tipo de Animal</label>
-                <select id="lostPetType" class="form-select" required>
-                    <option value="">Selecionar</option>
-                    <option value="Cão">Cão</option>
-                    <option value="Gato">Gato</option>
-                </select>
+            aqui para ajudá-lo a reunir-se com o seu amigo de quatro patas!
+        </p>
+        <form action="/LostFound/RegisterLost" method="post" id="lostForm" enctype="multipart/form-data">
+            <div class="row lost-form-row">
+                <div class="col-lg-6">
+                    <label for="id_animal">Animal (ID)</label>
+                    <input type="number" name="IDAnimal" id="id_animal" placeholder="ID do Animal"
+                           required>
+                </div>
+                <div class="col-md-6">
+                    <label for="lostPetType" class="lost-form-label">Tipo de Animal</label>
+                    <select name="IDSpecies" id="lostPetType" class="form-select" required>
+                        <option value="">Selecionar</option>
+                        <option value="1">Cão</option>
+                        <option value="2">Gato</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="lostPetSize" class="lost-form-label">Tamanho</label>
+                    <select name="Size" id="lostPetSize" class="form-select" required>
+                        <option value="">Selecionar</option>
+                        <option value="Mini">Mini</option>
+                        <option value="Pequeno">Pequeno</option>
+                        <option value="Médio">Médio</option>
+                        <option value="Grande">Grande</option>
+                        <option value="Gigante">Gigante</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="lostPetName" class="lost-form-label">Nome do Animal</label>
+                    <input name="AnimalName" type="text" id="lostPetName" class="form-control" placeholder="Insira o nome" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="lostPetAge" class="lost-form-label">Idade</label>
+                    <input name="Age" type="number" id="lostPetAge" class="form-control" placeholder="Digite a idade" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="lostPetBreed" class="lost-form-label">Raça</label>
+                    <input name="Breed" type="text" id="lostPetBreed" class="form-control" placeholder="Digite a raça">
+                </div>
+                <div class="col-md-6">
+                    <label for="lostLastSeen" class="lost-form-label">Última Localização Vista</label>
+                    <input name="Location" type="text" id="lostLastSeen" class="form-control" placeholder="Digite a localização">
+                </div>
+                <div class="col-md-6">
+                    <label for="lostDate" class="lost-form-label">Data do Desaparecimento</label>
+                    <input name="LostDate" type="date" id="lostDate" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="lostPhoto" class="lost-form-label">Foto do Animal</label>
+                    <input name="UploadedImage" type="file" id="lostPhoto" class="form-control" accept="image/*" required>
+                </div>
             </div>
-            <div class="col-md-6">
-                <label for="lostPetSize" class="lost-form-label">Tamanho</label>
-                <select id="lostPetSize" class="form-select" required>
-                    <option value="">Selecionar</option>
-                    <option value="Pequeno">Pequeno</option>
-                    <option value="Médio">Médio</option>
-                    <option value="Grande">Grande</option>
-                </select>
+            <div class="mt-4">
+                <label for="lostDescription" class="lost-form-label">Descrição</label>
+                <textarea name="Description" id="lostDescription" class="form-control" rows="4" placeholder="Descreva detalhes sobre o animal" required></textarea>
             </div>
-            <div class="col-md-6">
-                <label for="lostPetName" class="lost-form-label">Nome do Animal</label>
-                <input type="text" id="lostPetName" class="form-control" placeholder="Insira o nome" required>
+            <div class="row lost-form-row">
+                <div class="col-md-6">
+                    <label for="emailInput" class="lost-form-label">Email</label>
+                    <input name="LostEmail" type="email" id="emailInput" class="form-control" placeholder="Digite o email" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="telefone" class="lost-form-label">Telefone</label>
+                    <input name="LostPhone" type="tel" id="telefone" class="form-control input-tel"
+                           placeholder="Digite o telefone" required>
+                </div>
             </div>
-            <div class="col-md-6">
-                <label for="lostPetAge" class="lost-form-label">Idade</label>
-                <input type="number" id="lostPetAge" class="form-control" placeholder="Digite a idade" required>
+            <div class="text-right mt-4">
+                <button type="submit" class="btn btn-primary">Submeter</button>
+                <button type="button" class="btn btn-secondary" onclick="generateLostFormPDF()">Gerar PDF</button>
             </div>
-            <div class="col-md-6">
-                <label for="lostPetBreed" class="lost-form-label">Raça</label>
-                <input type="text" id="lostPetBreed" class="form-control" placeholder="Digite a raça">
-            </div>
-            <div class="col-md-6">
-                <label for="lostLastSeen" class="lost-form-label">Última Localização Vista</label>
-                <input type="text" id="lostLastSeen" class="form-control" placeholder="Digite a localização">
-            </div>
-            <div class="col-md-6">
-                <label for="lostDate" class="lost-form-label">Data do Desaparecimento</label>
-                <input type="date" id="lostDate" class="form-control" required>
-            </div>
-            <div class="col-md-6">
-                <label for="lostPhoto" class="lost-form-label">Foto do Animal</label>
-                <input type="file" id="lostPhoto" class="form-control" accept="image/*">
-            </div>
-        </div>
-        <div class="mt-4">
-            <label for="lostDescription" class="lost-form-label">Descrição</label>
-            <textarea id="lostDescription" class="form-control" rows="4" placeholder="Descreva detalhes sobre o animal"
-                required></textarea>
-        </div>
-        <div class="row lost-form-row">
-            <div class="col-md-6">
-                <label for="email" class="lost-form-label">Email</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Digite o email" required>
-            </div>
-            <div class="col-md-6">
-                <label for="telefone" class="lost-form-label">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" class="form-control input-tel"
-                    placeholder="Digite o telefone" required>
-            </div>
-        </div>
-        <div class="text-right mt-4">
-            <button type="submit" class="btn btn-primary">Submeter</button>
-            <button type="button" class="btn btn-secondary" onclick="generateLostFormPDF()">Gerar PDF</button>
-        </div>
+        </form>
+        <script>
+            document.getElementById('lostForm').addEventListener('submit', function (event) {
+                const lostDate = document.getElementById('lostDate').value;
+                const today = new Date().toISOString().split('T')[0];
+
+                // Validar se a data está dentro do intervalo permitido
+                if (lostDate > today || lostDate < '2000-01-01') {
+                    alert('Por favor, insira uma data válida entre 01/01/2000 e hoje.');
+                    event.preventDefault(); // Impede o envio do formulário
+                }
+            });
+        </script>
     </div>
     <!-- Reportar Perdido Section End -->
 

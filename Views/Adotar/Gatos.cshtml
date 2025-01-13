@@ -205,9 +205,6 @@
                 <div class="col-lg-3 col-md-3">
                     <div class="sidebar">
                         <div class="sidebar__categories">
-                            <div class="section-title">
-                                <h4>Filtros</h4>
-                            </div>
                             <!-- Botões para Filtrar e Limpar -->
                             <div class="filter-buttons">
                                 <button id="clear-filters" class="btn btn-primary">Limpar Filtros</button>
@@ -323,14 +320,21 @@
                                     <div class="product__item__text">
                                         <h6><a href="#">@cat.AnimalName</a></h6>
                                         <p>Raça: @cat.Breed | Idade: @cat.AgeRange | Porte: @cat.Size</p>
-                                        <button href="/Sheltered/Details/@cat.IDAnimal" class="adopt-btn">Adotar</button></div>
+                                        @if (cat.IsForAdoption)
+                                        {
+                                            <button class="adopt-btn" onclick="window.location.href='/Sheltered/Details/@cat.IDAnimal'">Adotar</button>
+                                        }
+                                        else
+                                        {
+                                            <button class="btn btn-secondary" disabled>Não Disponível para Adoção</button>
+                                        }
                                     </div>
                                 </div>
+                            </div>
                         }
-
-                   </div>
+                    </div>
                 </div>
-            </div>
+
     </section>
 
     <!-- Adoption Section End -->
