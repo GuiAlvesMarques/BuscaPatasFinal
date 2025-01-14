@@ -280,7 +280,7 @@
                 <!-- Main Adoption Cards -->
                 <div class="col-lg-9 col-md-9">
                     <div class="row">
-                        @foreach (var cat in Model)
+                        @foreach (var cat in Model.Where(c => c.IsForAdoption)) // Filtrar apenas os disponíveis para adoção
                         {
                             <div class="col-lg-4 col-md-6 product-item" data-breed="@cat.Breed" data-age="@cat.AgeRange" data-size="@cat.Size">
                                 <div class="product__item">
@@ -313,29 +313,23 @@
                                                 </li>
                                             }
                                             <li>
-                                                <a href="#" class="like-button"><span class="icon_heart_alt"></span></a>
+                                                <a href="#" class="like-button" data-species-id="@cat.IDSpecies" data-animal-id="@cat.IDAnimal">
+                                                    <span class="icon_heart_alt"></span>
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="product__item__text">
                                         <h6><a href="#">@cat.AnimalName</a></h6>
                                         <p>Raça: @cat.Breed | Idade: @cat.AgeRange | Porte: @cat.Size</p>
-                                        @if (cat.IsForAdoption)
-                                        {
-                                            <button class="adopt-btn" onclick="window.location.href='/Sheltered/Details/@cat.IDAnimal'">Adotar</button>
-                                        }
-                                        else
-                                        {
-                                            <button class="btn btn-secondary" disabled>Não Disponível para Adoção</button>
-                                        }
+                                        <button onclick="window.location.href='/Sheltered/Details/@cat.IDAnimal'" class="adopt-btn">Adotar</button>
                                     </div>
                                 </div>
                             </div>
                         }
                     </div>
                 </div>
-
-    </section>
+   </section>
 
     <!-- Adoption Section End -->
 
@@ -407,6 +401,29 @@
         </div>
     </div>
     <!-- Search End -->
+
+     <script>
+        $(document).on('click', '.like-button', function (e) {
+            e.preventDefault();
+            const speciesId = $(this).data('species-id');
+            const animalId = $(this).data('animal-id');
+
+            $.ajax({
+                url: '/Likes/AddLike',
+                method: 'POST',
+                data: { speciesId: speciesId, animalId: animalId },
+                success: function (response) {
+                    alert(response.message);
+                },
+                error: function (xhr) {
+                    const error = xhr.responseJSON?.message || 'An error occurred.';
+                    alert(error);
+                }
+            });
+        });
+
+    </script>
+
 
 
     <!-- Js Plugins -->

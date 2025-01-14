@@ -30,9 +30,9 @@ namespace BuscaPatasFinal.Models
         public string Diet { get; set; }
         public string Care { get; set; }
         public string Location { get; set; }
-        public byte[]? Image { get; set; } // Armazena a imagem no banco de dados
+        public byte[]? Image { get; set; }
         [NotMapped]
-        public IFormFile UploadedImage { get; set; } // Usado para processar a imagem no formulário
+        public IFormFile UploadedImage { get; set; }
 
     }
 }

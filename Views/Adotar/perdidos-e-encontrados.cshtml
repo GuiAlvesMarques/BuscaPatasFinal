@@ -265,7 +265,8 @@
                                             }
                                             else
                                             {
-                                                <p>Imagem não disponível.</p>
+                                                <img src="~/img/img-adotar.png" alt="Imagem não disponível" />
+
                                             }
                                             <div class="animal-info">
                                                 <h5>@lostAnimal.AnimalName</h5>
@@ -273,7 +274,7 @@
                                                     <strong>Localização:</strong> @lostAnimal.Location <br />
                                                     <strong>Data:</strong> @lostAnimal.LostDate.ToShortDateString() <br />
                                                 </p>
-                                                <a href="@Url.Action("Details", "LostFound", new { id = lostAnimal.IDAnimal })">
+                                                <a href="@Url.Action("DetailsLost", "LostFound", new { id = lostAnimal.IDAnimal })">
                                                     <button class="btn btn-details">Detalhes</button>
                                                 </a>
                                             </div>

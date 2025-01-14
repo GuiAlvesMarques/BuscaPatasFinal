@@ -54,7 +54,7 @@
             </li>
         </ul>
         <div class="offcanvas__logo">
-            <a href="./S-in_index.html"><img src="~/img/logo.png" alt=""></a>
+            <a href="~/index.html"><img src="~/img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__auth">
@@ -67,32 +67,31 @@
             <div class="row">
                 <div class="col-xl-1 col-lg-1">
                     <div class="header__logo">
-                        <a href="./S-in_index.html"><img src="~/img/logo.png" alt=""></a>
+                        <a href="~/index.html"><img src="~/img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-9">
                     <nav class="header__menu">
                         <ul>
                             <li>
-                                <a href="./S-in_adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                                <a href="~/adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
-                                    <li><a href="./S-in_page-caes.html">Cães</a></li>
-                                    <li><a href="./S-in_page-gatos.html">Gatos</a></li>
-                                    <li><a href="./S-in_matchmaking.html">Matchmaking</a></li>
+                                    <li><a href="/Sheltered/AdoptionList?speciesId=1">Cães</a></li>
+                                    <li><a href="/Sheltered/AdoptionList?speciesId=2">Gatos</a></li>
+                                    <li><a href="~/matchmaking.html">Matchmaking</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./S-in_entrega-animal.html">Entrega Animal</a></li>
-                            <li><a href="./S-in_perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                            <li><a href="~/entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
                             <li>
-                                <a href="./S-in_learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                                <a href="~/learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
-                                    <li><a href="./S-in_breed-info.html">Raças & Cuidados</a></li>
-                                    <li><a href="./S-in_faq.html">Perguntas Frequentes</a></li>
+                                    <li><a href="~/breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="~/faq.html">Perguntas Frequentes</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./S-in_partners.html">Parceiros</a></li>
-                            <li><a href="./S-in_ajuda.html">Apoiar</a></li>
-
+                            <li><a href="~/partners.html">Parceiros</a></li>
+                            <li><a href="~/ajuda.html">Apoiar</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -108,10 +107,24 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="S-in_user-profile.html">
+                                <a href="javascript:void(0);" onclick="checkUserProfileAccess()">
                                     <span class="icon_profile" data-bs-toggle="modal"
                                           data-bs-target="#authModal"></span>
                                 </a>
+                                <script>
+                                    function checkUserProfileAccess() {
+                                        fetch('/Account/UserProfile')
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                if (!data.success) {
+                                                    $('#authModal').modal('show');
+                                                } else {
+                                                    window.location.href = '/Account/UserProfile';
+                                                }
+                                            })
+                                            .catch(error => console.error('Error:', error));
+                                    }
+                                </script>
                             </li>
                         </ul>
                     </div>
@@ -129,7 +142,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href="./S-in_index.html"><i class="fa fa-home"></i> Home</a>
+                        <a href="~/index.html"><i class="fa fa-home"></i> Home</a>
                         <span>Perfil</span>
                     </div>
                 </div>
@@ -152,17 +165,14 @@
                 <p><strong>Nome:</strong> @ViewBag.UserName</p>
                 <p><strong>Email:</strong> @ViewBag.UserEmail</p>
                 <p><strong>Telefone:</strong> @ViewBag.UserPhone</p>
-                <p><strong>Endereço:</strong> Rua das Flores, 123, Lisboa</p>
-
                 <!-- Logout Button -->
                 <a href="/Account/Logout" class="logout-button" style="color:red">Log out</a>
             </div>
         </div>
-    </div>
     <!-- User Profile Section End -->
     <!-- Saved Quizzes Section -->
     <div class="card card-perfil shadow-sm mb-5">
-        <a href="S-in_matchmaking.html">
+        <a href="matchmaking.html">
             <div class="card-perfil-header">
                 <h5>Quizzes Guardados</h5>
             </div>
@@ -177,7 +187,7 @@
 
     <!-- Liked Animals Section -->
     <div class="card card-perfil shadow-sm">
-        <a href="S-in_favorito.html">
+        <a href="favorito.html">
             <div class="card-perfil-header">
                 <h5>Animais Marcados como Favoritos</h5>
             </div>
@@ -187,7 +197,7 @@
                 <!-- Animal Card 1 -->
                 <div class="col-md-4">
                     <div class="card animal-card">
-                        <a href="S-in_details-cao.html">
+                        <a href="details-cao.html">
                             <img src="~/img/product/details/luna4.png" class="card-img-top" alt="Dog 1">
                             <div class="card-body">
                                 <h6 class="animal-card-title">Luna</h6>
@@ -197,49 +207,12 @@
                         </a>
                     </div>
                 </div>
-                <!-- Animal Card 2 -->
-                <div class="col-md-4">
-                    <div class="card animal-card">
-                        <a href="S-in_details-cao.html">
-                            <img src="~/img/dogtest2.jpeg" class="card-img-top" alt="Dog 2">
-                            <div class="card-body">
-                                <h6 class="animal-card-title">Max</h6>
-                                <p class="animal-card-text">
-                                <p>Idade: 4 anos<br>Raça: Border Collie<br>Local: Porto</p>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- Animal Card 3 -->
-                <div class="col-md-4">
-                    <div class="card animal-card">
-                        <a href="S-in_details-cao.html">
-                            <img src="~/img/dogtest3.jpeg" class="card-img-top" alt="Dog 3">
-                            <div class="card-body">
-                                <h6 class="animal-card-title">Pantufa</h6>
-                                <p class="animal-card-text">
-                                <p>Idade: 3 anos<br>Raça: Pastor Belga<br>Local: Braga</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- Animal Card 4 -->
-                <div class="col-md-4">
-                    <div class="card animal-card">
-                        <a href="S-in_details-cao.html">
-                            <img src="~/img/product/details/dachshund.png" class="card-img-top" alt="Dog 4">
-                            <div class="card-body">
-                                <h6 class="animal-card-title">Ratito</h6>
-                                <p class="animal-card-text">
-                                <p>Idade: 2 anos<br>Raça: Pastor Alemão<br>Local: Lisboa</p>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
+    </div>
+
+        
+
 
         <!-- Edit Profile Modal -->
         <div class="modal modal-perfil fade" id="modal-perfil-editar" tabindex="-1"
@@ -366,6 +339,7 @@
                 </div>
             </div>
         </div>
+    </div>
         <!-- User Profile Section End -->
         <!-- Footer Section Begin -->
         <footer class="footer">
@@ -374,7 +348,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-7">
                         <div class="footer__about">
                             <div class="footer__logo">
-                                <a href="./S-in_index.html"><img src="~/img/logo.png" alt=""></a>
+                                <a href="~/index.html"><img src="~/img/logo.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -382,10 +356,10 @@
                         <div class="footer__widget">
                             <h6>Serviços</h6>
                             <ul>
-                                <li><a href="S-in_adotar.html">Adotar</a></li>
-                                <li><a href="S-in_entrega-animal.html">Entrega Animal</a></li>
-                                <li><a href="S-in_breed-info.html">Espécies e Raças</a></li>
-                                <li><a href="S-in_perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                                <li><a href="~/adotar.html">Adotar</a></li>
+                                <li><a href="~/entrega-animal.html">Entrega Animal</a></li>
+                                <li><a href="~/breed-info.html">Espécies e Raças</a></li>
+                                <li><a href="~/perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
                             </ul>
                         </div>
                     </div>
@@ -393,10 +367,10 @@
                         <div class="footer__widget">
                             <h6>Sobre Nós</h6>
                             <ul>
-                                <li><a href="S-in_about-us.html">Dinflux</a></li>
-                                <li><a href="S-in_team.html">Equipa BuscaPatas</a></li>
-                                <li><a href="S-in_partners.html">Nossos Parceiros</a></li>
-                                <li><a href="S-in_termos-politicas.html">Termos e Políticas</a></li>
+                                <li><a href="~/about-us.html">Dinflux</a></li>
+                                <li><a href="~/team.html">Equipa BuscaPatas</a></li>
+                                <li><a href="~/partners.html">Nossos Parceiros</a></li>
+                                <li><a href="~/termos-politicas.html">Termos e Políticas</a></li>
                             </ul>
                         </div>
                     </div>
@@ -404,9 +378,9 @@
                         <div class="footer__widget">
                             <h6>Apoio</h6>
                             <ul>
-                                <li><a href="S-in_ajuda.html">Ajuda</a></li>
-                                <li><a href="S-in_abrigos.html">Abrigos</a></li>
-                                <li><a href="S-in_merch.html">Merchandise</a></li>
+                                <li><a href="~/ajuda.html">Ajuda</a></li>
+                                <li><a href="~/abrigos.html">Abrigos</a></li>
+                                <li><a href="~/merch.html">Merchandise</a></li>
                             </ul>
                         </div>
                     </div>

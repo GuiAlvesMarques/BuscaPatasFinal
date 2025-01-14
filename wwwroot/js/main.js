@@ -448,7 +448,6 @@ function addPetDetails(pdf, startY) {
     pdf.text(`Telefone: ${document.getElementById("telefone")?.value || "N/A"}`, 20, startY + 100);
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const searchOverlay = document.querySelector(".search-model");
     const searchCloseSwitch = document.querySelector(".search-close-switch");

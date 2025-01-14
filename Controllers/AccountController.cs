@@ -86,9 +86,7 @@ namespace BuscaPatasFinal.Controllers
                 HttpContext.Session.SetString("Username", user.Username);
                 HttpContext.Session.SetString("PhoneNumber", user.PhoneNumber);
 
-
-                // Successful login
-                return Redirect("/S-in_index.html"); // Redirect to a secured page
+                return RedirectToAction("UserProfile", "Account");
             }
             catch (Exception ex)
             {
@@ -120,11 +118,32 @@ namespace BuscaPatasFinal.Controllers
 
         public IActionResult UserProfile()
         {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                // Usuário não está logado, redirecione para a página de login
+                return RedirectToAction("Index", "Home");
+            }
+
             ViewBag.UserName = HttpContext.Session.GetString("Username") ?? "Unknown User";
             ViewBag.UserEmail = HttpContext.Session.GetString("Email") ?? "No Email";
             ViewBag.UserPhone = HttpContext.Session.GetString("PhoneNumber") ?? "No Phone";
 
             return View();
         }
+
+        [HttpGet]
+        public IActionResult IsLoggedIn()
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Json(new { isLoggedIn = false });
+            }
+
+            var username = HttpContext.Session.GetString("Username");
+            return Json(new { isLoggedIn = true, username });
+        }
+
     }
 }

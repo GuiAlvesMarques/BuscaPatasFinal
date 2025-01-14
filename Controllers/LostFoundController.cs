@@ -238,5 +238,16 @@ namespace BuscaPatasFinal.Controllers
 
             return View("~/Views/Adotar/DetailsFound.cshtml", foundAnimal);
         }
+
+        public IActionResult DetailsLost(int id)
+        {
+            var foundAnimal = _context.Lost.FirstOrDefault(a => a.IDAnimal == id);
+            if (foundAnimal == null)
+            {
+                return NotFound();
+            }
+
+            return View("~/Views/Adotar/DetailsLost.cshtml", foundAnimal);
+        }
     }
 }
