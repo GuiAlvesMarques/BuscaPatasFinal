@@ -20,11 +20,10 @@ builder.Services.AddDistributedMemoryCache(); // Required for session
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Session timeout duration
-    options.Cookie.HttpOnly = true; // Prevent JavaScript access to cookies
-    options.Cookie.IsEssential = true; // Ensures cookies are always sent
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
 });
-
 
 var app = builder.Build();
 
