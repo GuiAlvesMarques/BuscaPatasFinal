@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BuscaPatasFinal.Data;
 using BuscaPatasFinal.Models;
-using BuscaPatasFinal.Data;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BuscaPatasFinal.Controllers
 {
@@ -115,22 +115,42 @@ namespace BuscaPatasFinal.Controllers
             // Redirect to login page
             return RedirectToAction("Index", "Home");
         }
+        [HttpGet]
 
         public IActionResult UserProfile()
         {
             var userId = HttpContext.Session.GetString("UserId");
             if (string.IsNullOrEmpty(userId))
             {
-                // Usuário não está logado, redirecione para a página de login
                 return RedirectToAction("Index", "Home");
             }
 
-            ViewBag.UserName = HttpContext.Session.GetString("Username") ?? "Unknown User";
-            ViewBag.UserEmail = HttpContext.Session.GetString("Email") ?? "No Email";
-            ViewBag.UserPhone = HttpContext.Session.GetString("PhoneNumber") ?? "No Phone";
+            int parsedUserId = int.Parse(userId);
+
+            // Carregar os favoritos do usuário
+            var favorites = from like in _context.Likes
+                            join sheltered in _context.Sheltered
+                            on like.IDAnimal equals sheltered.IDAnimal
+                            where like.IDUser == parsedUserId
+                            select new
+                            {
+                                IDAnimal = sheltered.IDAnimal,
+                                AnimalName = sheltered.AnimalName ?? "Nome desconhecido",
+                                Breed = sheltered.Breed ?? "Raça desconhecida",
+                                AgeRange = sheltered.AgeRange ?? "Desconhecida",
+                                Location = sheltered.Location ?? "Não informado",
+                                Image = sheltered.Image != null ? Convert.ToBase64String(sheltered.Image) : null
+                            };
+
+            ViewBag.Favorites = favorites.ToList(); // Adicionando favoritos ao ViewBag
+
+            ViewBag.UserName = HttpContext.Session.GetString("Username") ?? "Usuário Desconhecido";
+            ViewBag.UserEmail = HttpContext.Session.GetString("Email") ?? "Email Não Informado";
+            ViewBag.UserPhone = HttpContext.Session.GetString("PhoneNumber") ?? "Telefone Não Informado";
 
             return View();
         }
+
 
         [HttpGet]
         public IActionResult IsLoggedIn()

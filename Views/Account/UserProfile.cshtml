@@ -61,6 +61,7 @@
         </div>
     </div>
     <!-- Offcanvas Menu End -->
+    <!-- Offcanvas Menu End -->
     <!-- Header Section Begin -->
     <header class="header">
         <div class="container-fluid">
@@ -98,12 +99,10 @@
                 <div class="col-lg-2">
                     <div class="header__right">
                         <ul class="header__right__widget">
-
                             <li><span class="icon_search search-switch"></span></li>
                             <li>
-                                <a href="#">
+                                <a href="/likes/favorites" id="favoritesIcon">
                                     <span class="icon_heart_alt"></span>
-                                    <div class="tip">2</div>
                                 </a>
                             </li>
                             <li>
@@ -111,20 +110,6 @@
                                     <span class="icon_profile" data-bs-toggle="modal"
                                           data-bs-target="#authModal"></span>
                                 </a>
-                                <script>
-                                    function checkUserProfileAccess() {
-                                        fetch('/Account/UserProfile')
-                                            .then(response => response.json())
-                                            .then(data => {
-                                                if (!data.success) {
-                                                    $('#authModal').modal('show');
-                                                } else {
-                                                    window.location.href = '/Account/UserProfile';
-                                                }
-                                            })
-                                            .catch(error => console.error('Error:', error));
-                                    }
-                                </script>
                             </li>
                         </ul>
                     </div>
@@ -136,6 +121,86 @@
         </div>
     </header>
     <!-- Header Section End -->
+    <!-- Login and Register Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-header">
+                <div class="modal-body d-flex p-0">
+                    <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
+                            aria-label="Close">
+                        &times;
+                    </button>
+
+                    <!-- Left Side - Login/Register Form -->
+                    <div class="w-50 p-5">
+
+                        <form id="loginForm" method="post" action="/Account/Login">
+                            <h3 class="mb-4 text-center" id="authModalLabel">Iniciar Sessão</h3>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Endereço de Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Insira o seu email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Palavra-passe</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Insira a sua palavra-passe" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                            <div class="text-center mt-3">
+                                <small>Não tem conta? <a href="#" id="switchToRegister">Registar</a></small>
+                            </div>
+                        </form>
+
+                        <form id="registerForm" method="post" class="d-none" action="/Account/Register">
+                            <h3 class="mb-4 text-center">Register</h3>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" name="Username" placeholder="Enter your username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="Email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="Password" placeholder="Enter your password" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phoneNumber" class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" id="phoneNumber" name="PhoneNumber" placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="type" class="form-label">Type</label>
+                                <select class="form-control" id="type" name="Type">
+                                    <option value="User">User</option>
+                                    <option value="Admin">Admin</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Register</button>
+                            <div class="text-center mt-3">
+                                <small>Já tem conta? <a href="#" id="switchToLogin">Login</a></small>
+                            </div>
+                        </form>
+
+                        <!-- Placeholder for Popup -->
+                        <div id="popupMessage" class="alert alert-danger d-none"></div>
+
+
+                    </div>
+
+                    <!-- Right Side - Image -->
+                    <div class="w-50 d-none d-md-block">
+                        <img src="~/img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
+                             style="object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- Custom Close Button -->
+                <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <!-- Login Register Model Ends -->
     <!-- Breadcrumb Begin -->
     <div class="breadcrumb-option">
         <div class="container">
@@ -170,49 +235,120 @@
             </div>
         </div>
     <!-- User Profile Section End -->
-    <!-- Saved Quizzes Section -->
-    <div class="card card-perfil shadow-sm mb-5">
-        <a href="matchmaking.html">
-            <div class="card-perfil-header">
-                <h5>Quizzes Guardados</h5>
-            </div>
-        </a>
-        <div class="card-perfil-body">
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">Quiz de Compatibilidade com Gatos</a>
-                <a href="#" class="list-group-item list-group-item-action">Quiz de Raças de Cães</a>
-            </div>
-        </div>
-    </div>
 
-    <!-- Liked Animals Section -->
-    <div class="card card-perfil shadow-sm">
-        <a href="favorito.html">
+        <!-- Liked Animals Section -->
+        <div class="card card-perfil shadow-sm">
             <div class="card-perfil-header">
                 <h5>Animais Marcados como Favoritos</h5>
             </div>
-        </a>
-        <div class="card-perfil-body">
-            <div class="row">
-                <!-- Animal Card 1 -->
-                <div class="col-md-4">
-                    <div class="card animal-card">
-                        <a href="details-cao.html">
-                            <img src="~/img/product/details/luna4.png" class="card-img-top" alt="Dog 1">
-                            <div class="card-body">
-                                <h6 class="animal-card-title">Luna</h6>
-                                <p class="animal-card-text">
-                                <p>Idade: 3 anos<br>Raça: Labrador<br>Local: Lisboa</p>
+            <div class="card-perfil-body">
+                <div class="row">
+                    @if (ViewBag.Favorites != null && ViewBag.Favorites.Count > 0)
+                    {
+                        foreach (var favorite in ViewBag.Favorites)
+                        {
+                            <div class="col-md-4">
+                                <div class="card animal-card">
+                                    <a href="/Sheltered/Details/@favorite.IDAnimal">
+                                        <img src="@(favorite.Image != null ? $"data:image/jpeg;base64,{favorite.Image}" : "~/img/default-image.png")"
+                                             class="card-img-top" alt="@favorite.AnimalName">
+                                        <div class="card-body">
+                                            <h6 class="animal-card-title">@favorite.AnimalName</h6>
+                                            <p class="animal-card-text">
+                                                Idade: @favorite.AgeRange<br>
+                                                Raça: @favorite.Breed<br>
+                                                Local: @favorite.Location
+                                            </p>
+                                            <form action="/Likes/RemoveLike" method="post">
+                                                <input type="hidden" name="animalId" value="@favorite.IDAnimal" />
+                                                <button type="submit" class="btn btn-danger btn-sm">Remover dos Favoritos</button>
+                                            </form>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </a>
-                    </div>
+                        }
+                    }
+                    else
+                    {
+                        <p class="text-center">Nenhum animal marcado como favorito.</p>
+                    }
                 </div>
             </div>
         </div>
-    </div>
 
-        
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Função para carregar os favoritos
+        function loadFavorites() {
+            fetch('/Likes/GetUserFavorites')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const container = document.getElementById('liked-animals');
+                        container.innerHTML = ""; // Limpa os favoritos carregados anteriormente
+
+                        if (data.favorites.length === 0) {
+                            container.innerHTML = "<p class='text-center'>Nenhum animal marcado como favorito.</p>";
+                            return;
+                        }
+
+                        // Renderiza os favoritos dinamicamente
+                        data.favorites.forEach(favorite => {
+                            const card = `
+                                <div class="col-md-4">
+                                    <div class="card animal-card">
+                                        <a href="/Sheltered/Details/${favorite.IDAnimal}">
+                                            <img src="${favorite.Image || '~/img/no-image.png'}" 
+                                                 class="card-img-top" 
+                                                 alt="${favorite.AnimalName}">
+                                            <div class="card-body">
+                                                <h6 class="animal-card-title">${favorite.AnimalName}</h6>
+                                                <p class="animal-card-text">
+                                                    Idade: ${favorite.AgeRange || "Desconhecida"}<br>
+                                                    Raça: ${favorite.Breed || "Desconhecida"}<br>
+                                                    Local: ${favorite.Location || "Não informado"}
+                                                </p>
+                                                <button class="btn btn-danger btn-sm" 
+                                                        onclick="removeFavorite(${favorite.IDAnimal})">
+                                                    Remover dos Favoritos
+                                                </button>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>`;
+                            container.insertAdjacentHTML('beforeend', card);
+                        });
+                    } else {
+                        console.error("Erro ao carregar favoritos:", data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error("Erro ao buscar favoritos:", error);
+                });
+        }
+
+        // Função para remover favoritos
+        function removeFavorite(animalId) {
+            fetch(`/Likes/RemoveLike?animalId=${animalId}`, { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(data.message);
+                        loadFavorites(); // Recarrega a lista de favoritos
+                    } else {
+                        alert("Erro: " + data.message);
+                    }
+                })
+                .catch(error => console.error("Erro ao remover favorito:", error));
+        }
+
+        // Inicializa o carregamento dos favoritos ao carregar a página
+        loadFavorites();
+    });
+</script>
+   
 
         <!-- Edit Profile Modal -->
         <div class="modal modal-perfil fade" id="modal-perfil-editar" tabindex="-1"
@@ -359,7 +495,7 @@
                                 <li><a href="~/adotar.html">Adotar</a></li>
                                 <li><a href="~/entrega-animal.html">Entrega Animal</a></li>
                                 <li><a href="~/breed-info.html">Espécies e Raças</a></li>
-                                <li><a href="~/perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                                <li><a href="~//LostFound/Perdidos">Perdidos e Encontrados</a></li>
                             </ul>
                         </div>
                     </div>

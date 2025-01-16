@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using BuscaPatasFinal.Data;
+﻿using BuscaPatasFinal.Data;
 using BuscaPatasFinal.Models;
-using System;
-using System.Linq;
-using static System.Net.Mime.MediaTypeNames; 
+using Microsoft.AspNetCore.Mvc;
 
 namespace BuscaPatasFinal.Controllers
 {
@@ -92,6 +89,64 @@ namespace BuscaPatasFinal.Controllers
 
             // Retorna a View com o animal encontrado
             return View("~/Views/Adotar/Details.cshtml", animal);
+        }
+
+        [HttpPost]
+        [Route("Sheltered/SubmitSurrender")]
+        public IActionResult SubmitSurrender([FromForm] Surrender surrender)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Log ModelState validation errors for debugging
+                foreach (var key in ModelState.Keys)
+                {
+                    var errors = ModelState[key].Errors;
+                    foreach (var error in errors)
+                    {
+                        Console.WriteLine($"Field: {key}, Error: {error.ErrorMessage}");
+                    }
+                }
+                return Json(new { success = false, message = "Tipo de mensagem inválida", details = ModelState });
+            }
+
+            try
+            {
+                // Process the uploaded image
+                if (surrender.UploadedImage != null && surrender.UploadedImage.Length > 0)
+                {
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        surrender.UploadedImage.CopyTo(memoryStream);
+                        surrender.Image = memoryStream.ToArray(); // Convert the image to byte[]
+                    }
+                }
+                else
+                {
+                    return Json(new { success = false, message = "Imagem é Necessária" });
+                }
+
+                // Save the surrender data to the database
+                _context.Surrender.Add(surrender); // Ensure "Surrender" matches your DbSet name
+                _context.SaveChanges();
+
+                return Json(new { success = true, message = "Animal Submmetido para Entrega Animal com Sucesso" });
+            }
+            catch (Exception ex)
+            {
+                // Log the error details
+                Console.WriteLine($"Error: {ex.Message}");
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine($"Inner Exception: {ex.InnerException.Message}");
+                }
+
+                return Json(new
+                {
+                    success = false,
+                    message = $"Database error: {ex.Message}",
+                    innerException = ex.InnerException?.Message
+                });
+            }
         }
     }
 }

@@ -74,13 +74,13 @@
                                 <li>
                                     <a href="~/adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
-                                        <li><a href="~/page-caes.html">Cães</a></li>
-                                        <li><a href="~/page-gatos.html">Gatos</a></li>
+                                        <li><a href="/Sheltered/AdoptionList?speciesId=1">Cães</a></li>
+                                        <li><a href="/Sheltered/AdoptionList?speciesId=2">Gatos</a></li>
                                         <li><a href="~/matchmaking.html">Matchmaking</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="~/entrega-animal.html">Entrega Animal</a></li>
-                                <li><a href="~/perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                                <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
                                 <li>
                                     <a href="~/learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
@@ -96,21 +96,78 @@
                     </div>
                     <div class="col-lg-2">
                         <div class="header__right">
-                            <ul class="header__right__widget">
-                                <li><span class="icon_search search-switch"></span></li>
-                                <li>
-                                    <a href="#">
-                                        <span class="icon_heart_alt"></span>
-                                        <div class="tip">2</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="icon_profile" data-bs-toggle="modal"
-                                              data-bs-target="#authModal"></span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <ul class="header__right__widget">
+
+                            <li><span class="icon_search search-switch"></span></li>
+                            <li>
+                                <a href="/likes/favorites" id="favoritesIcon">
+                                    <span class="icon_heart_alt"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" onclick="checkUserProfileAccess()">
+                                    <span class="icon_profile" data-bs-toggle="modal"
+                                          data-bs-target="#authModal"></span>
+                                </a>
+                                <script>
+                                    function checkUserProfileAccess() {
+                                        fetch('/Account/IsLoggedIn', {
+                                            method: 'GET',
+                                            headers: {
+                                                'Accept': 'application/json',
+                                            },
+                                        })
+                                            .then(response => {
+                                                if (!response.ok) {
+                                                    throw new Error(`HTTP error! Status: ${response.status}`);
+                                                }
+                                                return response.json();
+                                            })
+                                            .then(data => {
+                                                if (data.isLoggedIn) {
+                                                    // Se o usuário está logado, redireciona para o perfil
+                                                    window.location.href = '/Account/UserProfile';
+                                                } else {
+                                                    // Se não está logado, exibe o modal de login
+                                                    $('#authModal').modal('show');
+                                                }
+                                            })
+                                            .catch(error => {
+                                                console.error('Erro ao verificar o acesso ao perfil:', error);
+                                                alert('Erro ao verificar o acesso ao perfil do usuário.');
+                                            });
+                                    }
+
+                                </script>
+                                <script>
+                                    $(document).ready(function () {
+                                        $("#favoritesIcon").click(function (e) {
+                                            e.preventDefault();
+
+                                            // Faz uma chamada AJAX para verificar login
+                                            $.ajax({
+                                                url: '/Account/IsLoggedIn', // Endpoint para verificar login
+                                                method: 'GET',
+                                                success: function (response) {
+                                                    if (response.isLoggedIn) {
+                                                        // Redireciona para a página de favoritos
+                                                        window.location.href = "/Adotar/Favorito";
+                                                    } else {
+                                                        // Exibe o modal de login
+                                                        $("#authModal").modal('show');
+                                                    }
+                                                },
+                                                error: function () {
+                                                    alert('Erro ao verificar login.');
+                                                }
+                                            });
+                                        });
+                                    });
+                                </script>
+
+
+                            </li>
+                        </ul>
                         </div>
                     </div>
                 </div>
@@ -120,77 +177,146 @@
             </div>
         </header>
         <!-- Header Section End -->
-        <!-- Login and Register Modal -->
-        <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content modal-header">
-                    <div class="modal-body d-flex p-0">
-                        <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
-                                aria-label="Close">
-                            &times;
-                        </button>
-
-                        <!-- Left Side - Login/Register Form -->
-                        <div class="w-50 p-5">
-
-                            <form id="loginForm">
-                                <h3 class="mb-4 text-center" id="authModalLabel">Iniciar Sessão</h3>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Endereço de Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Insira o seu email"
-                                           required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="password" class="form-label">Palavra-passe</label>
-                                    <input type="password" class="form-control" id="password"
-                                           placeholder="Insira a sua palavra-passe" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100">Entrar</button>
-                                <div class="text-center mt-3">
-                                    <small>Não tem conta? <a href="#" id="switchToRegister">Registar</a></small>
-                                </div>
-                            </form>
-
-                            <form id="registerForm" class="d-none">
-                                <h3 class="mb-4 text-center">Registar</h3>
-                                <div class="mb-3">
-                                    <label for="registerName" class="form-label">Nome Completo</label>
-                                    <input type="text" class="form-control" id="registerName"
-                                           placeholder="Insira o seu nome completo" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="registerEmail" class="form-label">Endereço de Email</label>
-                                    <input type="email" class="form-control" id="registerEmail"
-                                           placeholder="Insira o seu email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="registerPassword" class="form-label">Palavra-passe</label>
-                                    <input type="password" class="form-control" id="registerPassword"
-                                           placeholder="Crie uma palavra-passe" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100">Registar</button>
-                                <div class="text-center mt-3">
-                                    <small>Já tem conta? <a href="#" id="switchToLogin">Iniciar Sessão</a></small>
-                                </div>
-                            </form>
-
-
-                        </div>
-
-                        <!-- Right Side - Image -->
-                        <div class="w-50 d-none d-md-block">
-                            <img src="~/img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
-                                 style="object-fit: cover;">
-                        </div>
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-1 col-lg-1">
+                    <div class="header__logo">
+                        <a href="~/index.html"><img src="~/img/logo.png" alt=""></a>
                     </div>
-
-                    <!-- Custom Close Button -->
-                    <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                    <nav class="header__menu">
+                        <ul>
+                            <li>
+                                <a href="~/adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="/Sheltered/AdoptionList?speciesId=1">Cães</a></li>
+                                    <li><a href="/Sheltered/AdoptionList?speciesId=2">Gatos</a></li>
+                                    <li><a href="~/matchmaking.html">Matchmaking</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="~/entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
+                            <li>
+                                <a href="~/learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="~/breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="~/faq.html">Perguntas Frequentes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="~/partners.html">Parceiros</a></li>
+                            <li><a href="~/ajuda.html">Apoiar</a></li>
+                            <li><a href="~/shelters-formulario.html">Backoffice</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <ul class="header__right__widget">
+                            <li><span class="icon_search search-switch"></span></li>
+                            <li>
+                                <a href="/likes/favorites" id="favoritesIcon">
+                                    <span class="icon_heart_alt"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" onclick="checkUserProfileAccess()">
+                                    <span class="icon_profile" data-bs-toggle="modal"
+                                          data-bs-target="#authModal"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
         </div>
-        <!-- Login Register Model Ends -->
+    </header>
+    <!-- Header Section End -->
+    <!-- Login and Register Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-header">
+                <div class="modal-body d-flex p-0">
+                    <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
+                            aria-label="Close">
+                        &times;
+                    </button>
+
+                    <!-- Left Side - Login/Register Form -->
+                    <div class="w-50 p-5">
+
+                        <form id="loginForm" method="post" action="/Account/Login">
+                            <h3 class="mb-4 text-center" id="authModalLabel">Iniciar Sessão</h3>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Endereço de Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Insira o seu email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Palavra-passe</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Insira a sua palavra-passe" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                            <div class="text-center mt-3">
+                                <small>Não tem conta? <a href="#" id="switchToRegister">Registar</a></small>
+                            </div>
+                        </form>
+
+                        <form id="registerForm" method="post" class="d-none" action="/Account/Register">
+                            <h3 class="mb-4 text-center">Register</h3>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" name="Username" placeholder="Enter your username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="Email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="Password" placeholder="Enter your password" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phoneNumber" class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" id="phoneNumber" name="PhoneNumber" placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="type" class="form-label">Type</label>
+                                <select class="form-control" id="type" name="Type">
+                                    <option value="User">User</option>
+                                    <option value="Admin">Admin</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Register</button>
+                            <div class="text-center mt-3">
+                                <small>Já tem conta? <a href="#" id="switchToLogin">Login</a></small>
+                            </div>
+                        </form>
+
+                        <!-- Placeholder for Popup -->
+                        <div id="popupMessage" class="alert alert-danger d-none"></div>
+
+
+                    </div>
+
+                    <!-- Right Side - Image -->
+                    <div class="w-50 d-none d-md-block">
+                        <img src="~/img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
+                             style="object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- Custom Close Button -->
+                <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <!-- Login Register Model Ends -->
 
         <!-- Breadcrumb Begin -->
         <div class="breadcrumb-option">
@@ -276,7 +402,7 @@
                                 <li><a href="adotar.html">Adotar</a></li>
                                 <li><a href="entrega-animal.html">Entrega Animal</a></li>
                                 <li><a href="breed-info.html">Espécies e Raças</a></li>
-                                <li><a href="perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                                <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
                             </ul>
                         </div>
                     </div>

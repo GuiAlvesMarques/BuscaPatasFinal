@@ -25,286 +25,6 @@
       "PackagePath": "staticwebassets\\.vscode\\settings.json"
     },
     {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_about-us.html",
-      "PackagePath": "staticwebassets\\Admin_about-us.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_abrigos.html",
-      "PackagePath": "staticwebassets\\Admin_abrigos.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_adotar.html",
-      "PackagePath": "staticwebassets\\Admin_adotar.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_ajuda.html",
-      "PackagePath": "staticwebassets\\Admin_ajuda.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_blog-details.html",
-      "PackagePath": "staticwebassets\\Admin_blog-details.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_blog.html",
-      "PackagePath": "staticwebassets\\Admin_blog.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_breed-info.html",
-      "PackagePath": "staticwebassets\\Admin_breed-info.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_checkout.html",
-      "PackagePath": "staticwebassets\\Admin_checkout.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_contactos.html",
-      "PackagePath": "staticwebassets\\Admin_contactos.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_details-abrigo.html",
-      "PackagePath": "staticwebassets\\Admin_details-abrigo.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_details-cao-lost.html",
-      "PackagePath": "staticwebassets\\Admin_details-cao-lost.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_details-cao.html",
-      "PackagePath": "staticwebassets\\Admin_details-cao.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_details-merch.html",
-      "PackagePath": "staticwebassets\\Admin_details-merch.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_entrega-animal.html",
-      "PackagePath": "staticwebassets\\Admin_entrega-animal.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_faq.html",
-      "PackagePath": "staticwebassets\\Admin_faq.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_favorito.html",
-      "PackagePath": "staticwebassets\\Admin_favorito.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_index.html",
-      "PackagePath": "staticwebassets\\Admin_index.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_learn.html",
-      "PackagePath": "staticwebassets\\Admin_learn.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_main.html",
-      "PackagePath": "staticwebassets\\Admin_main.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_matchmaking.html",
-      "PackagePath": "staticwebassets\\Admin_matchmaking.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_merch-cover.html",
-      "PackagePath": "staticwebassets\\Admin_merch-cover.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_merch.html",
-      "PackagePath": "staticwebassets\\Admin_merch.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_page-caes.html",
-      "PackagePath": "staticwebassets\\Admin_page-caes.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_page-gatos.html",
-      "PackagePath": "staticwebassets\\Admin_page-gatos.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_partners.html",
-      "PackagePath": "staticwebassets\\Admin_partners.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_perdidos-e-encontrados.html",
-      "PackagePath": "staticwebassets\\Admin_perdidos-e-encontrados.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_reportar-encontrado.html",
-      "PackagePath": "staticwebassets\\Admin_reportar-encontrado.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_reportar-perdido.html",
-      "PackagePath": "staticwebassets\\Admin_reportar-perdido.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_search-result.html",
-      "PackagePath": "staticwebassets\\Admin_search-result.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_shop-cart.html",
-      "PackagePath": "staticwebassets\\Admin_shop-cart.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_shop.html",
-      "PackagePath": "staticwebassets\\Admin_shop.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_team.html",
-      "PackagePath": "staticwebassets\\Admin_team.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_termos-politicas.html",
-      "PackagePath": "staticwebassets\\Admin_termos-politicas.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_thankyou.html",
-      "PackagePath": "staticwebassets\\Admin_thankyou.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Admin_user-profile.html",
-      "PackagePath": "staticwebassets\\Admin_user-profile.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_about-us.html",
-      "PackagePath": "staticwebassets\\S-in_about-us.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_abrigos.html",
-      "PackagePath": "staticwebassets\\S-in_abrigos.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_adotar.html",
-      "PackagePath": "staticwebassets\\S-in_adotar.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_ajuda.html",
-      "PackagePath": "staticwebassets\\S-in_ajuda.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_blog-details.html",
-      "PackagePath": "staticwebassets\\S-in_blog-details.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_blog.html",
-      "PackagePath": "staticwebassets\\S-in_blog.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_breed-info.html",
-      "PackagePath": "staticwebassets\\S-in_breed-info.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_checkout.html",
-      "PackagePath": "staticwebassets\\S-in_checkout.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_contactos.html",
-      "PackagePath": "staticwebassets\\S-in_contactos.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_details-abrigo.html",
-      "PackagePath": "staticwebassets\\S-in_details-abrigo.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_details-cao-lost.html",
-      "PackagePath": "staticwebassets\\S-in_details-cao-lost.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_details-cao.html",
-      "PackagePath": "staticwebassets\\S-in_details-cao.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_details-merch.html",
-      "PackagePath": "staticwebassets\\S-in_details-merch.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_entrega-animal.html",
-      "PackagePath": "staticwebassets\\S-in_entrega-animal.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_faq.html",
-      "PackagePath": "staticwebassets\\S-in_faq.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_favorito.html",
-      "PackagePath": "staticwebassets\\S-in_favorito.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_index.html",
-      "PackagePath": "staticwebassets\\S-in_index.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_learn.html",
-      "PackagePath": "staticwebassets\\S-in_learn.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_main.html",
-      "PackagePath": "staticwebassets\\S-in_main.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_matchmaking.html",
-      "PackagePath": "staticwebassets\\S-in_matchmaking.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_merch-cover.html",
-      "PackagePath": "staticwebassets\\S-in_merch-cover.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_merch.html",
-      "PackagePath": "staticwebassets\\S-in_merch.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_page-caes.html",
-      "PackagePath": "staticwebassets\\S-in_page-caes.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_page-gatos.html",
-      "PackagePath": "staticwebassets\\S-in_page-gatos.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_partners.html",
-      "PackagePath": "staticwebassets\\S-in_partners.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_perdidos-e-encontrados.html",
-      "PackagePath": "staticwebassets\\S-in_perdidos-e-encontrados.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_reportar-encontrado.html",
-      "PackagePath": "staticwebassets\\S-in_reportar-encontrado.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_reportar-perdido.html",
-      "PackagePath": "staticwebassets\\S-in_reportar-perdido.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_search-result.html",
-      "PackagePath": "staticwebassets\\S-in_search-result.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_shop-cart.html",
-      "PackagePath": "staticwebassets\\S-in_shop-cart.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_shop.html",
-      "PackagePath": "staticwebassets\\S-in_shop.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_team.html",
-      "PackagePath": "staticwebassets\\S-in_team.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_termos-politicas.html",
-      "PackagePath": "staticwebassets\\S-in_termos-politicas.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_thankyou.html",
-      "PackagePath": "staticwebassets\\S-in_thankyou.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\S-in_user-profile.html",
-      "PackagePath": "staticwebassets\\S-in_user-profile.html"
-    },
-    {
       "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\Source\\Magnific-Popup-master.zip",
       "PackagePath": "staticwebassets\\Source\\Magnific-Popup-master.zip"
     },
@@ -349,14 +69,6 @@
       "PackagePath": "staticwebassets\\ajuda.html"
     },
     {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\blog-details.html",
-      "PackagePath": "staticwebassets\\blog-details.html"
-    },
-    {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\blog.html",
-      "PackagePath": "staticwebassets\\blog.html"
-    },
-    {
       "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\breed-info.html",
       "PackagePath": "staticwebassets\\breed-info.html"
     },
@@ -391,6 +103,10 @@
     {
       "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\css\\magnific-popup.css",
       "PackagePath": "staticwebassets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\css\\multiple-selection.css",
+      "PackagePath": "staticwebassets\\css\\multiple-selection.css"
     },
     {
       "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\css\\owl.carousel.min.css",
@@ -1267,6 +983,10 @@
     {
       "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\js\\register.js",
       "PackagePath": "staticwebassets\\js\\register.js"
+    },
+    {
+      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
     },
     {
       "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\js\\site.js",
