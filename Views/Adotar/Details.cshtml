@@ -269,7 +269,8 @@
                                 <button class="btn btn-secondary" disabled>Não Disponível para Adoção</button>
                             }
                             <a href="#"
-                               class="like-button @(ViewData["UserLiked"] != null && (bool)ViewData["UserLiked"] ? "liked" : "")"
+                               class="like-button"
+                               data-species-id="@Model.IDSpecies"
                                data-animal-id="@Model.IDAnimal">
                                 <span class="icon_heart_alt"></span>
                             </a>
@@ -412,55 +413,40 @@
         </div>
         <!-- Search End -->
         <!-- Js Plugins -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const likeButtons = document.querySelectorAll(".like-button")
+        <script>
+        $(document).on('click', '.like-button', function (e) {
+            e.preventDefault();
 
-            likeButtons.forEach((likeButton) => {
-                likeButton.addEventListener("click", function (e) {
-                    e.preventDefault();
+            // Captura os IDs do animal e da espécie
+            const animalId = $(this).data('animal-id');
+            const speciesId = $(this).data('species-id');
 
-                    // Retrieve IDAnimal from the button's data attribute
-                    const idAnimal = likeButton.getAttribute("data-idanimal");
+            // Verifique se o ID do animal está presente
+            if (!animalId) {
+                alert('ID do animal não encontrado.');
+                return;
+            }
 
-                    // Check if the button is already "liked"
-                    const isLiked = likeButton.classList.contains("liked");
-
-                    // Define the URL based on the action
-                    const url = isLiked ? "/Likes/RemoveLike" : "/Likes/AddLike";
-
-                    // Prepare request data
-                    const requestData = { idAnimal: idAnimal };
-
-                    // Send AJAX request
-                    fetch(url, {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify(requestData),
-                    })
-                        .then((response) => response.json())
-                        .then((data) => {
-                            if (data.success) {
-                                // Toggle the "liked" class
-                                console.log("ID do Animal:", animalId);
-                                likeButton.classList.toggle("liked");
-
-                                const action = isLiked ? "removido dos favoritos" : "adicionado aos favoritos";
-                                alert(`Animal ${action} com sucesso.`);
-                            } else {
-                                alert(data.message || "Erro ao processar a solicitação.");
-                            }
-                        })
-                        .catch((error) => {
-                            console.error("Erro ao realizar a requisição:", error);
-                            alert("Ocorreu um erro ao processar sua solicitação.");
-                        });
-                });
+            // Envia o pedido AJAX para adicionar o "like"
+            $.ajax({
+                url: '/Likes/AddLike',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ IDAnimal: animalId, IDSpecies: speciesId }),
+                success: function (response) {
+                    if (response.success) {
+                        alert('Animal adicionado aos favoritos com sucesso.');
+                    } else {
+                        alert(response.message || 'Não foi possível adicionar aos favoritos.');
+                    }
+                },
+                error: function (xhr) {
+                    const error = xhr.responseJSON?.message || 'Ocorreu um erro.';
+                    alert(error);
+                }
             });
         });
-    </script>
+        </script>
 
 
         <script src="~/js/jquery-3.3.1.min.js"></script>
