@@ -325,7 +325,7 @@
                 <!-- Main Content (Dynamic Cards) -->
                 <div class="col-lg-9 col-md-9">
                     <div class="row">
-                        @foreach (var dog in Model)
+                        @foreach (var dog in Model.Where(d => d.IsForAdoption)) // Filtrar apenas os disponíveis para adoção
                         {
                             <div class="col-lg-4 col-md-6 product-item" data-breed="@dog.Breed" data-age="@dog.AgeRange" data-size="@dog.Size">
                                 <div class="product__item">
@@ -358,28 +358,23 @@
                                                 </li>
                                             }
                                             <li>
-                                                <a href="#" class="like-button"><span class="icon_heart_alt"></span></a>
+                                                <a href="#" class="like-button" data-species-id="@dog.IDSpecies" data-animal-id="@dog.IDAnimal">
+                                                    <span class="icon_heart_alt"></span>
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="product__item__text">
                                         <h6><a href="#">@dog.AnimalName</a></h6>
                                         <p>Raça: @dog.Breed | Idade: @dog.AgeRange | Porte: @dog.Size</p>
-                                        @if (dog.IsForAdoption)
-                                        {
-                                            <button onclick="window.location.href='/Sheltered/Details/@dog.IDAnimal'" class="adopt-btn">Adotar</button>
-                                        }
-                                        else
-                                        {
-                                            <button class="btn btn-secondary" disabled>Não Disponível para Adoção</button>
-                                        }
-                                    </div>
+                                        <button onclick="window.location.href='/Sheltered/Details/@dog.IDAnimal'" class="adopt-btn">Adotar</button>
                                     </div>
                                 </div>
+                            </div>
                         }
-
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -449,6 +444,29 @@
         </div>
     </div>
     <!-- Search End -->
+
+    <script>
+        $(document).on('click', '.like-button', function (e) {
+            e.preventDefault();
+            const speciesId = $(this).data('species-id');
+            const animalId = $(this).data('animal-id');
+
+            $.ajax({
+                url: '/Likes/AddLike',
+                method: 'POST',
+                data: { speciesId: speciesId, animalId: animalId },
+                success: function (response) {
+                    alert(response.message);
+                },
+                error: function (xhr) {
+                    const error = xhr.responseJSON?.message || 'An error occurred.';
+                    alert(error);
+                }
+            });
+        });
+
+    </script>
+
     <!-- JS Scripts -->
     <script src="~/js/jquery-3.3.1.min.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
