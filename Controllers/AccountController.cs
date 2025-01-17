@@ -127,22 +127,23 @@ namespace BuscaPatasFinal.Controllers
 
             int parsedUserId = int.Parse(userId);
 
-            // Carregar os favoritos do usuário
-            var favorites = from like in _context.Likes
-                            join sheltered in _context.Sheltered
-                            on like.IDAnimal equals sheltered.IDAnimal
-                            where like.IDUser == parsedUserId
-                            select new
-                            {
-                                IDAnimal = sheltered.IDAnimal,
-                                AnimalName = sheltered.AnimalName ?? "Nome desconhecido",
-                                Breed = sheltered.Breed ?? "Raça desconhecida",
-                                AgeRange = sheltered.AgeRange ?? "Desconhecida",
-                                Location = sheltered.Location ?? "Não informado",
-                                Image = sheltered.Image != null ? Convert.ToBase64String(sheltered.Image) : null
-                            };
+            var userFavorites = from like in _context.Likes
+                                join sheltered in _context.Sheltered
+                                on like.IDAnimal equals sheltered.IDAnimal
+                                where like.IDUser == parsedUserId
+                                select new
+                                {
+                                    IDAnimal = sheltered.IDAnimal,
+                                    IDSpecies = like.IDSpecies, // Add this
+                                    AnimalName = sheltered.AnimalName ?? "Unknown",
+                                    Breed = sheltered.Breed ?? "Unknown",
+                                    AgeRange = sheltered.AgeRange ?? "Unknown",
+                                    Location = sheltered.Location ?? "Not provided",
+                                    Image = sheltered.Image != null ? Convert.ToBase64String(sheltered.Image) : null
+                                };
 
-            ViewBag.Favorites = favorites.ToList(); // Adicionando favoritos ao ViewBag
+
+            ViewBag.Favorites = userFavorites.ToList(); // Adicionando favoritos ao ViewBag
 
             ViewBag.UserName = HttpContext.Session.GetString("Username") ?? "Usuário Desconhecido";
             ViewBag.UserEmail = HttpContext.Session.GetString("Email") ?? "Email Não Informado";

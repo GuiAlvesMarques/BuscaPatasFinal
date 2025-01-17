@@ -3679,6 +3679,7 @@ body.showCart .container{
 }
 
 .product__hover li a {
+	margin-left: 10px;
 	font-size: 18px;
 	color: #181307;
 	display: block;
@@ -4602,6 +4603,7 @@ body.showCart .container{
 	position: relative;
 	cursor: pointer;
 	transition: all 0.3s ease;
+	margin-left: 10px;
 }
 
 .like-button .icon_heart_alt {

@@ -76,7 +76,6 @@ namespace BuscaPatasFinal.Controllers
             // Return the appropriate view with the list of animals
             return View(viewName, animals);
         }
-
         [HttpGet]
         public IActionResult Details(int id)
         {
@@ -86,6 +85,21 @@ namespace BuscaPatasFinal.Controllers
             {
                 return NotFound(); // Retorna uma página 404 caso o animal não exista
             }
+
+            // Verifica se o usuário está logado
+            var userId = HttpContext.Session.GetString("UserId");
+            bool userLiked = false;
+
+            if (!string.IsNullOrEmpty(userId))
+            {
+                int parsedUserId = int.Parse(userId);
+
+                // Verifica se o usuário curtiu o animal
+                userLiked = _context.Likes.Any(l => l.IDUser == parsedUserId && l.IDAnimal == id);
+            }
+
+            // Adiciona a informação sobre curtidas ao ViewData
+            ViewData["UserLiked"] = userLiked;
 
             // Retorna a View com o animal encontrado
             return View("~/Views/Adotar/Details.cshtml", animal);

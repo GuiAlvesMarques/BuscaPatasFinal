@@ -288,7 +288,9 @@
                             <h5 class="card-title">@dog.AnimalName</h5>
                             <p class="card-text">Raça: @dog.Breed<br>Idade: @dog.AgeRange<br>Local: @dog.Location</p>
                             <a href="/Sheltered/Details/@dog.IDAnimal" class="btn btn-primary">Ver Perfil</a>
-                            <button class="btn btn-danger remove-favorite" data-species-id="@dog.IDSpecies" data-animal-id="@dog.IDAnimal">Remover</button>
+                            <button class="btn btn-danger remove-favorite" data-animal-id="@dog.IDAnimal" data-species-id="@dog.IDSpecies">
+                                Remover
+                            </button>
 
                         </div>
                     </div>
@@ -296,31 +298,6 @@
             }
         </div>
     </div>
-
-    <script>
-        $(document).on('click', '.remove-favorite', function () {
-            const speciesId = $(this).data('species-id');
-            const animalId = $(this).data('animal-id');
-
-            $.ajax({
-                url: '/Likes/RemoveLike',
-                method: 'POST',
-                data: { speciesId: speciesId, animalId: animalId },
-                success: function (response) {
-                    if (response.success) {
-                        alert(response.message);
-                        // Opcional: Remova o cartão correspondente da interface
-                        location.reload(); // Atualize a página
-                    } else {
-                        alert(response.message);
-                    }
-                },
-                error: function (xhr) {
-                    alert('Erro ao remover dos favoritos. Tente novamente.');
-                }
-            });
-        });
-
     </script>
 
     <!-- Footer Section Begin -->
@@ -388,6 +365,34 @@
         </div>
     </div>
     <!-- Search End -->
+
+
+    <script>
+            $(document).on('click', '.remove-favorite', function () {
+                    const speciesId = $(this).data('species-id');
+            const animalId = $(this).data('animal-id');
+
+            $.ajax({
+                url: '/Likes/RemoveLike',
+            method: 'POST',
+            data: {speciesId: speciesId, animalId: animalId },
+            success: function (response) {
+                            if (response.success) {
+                alert(response.message);
+            // Opcional: Remova o cartão correspondente da interface
+            location.reload(); // Atualize a página
+                            } else {
+                alert(response.message);
+                            }
+                        },
+            error: function (xhr) {
+                alert('Erro ao remover dos favoritos. Tente novamente.');
+                        }
+                    });
+                });
+
+    </script>
+t>
     <!-- Js Plugins -->
     <script src="~/js/jquery-3.3.1.min.js"></script>
     <script src="~/js/bootstrap.min.js"></script>

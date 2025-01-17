@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NwffsDsnK8hQTaOvmx7UI1xtuMq08i+fsOdmPTxcGC8=",
+  "Hash": "6OOqWxntXn0+dmRS4w2qWGcGHY89Sk9vuAML0XQGpLw=",
   "Source": "BuscaPatasFinal",
   "BasePath": "_content/BuscaPatasFinal",
   "Mode": "Default",
@@ -642,25 +642,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
-      "Identity": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\favorito.html",
-      "SourceId": "BuscaPatasFinal",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\",
-      "BasePath": "_content/BuscaPatasFinal",
-      "RelativePath": "favorito.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favorito.html"
     },
     {
       "Identity": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\fonts\\ElegantIcons.eot",

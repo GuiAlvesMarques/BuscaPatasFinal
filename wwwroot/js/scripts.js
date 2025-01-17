@@ -50,3 +50,4 @@ document.getElementById("favoritesIcon").addEventListener("click", function (e) 
             alert("Ocorreu um erro ao tentar verificar o login.");
         });
 });
+
