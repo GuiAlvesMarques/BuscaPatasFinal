@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6OOqWxntXn0+dmRS4w2qWGcGHY89Sk9vuAML0XQGpLw=",
+  "Hash": "SVUUQJlw9FN9sTW8AxP+nrC/csp+hDllVyOY5Url2y0=",
   "Source": "BuscaPatasFinal",
   "BasePath": "_content/BuscaPatasFinal",
   "Mode": "Default",
@@ -224,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ajuda.html"
+    },
+    {
+      "Identity": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\animal-formulario.html",
+      "SourceId": "BuscaPatasFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\",
+      "BasePath": "_content/BuscaPatasFinal",
+      "RelativePath": "animal-formulario.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\animal-formulario.html"
     },
     {
       "Identity": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\breed-info.html",
@@ -6325,12 +6344,12 @@
       "OriginalItemSpec": "wwwroot\\search-result.html"
     },
     {
-      "Identity": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\shelters-formulario.html",
+      "Identity": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\shelter-formulario.html",
       "SourceId": "BuscaPatasFinal",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\",
       "BasePath": "_content/BuscaPatasFinal",
-      "RelativePath": "shelters-formulario.html",
+      "RelativePath": "shelter-formulario.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -6341,7 +6360,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\shelters-formulario.html"
+      "OriginalItemSpec": "wwwroot\\shelter-formulario.html"
     },
     {
       "Identity": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\shop.html",

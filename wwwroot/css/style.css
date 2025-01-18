@@ -7108,10 +7108,12 @@ body.showCart .container{
 	border-color: #c3e6cb;
 }
 
+#shelter-card {
+	padding: 10px;
+}
 /*---------------------
   Animal Perdido
 -----------------------*/
-
 .lost-form-container {
 	background-color: #ffffff;
 	padding: 40px;

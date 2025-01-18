@@ -59,7 +59,7 @@ namespace BuscaPatasFinal.Models
 
         [NotMapped]
         public IFormFile UploadedImage { get; set; } // Para o arquivo enviado
-        public byte[]? Image { get; set; }           // Para armazenar no banco
+        public byte[]? Image { get; set; } 
 
 
 

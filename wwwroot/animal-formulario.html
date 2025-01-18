@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Entrega Animal</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/multiple-selection.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    </head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <ul class="offcanvas__widget">
+            <li>
+                <a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
+            </li>
+            <li><span class="icon_search search-switch"></span></li>
+            <li>
+                <a href="#">
+                    <span class="icon_heart_alt"></span>
+                    <div class="tip">2</div>
+                </a>
+            </li>
+        </ul>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-1 col-lg-1">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                    <nav class="header__menu">
+                        <ul>
+                            <li>
+                                <a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="/Sheltered/AdoptionList?speciesId=1">Cães</a></li>
+                                    <li><a href="/Sheltered/AdoptionList?speciesId=2">Gatos</a></li>
+                                    <li><a href="./matchmaking.html">Matchmaking</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
+                            <li>
+                                <a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="./breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="./faq.html">Perguntas Frequentes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./partners.html">Parceiros</a></li>
+                            <li><a href="./ajuda.html">Apoiar</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <ul class="header__right__widget">
+
+                            <li><span class="icon_search search-switch"></span></li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon_heart_alt"></span>
+                                    <div class="tip">2</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon_profile" data-bs-toggle="modal"
+                                          data-bs-target="#authModal"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+    <!-- Login and Register Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-header">
+                <div class="modal-body d-flex p-0">
+                    <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
+                            aria-label="Close">
+                        &times;
+                    </button>
+
+                    <!-- Left Side - Login/Register Form -->
+                    <div class="w-50 p-5">
+
+                        <form id="loginForm">
+                            <h3 class="mb-4 text-center" id="authModalLabel">Iniciar Sessão</h3>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Endereço de Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Insira o seu email"
+                                       required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Palavra-passe</label>
+                                <input type="password" class="form-control" id="password"
+                                       placeholder="Insira a sua palavra-passe" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                            <div class="text-center mt-3">
+                                <small>Não tem conta? <a href="#" id="switchToRegister">Registar</a></small>
+                            </div>
+                        </form>
+
+                        <form id="registerForm" class="d-none">
+                            <h3 class="mb-4 text-center">Registar</h3>
+                            <div class="mb-3">
+                                <label for="registerName" class="form-label">Nome Completo</label>
+                                <input type="text" class="form-control" id="registerName"
+                                       placeholder="Insira o seu nome completo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerEmail" class="form-label">Endereço de Email</label>
+                                <input type="email" class="form-control" id="registerEmail"
+                                       placeholder="Insira o seu email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label">Palavra-passe</label>
+                                <input type="password" class="form-control" id="registerPassword"
+                                       placeholder="Crie uma palavra-passe" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Registar</button>
+                            <div class="text-center mt-3">
+                                <small>Já tem conta? <a href="#" id="switchToLogin">Iniciar Sessão</a></small>
+                            </div>
+                        </form>
+
+
+                    </div>
+
+                    <!-- Right Side - Image -->
+                    <div class="w-50 d-none d-md-block">
+                        <img src="img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
+                             style="object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- Custom Close Button -->
+                <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <!-- Login Register Model Ends -->
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                        <span>Entrega Animal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+    <!-- Formulário de Entrega de Animal -->
+    <section class="spad">
+
+        <section class="spad-sheltered-form">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2>Formulário de Registro de Animal na Plataforma</h2>
+                        <p>Preencha os detalhes abaixo para registrar o animal no sistema do BuscaPatas.</p>
+                        <form action="/Sheltered/RegisterSheltered" method="post" enctype="multipart/form-data" class="animal-form">
+                            <div class="row">
+                                <!-- Informações Gerais -->
+                                <div class="col-lg-12">
+                                    <h4>Informações Gerais</h4>
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="text" name="animal_name" placeholder="Nome do Animal" required>
+                                </div>
+                                <div class="col-lg-6">
+                                    <select name="animal_species" id="animal_species" required>
+                                        <option value="" disabled selected>Espécie</option>
+                                        <option value="1" id="dog">Cachorro</option>
+                                        <option value="2" id="cat">Gato</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6">
+                                    <select name="animal_sex" required>
+                                        <option value="" disabled selected>Sexo</option>
+                                        <option value="male">Macho</option>
+                                        <option value="female">Fêmea</option>
+                                        <option value="hermaphrodite">Hermafrodita</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6" id="dog_size_container" style="display: block;">
+                                    <select name="animal_size" required>
+                                        <option value="" disabled selected>Porte</option>
+                                        <option value="mini">Mini (até 5kg)</option>
+                                        <option value="pequeno">Pequeno (5-10kg)</option>
+                                        <option value="medio">Médio (10-20kg)</option>
+                                        <option value="grande">Grande (20-35kg)</option>
+                                        <option value="gigante">Gigante (acima de 35kg)</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4" id="cat_size_container" style="display: none;">
+                                    <select name="animal_size" required>
+                                        <option value="" disabled selected>Porte</option>
+                                        <option value="pequeno">Pequeno (até 3kg)</option>
+                                        <option value="medio">Médio (3-5kg)</option>
+                                        <option value="grande">Grande (5-7kg)</option>
+                                        <option value="gigante">Gigante (acima de 7kg)</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6" id="dog_breed_container" style="display: block;">
+                                    <select name="dog_breed[]" multiple="multiple" class="select2" required>
+                                        <option value="SRD">SRD (Sem Raça Definida)</option>
+                                        <option value="beagle">Beagle</option>
+                                        <option value="bulldog">Bulldog</option>
+                                        <option value="golden_retriever">Golden Retriever</option>
+                                        <option value="german_shepherd">Pastor Alemão</option>
+                                        <option value="labrador">Labrador</option>
+                                        <option value="poodle">Poodle</option>
+                                        <!-- adicionar todas as raças aqui -->
+                                    </select>
+                                </div>
+                                <div class="col-lg-6" id="cat_breed_container" style="display: none;">
+                                    <select name="cat_breed[]" multiple="multiple" class="select2" required>
+                                        <option value="SRD">SRD (Sem Raça Definida)</option>
+                                        <option value="persian">Persa</option>
+                                        <option value="siamese">Siamês</option>
+                                        <!-- adicionar todas as raças aqui -->
+                                    </select>
+                                </div>
+                                <div class="col-lg-6" id="dog_fur_container" style="display: block;">
+                                    <select name="animal_fur" required>
+                                        <option value="" disabled selected>Tipo de Pelo</option>
+                                        <option value="curto-liso">Curto e liso</option>
+                                        <option value="curto-aspero">Curto e áspero</option>
+                                        <option value="duplo-curto">Pelo duplo curto</option>
+                                        <option value="duplo-longo">Pelo duplo longo</option>
+                                        <option value="denso">Pelagem com subpelo espesso</option>
+                                        <option value="longo-liso">Longo e liso</option>
+                                        <option value="longo-ondulado">Longo e ondulado</option>
+                                        <option value="longo-encaracolado">Longo e encaracolado</option>
+                                        <option value="sem-pelo">Sem pelo</option>
+                                        <option value="duro-arame">Duro ou de arame</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6" id="cat_fur_container" style="display: none;">
+                                    <select name="animal_fur" required>
+                                        <option value="" disabled selected>Tipo de Pelo</option>
+                                        <option value="curto-liso">Curto e liso</option>
+                                        <option value="denso-curto">Pelagem densa curta</option>
+                                        <option value="longo-liso">Longo e liso</option>
+                                        <option value="ondulado">Ondulado ou cacheado</option>
+                                        <option value="semi-longo">Semi-longo com subpelo</option>
+                                        <option value="sem-pelo">Sem pelo</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="animal_images">Data de Nascimento</label>
+                                    <input type="date" name="birthday" required>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="animal_images">Data de Chegada</label>
+                                    <input type="date" name="arrival_date" required>
+                                </div>
+                                <div class="col-lg-4 checkboxes general_info">
+                                    <input type="checkbox" name="is_hypoallergenic" value="1">
+                                    <label>É Hipoalergénico(a)</label>
+                                </div>
+                                <div class="col-lg-4 checkboxes general_info">
+                                    <input type="checkbox" name="isforadoption" value="1">
+                                    <label>Disponível para Adoção</label>
+                                </div>
+                                <div class="col-lg-4 checkboxes general_info">
+                                    <input type="checkbox" name="isforfoster" value="1">
+                                    <label>Disponível para FAT</label>
+                                </div>
+                                <!-- Informações de Saúde -->
+                                <div class="col-lg-12 ">
+                                    <h4>Informações de Saúde</h4>
+                                </div>
+                                <div class="col-lg-3 checkboxes">
+                                    <input type="checkbox" name="diet" value="1">
+                                    <label class="smaller_checks">Dieta Especial</label>
+                                </div>
+                                <div class="col-lg-3 checkboxes">
+                                    <input type="checkbox" id="is_sick" name="is_sick" value="1">
+                                    <label class="smaller_checks">Está Doente</label>
+                                </div>
+                                <div class="col-lg-3 checkboxes">
+                                    <input type="checkbox" name="is_handicap" value="1">
+                                    <label class="smaller_checks">É Amputado(a)</label>
+                                </div>
+                                <div class="col-lg-3 checkboxes">
+                                    <input type="checkbox" name="is_blind" value="1">
+                                    <label class="smaller_checks">É Cego(a)</label>
+                                </div>
+                                <div class="col-lg-12" id="health_status">
+                                    <textarea name="health_status" placeholder="Descreva o estado de saúde do animal" rows="4" cols="50"></textarea>
+                                </div>
+                                <!-- Informações do Local -->
+                                <div class="col-lg-12">
+                                    <h4>Informações do Local</h4>
+                                </div>
+                                <div class="col-lg-12">
+                                    <select name="foster_or_shelter" id="foster_or_shelter" required>
+                                        <option value="" disabled selected>Selecione o Local</option>
+                                        <option value="shelter" id="shelter">No abrigo</option>
+                                        <option value="foster" id="foster">Em FAT</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6" id="sector_id" required>
+                                    <input type="number" name="sector_id" placeholder="ID do Setor" required>
+                                </div>
+                                <!-- Informações do Abrigo -->
+                                <div class="col-lg-6" id="sector_name" style="display: none;">
+                                    <input type="text" name="sector_name" placeholder="Nome do Setor" required>
+                                </div>
+                                <div class="col-lg-6" id="kennel_number" style="display: none;">
+                                    <input type="text" name="kennel_number" placeholder="Número da Box" required>
+                                </div>
+                                <!-- Informações da FAT -->
+                                <div class="col-lg-6" id="foster_name" style="display: none;">
+                                    <input type="text" name="foster_name" placeholder="Nome da FAT" required>
+                                </div>
+                                <div class="col-lg-6" id="foster_email" style="display: none;">
+                                    <input type="email" name="foster_email" placeholder="Email da FAT" required>
+                                </div>
+                                <div class="col-lg-6" id="foster_address" style="display: none;">
+                                    <input type="text" name="foster_address" placeholder="Endereço" required>
+                                </div>
+                                <div class="col-lg-6" id="foster_phone" style="display: none;">
+                                    <input type="text" name="foster_phone" placeholder="Telefone" required>
+                                </div>
+                                <!-- Atributos do Comportamento -->
+                                <div class="col-lg-12">
+                                    <h4>Atributos do Comportamento</h4>
+                                </div>
+                                <div class="col-lg-4 behaviour_info">
+                                    <label>Energia</label>
+                                    <input type="number" name="energy" min="1" max="5" placeholder="1-5">
+                                </div>
+                                <div class="col-lg-4 behaviour_info">
+                                    <label>Independência</label>
+                                    <input type="number" name="independence" min="1" max="5" placeholder="1-5">
+                                </div>
+                                <div class="col-lg-4 behaviour_info">
+                                    <label>Carência</label>
+                                    <input type="number" name="neediness" min="1" max="5" placeholder="1-5">
+                                </div>
+                                <div class="col-lg-4 behaviour_info">
+                                    <label>Gosto por Brincar</label>
+                                    <input type="number" name="playfulness" min="1" max="5" placeholder="1-5">
+                                </div>
+                                <div class="col-lg-4 behaviour_info">
+                                    <label>Calma</label>
+                                    <input type="number" name="calmness" min="1" max="5" placeholder="1-5">
+                                </div>
+                                <div class="col-lg-4 behaviour_info">
+                                    <label>Medo</label>
+                                    <input type="number" name="fear" min="1" max="5" placeholder="1-5">
+                                </div>
+                                <div class="col-lg-4 behaviour_info">
+                                    <label>Obediência</label>
+                                    <input type="number" name="behaviour" min="1" max="5" placeholder="1-5">
+                                </div>
+                                <div class="col-lg-4 checkboxes">
+                                    <input type="checkbox" name="is_trained" value="1">
+                                    <label>Sabe onde fazer xixi</label>
+                                </div>
+                                <div class="col-lg-4 checkboxes">
+                                    <input type="checkbox" name="is_vocal" value="1">
+                                    <label>É Vocal</label>
+                                </div>
+                                <!-- Interações com Outros Animais -->
+                                <div class="col-lg-12">
+                                    <h4>Interações</h4>
+                                </div>
+                                <div class="col-lg-3 checkboxes">
+                                    <input type="checkbox" name="reactive_dogs" value="1">
+                                    <label>Reage a Cães</label>
+                                </div>
+                                <div class="col-lg-3 checkboxes">
+                                    <input type="checkbox" name="reactive_cats" value="1">
+                                    <label>Reage a Gatos</label>
+                                </div>
+                                <div class="col-lg-3 checkboxes">
+                                    <input type="checkbox" name="reactive_children" value="1">
+                                    <label>Reage a Crianças</label>
+                                </div>
+                                <!-- Upload de Imagens -->
+                                <div class="col-lg-12">
+                                    <h4>Upload de Imagens</h4>
+                                </div>
+                                <div class="col-lg-12">
+                                    <label for="animal_images">Envie uma imagem do animal:</label>
+                                    <input type="file" name="animal_images[]" id="animal_images" accept="image/*" multiple
+                                           required>
+                                </div>
+                                <!-- Botão de Envio -->
+                                <div class="col-lg-12 text-center">
+                                    <button type="submit" class="site-btn">Submeter</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- End of the Form -->
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-7">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-5">
+                    <div class="footer__widget">
+                        <h6>Serviços</h6>
+                        <ul>
+                            <li><a href="adotar.html">Adotar</a></li>
+                            <li><a href="entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="breed-info.html">Espécies e Raças</a></li>
+                            <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer__widget">
+                        <h6>Sobre Nós</h6>
+                        <ul>
+                            <li><a href="about-us.html">Dinflux</a></li>
+                            <li><a href="team.html">Equipa BuscaPatas</a></li>
+                            <li><a href="partners.html">Nossos Parceiros</a></li>
+                            <li><a href="termos-politicas.html">Termos e Políticas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footer__widget">
+                        <h6>Apoio</h6>
+                        <ul>
+                            <li><a href="ajuda.html">Ajuda</a></li>
+                            <li><a href="abrigos.html">Abrigos</a></li>
+                            <li><a href="merch.html">Merchandise</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-8 col-sm-8">
+                    <div class="footer__newsletter">
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Procure aqui...">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".select2").select2({
+                placeholder: "Selecione uma opção",
+                allowClear: true,
+            });
+        });
+    </script>
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.js"></script>
+    <script src="js/login-register.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <
+    <!-- Owl Carousel -->
+    <!-- Select2 -->
+
+</body>
+
+</html>

@@ -10,6 +10,7 @@ namespace BuscaPatasFinal.Models
         public int IDAnimal { get; set; }
         public int IDSpecies { get; set; }
         public int IDEditor { get; set; }
+        public int IDShelter { get; set; }
         public string IDSector { get; set; }
         public string History { get; set; }
         public string Sponsors { get; set; }
@@ -32,6 +33,9 @@ namespace BuscaPatasFinal.Models
         [NotMapped]
         public IFormFile UploadedImage { get; set; } // Para o arquivo enviado
         public byte[]? Image { get; set; }           // Para armazenar no banco
+
+        [ForeignKey("IDShelter")]
+        public Shelter Shelter { get; set; }
 
     }
 }

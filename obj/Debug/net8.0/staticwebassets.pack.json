@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\ajuda.html"
     },
     {
+      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\animal-formulario.html",
+      "PackagePath": "staticwebassets\\animal-formulario.html"
+    },
+    {
       "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\breed-info.html",
       "PackagePath": "staticwebassets\\breed-info.html"
     },
@@ -1353,8 +1357,8 @@
       "PackagePath": "staticwebassets\\search-result.html"
     },
     {
-      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\shelters-formulario.html",
-      "PackagePath": "staticwebassets\\shelters-formulario.html"
+      "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\shelter-formulario.html",
+      "PackagePath": "staticwebassets\\shelter-formulario.html"
     },
     {
       "Id": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\wwwroot\\shop-cart.html",
