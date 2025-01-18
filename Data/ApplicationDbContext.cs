@@ -11,6 +11,8 @@ namespace BuscaPatasFinal.Data
         }
 
         // Define DbSets for your tables
+        public DbSet<Surrender> Surrender { get; set; }
+        public DbSet<Shelter> Shelter { get; set; }
         public DbSet<Like> Likes { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Lost> Lost { get; set; }

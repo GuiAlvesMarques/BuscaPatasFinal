@@ -1,7 +1,5 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Reflection.Metadata;
 
 
 namespace BuscaPatasFinal.Models
@@ -12,6 +10,7 @@ namespace BuscaPatasFinal.Models
         public int IDAnimal { get; set; }
         public int IDSpecies { get; set; }
         public int IDEditor { get; set; }
+        public int IDShelter { get; set; }
         public string IDSector { get; set; }
         public string History { get; set; }
         public string Sponsors { get; set; }
@@ -30,9 +29,13 @@ namespace BuscaPatasFinal.Models
         public string Diet { get; set; }
         public string Care { get; set; }
         public string Location { get; set; }
-        public byte[]? Image { get; set; }
+
         [NotMapped]
-        public IFormFile UploadedImage { get; set; }
+        public IFormFile UploadedImage { get; set; } // Para o arquivo enviado
+        public byte[]? Image { get; set; }           // Para armazenar no banco
+
+        [ForeignKey("IDShelter")]
+        public Shelter Shelter { get; set; }
 
     }
 }

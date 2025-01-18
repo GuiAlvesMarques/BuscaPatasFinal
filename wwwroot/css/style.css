@@ -3679,6 +3679,7 @@ body.showCart .container{
 }
 
 .product__hover li a {
+	margin-left: 10px;
 	font-size: 18px;
 	color: #181307;
 	display: block;
@@ -4602,6 +4603,7 @@ body.showCart .container{
 	position: relative;
 	cursor: pointer;
 	transition: all 0.3s ease;
+	margin-left: 10px;
 }
 
 .like-button .icon_heart_alt {
@@ -6833,6 +6835,133 @@ body.showCart .container{
 }
 
 /*---------------------
+  NOVO ANIMAL
+-----------------------*/
+
+/* Form Container */
+.animal-form {
+	padding: 30px;
+	background: #f8f9fa;
+	border-radius: 8px;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+	margin-bottom: 30px;
+}
+
+/* Input Fields */
+.animal-form input[type="text"],
+.animal-form input[type="email"],
+.animal-form textarea {
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 16px;
+	color: #333;
+	transition: border-color 0.3s ease;
+}
+
+	.animal-form input[type="text"]:focus,
+	.animal-form input[type="email"]:focus,
+	.animal-form textarea:focus {
+		border-color: #FF823A;
+		outline: none;
+	}
+
+/* Textarea Field */
+.animal-form textarea {
+	resize: vertical;
+	min-height: 120px;
+	resize: none;
+	height: 100px;
+}
+
+/* Submit Button */
+.animal-form .site-btn {
+	display: inline-block;
+	padding: 14px 35px;
+	background-color: #FF823A;
+	color: #ffff;
+	font-weight: 600;
+	text-transform: uppercase;
+	border-radius: 5px;
+	text-align: center;
+	transition: background-color 0.3s ease;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+	.animal-form .site-btn:hover {
+		background-color: #FFAD7E;
+	}
+
+.animal-form input,
+.animal-form select,
+.animal-form textarea {
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 15px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.animal-form .behaviour_info input {
+	padding: 2px;
+}
+
+.animal-form .smaller_checks {
+	font-size: 90%;
+}
+
+.animal-form .checkboxes {
+	margin-bottom: 15px;
+}
+
+	.animal-form .checkboxes.general_info {
+		margin-top: 10px;
+	}
+
+.animal-form input[type="checkbox"] {
+	width: auto;
+}
+
+.animal-form button.site-btn {
+	background-color: #ff7f50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.animal-form button.site-btn:hover {
+		background-color: #e56b3b;
+}
+
+.animal-form h4 {
+	font-size: 24px;
+	color: #ff7f50;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.animal-form .select2 {
+	margin-bottom: 15px;
+}
+
+.animal-form .select2-container--default .select2-selection--multiple {
+	padding-bottom: 0px;
+	padding-right: 0px;
+	border: 1px solid #ddd;
+}
+
+.animal-form .select2-container .select2-search--inline .select2-search__field {
+	margin: 0px 0px 0px 0px;
+	padding: 15px;
+}
+
+/*---------------------
   Lost and Found
 -----------------------*/
 
@@ -6979,10 +7108,12 @@ body.showCart .container{
 	border-color: #c3e6cb;
 }
 
+#shelter-card {
+	padding: 10px;
+}
 /*---------------------
   Animal Perdido
 -----------------------*/
-
 .lost-form-container {
 	background-color: #ffffff;
 	padding: 40px;
