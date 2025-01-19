@@ -257,22 +257,8 @@
                         <h5><strong>Porte:</strong> <span>@(Model.Size != null ? Model.Size.ToUpper() : "Não especificado")</span></h5>
                         <h5><strong>Disponível para adoção:</strong> <span>@(Model.IsForAdoption ? "Sim" : "Não")</span></h5>
                             <div class="product__details__adotar">
-                            @if (Model.IsForAdoption)
-                            {
-                                <!-- Botão funcional -->
-                                <button onclick="window.location.href='/Shelters/@Model.IDShelter'" class="adopt-btn-details">Adotar</button>
-                            }
-                            else
-                            {
-                                <!-- Botão desabilitado -->
-                                <button class="btn btn-secondary" disabled>Não Disponível para Adoção</button>
-                            }
-                            <a href="#"
-                               class="like-button"
-                               data-species-id="@Model.IDSpecies"
-                               data-animal-id="@Model.IDAnimal">
-                               <span class="icon_heart_alt"></span>
-                            </a>
+                            <!-- Botão funcional -->
+                            <button onclick="window.location.href='/Shelter/Details/@Model.IDShelter'" class="adopt-btn-details">Adotar</button>
                         </div>
                     </div>
                 </div>
@@ -281,9 +267,6 @@
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Sobre o Animal</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Sobre o Abrigo</a>
                             </li>
                         </ul>
                         <div class="tab-content">
@@ -295,46 +278,9 @@
                                 <p>@Model.Personality</p>
                                 <h6>Estado de Saude</h6>
                                 <p>@Model.History</p>
-                            </div>
-                            <div class="tab-pane" id="tabs-2" role="tabpanel">
-                                <h5>Sobre o Abrigo</h5>
-                                <p>
-                                    @Model.IDSector
-                                </p>
-                                <p>
-                                    No abrigo, os animais recebem atendimento médico regular, vacinação, castração e,
-                                    quando necessário, tratamentos especializados. Os cuidadores são apaixonados e
-                                    oferecem atenção personalizada a cada animal, garantindo que estejam prontos para
-                                    encontrar um novo lar.
-                                </p>
+                                
 
-                                <h6>Informações do Abrigo</h6>
-                                <ul>
-                                    <li><strong>Localização:</strong> Estrada da Pimenteira, 1300-459 Lisboa</li>
-                                    <li><strong>Horário de Funcionamento:</strong></li>
-                                    <ul>
-                                        <li>Seg - Sex: 9h30 - 12h00 e das 14h30 - 16h30</li>
-                                        <li>Sáb: 10h00 - 16h00</li>
-                                    </ul>
-                                    <li><strong>Telefone:</strong> +351 218 172 300</li>
-                                    <li><strong>Email:</strong> <a
-                                            href="mailto:info@casadosanimais.pt">info@casadosanimais.pt</a></li>
-                                    <a href="details-abrigo.html"><button class="site-btn">Visitar Abrigo</button> </a>
-                                </ul>
-                                <h6>Localização</h6>
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.9804012516537!2d-9.181823!3d38.721878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDQzJzIyLjkiTiA5wrAxMicwNi4xIlc!5e0!3m2!1sen!2spt!4v1699477399991!5m2!1sen!2spt"
-                                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade">
-                                </iframe>
-                                <h6>Como Chegar</h6>
-                                <p>
-                                    O abrigo está localizado próximo ao <strong>Parque Florestal de Monsanto</strong>.
-                                    Use o transporte público até a estação mais próxima ou utilize o estacionamento
-                                    disponível no local.
-                                </p>
                             </div>
-
                         </div>
                     </div>
                 </div>
