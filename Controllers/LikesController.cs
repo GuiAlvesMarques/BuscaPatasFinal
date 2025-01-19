@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using BuscaPatasFinal.Data;
+﻿using BuscaPatasFinal.Data;
 using BuscaPatasFinal.Models;
-using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BuscaPatasFinal.Controllers
 {
@@ -29,7 +28,12 @@ namespace BuscaPatasFinal.Controllers
             int parsedUserId = int.Parse(userId);
 
             // Verifica se o like já existe
-            var existingLike = _context.Likes.FirstOrDefault(l => l.IDUser == parsedUserId && l.IDSpecies == speciesId && l.IDAnimal == animalId);
+            Console.WriteLine($"Received speciesId: {speciesId}, animalId: {animalId}, userId: {parsedUserId}");
+
+            var existingLike = _context.Likes.FirstOrDefault(l => l.IDUser == parsedUserId
+                                                                && l.IDSpecies == speciesId
+                                                                && l.IDAnimal == animalId);
+
             if (existingLike != null)
             {
                 return Json(new { success = false, message = "Você já curtiu este animal." });
@@ -109,7 +113,7 @@ namespace BuscaPatasFinal.Controllers
             var userId = HttpContext.Session.GetString("UserId");
             if (string.IsNullOrEmpty(userId))
             {
-                return Unauthorized(new { success = false, message = "Você precisa estar logado para visualizar seus favoritos." });
+                return Unauthorized(new { success = false, message = "Precisa estar logado para visualizar seus favoritos." });
             }
 
             // Converte o userId da sessão para inteiro
@@ -120,6 +124,7 @@ namespace BuscaPatasFinal.Controllers
 
             return Json(new { success = true, likes = userLikes });
         }
+
         [HttpGet]
         public IActionResult GetUserFavorites()
         {
@@ -127,7 +132,8 @@ namespace BuscaPatasFinal.Controllers
             var userId = HttpContext.Session.GetString("UserId");
             if (string.IsNullOrEmpty(userId))
             {
-                return Unauthorized(new { success = false, message = "Você precisa estar logado para acessar os favoritos." });
+                TempData["Warning"] = "Você precisa estar logado para acessar os favoritos.";
+                return RedirectToAction("Index", "Home");
             }
 
             int parsedUserId = int.Parse(userId);
@@ -139,23 +145,25 @@ namespace BuscaPatasFinal.Controllers
                                 where like.IDUser == parsedUserId
                                 select new
                                 {
-                                    sheltered.IDAnimal,
-                                    sheltered.AnimalName,
-                                    sheltered.Breed,
-                                    sheltered.AgeRange,
-                                    sheltered.Location,
-                                    sheltered.Image
+                                    IDAnimal = sheltered.IDAnimal,
+                                    AnimalName = sheltered.AnimalName ?? "Nome desconhecido",
+                                    Breed = sheltered.Breed ?? "Raça desconhecida",
+                                    AgeRange = sheltered.AgeRange ?? "Desconhecida",
+                                    Location = sheltered.Location ?? "Não informado",
+                                    Image = sheltered.Image != null ? Convert.ToBase64String(sheltered.Image) : null // Para exibir imagens
                                 };
 
             return Json(new { success = true, favorites = userFavorites.ToList() });
         }
+
         [HttpGet]
         public IActionResult Favorites()
         {
             var userId = HttpContext.Session.GetString("UserId");
             if (string.IsNullOrEmpty(userId))
             {
-                return RedirectToAction("Login", "Account");
+                TempData["ShowLoginModal"] = true;
+                return RedirectToAction("Index", "Home");
             }
 
             int parsedUserId = int.Parse(userId);
@@ -167,7 +175,6 @@ namespace BuscaPatasFinal.Controllers
                             select sheltered;
 
             return View("~/Views/Adotar/Favorito.cshtml", favorites.ToList());
-
         }
     }
 }

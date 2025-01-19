@@ -552,13 +552,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateFilters();
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    const likeButton = document.querySelector(".like-button");
-
-    likeButton.addEventListener("click", function (e) {
-        e.preventDefault();
-        likeButton.classList.toggle("liked");
-    });
-});
-

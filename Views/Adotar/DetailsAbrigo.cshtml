@@ -1,15 +1,16 @@
-@model IEnumerable<BuscaPatasFinal.Models.Sheltered>
+﻿@model BuscaPatasFinal.Models.Shelter
+
 
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Ashion Template">
-    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="description" content="BuscaPatas Perdidos e Encontrados">
+    <meta name="keywords" content="BuscaPatas, Perdidos, Encontrados, Animais">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Buscapatas</title>
+    <title>Perdidos e Encontrados | BuscaPatas</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -17,7 +18,6 @@
           rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/~/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="~/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="~/css/elegant-icons.css" type="text/css">
@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="~/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="~/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="~/css/style.css" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.css">
 </head>
 
 <body>
@@ -109,62 +108,6 @@
                                     <span class="icon_profile" data-bs-toggle="modal"
                                           data-bs-target="#authModal"></span>
                                 </a>
-                                <script>
-                                    function checkUserProfileAccess() {
-                                        fetch('/Account/IsLoggedIn', {
-                                            method: 'GET',
-                                            headers: {
-                                                'Accept': 'application/json',
-                                            },
-                                        })
-                                            .then(response => {
-                                                if (!response.ok) {
-                                                    throw new Error(`HTTP error! Status: ${response.status}`);
-                                                }
-                                                return response.json();
-                                            })
-                                            .then(data => {
-                                                if (data.isLoggedIn) {
-                                                    // Se o usuário está logado, redireciona para o perfil
-                                                    window.location.href = '/Account/UserProfile';
-                                                } else {
-                                                    // Se não está logado, exibe o modal de login
-                                                    $('#authModal').modal('show');
-                                                }
-                                            })
-                                            .catch(error => {
-                                                console.error('Erro ao verificar o acesso ao perfil:', error);
-                                                alert('Erro ao verificar o acesso ao perfil do usuário.');
-                                            });
-                                    }
-
-                                </script>
-                                <script>
-                                    $(document).ready(function () {
-                                        $("#favoritesIcon").click(function (e) {
-                                            e.preventDefault();
-
-                                            // Faz uma chamada AJAX para verificar login
-                                            $.ajax({
-                                                url: '/Account/IsLoggedIn', // Endpoint para verificar login
-                                                method: 'GET',
-                                                success: function (response) {
-                                                    if (response.isLoggedIn) {
-                                                        // Redireciona para a página de favoritos
-                                                        window.location.href = "/Adotar/Favorito";
-                                                    } else {
-                                                        // Exibe o modal de login
-                                                        $("#authModal").modal('show');
-                                                    }
-                                                },
-                                                error: function () {
-                                                    alert('Erro ao verificar login.');
-                                                }
-                                            });
-                                        });
-                                    });
-                                </script>
-
                             </li>
                         </ul>
                     </div>
@@ -262,44 +205,146 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href="~/index.html"><i class="fa fa-home"></i> Home</a>
-                        <a href="~/user-profile.html">Perfil</a>
-                        <span>Animais Favoritos</span>
+                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                        <a href="./adotar.html">Adotar</a>
+                        <span>@Model.IDShelter</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Breadcrumb End -->
-
-    <div class="container py-5">
-        <h2>Meus Cães Favoritos</h2>
-        <p>Veja aqui todos os cães que você adicionou aos favoritos.</p>
-
-        <div class="row">
-            @foreach (var dog in Model)
-            {
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <div class="product__item__pic">
-                        <img src="data:image/jpeg;base64,@(Convert.ToBase64String(dog.Image))" class="card-img-top" alt="@dog.AnimalName">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">@dog.AnimalName</h5>
-                            <p class="card-text">Raça: @dog.Breed<br>Idade: @dog.AgeRange<br>Local: @dog.Location</p>
-                            <a href="/Sheltered/Details/@dog.IDAnimal" class="btn btn-primary">Ver Perfil</a>
-                            <button class="btn btn-danger remove-favorite" data-animal-id="@dog.IDAnimal" data-species-id="@dog.IDSpecies">
-                                Remover
-                            </button>
-
-                        </div>
+    <section class="shelter-details spad">
+        <div class="container">
+            <div class="row">
+                <!-- Shelter Information and Logo -->
+                <div class="col-lg-8">
+                    <div class="shelter__info">
+                        <h2>@Model.ShelterName <span>ID: @Model.IDShelter</span></h2>
+                        <p>@Model.ShelterDescription</p>
                     </div>
                 </div>
-            }
-        </div>
-    </div>
-    </script>
+                <div class="col-lg-4 text-center">
+                    @if (Model.Logo != null)
+                    {
+                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Logo)"
+                             alt="Logo do Abrigo" class="shelter__logo" />
+                    }
+                    else
+                    {
+                        <img src="~/img/default-placeholder.png" alt="Sem logo disponível" class="shelter__logo" />
+                    }
+                </div>
+            </div>
 
+            <div class="row mt-4">
+                <!-- Map and Shelter Details -->
+                <div class="col-lg-8">
+                    <div class="shelter__map">
+                        <iframe src="https://www.google.com/maps?q=@Model.Location&output=embed"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="shelter__details">
+                        <h5>Localização:</h5>
+                        <p>@Model.Location</p>
+                        <h5>Capacidade Máxima:</h5>
+                        <p>@Model.MaximumCapacity animais</p>
+                        <h5>Contacto:</h5>
+                        <p>Telefone: @Model.PhoneNumber</p>
+                        <p>Email: <a href="mailto:@Model.Email">@Model.Email</a></p>
+                    </div>
+                    <a href="@Model.Website">
+                        <button class="site-btn">Entrar em Contato</button>
+                    </a>
+                <div class="col-lg-8">
+                    <div class="shelter__social mt-4">
+                        <h5>Redes Sociais:</h5>
+                        <ul>
+                            @if (!string.IsNullOrEmpty(Model.Facebook))
+                            {
+                                <li><a href="@Model.Facebook" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
+                            }
+                            @if (!string.IsNullOrEmpty(Model.Instagram))
+                            {
+                                <li><a href="@Model.Instagram" target="_blank"><i class="fa fa-instagram"></i> Instagram</a></li>
+                            }
+                            @if (!string.IsNullOrEmpty(Model.TikTok))
+                            {
+                                <li><a href="@Model.TikTok" target="_blank"><i class="fa fa-tiktok"></i> TikTok</a></li>
+                            }
+                            @if (!string.IsNullOrEmpty(Model.Twitter))
+                            {
+                                <li><a href="@Model.Twitter" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+         </div>
+            <div class="row">
+                <div class="shelter__visits col-lg-8">
+                    <h5>Sobre Visitas:</h5>
+                    @if (!string.IsNullOrEmpty(Model.AboutVisits))
+                    {
+                        <p>@Model.AboutVisits</p>
+                    }
+                    else
+                    {
+                        <p>Sem informações sobre visitas no momento.</p>
+                    }
+                </div>
+                <div class="shelter__adoption col-lg-8">
+                    <h5>Processo de Adoção:</h5>
+                    @if (!string.IsNullOrEmpty(Model.AdoptionProcess))
+                    {
+                        <p>@Model.AdoptionProcess</p>
+                    }
+                    else
+                    {
+                        <p>O abrigo não informou detalhes sobre o processo de adoção.</p>
+                    }
+                </div>
+                <div class="shelter__animals col-lg-8">
+                    <h5>Animais Disponíveis para Adoção:</h5>
+                    @if (Model.ShelteredAnimals != null && Model.ShelteredAnimals.Any())
+                    {
+                        <div class="row">
+                            @foreach (var animal in Model.ShelteredAnimals)
+                            {
+                                <div class="col-lg-4 mb-4">
+                                    <div class="animal-card" id="shelter-card">
+                                        @if (animal.Image != null)
+                                        {
+                                            <img src="data:image/jpeg;base64,@Convert.ToBase64String(animal.Image)" alt="@animal.AnimalName" class="img-fluid" />
+                                        }
+                                        else
+                                        {
+                                            <img src="~/img/img-adotar.png" alt="Imagem não disponível" class="img-fluid" />
+                                        }
+                                        <div class="animal__details__text">
+                                        <h6>@animal.AnimalName</h6>
+                                        <p>Idade: @animal.Age anos</p>
+                                        <p>Raça: @animal.Breed</p>
+                                        <a href="/Sheltered/Details/@animal.IDAnimal" class="btn btn-primary btn-sm">Ver Mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <p>Não há animais disponíveis para adoção neste abrigo no momento.</p>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Shelter Details Section End -->
     <!-- Footer Section Begin -->
     <footer class="footer">
         <div class="container">
@@ -307,7 +352,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-7">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="~/index.html"><img src="img/logo.png" alt=""></a>
+                            <a href="~/index.html"><img src="~/img/logo.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -365,35 +410,43 @@
         </div>
     </div>
     <!-- Search End -->
-
-
-    <script>
-            $(document).on('click', '.remove-favorite', function () {
-                    const speciesId = $(this).data('species-id');
-            const animalId = $(this).data('animal-id');
-
-            $.ajax({
-                url: '/Likes/RemoveLike',
-            method: 'POST',
-            data: {speciesId: speciesId, animalId: animalId },
-            success: function (response) {
-                            if (response.success) {
-                alert(response.message);
-            // Opcional: Remova o cartão correspondente da interface
-            location.reload(); // Atualize a página
-                            } else {
-                alert(response.message);
-                            }
-                        },
-            error: function (xhr) {
-                alert('Erro ao remover dos favoritos. Tente novamente.');
-                        }
-                    });
-                });
-
-    </script>
-t>
     <!-- Js Plugins -->
+    <script>
+        $(document).on('click', '.like-button', function (e) {
+            e.preventDefault();
+
+            // Captura os IDs do animal e da espécie
+            const animalId = $(this).data('animal-id');
+            const speciesId = $(this).data('species-id');
+
+            // Verifique se o ID do animal est� presente
+            if (!animalId) {
+                alert('ID do animal não encontrado.');
+                return;
+            }
+
+            // Envia o pedido AJAX para adicionar o "like"
+            $.ajax({
+                url: '/Likes/AddLike',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ IDAnimal: animalId, IDSpecies: speciesId }),
+                success: function (response) {
+                    if (response.success) {
+                        alert('Animal adicionado aos favoritos com sucesso.');
+                    } else {
+                        alert(response.message || 'Não foi possível adicionar aos favoritos.');
+                    }
+                },
+                error: function (xhr) {
+                    const error = xhr.responseJSON?.message || 'Ocorreu um erro.';
+                    alert(error);
+                }
+            });
+        });
+    </script>
+
+
     <script src="~/js/jquery-3.3.1.min.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
     <script src="~/js/jquery.magnific-popup.min.js"></script>
@@ -409,6 +462,8 @@ t>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.js"></script>
     <script src="~/js/login-register.js"></script>
+    <script src="~/js/scripts.js"></script>
+    <
 </body>
 
 </html>
