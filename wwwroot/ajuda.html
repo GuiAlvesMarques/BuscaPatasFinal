@@ -12,7 +12,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+          rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -37,12 +37,16 @@
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__close">+</div>
         <ul class="offcanvas__widget">
-            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
+            <li>
+                <a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
             </li>
             <li><span class="icon_search search-switch"></span></li>
-            <li><a href="#"><span class="icon_heart_alt"></span>
+            <li>
+                <a href="#">
+                    <span class="icon_heart_alt"></span>
                     <div class="tip">2</div>
-                </a></li>
+                </a>
+            </li>
         </ul>
         <div class="offcanvas__logo">
             <a href="./index.html"><img src="img/logo.png" alt=""></a>
@@ -53,7 +57,6 @@
         </div>
     </div>
     <!-- Offcanvas Menu End -->
-
     <!-- Header Section Begin -->
     <header class="header">
         <div class="container-fluid">
@@ -66,7 +69,8 @@
                 <div class="col-xl-9 col-lg-9">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                            <li>
+                                <a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
                                     <li><a href="/Sheltered/AdoptionList?speciesId=1">Cães</a></li>
                                     <li><a href="/Sheltered/AdoptionList?speciesId=2">Gatos</a></li>
@@ -75,7 +79,8 @@
                             </li>
                             <li><a href="./entrega-animal.html">Entrega Animal</a></li>
                             <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
-                            <li><a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                            <li>
+                                <a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
                                     <li><a href="./breed-info.html">Raças & Cuidados</a></li>
                                     <li><a href="./faq.html">Perguntas Frequentes</a></li>
@@ -165,14 +170,15 @@
         </div>
     </header>
     <!-- Header Section End -->
-
     <!-- Login and Register Modal -->
     <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content modal-header">
                 <div class="modal-body d-flex p-0">
                     <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
-                        aria-label="Close">&times;</button>
+                            aria-label="Close">
+                        &times;
+                    </button>
 
                     <!-- Left Side - Login/Register Form -->
                     <div class="w-50 p-5">
@@ -182,12 +188,12 @@
                             <div class="mb-3">
                                 <label for="email" class="form-label">Endereço de Email</label>
                                 <input type="email" class="form-control" id="email" placeholder="Insira o seu email"
-                                    required>
+                                       required>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Palavra-passe</label>
                                 <input type="password" class="form-control" id="password"
-                                    placeholder="Insira a sua palavra-passe" required>
+                                       placeholder="Insira a sua palavra-passe" required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Entrar</button>
                             <div class="text-center mt-3">
@@ -200,17 +206,17 @@
                             <div class="mb-3">
                                 <label for="registerName" class="form-label">Nome Completo</label>
                                 <input type="text" class="form-control" id="registerName"
-                                    placeholder="Insira o seu nome completo" required>
+                                       placeholder="Insira o seu nome completo" required>
                             </div>
                             <div class="mb-3">
                                 <label for="registerEmail" class="form-label">Endereço de Email</label>
                                 <input type="email" class="form-control" id="registerEmail"
-                                    placeholder="Insira o seu email" required>
+                                       placeholder="Insira o seu email" required>
                             </div>
                             <div class="mb-3">
                                 <label for="registerPassword" class="form-label">Palavra-passe</label>
                                 <input type="password" class="form-control" id="registerPassword"
-                                    placeholder="Crie uma palavra-passe" required>
+                                       placeholder="Crie uma palavra-passe" required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Registar</button>
                             <div class="text-center mt-3">
@@ -224,18 +230,17 @@
                     <!-- Right Side - Image -->
                     <div class="w-50 d-none d-md-block">
                         <img src="img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
-                            style="object-fit: cover;">
+                             style="object-fit: cover;">
                     </div>
                 </div>
 
                 <!-- Custom Close Button -->
                 <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+                        aria-label="Close"></button>
             </div>
         </div>
     </div>
     <!-- Login Register Model Ends -->
-
     <!-- Breadcrumb Begin -->
     <div class="breadcrumb-option">
         <div class="container">
@@ -250,7 +255,6 @@
         </div>
     </div>
     <!-- Breadcrumb End -->
-
     <!-- Help Section Begin -->
     <section class="support spad">
         <div class="container">
@@ -339,17 +343,13 @@
 
                                         <input type="hidden" id="DonationAmount" name="DonationAmount" value="">
 
-                                        <div class="d-flex align-items-top mt-3">
-                                            <div class="form-group position-relative flex-grow-1">
+                                        <div class="d-flex flex-column align-items-start mt-3">
+                                            <label class="form-check-label custom-label small-text mb-2">
+                                                Para Doar diretamente à BuscaPatas escreva BuscaPatas na caixa abaixo
+                                            </label>
+                                            <div class="form-group position-relative flex-grow-1 w-100">
                                                 <input type="text" id="shelterFilter" name="NomeShelter" class="form-control"
-                                                       placeholder="Escolha o parceiro..." required>
-                                            </div>
-                                            <div class="form-check ms-auto" id="selectDirect">
-                                                <input type="checkbox" class="form-check-input custom-checkbox" id="directBuscaPatas"
-                                                       name="DonationBuscaPatas" value="true">
-                                                <label class="form-check-label custom-label" for="directBuscaPatas">
-                                                    Doar diretamente à BuscaPatas
-                                                </label>
+                                                       placeholder="Escolha o Destinatário da doação..." required>
                                             </div>
                                         </div>
 
@@ -437,7 +437,6 @@
         </div>
     </footer>
     <!-- Footer Section End -->
-
     <!-- Search Begin -->
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
@@ -448,7 +447,6 @@
         </div>
     </div>
     <!-- Search End -->
-
     <!-- Js Plugins -->
     <script src="js/donation.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
