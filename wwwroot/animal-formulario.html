@@ -222,7 +222,7 @@
                                 <div class="col-lg-6">
                                     <input type="text" name="AnimalName" placeholder="Nome do Animal" required>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6">                                  
                                     <select name="IDSpecies" id="IDSpecies" required>
                                         <option value="" disabled selected>Espécie</option>
                                         <option value="1" id="dog">Cão</option>
@@ -394,7 +394,8 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <label for="animal_images">Envie uma imagem do animal:</label>
-                                    <input type="file" name="UploadedImage" id="UploadedImage" accept="image/*" multiple>
+                                    <input type="file" name="UploadedImage" id="UploadedImage" accept="image/*" multiple
+                                           required>
                                 </div>
                                 <!-- Botão de Envio -->
                                 <div class="col-lg-12 text-center">
@@ -610,9 +611,6 @@
                 });
             }
         });
-
-
-
     </script>
 
 </body>

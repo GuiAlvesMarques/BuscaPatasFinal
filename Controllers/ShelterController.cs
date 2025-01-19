@@ -70,16 +70,30 @@ namespace BuscaPatasFinal.Controllers
         [HttpGet]
         public IActionResult Details(int id)
         {
-            var shelter = _context.Shelter
-                                  .Include(s => s.ShelteredAnimals)
-                                  .FirstOrDefault(s => s.IDShelter == id);
-
-            if (shelter == null)
+            // Busca o animal na base de dados usando o campo IDAnimal
+            var animal = _context.Sheltered.FirstOrDefault(a => a.IDAnimal == id);
+            if (animal == null)
             {
-                return NotFound("O abrigo solicitado não foi encontrado.");
+                return NotFound(); // Retorna uma página 404 caso o animal não exista
             }
 
-            return View("~/Views/Adotar/DetailsAbrigo.cshtml", shelter);
+            // Verifica se o usuário está logado
+            var userId = HttpContext.Session.GetString("UserId");
+            bool userLiked = false;
+
+            if (!string.IsNullOrEmpty(userId))
+            {
+                int parsedUserId = int.Parse(userId);
+
+                // Verifica se o usuário curtiu o animal
+                userLiked = _context.Likes.Any(l => l.IDUser == parsedUserId && l.IDAnimal == id);
+            }
+
+            // Adiciona a informação sobre curtidas ao ViewData
+            ViewData["UserLiked"] = userLiked;
+
+            // Retorna a View com o animal encontrado
+            return View("~/Views/Adotar/Details.cshtml", animal);
         }
     }
 }

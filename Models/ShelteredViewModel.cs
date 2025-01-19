@@ -12,6 +12,7 @@ namespace BuscaPatasFinal.Models
         public int IDEditor { get; set; } // Editor identifier
 
         [ForeignKey("IDShelter")]
+      
         public int IDShelter { get; set; } // Foreign Key associada a Shelter
         public string IDSector { get; set; }
 
@@ -64,6 +65,5 @@ namespace BuscaPatasFinal.Models
 
         [ForeignKey("IDShelter")]
         public Shelter? Shelter { get; set; } // Propriedade de navegação
-
     }
 }
