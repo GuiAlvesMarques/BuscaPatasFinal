@@ -448,62 +448,91 @@ function addPetDetails(pdf, startY) {
     pdf.text(`Telefone: ${document.getElementById("telefone")?.value || "N/A"}`, 20, startY + 100);
 }
 
+/* -------------------
+
+    Search Bar
+
+--------------------- */
+
 document.addEventListener("DOMContentLoaded", () => {
     const searchOverlay = document.querySelector(".search-model");
     const searchCloseSwitch = document.querySelector(".search-close-switch");
     const searchInput = document.querySelector("#search-input");
-    const searchForm = document.querySelector(".search-model-form");
 
-    // Open the search overlay
+    // Open the search modal
     const openSearchOverlay = () => {
         if (searchOverlay) {
             searchOverlay.classList.add("active");
-            searchInput.focus(); // Automatically focus the input
+            searchInput.focus();
         }
     };
 
-    // Close the search overlay
+    // Close the search modal
     const closeSearchOverlay = () => {
         if (searchOverlay) {
             searchOverlay.classList.remove("active");
         }
     };
 
-    // Listen for Enter key or form submission
+    // Submit search query
+    const searchForm = document.querySelector(".search-model-form");
     if (searchForm) {
         searchForm.addEventListener("submit", (event) => {
             event.preventDefault();
             const query = searchInput.value.trim();
             if (query) {
-                window.location.href = `search-result.html?query=${encodeURIComponent(query)}`;
+                window.location.href = `/Search?query=${encodeURIComponent(query)}`;
             }
         });
     }
 
-    // Close the search overlay when the close button is clicked
-    if (searchCloseSwitch) {
-        searchCloseSwitch.addEventListener("click", closeSearchOverlay);
-    }
-
-    // Open the search overlay when the search icon is clicked
+    // Attach event listeners
     document.querySelector(".search-switch")?.addEventListener("click", openSearchOverlay);
+    searchCloseSwitch?.addEventListener("click", closeSearchOverlay);
 
-    // Close the overlay when the user presses the Escape key
+    // Close modal on Escape key
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape") {
             closeSearchOverlay();
         }
     });
-
-    // Handle setting the placeholder on the search-result page #search-input-bar
-    const searchInputBar = document.querySelector("#search-input-bar");
-    if (searchInputBar) {
-        const query = new URLSearchParams(window.location.search).get(query);
-        if (query) {
-            searchInputBar.value = query;
-        }
-    }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const searchButton = document.getElementById("search-button");
+    const searchInput = document.getElementById("search-input-bar");
+
+    // Adicionar evento de clique ao botão de pesquisa
+    searchButton.addEventListener("click", () => {
+        const query = searchInput.value.trim(); // Captura o valor da barra de pesquisa
+        if (query) {
+            // Redirecionar para a página de resultados com a query
+            window.location.href = `/Search?query=${encodeURIComponent(query)}`;
+        } else {
+            alert("Por favor, insira um termo para pesquisa!");
+        }
+    });
+
+    // Também permite que a pesquisa seja enviada ao pressionar Enter
+    searchInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            const query = searchInput.value.trim();
+            if (query) {
+                window.location.href = `/Search?query=${encodeURIComponent(query)}`;
+            } else {
+                alert("Por favor, insira um termo para pesquisa!");
+            }
+        }
+    });
+});
+
+
+
+/* -------------------
+
+    Filters
+
+--------------------- */
 
 document.addEventListener("DOMContentLoaded", function () {
     const checkboxes = document.querySelectorAll(".filter-checkbox");

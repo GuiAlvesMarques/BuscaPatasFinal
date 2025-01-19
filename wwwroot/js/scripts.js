@@ -83,3 +83,5 @@ document.addEventListener("DOMContentLoaded", function () {
     // Chama a função para verificar o tipo de usuário
     checkUserType();
 });
+
+
