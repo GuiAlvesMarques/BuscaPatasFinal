@@ -1,5 +1,6 @@
 ﻿using BuscaPatasFinal.Data;
 using BuscaPatasFinal.Models;
+using BuscaPatasFinal.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BuscaPatasFinal.Controllers
@@ -85,27 +86,49 @@ namespace BuscaPatasFinal.Controllers
             }
         }
 
-
         [HttpGet]
         public IActionResult AdoptionList(int speciesId)
         {
-            // Retrieve animals based on the species ID
-            var query = _context.Sheltered
-                .Where(a => a.IDSpecies == speciesId);
-            var animals = query.ToList();
+            // Combine animais da tabela Sheltered e Surrender
+            var shelteredAnimals = _context.Sheltered
+                .Where(a => a.IDSpecies == speciesId)
+                .Select(a => new AnimalViewModel
+                {
+                    IDAnimal = a.IDAnimal,
+                    AnimalName = a.AnimalName,
+                    Breed = a.Breed,
+                    Age = a.Age,
+                    Size = a.Size,
+                    Image = a.Image,
+                    IsSurrendered = false, // Indica que é da tabela Sheltered
+                    IDSpecies = a.IDSpecies // Certifica-se de que o IDSpecies está preenchido
+                });
+
+            var surrenderedAnimals = _context.Surrender
+                .Where(a => a.IDSpecies == speciesId)
+                .Select(a => new AnimalViewModel
+                {
+                    IDAnimal = a.IDAnimal,
+                    AnimalName = a.AnimalName,
+                    Breed = a.Breed,
+                    Age = a.Age,
+                    Size = a.Size,
+                    Image = a.Image,
+                    IsSurrendered = true, // Indica que é da tabela Surrender
+                    IDSpecies = a.IDSpecies // Certifica-se de que o IDSpecies está preenchido
+                });
 
 
-            // Verify if there are results; if not, initialize an empty list
-            if (animals == null || !animals.Any())
-            {
-                animals = new List<Sheltered>();
-            }
+            // Combine os resultados de ambas as tabelas
+            var combinedAnimals = shelteredAnimals
+                .Union(surrenderedAnimals)
+                .ToList();
 
-            // Determine the view based on the species
+            // Determina a view com base na espécie
             string viewName = speciesId == 1 ? "~/Views/Adotar/Caes.cshtml" : "~/Views/Adotar/Gatos.cshtml";
 
-            // Return the appropriate view with the list of animals
-            return View(viewName, animals);
+            // Retorna a view com os animais combinados
+            return View(viewName, combinedAnimals);
         }
 
         [HttpGet]
@@ -152,7 +175,8 @@ namespace BuscaPatasFinal.Controllers
                         Console.WriteLine($"Field: {key}, Error: {error.ErrorMessage}");
                     }
                 }
-                return Json(new { success = false, message = "Tipo de mensagem inválida", details = ModelState });
+
+                return RedirectToAction("AdoptionList", new { speciesId = surrender.IDSpecies });
             }
 
             try
@@ -167,6 +191,20 @@ namespace BuscaPatasFinal.Controllers
                         surrender.Image = memoryStream.ToArray(); // Convert the image to byte[]
                     }
                 }
+
+                if (surrender.Birthday != null)
+                {
+                    // Calcula a idade com base no aniversário
+                    DateTime today = DateTime.Today;
+                    surrender.Age = today.Year - surrender.Birthday.Value.Year;
+
+                    // Verifica se o aniversário ainda não ocorreu neste ano
+                    if (surrender.Birthday.Value.Date > today.AddYears(-surrender.Age))
+                    {
+                        surrender.Age--;
+                    }
+                }
+
                 else
                 {
                     return Json(new { success = false, message = "Imagem é Necessária" });
@@ -176,7 +214,7 @@ namespace BuscaPatasFinal.Controllers
                 _context.Surrender.Add(surrender); // Ensure "Surrender" matches your DbSet name
                 _context.SaveChanges();
 
-                return Json(new { success = true, message = "Animal Submmetido para Entrega Animal com Sucesso" });
+                return RedirectToAction("AdoptionList", new { speciesId = surrender.IDSpecies });
             }
             catch (Exception ex)
             {
@@ -195,6 +233,21 @@ namespace BuscaPatasFinal.Controllers
                 });
             }
         }
+
+        [HttpGet]
+        public IActionResult DetailsSurrender(int id)
+        {
+            // Busca o animal na base de dados usando o campo IDAnimal
+            var animal = _context.Surrender.FirstOrDefault(a => a.IDAnimal == id);
+            if (animal == null)
+            {
+                return NotFound(); // Retorna uma página 404 caso o animal não exista
+            }
+
+            // Retorna a View com o animal encontrado
+            return View("~/Views/Adotar/DetailsSurrender.cshtml", animal);
+        }
+
         [HttpGet]
         public IActionResult GetSuggestions()
         {
