@@ -15,7 +15,7 @@ namespace BuscaPatasFinal.Controllers
 
         // POST: Register a new sheltered animal
         [HttpPost]
-        public IActionResult RegisterSheltered([FromForm] Sheltered sheltered)
+        public IActionResult RegisterSheltered([FromForm] Sheltered registoanimal)
         {
             if (!ModelState.IsValid)
             {
@@ -34,10 +34,10 @@ namespace BuscaPatasFinal.Controllers
             {
 
                 // Salva os dados no banco de dados
-                _context.Sheltered.Add(sheltered);
+                _context.Sheltered.Add(registoanimal);
                 _context.SaveChanges();
 
-                return RedirectToAction("AdoptionList", new { speciesId = sheltered.IDSpecies });
+                return RedirectToAction("AdoptionList", new { speciesId = registoanimal.IDSpecies });
             }
             catch (Exception ex)
             {

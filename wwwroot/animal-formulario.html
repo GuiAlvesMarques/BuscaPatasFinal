@@ -220,25 +220,25 @@
                                     <h4>Informações Gerais</h4>
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="text" name="animal_name" placeholder="Nome do Animal" required>
+                                    <input type="text" name="AnimalName" placeholder="Nome do Animal" required>
                                 </div>
                                 <div class="col-lg-6">
-                                    <select name="animal_species" id="animal_species" required>
+                                    <select name="animal_species" id="IDSpecies" required>
                                         <option value="" disabled selected>Espécie</option>
                                         <option value="1" id="dog">Cachorro</option>
                                         <option value="2" id="cat">Gato</option>
                                     </select>
                                 </div>
                                 <div class="col-lg-6">
-                                    <select name="animal_sex" required>
+                                    <select name="Sex" required>
                                         <option value="" disabled selected>Sexo</option>
                                         <option value="male">Macho</option>
                                         <option value="female">Fêmea</option>
                                         <option value="hermaphrodite">Hermafrodita</option>
                                     </select>
                                 </div>
-                                <div class="col-lg-6" id="dog_size_container" style="display: block;">
-                                    <select name="animal_size" required>
+                                <div class="col-lg-6">
+                                    <select name="Size" required>
                                         <option value="" disabled selected>Porte</option>
                                         <option value="mini">Mini (até 5kg)</option>
                                         <option value="pequeno">Pequeno (5-10kg)</option>
@@ -248,7 +248,7 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-4" id="cat_size_container" style="display: none;">
-                                    <select name="animal_size" required>
+                                    <select name="Size">
                                         <option value="" disabled selected>Porte</option>
                                         <option value="pequeno">Pequeno (até 3kg)</option>
                                         <option value="medio">Médio (3-5kg)</option>
@@ -257,7 +257,7 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-6" id="dog_breed_container" style="display: block;">
-                                    <select name="dog_breed[]" multiple="multiple" class="select2" required>
+                                    <select name="Breed[]" multiple="multiple" class="select2" required>
                                         <option value="SRD">SRD (Sem Raça Definida)</option>
                                         <option value="beagle">Beagle</option>
                                         <option value="bulldog">Bulldog</option>
@@ -269,7 +269,7 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-6" id="cat_breed_container" style="display: none;">
-                                    <select name="cat_breed[]" multiple="multiple" class="select2" required>
+                                    <select name="Breed[]" multiple="multiple" class="select2">
                                         <option value="SRD">SRD (Sem Raça Definida)</option>
                                         <option value="persian">Persa</option>
                                         <option value="siamese">Siamês</option>
@@ -277,7 +277,7 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-6" id="dog_fur_container" style="display: block;">
-                                    <select name="animal_fur" required>
+                                    <select name="Furtype" required>
                                         <option value="" disabled selected>Tipo de Pelo</option>
                                         <option value="curto-liso">Curto e liso</option>
                                         <option value="curto-aspero">Curto e áspero</option>
@@ -291,8 +291,12 @@
                                         <option value="duro-arame">Duro ou de arame</option>
                                     </select>
                                 </div>
+                                <div class="col-lg-4 checkboxes general_info">
+                                    <input type="checkbox" name="Shedding" value="TRUE">
+                                    <label>Perde Pêlo?</label>
+                                </div>
                                 <div class="col-lg-6" id="cat_fur_container" style="display: none;">
-                                    <select name="animal_fur" required>
+                                    <select name="Furtype">
                                         <option value="" disabled selected>Tipo de Pelo</option>
                                         <option value="curto-liso">Curto e liso</option>
                                         <option value="denso-curto">Pelagem densa curta</option>
@@ -304,22 +308,22 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="animal_images">Data de Nascimento</label>
-                                    <input type="date" name="birthday" required>
+                                    <input type="date" name="Birthday" required>
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="animal_images">Data de Chegada</label>
                                     <input type="date" name="arrival_date" required>
                                 </div>
                                 <div class="col-lg-4 checkboxes general_info">
-                                    <input type="checkbox" name="is_hypoallergenic" value="1">
+                                    <input type="checkbox" name="IsHypoallergenic" value="TRUE">
                                     <label>É Hipoalergénico(a)</label>
                                 </div>
                                 <div class="col-lg-4 checkboxes general_info">
-                                    <input type="checkbox" name="isforadoption" value="1">
+                                    <input type="checkbox" name="IsForAdoption" value="TRUE">
                                     <label>Disponível para Adoção</label>
                                 </div>
                                 <div class="col-lg-4 checkboxes general_info">
-                                    <input type="checkbox" name="isforfoster" value="1">
+                                    <input type="checkbox" name="IsForFostered" value="TRUE">
                                     <label>Disponível para FAT</label>
                                 </div>
                                 <!-- Informações de Saúde -->
@@ -327,57 +331,33 @@
                                     <h4>Informações de Saúde</h4>
                                 </div>
                                 <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="diet" value="1">
+                                    <input type="checkbox" name="Diet" value="TRUE">
                                     <label class="smaller_checks">Dieta Especial</label>
                                 </div>
                                 <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" id="is_sick" name="is_sick" value="1">
+                                    <input type="checkbox" id="IsSick" name="IsSick" value="TRUE">
                                     <label class="smaller_checks">Está Doente</label>
                                 </div>
                                 <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="is_handicap" value="1">
+                                    <input type="checkbox" name="IsHandicap" value="TRUE">
                                     <label class="smaller_checks">É Amputado(a)</label>
                                 </div>
                                 <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="is_blind" value="1">
+                                    <input type="checkbox" name="IsBlind" value="TRUE">
                                     <label class="smaller_checks">É Cego(a)</label>
                                 </div>
                                 <div class="col-lg-12" id="health_status">
-                                    <textarea name="health_status" placeholder="Descreva o estado de saúde do animal" rows="4" cols="50"></textarea>
+                                    <textarea name="HealthStatus" placeholder="Descreva o estado de saúde do animal" rows="4" cols="50"></textarea>
                                 </div>
                                 <!-- Informações do Local -->
                                 <div class="col-lg-12">
                                     <h4>Informações do Local</h4>
                                 </div>
-                                <div class="col-lg-12">
-                                    <select name="foster_or_shelter" id="foster_or_shelter" required>
-                                        <option value="" disabled selected>Selecione o Local</option>
-                                        <option value="shelter" id="shelter">No abrigo</option>
-                                        <option value="foster" id="foster">Em FAT</option>
-                                    </select>
-                                </div>
                                 <div class="col-lg-6" id="sector_id" required>
-                                    <input type="number" name="sector_id" placeholder="ID do Setor" required>
+                                    <input type="number" name="IDSector" placeholder="ID do Setor" required>
                                 </div>
-                                <!-- Informações do Abrigo -->
-                                <div class="col-lg-6" id="sector_name" style="display: none;">
-                                    <input type="text" name="sector_name" placeholder="Nome do Setor" required>
-                                </div>
-                                <div class="col-lg-6" id="kennel_number" style="display: none;">
-                                    <input type="text" name="kennel_number" placeholder="Número da Box" required>
-                                </div>
-                                <!-- Informações da FAT -->
-                                <div class="col-lg-6" id="foster_name" style="display: none;">
-                                    <input type="text" name="foster_name" placeholder="Nome da FAT" required>
-                                </div>
-                                <div class="col-lg-6" id="foster_email" style="display: none;">
-                                    <input type="email" name="foster_email" placeholder="Email da FAT" required>
-                                </div>
-                                <div class="col-lg-6" id="foster_address" style="display: none;">
-                                    <input type="text" name="foster_address" placeholder="Endereço" required>
-                                </div>
-                                <div class="col-lg-6" id="foster_phone" style="display: none;">
-                                    <input type="text" name="foster_phone" placeholder="Telefone" required>
+                                <div class="col-lg-6" id="shelter_id" required>
+                                    <input type="number" name="IDShelter" placeholder="ID do Shelter">
                                 </div>
                                 <!-- Atributos do Comportamento -->
                                 <div class="col-lg-12">
@@ -405,18 +385,18 @@
                                 </div>
                                 <div class="col-lg-4 behaviour_info">
                                     <label>Medo</label>
-                                    <input type="number" name="fear" min="1" max="5" placeholder="1-5">
+                                    <input type="number" name="Fear" min="1" max="5" placeholder="1-5">
                                 </div>
                                 <div class="col-lg-4 behaviour_info">
                                     <label>Obediência</label>
                                     <input type="number" name="behaviour" min="1" max="5" placeholder="1-5">
                                 </div>
                                 <div class="col-lg-4 checkboxes">
-                                    <input type="checkbox" name="is_trained" value="1">
+                                    <input type="checkbox" name="HouseTrained" value="TRUE">
                                     <label>Sabe onde fazer xixi</label>
                                 </div>
                                 <div class="col-lg-4 checkboxes">
-                                    <input type="checkbox" name="is_vocal" value="1">
+                                    <input type="checkbox" name="IsVocal" value="TRUE">
                                     <label>É Vocal</label>
                                 </div>
                                 <!-- Interações com Outros Animais -->
@@ -424,15 +404,15 @@
                                     <h4>Interações</h4>
                                 </div>
                                 <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="reactive_dogs" value="1">
+                                    <input type="checkbox" name="ReactiveDogs" value="TRUE">
                                     <label>Reage a Cães</label>
                                 </div>
                                 <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="reactive_cats" value="1">
+                                    <input type="checkbox" name="ReactiveCats" value="TRUE">
                                     <label>Reage a Gatos</label>
                                 </div>
                                 <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="reactive_children" value="1">
+                                    <input type="checkbox" name="ReactiveChildren" value="TRUE">
                                     <label>Reage a Crianças</label>
                                 </div>
                                 <!-- Upload de Imagens -->
@@ -441,7 +421,7 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <label for="animal_images">Envie uma imagem do animal:</label>
-                                    <input type="file" name="animal_images[]" id="animal_images" accept="image/*" multiple
+                                    <input type="file" name="UploadedImage" id="UploadedImage" accept="image/*" multiple
                                            required>
                                 </div>
                                 <!-- Botão de Envio -->
@@ -552,6 +532,43 @@
     <
     <!-- Owl Carousel -->
     <!-- Select2 -->
+    <script>
+        $(document).ready(function () {
+            $('.select2').select2({
+                placeholder: 'RaÃ§a', // Explicit placeholder
+                allowClear: true,              // Allow clearing the selection
+                width: '100%'                  // Full-width styling
+            });
+        });
+
+        document.getElementById('animal_species').addEventListener('change', function () {
+            // Get the selected species
+            const selectedSpecies = this.value;
+
+            // Hide both breed containers initially
+            document.getElementById('dog_breed_container').style.display = 'block';
+            document.getElementById('cat_breed_container').style.display = 'none';
+            document.getElementById('dog_size_container').style.display = 'block';
+            document.getElementById('cat_size_container').style.display = 'none';
+            document.getElementById('dog_fur_container').style.display = 'block';
+            document.getElementById('cat_fur_container').style.display = 'none';
+
+            // Show the relevant breed dropdown based on the selection
+            if (selectedSpecies === 'dog') {
+                document.getElementById('dog_breed_container').style.display = 'block';
+                document.getElementById('dog_size_container').style.display = 'block';
+                document.getElementById('dog_fur_container').style.display = 'block';
+            } else if (selectedSpecies === 'cat') {
+                document.getElementById('dog_breed_container').style.display = 'none';
+                document.getElementById('cat_breed_container').style.display = 'block';
+                document.getElementById('dog_size_container').style.display = 'none';
+                document.getElementById('cat_size_container').style.display = 'block';
+                document.getElementById('dog_fur_container').style.display = 'none';
+                document.getElementById('cat_fur_container').style.display = 'block';
+            }
+        });
+
+    </script>
 
 </body>
 
