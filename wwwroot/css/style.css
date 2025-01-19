@@ -7374,6 +7374,12 @@ button.btn-secondary:hover {
 	padding-bottom: 20px;
 }
 
+.admin-link {
+	display: inline-block; /* Garante que fiquem na mesma linha */
+	margin-right: 15px; /* Espaçamento entre os itens */
+}
+
+
 /*---------------------
   404 Page
 -----------------------*/
