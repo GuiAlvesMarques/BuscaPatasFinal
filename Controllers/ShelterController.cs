@@ -81,5 +81,22 @@ namespace BuscaPatasFinal.Controllers
 
             return View("~/Views/Adotar/DetailsAbrigo.cshtml", shelter);
         }
+
+        [HttpGet]
+        public IActionResult GetShelters()
+        {
+            var shelters = _context.Shelter
+                .Select(s => new
+                {
+                    IDShelter = s.IDShelter,
+                    ShelterName = s.ShelterName ?? "Nome não disponível",
+                    ShelterDescription = s.ShelterDescription ?? "Descrição não disponível",
+                    LogoBase64 = s.Logo != null ? Convert.ToBase64String(s.Logo) : null,
+                    Website = string.IsNullOrEmpty(s.Website) ? "#" : s.Website
+                })
+                .ToList();
+
+            return Json(shelters);
+        }
     }
 }

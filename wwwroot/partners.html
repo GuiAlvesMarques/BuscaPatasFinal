@@ -37,12 +37,16 @@
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__close">+</div>
         <ul class="offcanvas__widget">
-            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
+            <li>
+                <a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
             </li>
             <li><span class="icon_search search-switch"></span></li>
-            <li><a href="#"><span class="icon_heart_alt"></span>
+            <li>
+                <a href="#">
+                    <span class="icon_heart_alt"></span>
                     <div class="tip">2</div>
-                </a></li>
+                </a>
+            </li>
         </ul>
         <div class="offcanvas__logo">
             <a href="./index.html"><img src="img/logo.png" alt=""></a>
@@ -52,7 +56,6 @@
         </div>
     </div>
     <!-- Offcanvas Menu End -->
-
     <!-- Header Section Begin -->
     <header class="header">
         <div class="container-fluid">
@@ -65,7 +68,8 @@
                 <div class="col-xl-9 col-lg-9">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                            <li>
+                                <a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
                                     <li><a href="/Sheltered/AdoptionList?speciesId=1">Cães</a></li>
                                     <li><a href="/Sheltered/AdoptionList?speciesId=2">Gatos</a></li>
@@ -74,7 +78,8 @@
                             </li>
                             <li><a href="./entrega-animal.html">Entrega Animal</a></li>
                             <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
-                            <li><a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                            <li>
+                                <a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
                                     <li><a href="./breed-info.html">Raças & Cuidados</a></li>
                                     <li><a href="./faq.html">Perguntas Frequentes</a></li>
@@ -91,11 +96,18 @@
                         <ul class="header__right__widget">
 
                             <li><span class="icon_search search-switch"></span></li>
-                            <li><a href="#"><span class="icon_heart_alt"></span>
+                            <li>
+                                <a href="#">
+                                    <span class="icon_heart_alt"></span>
                                     <div class="tip">2</div>
-                                </a></li>
-                            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal"
-                                        data-bs-target="#authModal"></span></a></li>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon_profile" data-bs-toggle="modal"
+                                          data-bs-target="#authModal"></span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -106,14 +118,15 @@
         </div>
     </header>
     <!-- Header Section End -->
-
     <!-- Login and Register Modal -->
     <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content modal-header">
                 <div class="modal-body d-flex p-0">
                     <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
-                        aria-label="Close">&times;</button>
+                            aria-label="Close">
+                        &times;
+                    </button>
 
                     <!-- Left Side - Login/Register Form -->
                     <div class="w-50 p-5">
@@ -123,12 +136,12 @@
                             <div class="mb-3">
                                 <label for="email" class="form-label">Endereço de Email</label>
                                 <input type="email" class="form-control" id="email" placeholder="Insira o seu email"
-                                    required>
+                                       required>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Palavra-passe</label>
                                 <input type="password" class="form-control" id="password"
-                                    placeholder="Insira a sua palavra-passe" required>
+                                       placeholder="Insira a sua palavra-passe" required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Entrar</button>
                             <div class="text-center mt-3">
@@ -141,17 +154,17 @@
                             <div class="mb-3">
                                 <label for="registerName" class="form-label">Nome Completo</label>
                                 <input type="text" class="form-control" id="registerName"
-                                    placeholder="Insira o seu nome completo" required>
+                                       placeholder="Insira o seu nome completo" required>
                             </div>
                             <div class="mb-3">
                                 <label for="registerEmail" class="form-label">Endereço de Email</label>
                                 <input type="email" class="form-control" id="registerEmail"
-                                    placeholder="Insira o seu email" required>
+                                       placeholder="Insira o seu email" required>
                             </div>
                             <div class="mb-3">
                                 <label for="registerPassword" class="form-label">Palavra-passe</label>
                                 <input type="password" class="form-control" id="registerPassword"
-                                    placeholder="Crie uma palavra-passe" required>
+                                       placeholder="Crie uma palavra-passe" required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Registar</button>
                             <div class="text-center mt-3">
@@ -165,18 +178,17 @@
                     <!-- Right Side - Image -->
                     <div class="w-50 d-none d-md-block">
                         <img src="img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
-                            style="object-fit: cover;">
+                             style="object-fit: cover;">
                     </div>
                 </div>
 
                 <!-- Custom Close Button -->
                 <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+                        aria-label="Close"></button>
             </div>
         </div>
     </div>
     <!-- Login Register Model Ends -->
-
     <!-- Breadcrumb Begin -->
     <div class="breadcrumb-option">
         <div class="container">
@@ -191,107 +203,20 @@
         </div>
     </div>
     <!-- Breadcrumb End -->
-
-    
-<!-- Partners with Filter Section Begin -->
-<div class="container my-5">
-    <h2 class="text-center mb-4">Os nossos Parceiros</h2>
-    <p class="text-center mb-5">Temos orgulho em colaborar com organizações que partilham da nossa missão de melhorar a vida dos animais.</p>
-
-    <!-- Filter Controls -->
-    <div class="row mb-4">
-        <div class="col-lg-4 col-md-4">
-            <div class="section-title">
-                <h4>Filtrar Parceiros</h4>
-            </div>
-        </div>
-        <div class="col-lg-8 col-md-8">
-            <ul class="filter__controls">
-                <li class="active" data-filter="*">Todos</li>
-                <li data-filter=".abrigos">Abrigos</li>
-                <li data-filter=".vet">Veterinários</li>
-                <li data-filter=".loja">Lojas de Animas</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Partners Section -->
-    <div class="row g-4 property__gallery">
-        <!-- União Zoófila -->
-        <div class="col-md-6 mix abrigos">
-            <div class="d-flex align-items-center shadow border-0 p-3">
-                <img id="imgParceiro" src="img/shelters/logos/parceiro4.png" alt="União Zoófila" class="img-fluid me-3" style="max-width: 80px;">
-                <div>
-                    <h5 id="tituloParceiro" class="card-title">União Zoófila</h5>
-                    <p class="card-text">A União Zoófila é uma organização sem fins lucrativos dedicada ao bem-estar dos animais, especialmente aqueles que foram abandonados ou maltratados. 
-                        A sua missão está alinhada com o nosso compromisso de criar um mundo melhor para animais necessitados, ajudando-nos em operações de resgate e esforços de adoção.</p>
-                    <a id="linkParceiro" href="abrigos.html" target="_blank">Ver Página &gt;</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- AniCura -->
-        <div class="col-md-6 mix vet">
-            <div class="d-flex align-items-center shadow border-0 p-3">
-                <img id="imgParceiro" src="img/shelters/logos/parceiro1.png" alt="AniCura" class="img-fluid me-3" style="max-width: 80px;">
-                <div>
-                    <h5 id="tituloParceiro" class="card-title">AniCura</h5>
-                    <p class="card-text">A AniCura é um dos principais prestadores de cuidados veterinários na Europa. A sua equipa de especialistas ajuda-nos a garantir que os animais resgatados 
-                        recebem os melhores cuidados médicos, desde vacinas a cirurgias, permitindo-lhes recuperar e prosperar em lares amorosos.</p>
-                    <a id="linkParceiro" href="https://www.anicura.pt" target="_blank">Ver Página &gt;</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Casa dos Animais -->
-        <div class="col-md-6 mix abrigos">
-            <div class="d-flex align-items-center shadow border-0 p-3">
-                <img id="imgParceiro" src="img/shelters/logos/abrigo.jpg" alt="Casa_dos_Animais" class="img-fluid me-3" style="max-width: 80px;">
-                <div>
-                    <h5 id="tituloParceiro" class="card-title">Casa dos Animais</h5>
-                    <p class="card-text">A Casas dos Animais é um dos principais abrigos de animais na Europa. A sua equipa de especialistas ajuda-nos a garantir que os animais resgatados recebem os 
-                        melhores cuidados médicos, desde vacinas a cirurgias, permitindo-lhes recuperar e prosperar em lares amorosos</p>
-                    <a id="linkParceiro" href="details-abrigo.html" target="_blank">Ver Página &gt;</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Animais de Rua -->
-        <div class="col-md-6 mix abrigos">
-            <div class="d-flex align-items-center shadow border-0 p-3">
-                <img id="imgParceiro" src="img/shelters/logos/parceiro3.png" alt="Animais de Rua" class="img-fluid me-3" style="max-width: 80px;">
-                <div>
-                    <h5 id="tituloParceiro" class="card-title">Animais de Rua</h5>
-                    <p class="card-text">A Animais de Rua dedica-se a melhorar a qualidade de vida dos animais errantes através de programas de esterilização, educação e adoção. 
-                        Colaboram connosco para reduzir a população de animais errantes enquanto promovem a posse responsável de animais de estimação nas comunidades.</p>
-                    <a id="linkParceiro" href="abrigos.html" target="_blank">Ver Página &gt;</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Patinhas Mimadas -->
-        <div class="col-md-6 mix loja">
-            <div class="d-flex align-items-center shadow border-0 p-3">
-                <img id="imgParceiro" src="img/shelters/logos/parceiro2.png" alt="Patinhas Mimadas" class="img-fluid me-3" style="max-width: 80px;">
-                <div>
-                    <h5 id="tituloParceiro" class="card-title">Patinhas Mimadas</h5>
-                    <p class="card-text">A Patinhas Mimadas é uma marca boutique especializada em acessórios e essenciais de alta qualidade para animais de estimação. 
-                        Eles apoiam generosamente as nossas iniciativas, doando materiais e contribuindo com uma parte das suas vendas para programas de bem-estar animal.</p>
-                    <a id="linkParceiro" href="https://patinhasmimadas.com/pt/" target="_blank">Ver Página &gt;</a>
-                </div>
+    <!-- Partners with Filter Section Begin -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Os nossos Parceiros</h2>
+        <p class="text-center mb-5">Temos orgulho em colaborar com organizações que partilham da nossa missão de melhorar a vida dos animais.</p>
+        <!-- Partners Section -->
+        <div class="row g-4 property__gallery">
+            <div class="row g-4 property__gallery" id="shelter-list">
+                <!-- Shelters will be dynamically inserted here -->
             </div>
         </div>
     </div>
-</div>
-<!-- Partners with Filter Section End -->
-
-
-    
-<!-- Partners End -->
-
-
-    <!-- Partners Begin -->     
-
+    <!-- Partners with Filter Section End -->
+    <!-- Partners End -->
+    <!-- Partners Begin -->
     <!-- Footer Section Begin -->
     <footer class="footer">
         <div class="container">
@@ -347,7 +272,6 @@
         </div>
     </footer>
     <!-- Footer Section End -->
-
     <!-- Search Begin -->
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
@@ -358,8 +282,6 @@
         </div>
     </div>
     <!-- Search End -->
-
-
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -376,6 +298,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js"></script>
     <script src="js/login-register.js"></script>
+    <script src="js/partners.js"></script>
 </body>
 
 </html>
