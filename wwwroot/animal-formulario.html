@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/multiple-selection.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-    </head>
+</head>
 
 <body>
     <!-- Page Preloder -->
@@ -222,10 +222,10 @@
                                 <div class="col-lg-6">
                                     <input type="text" name="AnimalName" placeholder="Nome do Animal" required>
                                 </div>
-                                <div class="col-lg-6">
-                                    <select name="animal_species" id="IDSpecies" required>
+                                <div class="col-lg-6">                                  
+                                    <select name="IDSpecies" id="IDSpecies" required>
                                         <option value="" disabled selected>Espécie</option>
-                                        <option value="1" id="dog">Cachorro</option>
+                                        <option value="1" id="dog">Cão</option>
                                         <option value="2" id="cat">Gato</option>
                                     </select>
                                 </div>
@@ -247,65 +247,21 @@
                                         <option value="gigante">Gigante (acima de 35kg)</option>
                                     </select>
                                 </div>
-                                <div class="col-lg-4" id="cat_size_container" style="display: none;">
-                                    <select name="Size">
-                                        <option value="" disabled selected>Porte</option>
-                                        <option value="pequeno">Pequeno (até 3kg)</option>
-                                        <option value="medio">Médio (3-5kg)</option>
-                                        <option value="grande">Grande (5-7kg)</option>
-                                        <option value="gigante">Gigante (acima de 7kg)</option>
+                                <div class="col-lg-6">
+                                    <label for="Breed">Raça</label>
+                                    <select id="breed_select" name="Breed" class="form-control" required>
+                                        <option value="" disabled selected>Selecione a raça</option>
+                                        <!-- As opções serão preenchidas dinamicamente -->
                                     </select>
                                 </div>
-                                <div class="col-lg-6" id="dog_breed_container" style="display: block;">
-                                    <select name="Breed[]" multiple="multiple" class="select2" required>
-                                        <option value="SRD">SRD (Sem Raça Definida)</option>
-                                        <option value="beagle">Beagle</option>
-                                        <option value="bulldog">Bulldog</option>
-                                        <option value="golden_retriever">Golden Retriever</option>
-                                        <option value="german_shepherd">Pastor Alemão</option>
-                                        <option value="labrador">Labrador</option>
-                                        <option value="poodle">Poodle</option>
-                                        <!-- adicionar todas as raças aqui -->
+                                <div class="col-lg-6">
+                                    <label for="Furtype">Tipo de Pelo</label>
+                                    <select id="furtype_select" name="Furtype" class="form-control" required>
+                                        <option value="" disabled selected>Selecione o tipo de pelo</option>
+                                        <!-- As opções serão preenchidas dinamicamente -->
                                     </select>
                                 </div>
-                                <div class="col-lg-6" id="cat_breed_container" style="display: none;">
-                                    <select name="Breed[]" multiple="multiple" class="select2">
-                                        <option value="SRD">SRD (Sem Raça Definida)</option>
-                                        <option value="persian">Persa</option>
-                                        <option value="siamese">Siamês</option>
-                                        <!-- adicionar todas as raças aqui -->
-                                    </select>
-                                </div>
-                                <div class="col-lg-6" id="dog_fur_container" style="display: block;">
-                                    <select name="Furtype" required>
-                                        <option value="" disabled selected>Tipo de Pelo</option>
-                                        <option value="curto-liso">Curto e liso</option>
-                                        <option value="curto-aspero">Curto e áspero</option>
-                                        <option value="duplo-curto">Pelo duplo curto</option>
-                                        <option value="duplo-longo">Pelo duplo longo</option>
-                                        <option value="denso">Pelagem com subpelo espesso</option>
-                                        <option value="longo-liso">Longo e liso</option>
-                                        <option value="longo-ondulado">Longo e ondulado</option>
-                                        <option value="longo-encaracolado">Longo e encaracolado</option>
-                                        <option value="sem-pelo">Sem pelo</option>
-                                        <option value="duro-arame">Duro ou de arame</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 checkboxes general_info">
-                                    <input type="checkbox" name="Shedding" value="TRUE">
-                                    <label>Perde Pêlo?</label>
-                                </div>
-                                <div class="col-lg-6" id="cat_fur_container" style="display: none;">
-                                    <select name="Furtype">
-                                        <option value="" disabled selected>Tipo de Pelo</option>
-                                        <option value="curto-liso">Curto e liso</option>
-                                        <option value="denso-curto">Pelagem densa curta</option>
-                                        <option value="longo-liso">Longo e liso</option>
-                                        <option value="ondulado">Ondulado ou cacheado</option>
-                                        <option value="semi-longo">Semi-longo com subpelo</option>
-                                        <option value="sem-pelo">Sem pelo</option>
-                                    </select>
-                                </div>
+
                                 <div class="col-lg-6">
                                     <label for="animal_images">Data de Nascimento</label>
                                     <input type="date" name="Birthday" required>
@@ -315,35 +271,52 @@
                                     <input type="date" name="arrival_date" required>
                                 </div>
                                 <div class="col-lg-4 checkboxes general_info">
-                                    <input type="checkbox" name="IsHypoallergenic" value="TRUE">
+                                    <input type="checkbox" name="IsHypoallergenic" value="true">
                                     <label>É Hipoalergénico(a)</label>
                                 </div>
                                 <div class="col-lg-4 checkboxes general_info">
-                                    <input type="checkbox" name="IsForAdoption" value="TRUE">
+                                    <input type="checkbox" name="IsForAdoption" value="true">
                                     <label>Disponível para Adoção</label>
                                 </div>
                                 <div class="col-lg-4 checkboxes general_info">
-                                    <input type="checkbox" name="IsForFostered" value="TRUE">
+                                    <input type="checkbox" name="IsForFostered" value="true">
                                     <label>Disponível para FAT</label>
+                                </div>
+                                <div class="col-lg-4 checkboxes general_info">
+                                    <input type="checkbox" name="Shedding" value="true">
+                                    <label>Perde Pêlo?</label>
+                                </div>
+                                <!-- Informações Sobre o Animal-->
+                                <div class="col-lg-12 ">
+                                    <h4>Informações sobre o Animal</h4>
+                                </div>
+                                <div class="col-lg-12" id="history">
+                                    <textarea name="History" placeholder="Descreva a história do animal" rows="4" cols="50"></textarea>
+                                </div>
+                                <div class="col-lg-12" id="personality">
+                                    <textarea name="Personality" placeholder="Descreva a personalidade do animal" rows="4" cols="50"></textarea>
+                                </div>
+                                <div class="col-lg-12" id="sponsors">
+                                    <textarea name="Sponsors" placeholder="Descreva os €patrocinadores ou apoios do animal" rows="4" cols="50"></textarea>
                                 </div>
                                 <!-- Informações de Saúde -->
                                 <div class="col-lg-12 ">
                                     <h4>Informações de Saúde</h4>
                                 </div>
                                 <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="Diet" value="TRUE">
+                                    <input type="checkbox" name="Diet" value="true">
                                     <label class="smaller_checks">Dieta Especial</label>
                                 </div>
                                 <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" id="IsSick" name="IsSick" value="TRUE">
+                                    <input type="checkbox" id="IsSick" name="IsSick" value="true">
                                     <label class="smaller_checks">Está Doente</label>
                                 </div>
                                 <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="IsHandicap" value="TRUE">
+                                    <input type="checkbox" name="IsHandicap" value="true">
                                     <label class="smaller_checks">É Amputado(a)</label>
                                 </div>
                                 <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="IsBlind" value="TRUE">
+                                    <input type="checkbox" name="IsBlind" value="true">
                                     <label class="smaller_checks">É Cego(a)</label>
                                 </div>
                                 <div class="col-lg-12" id="health_status">
@@ -354,10 +327,10 @@
                                     <h4>Informações do Local</h4>
                                 </div>
                                 <div class="col-lg-6" id="sector_id" required>
-                                    <input type="number" name="IDSector" placeholder="ID do Setor" required>
+                                    <input type="text" name="IDSector" placeholder="ID do Setor" required>
                                 </div>
                                 <div class="col-lg-6" id="shelter_id" required>
-                                    <input type="number" name="IDShelter" placeholder="ID do Shelter">
+                                    <input type="number" name="IDShelter" placeholder="ID do Shelter" required>
                                 </div>
                                 <!-- Atributos do Comportamento -->
                                 <div class="col-lg-12">
@@ -392,11 +365,11 @@
                                     <input type="number" name="behaviour" min="1" max="5" placeholder="1-5">
                                 </div>
                                 <div class="col-lg-4 checkboxes">
-                                    <input type="checkbox" name="HouseTrained" value="TRUE">
+                                    <input type="checkbox" name="HouseTrained" value="true">
                                     <label>Sabe onde fazer xixi</label>
                                 </div>
                                 <div class="col-lg-4 checkboxes">
-                                    <input type="checkbox" name="IsVocal" value="TRUE">
+                                    <input type="checkbox" name="IsVocal" value="true">
                                     <label>É Vocal</label>
                                 </div>
                                 <!-- Interações com Outros Animais -->
@@ -404,15 +377,15 @@
                                     <h4>Interações</h4>
                                 </div>
                                 <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="ReactiveDogs" value="TRUE">
+                                    <input type="checkbox" name="ReactiveDogs" value="true">
                                     <label>Reage a Cães</label>
                                 </div>
                                 <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="ReactiveCats" value="TRUE">
+                                    <input type="checkbox" name="ReactiveCats" value="true">
                                     <label>Reage a Gatos</label>
                                 </div>
                                 <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="ReactiveChildren" value="TRUE">
+                                    <input type="checkbox" name="ReactiveChildren" value="true">
                                     <label>Reage a Crianças</label>
                                 </div>
                                 <!-- Upload de Imagens -->
@@ -535,39 +508,109 @@
     <script>
         $(document).ready(function () {
             $('.select2').select2({
-                placeholder: 'RaÃ§a', // Explicit placeholder
-                allowClear: true,              // Allow clearing the selection
-                width: '100%'                  // Full-width styling
+                placeholder: 'Raça', // Placeholder explícito
+                allowClear: true,    // Permitir limpar a seleção
+                width: '100%'        // Estilização full-width
             });
         });
 
-        document.getElementById('animal_species').addEventListener('change', function () {
-            // Get the selected species
-            const selectedSpecies = this.value;
+        const breeds = {
+            1: [ // Cães (value 1)
+                { value: "srd", text: "SRD (Sem Raça Definida)" },
+                { value: "golden_retriever", text: "Golden Retriever" },
+                { value: "pastor_alemao", text: "Pastor Alemão" },
+                { value: "labrador", text: "Labrador" },
+                { value: "bulldog", text: "Bulldog" },
+                { value: "beagle", text: "Beagle" },
+                { value: "rottweiler", text: "Rottweiler" },
+                { value: "poodle", text: "Poodle" },
+                { value: "boxer", text: "Boxer" },
+                { value: "teckel", text: "Teckel" },
+                { value: "chihuahua", text: "Chihuahua" },
+                { value: "doberman", text: "Doberman" },
+                { value: "border_collie", text: "Border Collie" },
+                { value: "akita", text: "Akita" },
+                { value: "cocker_spaniel", text: "Cocker Spaniel" },
+                { value: "husky_siberiano", text: "Husky Siberiano" },
+                { value: "dalmata", text: "Dálmata" },
+                { value: "bulterrier", text: "Bull Terrier" },
+                { value: "cavalier_king_charles", text: "Cavalier King Charles" },
+                { value: "staffordshire", text: "Staffordshire" },
+                { value: "weimaraner", text: "Weimaraner" },
+                // Adicione mais raças de cães aqui se necessário
+            ],
+            2: [ // Gatos (value 2)
+                { value: "srd", text: "SRD (Sem Raça Definida)" },
+                { value: "persa", text: "Persa" },
+                { value: "siames", text: "Siamês" },
+                { value: "maine_coon", text: "Maine Coon" },
+                { value: "ragdoll", text: "Ragdoll" },
+                { value: "sphynx", text: "Sphynx" },
+                { value: "bengal", text: "Bengal" },
+                { value: "britanico_pelo_curto", text: "Britânico de Pelo Curto" },
+                { value: "floresta_norueguesa", text: "Floresta Norueguesa" },
+                { value: "abissinio", text: "Abissínio" },
+                { value: "burmes", text: "Burmês" },
+                { value: "siames_tailandes", text: "Siamês Tailandês" },
+                { value: "angora_turco", text: "Angorá Turco" },
+                { value: "bombaim", text: "Bombaim" },
+                { value: "chartreux", text: "Chartreux" },
+                { value: "birmano", text: "Birmano" },
+                { value: "exotico_pelo_curto", text: "Exótico de Pelo Curto" },
+                { value: "azul_russo", text: "Azul Russo" },
+                { value: "korat", text: "Korat" },
+                // Adicione mais raças de gatos aqui se necessário
+            ],
+        };
 
-            // Hide both breed containers initially
-            document.getElementById('dog_breed_container').style.display = 'block';
-            document.getElementById('cat_breed_container').style.display = 'none';
-            document.getElementById('dog_size_container').style.display = 'block';
-            document.getElementById('cat_size_container').style.display = 'none';
-            document.getElementById('dog_fur_container').style.display = 'block';
-            document.getElementById('cat_fur_container').style.display = 'none';
 
-            // Show the relevant breed dropdown based on the selection
-            if (selectedSpecies === 'dog') {
-                document.getElementById('dog_breed_container').style.display = 'block';
-                document.getElementById('dog_size_container').style.display = 'block';
-                document.getElementById('dog_fur_container').style.display = 'block';
-            } else if (selectedSpecies === 'cat') {
-                document.getElementById('dog_breed_container').style.display = 'none';
-                document.getElementById('cat_breed_container').style.display = 'block';
-                document.getElementById('dog_size_container').style.display = 'none';
-                document.getElementById('cat_size_container').style.display = 'block';
-                document.getElementById('dog_fur_container').style.display = 'none';
-                document.getElementById('cat_fur_container').style.display = 'block';
+        const furtypes = {
+            1: [ // Cães (value 1)
+                { value: "curto-liso", text: "Curto e liso" },
+                { value: "curto-aspero", text: "Curto e áspero" },
+                { value: "duplo-curto", text: "Pelo duplo curto" },
+                { value: "duplo-longo", text: "Pelo duplo longo" },
+                { value: "denso", text: "Pelagem com subpelo espesso" },
+                { value: "longo-liso", text: "Longo e liso" },
+                { value: "longo-ondulado", text: "Longo e ondulado" },
+                { value: "sem-pelo", text: "Sem pelo" },
+            ],
+            2: [ // Gatos (value 2)
+                { value: "curto-liso", text: "Curto e liso" },
+                { value: "denso-curto", text: "Pelagem densa curta" },
+                { value: "longo-liso", text: "Longo e liso" },
+                { value: "semi-longo", text: "Semi-longo com subpelo" },
+                { value: "sem-pelo", text: "Sem pelo" },
+            ],
+        };
+
+        document.getElementById("IDSpecies").addEventListener("change", function () {
+            const selectedSpecies = this.value; // Pega o value (1 ou 2)
+
+            // Atualizar o campo de raças
+            const breedSelect = document.getElementById("breed_select");
+            breedSelect.innerHTML = '<option value="" disabled selected>Selecione a raça</option>';
+            if (breeds[selectedSpecies]) {
+                breeds[selectedSpecies].forEach((breed) => {
+                    const option = document.createElement("option");
+                    option.value = breed.value;
+                    option.textContent = breed.text;
+                    breedSelect.appendChild(option);
+                });
+            }
+
+            // Atualizar o campo de tipos de pelo
+            const furtypeSelect = document.getElementById("furtype_select");
+            furtypeSelect.innerHTML = '<option value="" disabled selected>Selecione o tipo de pelo</option>';
+            if (furtypes[selectedSpecies]) {
+                furtypes[selectedSpecies].forEach((furtype) => {
+                    const option = document.createElement("option");
+                    option.value = furtype.value;
+                    option.textContent = furtype.text;
+                    furtypeSelect.appendChild(option);
+                });
             }
         });
-
     </script>
 
 </body>

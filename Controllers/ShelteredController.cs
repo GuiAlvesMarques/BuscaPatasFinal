@@ -17,6 +17,7 @@ namespace BuscaPatasFinal.Controllers
         [HttpPost]
         public IActionResult RegisterSheltered([FromForm] Sheltered registoanimal)
         {
+            // Validação do modelo recebido
             if (!ModelState.IsValid)
             {
                 foreach (var key in ModelState.Keys)
@@ -32,6 +33,34 @@ namespace BuscaPatasFinal.Controllers
 
             try
             {
+                // Verifica se há uma imagem enviada e processa para salvar no banco de dados
+                if (registoanimal.UploadedImage != null && registoanimal.UploadedImage.Length > 0)
+                {
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        registoanimal.UploadedImage.CopyTo(memoryStream);
+                        registoanimal.Image = memoryStream.ToArray(); // Converte a imagem para byte[]
+                    }
+                }
+
+                if (registoanimal.Birthday != null)
+                {
+                    // Calcula a idade com base no aniversário
+                    DateTime today = DateTime.Today;
+                    registoanimal.Age = today.Year - registoanimal.Birthday.Value.Year;
+
+                    // Verifica se o aniversário ainda não ocorreu neste ano
+                    if (registoanimal.Birthday.Value.Date > today.AddYears(-registoanimal.Age))
+                    {
+                        registoanimal.Age--;
+                    }
+                }
+
+                // Verifica se IDShelter é válido
+                if (!_context.Shelter.Any(s => s.IDShelter == registoanimal.IDShelter))
+                {
+                    return Json(new { error = "The specified shelter does not exist." });
+                }
 
                 // Salva os dados no banco de dados
                 _context.Sheltered.Add(registoanimal);
@@ -56,13 +85,15 @@ namespace BuscaPatasFinal.Controllers
             }
         }
 
+
         [HttpGet]
         public IActionResult AdoptionList(int speciesId)
         {
             // Retrieve animals based on the species ID
-            var animals = _context.Sheltered
-                .Where(a => a.IDSpecies == speciesId) // Filter by species ID
-                .ToList();
+            var query = _context.Sheltered
+                .Where(a => a.IDSpecies == speciesId);
+            var animals = query.ToList();
+
 
             // Verify if there are results; if not, initialize an empty list
             if (animals == null || !animals.Any())
@@ -76,6 +107,7 @@ namespace BuscaPatasFinal.Controllers
             // Return the appropriate view with the list of animals
             return View(viewName, animals);
         }
+
         [HttpGet]
         public IActionResult Details(int id)
         {

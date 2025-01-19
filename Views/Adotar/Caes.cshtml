@@ -238,15 +238,15 @@
                                                 <ul>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="age"
-                                                               value="Filhote"> Filhote (0-2 anos)
+                                                               value="filhote"> Filhote (0-2 anos)
                                                     </li>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="age"
-                                                               value="Adulto"> Adulto (2-7 anos)
+                                                               value="adulto"> Adulto (2-7 anos)
                                                     </li>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="age"
-                                                               value="Idoso"> Idoso (7+ anos)
+                                                               value="idoso"> Idoso (7+ anos)
                                                     </li>
                                                 </ul>
                                             </div>
@@ -264,27 +264,27 @@
                                                 <ul>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="breed"
-                                                               value="Labrador"> Labrador
+                                                               value="labrador"> Labrador
                                                     </li>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="breed"
-                                                               value="Bulldog"> Bulldog
+                                                               value="bulldog"> Bulldog
                                                     </li>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="breed"
-                                                               value="Dachshund"> Dachshund
+                                                               value="dachshund"> Dachshund
                                                     </li>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="breed"
-                                                               value="Husky"> Husky
+                                                               value="husky"> Husky
                                                     </li>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="breed"
-                                                               value="Golden Retriever"> Golden Retriever
+                                                               value="golden Retriever"> Golden Retriever
                                                     </li>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="breed"
-                                                               value="Beagle"> Beagle
+                                                               value="beagle"> Beagle
                                                     </li>
                                                 </ul>
                                             </div>
@@ -302,23 +302,23 @@
                                                 <ul>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="size"
-                                                               value="Mini"> Mini
+                                                               value="mini"> Mini
                                                     </li>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="size"
-                                                               value="Pequeno"> Pequeno
+                                                               value="pequeno"> Pequeno
                                                     </li>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="size"
-                                                               value="Médio"> Médio
+                                                               value="medio"> Médio
                                                     </li>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="size"
-                                                               value="Grande"> Grande
+                                                               value="grande"> Grande
                                                     </li>
                                                     <li>
                                                         <input type="checkbox" class="filter-checkbox" data-type="size"
-                                                               value="Gigante"> Gigante
+                                                               value="gigante"> Gigante
                                                     </li>
                                                 </ul>
                                             </div>
@@ -333,7 +333,7 @@
                 <!-- Main Content (Dynamic Cards) -->
                 <div class="col-lg-9 col-md-9">
                     <div class="row">
-                        @foreach (var dog in Model.Where(d => d.IsForAdoption)) // Filtrar apenas os disponíveis para adoção
+                        @foreach (var dog in Model) // Filtrar apenas os disponíveis para adoção
                         {
                             <div class="col-lg-4 col-md-6 product-item" data-breed="@dog.Breed" data-age="@dog.AgeRange" data-size="@dog.Size">
                                 <div class="product__item">
@@ -374,7 +374,7 @@
                                     </div>
                                     <div class="product__item__text">
                                         <h6><a href="#">@dog.AnimalName</a></h6>
-                                        <p>Raça: @dog.Breed | Idade: @dog.AgeRange | Porte: @dog.Size</p>
+                                        <p>Raça: @char.ToUpper(dog.Breed.First())@dog.Breed.Substring(1) | Idade: @dog.Age anos | Porte: @char.ToUpper(dog.Size.First())@dog.Size.Substring(1)</p>
                                         <button onclick="window.location.href='/Sheltered/Details/@dog.IDAnimal'" class="adopt-btn">Adotar</button>
                                     </div>
                                 </div>

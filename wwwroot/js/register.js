@@ -66,7 +66,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
                 popupMessage.innerText = data.message;
 
                 setTimeout(() => {
-                    window.location.href = "/UserP.html";
+                    window.location.href = "/index.html";
                 }, 2000);
             } else {
                 popupMessage.classList.remove("d-none", "alert-success");

@@ -1,4 +1,4 @@
-@model BuscaPatasFinal.Models.Shelter
+Ôªø@model BuscaPatasFinal.Models.Shelter
 
 
 <!DOCTYPE html>
@@ -73,7 +73,7 @@
                             <li>
                                 <a href="~/adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
-                                    <li><a href="/Sheltered/AdoptionList?speciesId=1">C„es</a></li>
+                                    <li><a href="/Sheltered/AdoptionList?speciesId=1">C√£es</a></li>
                                     <li><a href="/Sheltered/AdoptionList?speciesId=2">Gatos</a></li>
                                     <li><a href="~/matchmaking.html">Matchmaking</a></li>
                                 </ul>
@@ -83,7 +83,7 @@
                             <li>
                                 <a href="~/learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
-                                    <li><a href="~/breed-info.html">RaÁas & Cuidados</a></li>
+                                    <li><a href="~/breed-info.html">Ra√ßas & Cuidados</a></li>
                                     <li><a href="~/faq.html">Perguntas Frequentes</a></li>
                                 </ul>
                             </li>
@@ -133,9 +133,9 @@
                     <div class="w-50 p-5">
 
                         <form id="loginForm" method="post" action="/Account/Login">
-                            <h3 class="mb-4 text-center" id="authModalLabel">Iniciar Sess„o</h3>
+                            <h3 class="mb-4 text-center" id="authModalLabel">Iniciar Sess√£o</h3>
                             <div class="mb-3">
-                                <label for="email" class="form-label">EndereÁo de Email</label>
+                                <label for="email" class="form-label">Endere√ßo de Email</label>
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Insira o seu email" required>
                             </div>
                             <div class="mb-3">
@@ -144,7 +144,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Entrar</button>
                             <div class="text-center mt-3">
-                                <small>N„o tem conta? <a href="#" id="switchToRegister">Registar</a></small>
+                                <small>N√£o tem conta? <a href="#" id="switchToRegister">Registar</a></small>
                             </div>
                         </form>
 
@@ -175,7 +175,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Register</button>
                             <div class="text-center mt-3">
-                                <small>J· tem conta? <a href="#" id="switchToLogin">Login</a></small>
+                                <small>J√° tem conta? <a href="#" id="switchToLogin">Login</a></small>
                             </div>
                         </form>
 
@@ -232,7 +232,7 @@
                     }
                     else
                     {
-                        <img src="~/img/default-placeholder.png" alt="Sem logo disponÌvel" class="shelter__logo" />
+                        <img src="~/img/default-placeholder.png" alt="Sem logo dispon√≠vel" class="shelter__logo" />
                     }
                 </div>
             </div>
@@ -248,9 +248,9 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="shelter__details">
-                        <h5>LocalizaÁaaaa„o:</h5>
+                        <h5>Localiza√ß√£o:</h5>
                         <p>@Model.Location</p>
-                        <h5>Capacidade M·xima:</h5>
+                        <h5>Capacidade M√°xima:</h5>
                         <p>@Model.MaximumCapacity animais</p>
                         <h5>Contacto:</h5>
                         <p>Telefone: @Model.PhoneNumber</p>
@@ -293,22 +293,22 @@
                     }
                     else
                     {
-                        <p>Sem informaÁıes sobre visitas no momento.</p>
+                        <p>Sem informa√ß√µes sobre visitas no momento.</p>
                     }
                 </div>
                 <div class="shelter__adoption col-lg-8">
-                    <h5>Processo de AdoÁ„o:</h5>
+                    <h5>Processo de Ado√ß√£o:</h5>
                     @if (!string.IsNullOrEmpty(Model.AdoptionProcess))
                     {
                         <p>@Model.AdoptionProcess</p>
                     }
                     else
                     {
-                        <p>O abrigo n„o informou detalhes sobre o processo de adoÁ„o.</p>
+                        <p>O abrigo n√£o informou detalhes sobre o processo de ado√ß√£o.</p>
                     }
                 </div>
                 <div class="shelter__animals col-lg-8">
-                    <h5>Animais DisponÌveis para AdoÁ„o:</h5>
+                    <h5>Animais Dispon√≠veis para Ado√ß√£o:</h5>
                     @if (Model.ShelteredAnimals != null && Model.ShelteredAnimals.Any())
                     {
                         <div class="row">
@@ -322,12 +322,12 @@
                                         }
                                         else
                                         {
-                                            <img src="~/img/img-adotar.png" alt="Imagem n„o disponÌvel" class="img-fluid" />
+                                            <img src="~/img/img-adotar.png" alt="Imagem n√£o dispon√≠vel" class="img-fluid" />
                                         }
                                         <div class="animal__details__text">
                                         <h6>@animal.AnimalName</h6>
                                         <p>Idade: @animal.Age anos</p>
-                                        <p>RaÁa: @animal.Breed</p>
+                                        <p>Ra√ßa: @animal.Breed</p>
                                         <a href="/Sheltered/Details/@animal.IDAnimal" class="btn btn-primary btn-sm">Ver Mais</a>
                                         </div>
                                     </div>
@@ -337,7 +337,7 @@
                     }
                     else
                     {
-                        <p>N„o h· animais disponÌveis para adoÁ„o neste abrigo no momento.</p>
+                        <p>N√£o h√° animais dispon√≠veis para ado√ß√£o neste abrigo no momento.</p>
                     }
                 </div>
 
@@ -358,23 +358,23 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-5">
                     <div class="footer__widget">
-                        <h6>ServiÁos</h6>
+                        <h6>Servi√ßos</h6>
                         <ul>
                             <li><a href="adotar.html">Adotar</a></li>
                             <li><a href="entrega-animal.html">Entrega Animal</a></li>
-                            <li><a href="breed-info.html">EspÈcies e RaÁas</a></li>
+                            <li><a href="breed-info.html">Esp√©cies e Ra√ßas</a></li>
                             <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4">
                     <div class="footer__widget">
-                        <h6>Sobre NÛs</h6>
+                        <h6>Sobre N√≥s</h6>
                         <ul>
                             <li><a href="about-us.html">Dinflux</a></li>
                             <li><a href="team.html">Equipa BuscaPatas</a></li>
                             <li><a href="partners.html">Nossos Parceiros</a></li>
-                            <li><a href="termos-politicas.html">Termos e PolÌticas</a></li>
+                            <li><a href="termos-politicas.html">Termos e Pol√≠ticas</a></li>
                         </ul>
                     </div>
                 </div>
@@ -415,13 +415,13 @@
         $(document).on('click', '.like-button', function (e) {
             e.preventDefault();
 
-            // Captura os IDs do animal e da espÈcie
+            // Captura os IDs do animal e da esp√©cie
             const animalId = $(this).data('animal-id');
             const speciesId = $(this).data('species-id');
 
-            // Verifique se o ID do animal est· presente
+            // Verifique se o ID do animal estÔøΩ presente
             if (!animalId) {
-                alert('ID do animal n„o encontrado.');
+                alert('ID do animal n√£o encontrado.');
                 return;
             }
 
@@ -435,7 +435,7 @@
                     if (response.success) {
                         alert('Animal adicionado aos favoritos com sucesso.');
                     } else {
-                        alert(response.message || 'N„o foi possÌvel adicionar aos favoritos.');
+                        alert(response.message || 'N√£o foi poss√≠vel adicionar aos favoritos.');
                     }
                 },
                 error: function (xhr) {

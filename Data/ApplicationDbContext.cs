@@ -18,5 +18,19 @@ namespace BuscaPatasFinal.Data
         public DbSet<Lost> Lost { get; set; }
         public DbSet<Found> Found { get; set; }
         public DbSet<Sheltered> Sheltered { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Configuração do relacionamento Shelter (1) -> Sheltered (N)
+            modelBuilder.Entity<Sheltered>()
+                .HasOne<Shelter>(s => s.Shelter) // Propriedade de navegação na entidade Sheltered
+                .WithMany(s => s.ShelteredAnimals) // Propriedade de navegação na entidade Shelter
+                .HasForeignKey(s => s.IDShelter) // Chave estrangeira no modelo Sheltered
+                .OnDelete(DeleteBehavior.Cascade); // Comportamento ao deletar um abrigo
+
+            // Outras configurações adicionais (se necessário)
+        }
     }
 }
