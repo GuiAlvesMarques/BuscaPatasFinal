@@ -539,14 +539,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const clearFiltersButton = document.getElementById("clear-filters");
     const products = document.querySelectorAll(".product-item");
 
+    // Função para determinar se a idade está dentro de um intervalo
+    const isAgeInRange = (age, range) => {
+        if (range === "0-2") return age >= 0 && age <= 2;
+        if (range === "2-7") return age > 2 && age <= 7;
+        if (range === "7+") return age > 7;
+        return false;
+    };
+
     // Atualizar os filtros
     const updateFilters = () => {
-        const activeFilters = {};
+        const activeFilters = {
+            age: [],
+            breed: [],
+            size: []
+        };
 
         checkboxes.forEach((checkbox) => {
             if (checkbox.checked) {
                 const type = checkbox.dataset.type;
-                if (!activeFilters[type]) activeFilters[type] = [];
                 activeFilters[type].push(checkbox.value);
             }
         });
@@ -554,22 +565,29 @@ document.addEventListener("DOMContentLoaded", function () {
         products.forEach((product) => {
             let isVisible = true;
 
-            for (const [type, values] of Object.entries(activeFilters)) {
-                const productValue = product.dataset[type];
-                if (!values.includes(productValue)) {
-                    isVisible = false;
-                    break;
-                }
+            const productAge = parseInt(product.dataset.age, 10);
+            const productBreed = product.dataset.breed;
+            const productSize = product.dataset.size;
+
+            // Verificar filtro de idade
+            if (activeFilters.age.length > 0) {
+                const matchesAge = activeFilters.age.some((range) => isAgeInRange(productAge, range));
+                if (!matchesAge) isVisible = false;
+            }
+
+            // Verificar filtro de raça
+            if (activeFilters.breed.length > 0) {
+                if (!activeFilters.breed.includes(productBreed)) isVisible = false;
+            }
+
+            // Verificar filtro de porte
+            if (activeFilters.size.length > 0) {
+                if (!activeFilters.size.includes(productSize)) isVisible = false;
             }
 
             product.style.display = isVisible ? "block" : "none";
         });
     };
-
-    // Listener para os checkboxes
-    checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener("change", updateFilters);
-    });
 
     // Limpar filtros
     clearFiltersButton.addEventListener("click", () => {
@@ -579,5 +597,9 @@ document.addEventListener("DOMContentLoaded", function () {
         updateFilters();
     });
 
-    updateFilters();
+    // Evento para atualizar filtros ao alterar checkboxes
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", updateFilters);
+    });
 });
+

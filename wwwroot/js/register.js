@@ -83,3 +83,48 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         });
 });
 
+document.querySelectorAll(".like-button").forEach((button) => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const speciesId = button.dataset.speciesId;
+        const animalId = button.dataset.animalId;
+
+        fetch("/Likes/AddLike", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ speciesId, animalId }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.success) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Sucesso!",
+                        text: data.message,
+                        showConfirmButton: false,
+                        timer: 2000,
+                    });
+                } else {
+                    Swal.fire({
+                        icon: "info",
+                        title: "Aviso!",
+                        text: data.message,
+                        showConfirmButton: false,
+                        timer: 2000,
+                    });
+                }
+            })
+            .catch((error) => {
+                Swal.fire({
+                    icon: "error",
+                    title: "Erro!",
+                    text: "Houve um problema ao tentar processar sua solicitação. Por favor, tente novamente mais tarde.",
+                    showConfirmButton: false,
+                    timer: 2000,
+                });
+                console.error("Erro:", error);
+            });
+    });
+});
+

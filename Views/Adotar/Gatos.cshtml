@@ -292,36 +292,15 @@
                                         </div>
                                         <div id="collapseAge" class="collapse show" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                <ul>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="age"
-                                                            value="Filhote"> Filhote (0-2 anos)</li>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="age"
-                                                            value="Adulto"> Adulto (2-7 anos)</li>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="age"
-                                                            value="Idoso"> Idoso (7+ anos)</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Filtros por Raça -->
-                                    <div class="card">
-                                        <div class="card-heading">
-                                            <a class="collapse-trigger" data-toggle="collapse" href="#collapseBreed"
-                                                role="button" aria-expanded="true"
-                                                aria-controls="collapseBreed">Raça</a>
-                                        </div>
-                                        <div id="collapseBreed" class="collapse" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                <ul>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
-                                                            value="Siamês"> Siamês</li>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
-                                                            value="Persa"> Persa</li>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
-                                                            value="Maine Coon"> Maine Coon</li>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="breed"
-                                                            value="Bengal"> Bengal</li>
-                                                </ul>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="age" value="0-2"> Filhote (0-2 anos)
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="age" value="2-7"> Adulto (2-7 anos)
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="age" value="7+"> Idoso (7+ anos)
+                                                    </li>
                                             </div>
                                         </div>
                                     </div>
@@ -334,14 +313,98 @@
                                         </div>
                                         <div id="collapseSize" class="collapse" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                <ul>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="size"
-                                                            value="Pequeno"> Pequeno</li>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="size"
-                                                            value="Médio"> Médio</li>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="size"
-                                                            value="Grande"> Grande</li>
-                                                </ul>
+                                                <li>
+                                                    <input type="checkbox" class="filter-checkbox" data-type="size"
+                                                           value="mini"> Mini
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" class="filter-checkbox" data-type="size"
+                                                           value="pequeno"> Pequeno
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" class="filter-checkbox" data-type="size"
+                                                           value="medio"> Médio
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" class="filter-checkbox" data-type="size"
+                                                           value="grande"> Grande
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" class="filter-checkbox" data-type="size"
+                                                           value="gigante"> Gigante
+                                                </li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Filtros por Raça -->
+                                    <div class="card">
+                                        <div class="card-heading">
+                                            <a class="collapse-trigger" data-toggle="collapse" href="#collapseBreed"
+                                               role="button" aria-expanded="true"
+                                               aria-controls="collapseBreed">Raça</a>
+                                        </div>
+                                        <div id="collapseBreed" class="collapse" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="SRD"> SRD (Sem Raça Definida)
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Persa"> Persa
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Siames"> Siamês
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Maine_coon"> Maine Coon
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Ragdoll"> Ragdoll
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Sphynx"> Sphynx
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Bengal"> Bengal
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Britanico_Pelo_Curto"> Britânico de Pelo Curto
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Floresta_Norueguesa"> Floresta Norueguesa
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Abissinio"> Abissínio
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Burmes"> Burmês
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Siames_Tailandes"> Siamês Tailandês
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Angora_Turco"> Angorá Turco
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Bombaim"> Bombaim
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Chartreux"> Chartreux
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Birmano"> Birmano
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Exotico_pelo_Curto"> Exótico de Pelo Curto
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Azul_Russo"> Azul Russo
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Korat"> Korat
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="breed" value="Outro"> Outro
+                                                    </li>
                                             </div>
                                         </div>
                                     </div>

@@ -213,7 +213,7 @@
                     <div class="col-lg-10">
                         <h2>Formulário de Registro de Animal na Plataforma</h2>
                         <p>Preencha os detalhes abaixo para registrar o animal no sistema do BuscaPatas.</p>
-                        <form action="/Sheltered/RegisterSheltered" method="post" enctype="multipart/form-data" class="animal-form">
+                        <form action="/Sheltered/SubmitSurrender" method="post" enctype="multipart/form-data" class="animal-form">
                             <div class="row">
                                 <!-- Informações Gerais -->
                                 <div class="col-lg-12">
@@ -348,56 +348,6 @@
                                 </div>
                                 <div class="col-lg-12" id="health_status">
                                     <textarea name="HealthStatus" placeholder="Descreva o estado de saúde do animal" rows="4" cols="50"></textarea>
-                                </div>
-                                <!-- Informações do Local -->
-                                <div class="col-lg-12">
-                                    <h4>Informações do Local</h4>
-                                </div>
-                                <div class="col-lg-6" id="sector_id" required>
-                                    <input type="number" name="IDSector" placeholder="ID do Setor" required>
-                                </div>
-                                <div class="col-lg-6" id="shelter_id" required>
-                                    <input type="number" name="IDShelter" placeholder="ID do Shelter">
-                                </div>
-                                <!-- Atributos do Comportamento -->
-                                <div class="col-lg-12">
-                                    <h4>Atributos do Comportamento</h4>
-                                </div>
-                                <div class="col-lg-4 behaviour_info">
-                                    <label>Energia</label>
-                                    <input type="number" name="energy" min="1" max="5" placeholder="1-5">
-                                </div>
-                                <div class="col-lg-4 behaviour_info">
-                                    <label>Independência</label>
-                                    <input type="number" name="independence" min="1" max="5" placeholder="1-5">
-                                </div>
-                                <div class="col-lg-4 behaviour_info">
-                                    <label>Carência</label>
-                                    <input type="number" name="neediness" min="1" max="5" placeholder="1-5">
-                                </div>
-                                <div class="col-lg-4 behaviour_info">
-                                    <label>Gosto por Brincar</label>
-                                    <input type="number" name="playfulness" min="1" max="5" placeholder="1-5">
-                                </div>
-                                <div class="col-lg-4 behaviour_info">
-                                    <label>Calma</label>
-                                    <input type="number" name="calmness" min="1" max="5" placeholder="1-5">
-                                </div>
-                                <div class="col-lg-4 behaviour_info">
-                                    <label>Medo</label>
-                                    <input type="number" name="Fear" min="1" max="5" placeholder="1-5">
-                                </div>
-                                <div class="col-lg-4 behaviour_info">
-                                    <label>Obediência</label>
-                                    <input type="number" name="behaviour" min="1" max="5" placeholder="1-5">
-                                </div>
-                                <div class="col-lg-4 checkboxes">
-                                    <input type="checkbox" name="HouseTrained" value="TRUE">
-                                    <label>Sabe onde fazer xixi</label>
-                                </div>
-                                <div class="col-lg-4 checkboxes">
-                                    <input type="checkbox" name="IsVocal" value="TRUE">
-                                    <label>É Vocal</label>
                                 </div>
                                 <!-- Interações com Outros Animais -->
                                 <div class="col-lg-12">
@@ -535,39 +485,111 @@
     <script>
         $(document).ready(function () {
             $('.select2').select2({
-                placeholder: 'RaÃ§a', // Explicit placeholder
-                allowClear: true,              // Allow clearing the selection
-                width: '100%'                  // Full-width styling
+                placeholder: 'Raça', // Placeholder explícito
+                allowClear: true,    // Permitir limpar a seleção
+                width: '100%'        // Estilização full-width
             });
         });
 
-        document.getElementById('animal_species').addEventListener('change', function () {
-            // Get the selected species
-            const selectedSpecies = this.value;
+        const breeds = {
+            1: [ // Cães (value 1)
+                { value: "SRD", text: "SRD (Sem Raça Definida)" },
+                { value: "Golden_Retriever", text: "Golden Retriever" },
+                { value: "Pastor_Alemao", text: "Pastor Alemão" },
+                { value: "Labrador", text: "Labrador" },
+                { value: "Bulldog", text: "Bulldog" },
+                { value: "Beagle", text: "Beagle" },
+                { value: "Rottweiler", text: "Rottweiler" },
+                { value: "Poodle", text: "Poodle" },
+                { value: "Boxer", text: "Boxer" },
+                { value: "Teckel", text: "Teckel" },
+                { value: "Chihuahua", text: "Chihuahua" },
+                { value: "Doberman", text: "Doberman" },
+                { value: "Dorder_collie", text: "Border Collie" },
+                { value: "Akita", text: "Akita" },
+                { value: "Cocker_spaniel", text: "Cocker Spaniel" },
+                { value: "Gusky_siberiano", text: "Husky Siberiano" },
+                { value: "Dalmata", text: "Dálmata" },
+                { value: "Bulterrier", text: "Bull Terrier" },
+                { value: "Cavalier_king_charles", text: "Cavalier King Charles" },
+                { value: "Staffordshire", text: "Staffordshire" },
+                { value: "Weimaraner", text: "Weimaraner" },
+                { value: "Outro", text: "Outro" },
+                // Adicione mais raças de cães aqui se necessário
+            ],
+            2: [ // Gatos (value 2)
+                { value: "SRD", text: "SRD (Sem Raça Definida)" },
+                { value: "Persa", text: "Persa" },
+                { value: "Siames", text: "Siamês" },
+                { value: "Maine_coon", text: "Maine Coon" },
+                { value: "Eagdoll", text: "Ragdoll" },
+                { value: "Sphynx", text: "Sphynx" },
+                { value: "Bengal", text: "Bengal" },
+                { value: "Britanico_Pelo_Curto", text: "Britânico de Pelo Curto" },
+                { value: "Floresta_Norueguesa", text: "Floresta Norueguesa" },
+                { value: "Abissinio", text: "Abissínio" },
+                { value: "Burmes", text: "Burmês" },
+                { value: "Siames_Tailandes", text: "Siamês Tailandês" },
+                { value: "Angora_Turco", text: "Angorá Turco" },
+                { value: "Bombaim", text: "Bombaim" },
+                { value: "Chartreux", text: "Chartreux" },
+                { value: "Birmano", text: "Birmano" },
+                { value: "Exotico_pelo_Curto", text: "Exótico de Pelo Curto" },
+                { value: "Azul_Russo", text: "Azul Russo" },
+                { value: "Korat", text: "Korat" },
+                { value: "Outro", text: "Outro" },
+                // Adicione mais raças de gatos aqui se necessário
+            ],
+        };
 
-            // Hide both breed containers initially
-            document.getElementById('dog_breed_container').style.display = 'block';
-            document.getElementById('cat_breed_container').style.display = 'none';
-            document.getElementById('dog_size_container').style.display = 'block';
-            document.getElementById('cat_size_container').style.display = 'none';
-            document.getElementById('dog_fur_container').style.display = 'block';
-            document.getElementById('cat_fur_container').style.display = 'none';
 
-            // Show the relevant breed dropdown based on the selection
-            if (selectedSpecies === 'dog') {
-                document.getElementById('dog_breed_container').style.display = 'block';
-                document.getElementById('dog_size_container').style.display = 'block';
-                document.getElementById('dog_fur_container').style.display = 'block';
-            } else if (selectedSpecies === 'cat') {
-                document.getElementById('dog_breed_container').style.display = 'none';
-                document.getElementById('cat_breed_container').style.display = 'block';
-                document.getElementById('dog_size_container').style.display = 'none';
-                document.getElementById('cat_size_container').style.display = 'block';
-                document.getElementById('dog_fur_container').style.display = 'none';
-                document.getElementById('cat_fur_container').style.display = 'block';
+        const furtypes = {
+            1: [ // Cães (value 1)
+                { value: "curto-liso", text: "Curto e liso" },
+                { value: "curto-aspero", text: "Curto e áspero" },
+                { value: "duplo-curto", text: "Pelo duplo curto" },
+                { value: "duplo-longo", text: "Pelo duplo longo" },
+                { value: "denso", text: "Pelagem com subpelo espesso" },
+                { value: "longo-liso", text: "Longo e liso" },
+                { value: "longo-ondulado", text: "Longo e ondulado" },
+                { value: "sem-pelo", text: "Sem pelo" },
+            ],
+            2: [ // Gatos (value 2)
+                { value: "curto-liso", text: "Curto e liso" },
+                { value: "denso-curto", text: "Pelagem densa curta" },
+                { value: "longo-liso", text: "Longo e liso" },
+                { value: "semi-longo", text: "Semi-longo com subpelo" },
+                { value: "sem-pelo", text: "Sem pelo" },
+            ],
+        };
+
+        document.getElementById("IDSpecies").addEventListener("change", function () {
+            const selectedSpecies = this.value; // Pega o value (1 ou 2)
+
+            // Atualizar o campo de raças
+            const breedSelect = document.getElementById("breed_select");
+            breedSelect.innerHTML = '<option value="" disabled selected>Selecione a raça</option>';
+            if (breeds[selectedSpecies]) {
+                breeds[selectedSpecies].forEach((breed) => {
+                    const option = document.createElement("option");
+                    option.value = breed.value;
+                    option.textContent = breed.text;
+                    breedSelect.appendChild(option);
+                });
+            }
+
+            // Atualizar o campo de tipos de pelo
+            const furtypeSelect = document.getElementById("furtype_select");
+            furtypeSelect.innerHTML = '<option value="" disabled selected>Selecione o tipo de pelo</option>';
+            if (furtypes[selectedSpecies]) {
+                furtypes[selectedSpecies].forEach((furtype) => {
+                    const option = document.createElement("option");
+                    option.value = furtype.value;
+                    option.textContent = furtype.text;
+                    furtypeSelect.appendChild(option);
+                });
             }
         });
-
     </script>
 
 </body>

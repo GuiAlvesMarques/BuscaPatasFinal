@@ -222,7 +222,7 @@
                                 <div class="col-lg-6">
                                     <input type="text" name="AnimalName" placeholder="Nome do Animal" required>
                                 </div>
-                                <div class="col-lg-6">                                  
+                                <div class="col-lg-6">
                                     <select name="IDSpecies" id="IDSpecies" required>
                                         <option value="" disabled selected>Espécie</option>
                                         <option value="1" id="dog">Cão</option>
@@ -502,6 +502,7 @@
     <script src="js/login-register.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <
     <!-- Owl Carousel -->
     <!-- Select2 -->
@@ -516,49 +517,51 @@
 
         const breeds = {
             1: [ // Cães (value 1)
-                { value: "srd", text: "SRD (Sem Raça Definida)" },
-                { value: "golden_retriever", text: "Golden Retriever" },
-                { value: "pastor_alemao", text: "Pastor Alemão" },
-                { value: "labrador", text: "Labrador" },
-                { value: "bulldog", text: "Bulldog" },
-                { value: "beagle", text: "Beagle" },
-                { value: "rottweiler", text: "Rottweiler" },
-                { value: "poodle", text: "Poodle" },
-                { value: "boxer", text: "Boxer" },
-                { value: "teckel", text: "Teckel" },
-                { value: "chihuahua", text: "Chihuahua" },
-                { value: "doberman", text: "Doberman" },
-                { value: "border_collie", text: "Border Collie" },
-                { value: "akita", text: "Akita" },
-                { value: "cocker_spaniel", text: "Cocker Spaniel" },
-                { value: "husky_siberiano", text: "Husky Siberiano" },
-                { value: "dalmata", text: "Dálmata" },
-                { value: "bulterrier", text: "Bull Terrier" },
-                { value: "cavalier_king_charles", text: "Cavalier King Charles" },
-                { value: "staffordshire", text: "Staffordshire" },
-                { value: "weimaraner", text: "Weimaraner" },
+                { value: "SRD", text: "SRD (Sem Raça Definida)" },
+                { value: "Golden_Retriever", text: "Golden Retriever" },
+                { value: "Pastor_Alemao", text: "Pastor Alemão" },
+                { value: "Labrador", text: "Labrador" },
+                { value: "Bulldog", text: "Bulldog" },
+                { value: "Beagle", text: "Beagle" },
+                { value: "Rottweiler", text: "Rottweiler" },
+                { value: "Poodle", text: "Poodle" },
+                { value: "Boxer", text: "Boxer" },
+                { value: "Teckel", text: "Teckel" },
+                { value: "Chihuahua", text: "Chihuahua" },
+                { value: "Doberman", text: "Doberman" },
+                { value: "Dorder_collie", text: "Border Collie" },
+                { value: "Akita", text: "Akita" },
+                { value: "Cocker_spaniel", text: "Cocker Spaniel" },
+                { value: "Gusky_siberiano", text: "Husky Siberiano" },
+                { value: "Dalmata", text: "Dálmata" },
+                { value: "Bulterrier", text: "Bull Terrier" },
+                { value: "Cavalier_king_charles", text: "Cavalier King Charles" },
+                { value: "Staffordshire", text: "Staffordshire" },
+                { value: "Weimaraner", text: "Weimaraner" },
+                { value: "Outro", text: "Outro" },
                 // Adicione mais raças de cães aqui se necessário
             ],
             2: [ // Gatos (value 2)
-                { value: "srd", text: "SRD (Sem Raça Definida)" },
-                { value: "persa", text: "Persa" },
-                { value: "siames", text: "Siamês" },
-                { value: "maine_coon", text: "Maine Coon" },
-                { value: "ragdoll", text: "Ragdoll" },
-                { value: "sphynx", text: "Sphynx" },
-                { value: "bengal", text: "Bengal" },
-                { value: "britanico_pelo_curto", text: "Britânico de Pelo Curto" },
-                { value: "floresta_norueguesa", text: "Floresta Norueguesa" },
-                { value: "abissinio", text: "Abissínio" },
-                { value: "burmes", text: "Burmês" },
-                { value: "siames_tailandes", text: "Siamês Tailandês" },
-                { value: "angora_turco", text: "Angorá Turco" },
-                { value: "bombaim", text: "Bombaim" },
-                { value: "chartreux", text: "Chartreux" },
-                { value: "birmano", text: "Birmano" },
-                { value: "exotico_pelo_curto", text: "Exótico de Pelo Curto" },
-                { value: "azul_russo", text: "Azul Russo" },
-                { value: "korat", text: "Korat" },
+                { value: "SRD", text: "SRD (Sem Raça Definida)" },
+                { value: "Persa", text: "Persa" },
+                { value: "Siames", text: "Siamês" },
+                { value: "Maine_coon", text: "Maine Coon" },
+                { value: "Eagdoll", text: "Ragdoll" },
+                { value: "Sphynx", text: "Sphynx" },
+                { value: "Bengal", text: "Bengal" },
+                { value: "Britanico_Pelo_Curto", text: "Britânico de Pelo Curto" },
+                { value: "Floresta_Norueguesa", text: "Floresta Norueguesa" },
+                { value: "Abissinio", text: "Abissínio" },
+                { value: "Burmes", text: "Burmês" },
+                { value: "Siames_Tailandes", text: "Siamês Tailandês" },
+                { value: "Angora_Turco", text: "Angorá Turco" },
+                { value: "Bombaim", text: "Bombaim" },
+                { value: "Chartreux", text: "Chartreux" },
+                { value: "Birmano", text: "Birmano" },
+                { value: "Exotico_pelo_Curto", text: "Exótico de Pelo Curto" },
+                { value: "Azul_Russo", text: "Azul Russo" },
+                { value: "Korat", text: "Korat" },
+                { value: "Outro", text: "Outro" },
                 // Adicione mais raças de gatos aqui se necessário
             ],
         };
