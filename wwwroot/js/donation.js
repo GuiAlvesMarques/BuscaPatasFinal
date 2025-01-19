@@ -1,72 +1,57 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const shelterFilter = document.getElementById("shelterFilter");
-    const shelterList = document.getElementById("shelterList");
-
-    // Show dropdown on input focus
-    shelterFilter.addEventListener("focus", () => {
-        shelterList.classList.remove("d-none");
-    });
-
-    // Hide dropdown on click outside
-    document.addEventListener("click", (event) => {
-        if (!shelterFilter.contains(event.target) && !shelterList.contains(event.target)) {
-            shelterList.classList.add("d-none");
-        }
-    });
-
-    // Populate input field with selected item
-    shelterList.addEventListener("click", (event) => {
-        if (event.target.tagName === "LI") {
-            shelterFilter.value = event.target.textContent;
-            shelterList.classList.add("d-none");
-        }
-    });
-
-    // Filter the dropdown items
-    shelterFilter.addEventListener("input", () => {
-        const filter = shelterFilter.value.toLowerCase();
-        const items = shelterList.getElementsByTagName("li");
-        Array.from(items).forEach((item) => {
-            const text = item.textContent.toLowerCase();
-            item.style.display = text.includes(filter) ? "" : "none";
-        });
-    });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
+    // Donation modal handling
     const donationButton = document.getElementById("donation_button");
     const donationModal = document.getElementById("donationModal");
     const closeModal = document.getElementById("closeModal");
 
-    // Open the modal
-    donationButton.addEventListener("click", () => {
-        donationModal.classList.remove("d-none");
-    });
-
-    // Close the modal
-    closeModal.addEventListener("click", () => {
-        donationModal.classList.add("d-none");
-    });
-
-    // Close the modal by clicking outside the modal content
+    donationButton.addEventListener("click", () => donationModal.classList.remove("d-none"));
+    closeModal.addEventListener("click", () => donationModal.classList.add("d-none"));
     donationModal.addEventListener("click", (event) => {
         if (event.target === donationModal) {
             donationModal.classList.add("d-none");
         }
     });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
+    // More details toggle
     const detailsButton = document.getElementById("details");
     const moreDetails = document.getElementById("moreDetails");
 
     detailsButton.addEventListener("click", () => {
-        if (moreDetails.classList.contains("d-none")) {
-            moreDetails.classList.remove("d-none");
-            detailsButton.textContent = "Mostrar Menos";
+        moreDetails.classList.toggle("d-none");
+        detailsButton.textContent = moreDetails.classList.contains("d-none") ? "Saber Mais" : "Mostrar Menos";
+    });
+
+    // Donation amount selection
+    const donationAmountInput = document.getElementById("DonationAmount");
+    const donationButtons = document.querySelectorAll(".donation-btn");
+
+    donationButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const selectedAmount = event.target.textContent.replace("€", "").trim();
+            donationAmountInput.value = selectedAmount;
+
+            donationButtons.forEach((btn) => btn.classList.remove("selected"));
+            event.target.classList.add("selected"); // Highlight the selected button
+        });
+    });
+
+    // Handle custom amount input
+    const customAmountInput = document.getElementById("customAmount");
+    customAmountInput.addEventListener("input", () => {
+        donationAmountInput.value = customAmountInput.value;
+    });
+
+    // Form validation before submission
+    const donationForm = document.getElementById("donationForm");
+    donationForm.addEventListener("submit", (event) => {
+        const donationAmount = document.getElementById("DonationAmount").value;
+        const shelterName = document.getElementById("shelterFilter").value;
+
+        if (!donationAmount || !shelterName) {
+            event.preventDefault();
+            alert("Por favor, selecione um valor e escolha um parceiro antes de doar.");
         } else {
-            moreDetails.classList.add("d-none");
-            detailsButton.textContent = "Saber Mais";
+            alert("Obrigado pelo seu donativo!");
         }
     });
 });
