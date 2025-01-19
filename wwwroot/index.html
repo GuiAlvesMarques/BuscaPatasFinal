@@ -85,7 +85,8 @@
                             </li>
                             <li><a href="./partners.html">Parceiros</a></li>
                             <li><a href="./ajuda.html">Apoiar</a></li>
-                            <li><a href="/Shelter/Details/3">Apoiar</a></li>
+                            <li id="adminLink" style="visibility: hidden;"><a href="/Admin/AdminManagement">Admins</a></li>
+
                         </ul>
                     </nav>
                 </div>
@@ -450,7 +451,40 @@
     <script type="module" src="js/map.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check user type and display Admin link if applicable
+            function checkUserType() {
+                fetch('/Account/IsLoggedIn', {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                    },
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data); // Debug: Log the response
+                        if (data.isLoggedIn && data.userType === "Admin") {
+                            // Show the Admin link if the user is an Admin
+                            document.getElementById('adminLink').style.visibility = 'visible';
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error checking user type:', error);
+                    });
+            }
+
+            // Call the function to check the user type
+            checkUserType();
+        });
+    </script>
     <script src="js/scripts.js"></script>
+
 </body>
 
 </html>

@@ -77,6 +77,7 @@ namespace BuscaPatasFinal.Controllers
                 HttpContext.Session.SetString("Email", user.Email);
                 HttpContext.Session.SetString("Username", user.Username);
                 HttpContext.Session.SetString("PhoneNumber", user.PhoneNumber);
+                HttpContext.Session.SetString("Type", user.Type);
 
                 return Json(new { success = true, message = "Login efetuado com sucesso!" });
             }
@@ -154,9 +155,22 @@ namespace BuscaPatasFinal.Controllers
                 return Json(new { isLoggedIn = false });
             }
 
+            // Retrieve the user type from the session
+            var userType = HttpContext.Session.GetString("Type");
+            if (string.IsNullOrEmpty(userType))
+            {
+                // If user type is not set in the session, fetch it from the database
+                userType = _context.Users
+                    .Where(u => u.Id == int.Parse(userId))
+                    .Select(u => u.Type)
+                    .FirstOrDefault();
+                HttpContext.Session.SetString("Type", userType); // Cache it in the session
+            }
+
             var username = HttpContext.Session.GetString("Username");
-            return Json(new { isLoggedIn = true, username });
+            return Json(new { isLoggedIn = true, username, userType });
         }
+
 
     }
 }
