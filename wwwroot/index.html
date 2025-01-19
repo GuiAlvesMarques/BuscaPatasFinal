@@ -115,7 +115,6 @@
         </div>
     </header>
     <!-- Header Section End -->
-
     <!-- Login and Register Modal -->
     <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -196,7 +195,6 @@
         </div>
     </div>
     <!-- Login Register Model Ends -->
-
     <!-- Categories Section Begin -->
     <section class="homepage-carousel">
         <div class="owl-carousel owl-theme">
@@ -293,120 +291,40 @@
         <div class="container">
             <h1 class="text-center">Sugestões</h1>
             <div class="row">
+                <!-- Novas Entradas -->
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="suggestion__content">
                         <div class="section-title">
                             <h4>Novas Entradas</h4>
                         </div>
-                        <div class="suggestion__item">
-                            <div class="suggestion__item__pic">
-                                <img src="img/product/details/luna4.png" alt="">
-                            </div>
-                            <div class="suggestion__item__text">
-                                <h6>Luna</h6>
-                                <h4>2 anos</h4>
-                                <a href="details-cao.html"><button class="btn btn_sug">Ver</button></a>
-                            </div>
-                        </div>
-                        <div class="suggestion__item">
-                            <div class="suggestion__item__pic">
-                                <img src="img/dogtest3.jpeg" alt="">
-                            </div>
-                            <div class="suggestion__item__text">
-                                <h6>Muffin</h6>
-                                <h4>9 anos</h4>
-                                <button class="btn btn_sug">Ver</button>
-                            </div>
-                        </div>
-                        <div class="suggestion__item">
-                            <div class="suggestion__item__pic">
-                                <img src="img/dogtest2.jpeg" alt="">
-                            </div>
-                            <div class="suggestion__item__text">
-                                <h6>Patins</h6>
-                                <h4>4 anos</h4>
-                                <button class="btn btn_sug">Ver</button>
-                            </div>
-                        </div>
+                        <div id="new-entries" class="suggestion__list"></div>
                     </div>
                 </div>
+
+                <!-- Mais Velhos -->
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="suggestion__content">
                         <div class="section-title">
                             <h4>Mais Velhos</h4>
                         </div>
-                        <div class="suggestion__item">
-                            <div class="suggestion__item__pic">
-                                <img src="img/cats/maine-coon.png" alt="">
-                            </div>
-                            <div class="suggestion__item__text">
-                                <h6>Ben Hur</h6>
-                                <h4>15 anos</h4>
-                                <button class="btn btn_sug">Ver</button>
-                            </div>
-                        </div>
-                        <div class="suggestion__item">
-                            <div class="suggestion__item__pic">
-                                <img src="img/product/details/dachshund.png" alt="">
-                            </div>
-                            <div class="suggestion__item__text">
-                                <h6>Sprite</h6>
-                                <h4>13 anos</h4>
-                                <button class="btn btn_sug">Ver</button>
-                            </div>
-                        </div>
-                        <div class="suggestion__item">
-                            <div class="suggestion__item__pic">
-                                <img src="img/cats/siames.png" alt="">
-                            </div>
-                            <div class="suggestion__item__text">
-                                <h6>Milhas</h6>
-                                <h4>13 anos</h4>
-                                <button class="btn btn_sug">Ver</button>
-                            </div>
-                        </div>
+                        <div id="oldest" class="suggestion__list"></div>
                     </div>
                 </div>
+
+                <!-- Mais Novos -->
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="suggestion__content">
                         <div class="section-title">
                             <h4>Mais Novos</h4>
                         </div>
-                        <div class="suggestion__item">
-                            <div class="suggestion__item__pic">
-                                <img src="img/product/details/bulldog.png" alt="">
-                            </div>
-                            <div class="suggestion__item__text">
-                                <h6>Bingo</h6>
-                                <h4>5 meses</h4>
-                                <button class="btn btn_sug">Ver</button>
-                            </div>
-                        </div>
-                        <div class="suggestion__item">
-                            <div class="suggestion__item__pic">
-                                <img src="img/dogtest4.jpeg" alt="">
-                            </div>
-                            <div class="suggestion__item__text">
-                                <h6>Chuchu</h6>
-                                <h4>7 meses</h4>
-                                <button class="btn btn_sug">Ver</button>
-                            </div>
-                        </div>
-                        <div class="suggestion__item">
-                            <div class="suggestion__item__pic">
-                                <img src="img/product/details/husky.png" alt="">
-                            </div>
-                            <div class="suggestion__item__text">
-                                <h6>Piritin</h6>
-                                <h4>8 meses</h4>
-                                <button class="btn btn_sug">Ver</button>
-                            </div>
-                        </div>
+                        <div id="youngest" class="suggestion__list"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
     <!-- Suggestions Section End -->
     <!-- Footer Section Begin -->
     <footer class="footer">
@@ -473,6 +391,49 @@
         </div>
     </div>
     <!-- Search End -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fetch data from the server
+            fetch('/Sheltered/GetSuggestions')
+                .then(response => response.json())
+                .then(data => {
+                    renderSuggestions(data.NewEntries, "new-entries");
+                    renderSuggestions(data.Oldest, "oldest");
+                    renderSuggestions(data.Youngest, "youngest");
+                })
+                .catch(error => console.error("Erro ao buscar sugestões:", error));
+        });
+
+        // Renderiza os dados na seção especificada
+        function renderSuggestions(animals, containerId) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = ""; // Limpa conteúdo existente
+
+            animals.forEach(animal => {
+                const animalDiv = document.createElement("div");
+                animalDiv.classList.add("suggestion__item");
+
+                const imgSrc = animal.Image
+                    ? `data:image/jpeg;base64,${animal.Image}`
+                    : "/img/img-adotar.png"; // Imagem padrão
+
+                animalDiv.innerHTML = `
+            <div class="suggestion__item__pic">
+                <img src="${imgSrc}" alt="${animal.AnimalName}" class="img-fluid">
+            </div>
+            <div class="suggestion__item__text text-center">
+                <h6>${animal.AnimalName}</h6>
+                <a href="/Sheltered/Details/${animal.IDAnimal}">
+                    <button class="btn btn-primary">Ver</button>
+                </a>
+            </div>
+        `;
+                container.appendChild(animalDiv);
+            });
+        }
+    </script>
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

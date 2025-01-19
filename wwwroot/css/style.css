@@ -6892,9 +6892,9 @@ body.showCart .container{
 	width: 100%;
 }
 
-	.animal-form .site-btn:hover {
-		background-color: #FFAD7E;
-	}
+.animal-form .site-btn:hover {
+	background-color: #FFAD7E;
+}
 
 .animal-form input,
 .animal-form select,
@@ -6904,6 +6904,7 @@ body.showCart .container{
 	margin-bottom: 15px;
 	border: 1px solid #ddd;
 	border-radius: 5px;
+	height: auto;
 }
 
 .animal-form .behaviour_info input {
@@ -6918,9 +6919,9 @@ body.showCart .container{
 	margin-bottom: 15px;
 }
 
-	.animal-form .checkboxes.general_info {
-		margin-top: 10px;
-	}
+.animal-form .checkboxes.general_info {
+	margin-top: 10px;
+}
 
 .animal-form input[type="checkbox"] {
 	width: auto;

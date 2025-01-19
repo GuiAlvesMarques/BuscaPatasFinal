@@ -68,7 +68,7 @@ namespace BuscaPatasFinal.Models
 
         public byte[]? Logo { get; set; } // Armazena a logo como byte[]
 
-        public ICollection<Sheltered> ShelteredAnimals { get; set; } = new List<Sheltered>();
+        public ICollection<Sheltered> ShelteredAnimals { get; set; } = new List<Sheltered>(); // Propriedade de navegação para Sheltered
 
     }
 }

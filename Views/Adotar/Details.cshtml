@@ -251,17 +251,16 @@
                     <div class="animal__details__text">
                         <h3>@Model.AnimalName <span></span></h3>
                         <h5><strong>ID:</strong> <span>@Model.IDAnimal</span></h5>
-                        <h5><strong>Idade:</strong> <span>@Model.AgeRange</span></h5>
-                        <h5><strong>Sexo:</strong> <span>@Model.Sex</span></h5>
-                        <h5><strong>Raça:</strong> <span>@Model.Breed</span></h5>
-                        <h5><strong>Porte:</strong> <span>@Model.Size</span></h5>
-                        <h5><strong>Localização do abrigo:</strong> <span>@Model.Location</span></h5>
+                        <h5><strong>Idade:</strong> <span>@(Model.Age > 0 ? $"{Model.Age} anos" : "Não especificado")</span></h5>
+                        <h5><strong>Sexo:</strong> <span>@(Model.Sex == "male" ? "Macho" : Model.Sex == "female" ? "Fêmea" : "Outro")</span></h5>
+                        <h5><strong>Raça:</strong> <span>@(string.IsNullOrEmpty(Model.Breed) ? "SRD (Sem Raça Definida)" : Model.Breed)</span></h5>
+                        <h5><strong>Porte:</strong> <span>@(Model.Size != null ? Model.Size.ToUpper() : "Não especificado")</span></h5>
                         <h5><strong>Disponível para adoção:</strong> <span>@(Model.IsForAdoption ? "Sim" : "Não")</span></h5>
                             <div class="product__details__adotar">
                             @if (Model.IsForAdoption)
                             {
                                 <!-- Botão funcional -->
-                                <button onclick="window.location.href=" class="adopt-btn-details">Adotar</button>
+                                <button onclick="window.location.href='/Shelters/@Model.IDShelter'" class="adopt-btn-details">Adotar</button>
                             }
                             else
                             {
@@ -301,9 +300,6 @@
                                 <h5>Sobre o Abrigo</h5>
                                 <p>
                                     @Model.IDSector
-                                </p>
-                                <p>
-                                    @Model.IDEditor
                                 </p>
                                 <p>
                                     No abrigo, os animais recebem atendimento médico regular, vacinação, castração e,
