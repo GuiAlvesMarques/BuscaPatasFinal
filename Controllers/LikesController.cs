@@ -28,7 +28,12 @@ namespace BuscaPatasFinal.Controllers
             int parsedUserId = int.Parse(userId);
 
             // Verifica se o like já existe
-            var existingLike = _context.Likes.FirstOrDefault(l => l.IDUser == parsedUserId && l.IDSpecies == speciesId && l.IDAnimal == animalId);
+            Console.WriteLine($"Received speciesId: {speciesId}, animalId: {animalId}, userId: {parsedUserId}");
+
+            var existingLike = _context.Likes.FirstOrDefault(l => l.IDUser == parsedUserId
+                                                                && l.IDSpecies == speciesId
+                                                                && l.IDAnimal == animalId);
+
             if (existingLike != null)
             {
                 return Json(new { success = false, message = "Você já curtiu este animal." });
