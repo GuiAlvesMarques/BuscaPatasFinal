@@ -18,6 +18,7 @@ namespace BuscaPatasFinal.Data
         public DbSet<Lost> Lost { get; set; }
         public DbSet<Found> Found { get; set; }
         public DbSet<Sheltered> Sheltered { get; set; }
+        public DbSet<Donation> Donations { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
