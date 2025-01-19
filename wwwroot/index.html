@@ -300,7 +300,6 @@
                         <div id="new-entries" class="suggestion__list"></div>
                     </div>
                 </div>
-
                 <!-- Mais Velhos -->
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="suggestion__content">
@@ -310,7 +309,6 @@
                         <div id="oldest" class="suggestion__list"></div>
                     </div>
                 </div>
-
                 <!-- Mais Novos -->
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="suggestion__content">
@@ -323,9 +321,8 @@
             </div>
         </div>
     </section>
-
-
     <!-- Suggestions Section End -->
+
     <!-- Footer Section Begin -->
     <footer class="footer">
         <div class="container">
@@ -393,46 +390,77 @@
     <!-- Search End -->
 
     <script>
-
         document.addEventListener("DOMContentLoaded", function () {
             // Fetch data from the server
             fetch('/Sheltered/GetSuggestions')
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
                 .then(data => {
-                    renderSuggestions(data.NewEntries, "new-entries");
-                    renderSuggestions(data.Oldest, "oldest");
-                    renderSuggestions(data.Youngest, "youngest");
+                    console.log("Dados recebidos do endpoint:", data);
+
+                    // Renderiza as listas em cada seção
+                    renderSuggestions(data.newEntries, "new-entries");
+                    renderSuggestions(data.oldest, "oldest");
+                    renderSuggestions(data.youngest, "youngest");
                 })
                 .catch(error => console.error("Erro ao buscar sugestões:", error));
         });
 
-        // Renderiza os dados na seção especificada
+        // Função para renderizar os itens em cada seção
         function renderSuggestions(animals, containerId) {
+            console.log(`Renderizando para o container: ${containerId}`);
+            console.log("Animais recebidos:", animals);
+
             const container = document.getElementById(containerId);
+
+            if (!container) {
+                console.error(`Elemento com ID '${containerId}' não encontrado.`);
+                return;
+            }
+
             container.innerHTML = ""; // Limpa conteúdo existente
 
+            // Valide o array de animais
+            if (!animals || !Array.isArray(animals) || animals.length === 0) {
+                container.innerHTML = `<p>Sem sugestões disponíveis no momento.</p>`;
+                return;
+            }
+
+            // Renderize cada animal
             animals.forEach(animal => {
                 const animalDiv = document.createElement("div");
                 animalDiv.classList.add("suggestion__item");
 
-                const imgSrc = animal.Image
-                    ? `data:image/jpeg;base64,${animal.Image}`
-                    : "/img/img-adotar.png"; // Imagem padrão
+                let imgSrc;
+                if (animal.image) {
+                    // Converte a imagem base64
+                    imgSrc = `data:image/jpeg;base64,${animal.image}`;
+                } else {
+                    // Imagem padrão
+                    imgSrc = "/img/img-adotar.png";
+                }
 
                 animalDiv.innerHTML = `
-            <div class="suggestion__item__pic">
-                <img src="${imgSrc}" alt="${animal.AnimalName}" class="img-fluid">
-            </div>
-            <div class="suggestion__item__text text-center">
-                <h6>${animal.AnimalName}</h6>
-                <a href="/Sheltered/Details/${animal.IDAnimal}">
-                    <button class="btn btn-primary">Ver</button>
-                </a>
-            </div>
+                <div class="suggestion__item__pic">
+                    <img src="${imgSrc}" alt="${animal.animalName}" class="img-fluid">
+                </div>
+                <div class="suggestion__item__text">
+                    <h6>${animal.animalName}</h6>
+                    <a href="/Sheltered/Details/${animal.idAnimal}">
+                        <button class="btn btn_sug">Ver</button>
+                    </a>
+                </div>
+
+
         `;
                 container.appendChild(animalDiv);
             });
         }
+
     </script>
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>

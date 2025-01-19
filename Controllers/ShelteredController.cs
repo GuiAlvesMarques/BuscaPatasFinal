@@ -194,5 +194,29 @@ namespace BuscaPatasFinal.Controllers
                 });
             }
         }
+        [HttpGet]
+        public IActionResult GetSuggestions()
+        {
+            var suggestions = new
+            {
+                NewEntries = _context.Sheltered
+                                     .OrderByDescending(a => a.arrival_Date)
+                                     .Take(5)
+                                     .Select(a => new { a.IDAnimal, a.AnimalName, a.Image })
+                                     .ToList(),
+                Oldest = _context.Sheltered
+                                 .OrderBy(a => a.Age)
+                                 .Take(5)
+                                 .Select(a => new { a.IDAnimal, a.AnimalName, a.Image })
+                                 .ToList(),
+                Youngest = _context.Sheltered
+                                   .OrderByDescending(a => a.Birthday)
+                                   .Take(5)
+                                   .Select(a => new { a.IDAnimal, a.AnimalName, a.Image })
+                                   .ToList()
+            };
+
+            return Json(suggestions);
+        }
     }
 }
