@@ -225,7 +225,7 @@
                                 <div class="col-lg-6">
                                     <select name="animal_species" id="IDSpecies" required>
                                         <option value="" disabled selected>Espécie</option>
-                                        <option value="1" id="dog">Cachorro</option>
+                                        <option value="1" id="dog">Cão</option>
                                         <option value="2" id="cat">Gato</option>
                                     </select>
                                 </div>
@@ -247,123 +247,43 @@
                                         <option value="gigante">Gigante (acima de 35kg)</option>
                                     </select>
                                 </div>
-                                <div class="col-lg-4" id="cat_size_container" style="display: none;">
-                                    <select name="Size">
-                                        <option value="" disabled selected>Porte</option>
-                                        <option value="pequeno">Pequeno (até 3kg)</option>
-                                        <option value="medio">Médio (3-5kg)</option>
-                                        <option value="grande">Grande (5-7kg)</option>
-                                        <option value="gigante">Gigante (acima de 7kg)</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-6" id="dog_breed_container" style="display: block;">
-                                    <select name="Breed[]" multiple="multiple" class="select2" required>
-                                        <option value="SRD">SRD (Sem Raça Definida)</option>
-                                        <option value="beagle">Beagle</option>
-                                        <option value="bulldog">Bulldog</option>
-                                        <option value="golden_retriever">Golden Retriever</option>
-                                        <option value="german_shepherd">Pastor Alemão</option>
-                                        <option value="labrador">Labrador</option>
-                                        <option value="poodle">Poodle</option>
-                                        <!-- adicionar todas as raças aqui -->
-                                    </select>
-                                </div>
-                                <div class="col-lg-6" id="cat_breed_container" style="display: none;">
-                                    <select name="Breed[]" multiple="multiple" class="select2">
-                                        <option value="SRD">SRD (Sem Raça Definida)</option>
-                                        <option value="persian">Persa</option>
-                                        <option value="siamese">Siamês</option>
-                                        <!-- adicionar todas as raças aqui -->
-                                    </select>
-                                </div>
-                                <div class="col-lg-6" id="dog_fur_container" style="display: block;">
-                                    <select name="Furtype" required>
-                                        <option value="" disabled selected>Tipo de Pelo</option>
-                                        <option value="curto-liso">Curto e liso</option>
-                                        <option value="curto-aspero">Curto e áspero</option>
-                                        <option value="duplo-curto">Pelo duplo curto</option>
-                                        <option value="duplo-longo">Pelo duplo longo</option>
-                                        <option value="denso">Pelagem com subpelo espesso</option>
-                                        <option value="longo-liso">Longo e liso</option>
-                                        <option value="longo-ondulado">Longo e ondulado</option>
-                                        <option value="longo-encaracolado">Longo e encaracolado</option>
-                                        <option value="sem-pelo">Sem pelo</option>
-                                        <option value="duro-arame">Duro ou de arame</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-6" id="cat_fur_container" style="display: none;">
-                                    <select name="Furtype">
-                                        <option value="" disabled selected>Tipo de Pelo</option>
-                                        <option value="curto-liso">Curto e liso</option>
-                                        <option value="denso-curto">Pelagem densa curta</option>
-                                        <option value="longo-liso">Longo e liso</option>
-                                        <option value="ondulado">Ondulado ou cacheado</option>
-                                        <option value="semi-longo">Semi-longo com subpelo</option>
-                                        <option value="sem-pelo">Sem pelo</option>
+                                <div class="col-lg-6">
+                                    <select id="breed_select" name="Breed" class="form-control" required>
+                                        <option value="" disabled selected>Selecione a raça</option>
+                                        <!-- As opções serão preenchidas dinamicamente -->
                                     </select>
                                 </div>
                                 <div class="col-lg-6">
-                                    <label for="animal_images">Data de Nascimento</label>
                                     <input type="date" name="Birthday" required>
                                 </div>
-                                <div class="col-lg-6">
-                                    <label for="animal_images">Data de Chegada</label>
-                                    <input type="date" name="arrival_date" required>
+                                <div class="col-lg-12" id="ReasonForSurrender">
+                                    <textarea name="ReasonForSurrender" placeholder="Por favor, descreva detalhadamente o motivo para a entrega do animal." rows="4" cols="50"></textarea>
                                 </div>
-                                <div class="col-lg-4 checkboxes general_info">
-                                    <input type="checkbox" name="IsHypoallergenic" value="TRUE">
-                                    <label>É Hipoalergénico(a)</label>
+                                <div class="col-lg-12" id="Perosonality">
+                                    <textarea name="Perosonality" placeholder="Por favor, descreva a personalidade do animal." rows="4" cols="50"></textarea>
                                 </div>
-                                <div class="col-lg-4 checkboxes general_info">
-                                    <input type="checkbox" name="IsForAdoption" value="TRUE">
-                                    <label>Disponível para Adoção</label>
+                                <div class="col-lg-4 mb-4" id="email">
+                                    <label for="Email" class="form-label">Email</label>
+                                    <input type="email" name="Email"
+                                           id="Email"
+                                           placeholder="Insira o seu email"
+                                           class="form-control">
                                 </div>
-                                <div class="col-lg-4 checkboxes general_info">
-                                    <input type="checkbox" name="IsForFostered" value="TRUE">
-                                    <label>Disponível para FAT</label>
+                                <div class="col-lg-4 mb-4" id="phone">
+                                    <label for="Phone" class="form-label">Telefone</label>
+                                    <input type="tel"
+                                           name="Phone"
+                                           id="Phone"
+                                           placeholder="Insira o seu telefone"
+                                           class="form-control">
                                 </div>
-                                <div class="col-lg-4 checkboxes general_info">
-                                    <input type="checkbox" name="Shedding" value="TRUE">
-                                    <label>Perde Pêlo?</label>
-                                </div>
-                                <!-- Informações de Saúde -->
-                                <div class="col-lg-12 ">
-                                    <h4>Informações de Saúde</h4>
-                                </div>
-                                <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="Diet" value="TRUE">
-                                    <label class="smaller_checks">Dieta Especial</label>
-                                </div>
-                                <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" id="IsSick" name="IsSick" value="TRUE">
-                                    <label class="smaller_checks">Está Doente</label>
-                                </div>
-                                <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="IsHandicap" value="TRUE">
-                                    <label class="smaller_checks">É Amputado(a)</label>
-                                </div>
-                                <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="IsBlind" value="TRUE">
-                                    <label class="smaller_checks">É Cego(a)</label>
-                                </div>
-                                <div class="col-lg-12" id="health_status">
-                                    <textarea name="HealthStatus" placeholder="Descreva o estado de saúde do animal" rows="4" cols="50"></textarea>
-                                </div>
-                                <!-- Interações com Outros Animais -->
-                                <div class="col-lg-12">
-                                    <h4>Interações</h4>
-                                </div>
-                                <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="ReactiveDogs" value="TRUE">
-                                    <label>Reage a Cães</label>
-                                </div>
-                                <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="ReactiveCats" value="TRUE">
-                                    <label>Reage a Gatos</label>
-                                </div>
-                                <div class="col-lg-3 checkboxes">
-                                    <input type="checkbox" name="ReactiveChildren" value="TRUE">
-                                    <label>Reage a Crianças</label>
+                                <div class="col-lg-4 mb-4" id="location">
+                                    <label for="Location" class="form-label">Localização</label>
+                                    <input type="text"
+                                           name="Location"
+                                           id="Location"
+                                           placeholder="Insira a sua localização"
+                                           class="form-control">
                                 </div>
                                 <!-- Upload de Imagens -->
                                 <div class="col-lg-12">
@@ -454,14 +374,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".select2").select2({
-                placeholder: "Selecione uma opção",
-                allowClear: true,
-            });
-        });
-    </script>
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>

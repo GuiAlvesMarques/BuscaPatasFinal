@@ -158,6 +158,7 @@ namespace BuscaPatasFinal.Controllers
             try
             {
                 // Process the uploaded image
+
                 if (surrender.UploadedImage != null && surrender.UploadedImage.Length > 0)
                 {
                     using (var memoryStream = new MemoryStream())
