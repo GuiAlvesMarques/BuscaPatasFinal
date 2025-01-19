@@ -51,3 +51,35 @@ document.getElementById("favoritesIcon").addEventListener("click", function (e) 
         });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    function checkUserType() {
+        fetch('/Account/IsLoggedIn', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+            },
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data); // Para depuração
+
+                if (data.isLoggedIn && data.userType === "Admin") {
+                    // Mostra todos os links de admin
+                    document.getElementById('adminLink1').style.display = 'inline-block';
+                    document.getElementById('adminLink2').style.display = 'inline-block';
+                    document.getElementById('adminLink3').style.display = 'inline-block';
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao verificar o tipo de usuário:', error);
+            });
+    }
+
+    // Chama a função para verificar o tipo de usuário
+    checkUserType();
+});
