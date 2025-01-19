@@ -1,4 +1,4 @@
-@model BuscaPatasFinal.Models.Found
+@model BuscaPatasFinal.Models.Surrender
 
 
     <!DOCTYPE html>
@@ -59,42 +59,43 @@
             </div>
         </div>
         <!-- Offcanvas Menu End -->
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-1 col-lg-1">
-                    <div class="header__logo">
-                        <a href="~/index.html"><img src="~/img/logo.png" alt=""></a>
+        <!-- Header Section Begin -->
+        <header class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-1 col-lg-1">
+                        <div class="header__logo">
+                            <a href="~/index.html"><img src="~/img/logo.png" alt=""></a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xl-9 col-lg-9">
-                    <nav class="header__menu">
-                        <ul>
-                            <li>
-                                <a href="~/adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
-                                <ul class="dropdown">
-                                    <li><a href="/Sheltered/AdoptionList?speciesId=1">Cães</a></li>
-                                    <li><a href="/Sheltered/AdoptionList?speciesId=2">Gatos</a></li>
-                                    <li><a href="~/matchmaking.html">Matchmaking</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="~/entrega-animal.html">Entrega Animal</a></li>
-                            <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
-                            <li>
-                                <a href="~/learn.html">Aprender <span class="arrow_carrot-down"></span></a>
-                                <ul class="dropdown">
-                                    <li><a href="~/breed-info.html">Raças & Cuidados</a></li>
-                                    <li><a href="~/faq.html">Perguntas Frequentes</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="~/partners.html">Parceiros</a></li>
-                            <li><a href="~/ajuda.html">Apoiar</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-2">
-                    <div class="header__right">
+                    <div class="col-xl-9 col-lg-9">
+                        <nav class="header__menu">
+                            <ul>
+                                <li>
+                                    <a href="~/adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="/Sheltered/AdoptionList?speciesId=1">Cães</a></li>
+                                        <li><a href="/Sheltered/AdoptionList?speciesId=2">Gatos</a></li>
+                                        <li><a href="~/matchmaking.html">Matchmaking</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="~/entrega-animal.html">Entrega Animal</a></li>
+                                <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
+                                <li>
+                                    <a href="~/learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="~/breed-info.html">Raças & Cuidados</a></li>
+                                        <li><a href="~/faq.html">Perguntas Frequentes</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="~/partners.html">Parceiros</a></li>
+                                <li><a href="~/ajuda.html">Apoiar</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="header__right">
                         <ul class="header__right__widget">
 
                             <li><span class="icon_search search-switch"></span></li>
@@ -110,15 +111,15 @@
                                 </a>
                             </li>
                         </ul>
+                        </div>
                     </div>
                 </div>
+                <div class="canvas__open">
+                    <i class="fa fa-bars"></i>
+                </div>
             </div>
-            <div class="canvas__open">
-                <i class="fa fa-bars"></i>
-            </div>
-        </div>
-    </header>
-    <!-- Header Section End -->
+        </header>
+        <!-- Header Section End -->
     <!-- Login and Register Modal -->
     <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -201,19 +202,27 @@
     <!-- Login Register Model Ends -->
 
         <!-- Breadcrumb Begin -->
-    <div class="breadcrumb-option">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb__links">
-                        <a href="~/index.html"><i class="fa fa-home"></i> Home</a>
-                        <a href="/LostFound/Perdidos">Perdidos e Encontrados</a>
-                        <span>@Model.IDAnimal</span>
+        <div class="breadcrumb-option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb__links">
+                            <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                            <a href="./adotar.html">Adotar</a>
+                            @if (Model.IDSpecies == 1)
+                            {
+                                <a href="/Sheltered/AdoptionList?speciesId=1">Cães</a>
+                            }
+                            else if (Model.IDSpecies == 2)
+                            {
+                                <a href="/Sheltered/AdoptionList?speciesId=2">Gatos</a>
+                            }
+                            <span>@Model.IDAnimal</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
         <!-- Breadcrumb End -->
 
     <!-- Product Details Section Begin -->
@@ -227,7 +236,7 @@
                                 @if (Model.Image != null)
                                 {
                                     string base64Image = Convert.ToBase64String(Model.Image);
-                                        <img src="data:image/jpeg;base64,@base64Image"/>
+                                        <img src="data:image/jpeg;base64,@base64Image" alt="@Model.AnimalName" />
                                 }
                                 else
                                 {
@@ -240,26 +249,34 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="animal__details__text">
-                        <h3>@Model.IDAnimal <span></span></h3>
-                        <h5><strong>Idade:</strong> <span>@Model.AgeRange</span></h5>
-                        <h5><strong>Raça:</strong> <span>@Model.Breed</span></h5>
-                        <h5><strong>Porte:</strong> <span>@Model.Size</span></h5>
-                        <h5><strong>Ultima Localização:</strong> <span>@Model.Location</span></h5>
-                        <h5><strong>Email:</strong> <span>@Model.FoundEmail</span></h5>
-                        <h5><strong>Telefone:</strong> <span>@Model.FoundPhone</span></h5>
+                        <h3>@Model.AnimalName <span></span></h3>
+                        <h5><strong>ID:</strong> <span>@Model.IDAnimal</span></h5>
+                        <h5><strong>Idade:</strong> <span>@(Model.Age > 0 ? $"{Model.Age} anos" : "Não especificado")</span></h5>
+                        <h5><strong>Sexo:</strong> <span>@(Model.Sex == "male" ? "Macho" : Model.Sex == "female" ? "Fêmea" : "Outro")</span></h5>
+                        <h5><strong>Raça:</strong> <span>@(string.IsNullOrEmpty(Model.Breed) ? "SRD (Sem Raça Definida)" : Model.Breed)</span></h5>
+                        <h5><strong>Porte:</strong> <span>@(Model.Size != null ? Model.Size.ToUpper() : "Não especificado")</span></h5>
                         </div>
-                        <div class="tab-pane" id="tabs-2" role="tabpanel">
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="product__details__tab">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Descrição</a>
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Sobre o Animal</a>
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <p>@Model.Description</p>
+                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                <h5>Conheça @Model.AnimalName</h5>
+                                <h6>Contactos:</h6>
+                                <p>@Model.Username</p>
+                                <p>@Model.Email</p>
+                                <p>@Model.Phone</p>
+                                <h6>Personalidade:</h6>
+                                <p>@Model.Personality</p>
+                                <h6>Estado de Saude:</h6>
+                                <p>@Model.HealthStatus</p>                                
+                           </div>
                         </div>
                     </div>
                 </div>
@@ -334,6 +351,42 @@
         </div>
         <!-- Search End -->
         <!-- Js Plugins -->
+        <script>
+        $(document).on('click', '.like-button', function (e) {
+            e.preventDefault();
+
+            // Captura os IDs do animal e da espécie
+            const animalId = $(this).data('animal-id');
+            const speciesId = $(this).data('species-id');
+
+            // Verifique se o ID do animal está presente
+            if (!animalId) {
+                alert('ID do animal não encontrado.');
+                return;
+            }
+
+            // Envia o pedido AJAX para adicionar o "like"
+            $.ajax({
+                url: '/Likes/AddLike',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ IDAnimal: animalId, IDSpecies: speciesId }),
+                success: function (response) {
+                    if (response.success) {
+                        alert('Animal adicionado aos favoritos com sucesso.');
+                    } else {
+                        alert(response.message || 'Não foi possível adicionar aos favoritos.');
+                    }
+                },
+                error: function (xhr) {
+                    const error = xhr.responseJSON?.message || 'Ocorreu um erro.';
+                    alert(error);
+                }
+            });
+        });
+        </script>
+
+
         <script src="~/js/jquery-3.3.1.min.js"></script>
         <script src="~/js/bootstrap.min.js"></script>
         <script src="~/js/jquery.magnific-popup.min.js"></script>
@@ -352,6 +405,7 @@
     <script src="~/js/scripts.js"></script>
     <script src="~/js/resgiter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <
     </body>
 
 </html>

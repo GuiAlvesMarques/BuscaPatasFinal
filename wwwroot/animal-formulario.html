@@ -238,13 +238,10 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-6">
-                                    <select name="Size" required>
-                                        <option value="" disabled selected>Porte</option>
-                                        <option value="mini">Mini (até 5kg)</option>
-                                        <option value="pequeno">Pequeno (5-10kg)</option>
-                                        <option value="medio">Médio (10-20kg)</option>
-                                        <option value="grande">Grande (20-35kg)</option>
-                                        <option value="gigante">Gigante (acima de 35kg)</option>
+
+                                    <select id="size_select" name="Size" class="form-control" required>
+                                        <option value="" disabled selected>Selecione o porte</option>
+                                        <!-- As opções serão preenchidas dinamicamente -->
                                     </select>
                                 </div>
                                 <div class="col-lg-6">
@@ -517,6 +514,22 @@
             });
         });
 
+        const size = {
+            1: [ // Cães (value 1)
+                { value: "mini", text: "Mini (até 5kg)" },
+                { value: "pequeno", text: "Pequeno (5-10kg)" },
+                { value: "medio", text: "Médio (10-20kg)" },
+                { value: "grande", text: "Grande (20-35kg)" },
+                { value: "gigante", text: "Gigante (acima de 35kg)" }
+            ],
+            2: [ // Gatos (value 2)
+                { value: "pequeno", text: "Pequeno (até 3kg)" },
+                { value: "medio", text: "Médio (3-5kg)" },
+                { value: "grande", text: "Grande (5-7kg)" },
+                { value: "gigante", text: "Gigante (acima de 7kg)" }
+            ]
+        };
+
         const breeds = {
             1: [ // Cães (value 1)
                 { value: "SRD", text: "SRD (Sem Raça Definida)" },
@@ -591,6 +604,17 @@
 
         document.getElementById("IDSpecies").addEventListener("change", function () {
             const selectedSpecies = this.value; // Pega o value (1 ou 2)
+
+            const sizeSelect = document.getElementById("size_select");
+            sizeSelect.innerHTML = '<option value="" disabled selected>Selecione o porte</option>';
+            if (size[selectedSpecies]) {
+                size[selectedSpecies].forEach((size) => {
+                    const option = document.createElement("option");
+                    option.value = size.value;
+                    option.textContent = size.text;
+                    sizeSelect.appendChild(option);
+                });
+            }
 
             // Atualizar o campo de raças
             const breedSelect = document.getElementById("breed_select");

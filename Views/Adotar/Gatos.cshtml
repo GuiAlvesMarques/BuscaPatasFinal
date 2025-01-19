@@ -1,4 +1,4 @@
-@model IEnumerable<BuscaPatasFinal.Models.Sheltered>
+@model IEnumerable<BuscaPatasFinal.ViewModels.AnimalViewModel>
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -416,52 +416,66 @@
                 <!-- Main Adoption Cards -->
                 <div class="col-lg-9 col-md-9">
                     <div class="row">
-                        @foreach (var cat in Model.Where(c => c.IsForAdoption)) // Filtrar apenas os disponíveis para adoção
+                        @if (Model != null && Model.Any())
                         {
-                            <div class="col-lg-4 col-md-6 product-item" data-breed="@cat.Breed" data-age="@cat.AgeRange" data-size="@cat.Size">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg">
-                                        @if (cat.Image != null)
-                                        {
-                                            string base64Image = Convert.ToBase64String(cat.Image);
-                                            <img src="data:image/jpeg;base64,@base64Image" alt="@cat.AnimalName" class="product-img" />
-                                        }
-                                        else
-                                        {
-                                            <img src="~/img/img-adotar.png" alt="Imagem não disponível" class="product-img" />
-                                        }
-                                        <ul class="product__hover">
-                                            @if (cat.Image != null)
+                            foreach (var animal in Model)
+                            {
+                                <div class="col-lg-4 col-md-6 mb-4 product-item">
+                                    <div class="product__item shadow-sm h-100">
+                                        <div class="product__item__pic set-bg">
+                                            @if (animal.Image != null)
                                             {
-                                                string base64Image = Convert.ToBase64String(cat.Image);
-                                                <li>
-                                                    <a href="data:image/jpeg;base64,@base64Image" class="image-popup">
-                                                        <span class="arrow_expand"></span>
-                                                    </a>
-                                                </li>
+                                                string base64Image = Convert.ToBase64String(animal.Image);
+                                                <img src="data:image/jpeg;base64,@base64Image" alt="@animal.AnimalName" class="img-fluid product-img" />
                                             }
                                             else
                                             {
+                                                <img src="~/img/img-adotar.png" alt="Imagem não disponível" class="img-fluid product-img" />
+                                            }
+                                            <ul class="product__hover">
+                                                @if (animal.Image != null)
+                                                {
+                                                    <li>
+                                                        <a href="data:image/jpeg;base64,@Convert.ToBase64String(animal.Image)" class="image-popup">
+                                                            <span class="arrow_expand"></span>
+                                                        </a>
+                                                    </li>
+                                                }
+                                                else
+                                                {
+                                                    <li>
+                                                        <a href="~/img/img-adotar.png" class="image-popup">
+                                                            <span class="arrow_expand"></span>
+                                                        </a>
+                                                    </li>
+                                                }
                                                 <li>
-                                                    <a href="~/img/img-adotar.png" class="image-popup">
-                                                        <span class="arrow_expand"></span>
+                                                    <a href="#" class="like-button" data-species-id="@animal.IDSpecies" data-animal-id="@animal.IDAnimal">
+                                                        <span class="icon_heart_alt"></span>
                                                     </a>
                                                 </li>
-                                            }
-                                            <li>
-                                                <a href="#" class="like-button" data-species-id="@cat.IDSpecies" data-animal-id="@cat.IDAnimal">
-                                                    <span class="icon_heart_alt"></span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <h6><a href="#">@cat.AnimalName</a></h6>
-                                        <p>Raça: @cat.Breed | Idade: @cat.AgeRange | Porte: @cat.Size</p>
-                                        <button onclick="window.location.href='/Sheltered/Details/@cat.IDAnimal'" class="adopt-btn">Adotar</button>
+                                            </ul>
+                                        </div>
+                                        <div class="product__item__text text-center mt-3">
+                                            <h6 class="shelter-animal-name">@animal.AnimalName</h6>
+                                            <p>
+                                                <strong>Raça:</strong> @animal.Breed <br />
+                                                <strong>Idade:</strong> @animal.Age anos <br />
+                                                <strong>Porte:</strong> @animal.Size
+                                                @if (animal.IsSurrendered)
+                                                {
+                                                    <span class="badge bg-warning ms-1">Entregue</span>
+                                                }
+                                            </p>
+                                            <a href="/Sheltered/Details/@animal.IDAnimal" class="btn btn-primary adopt-btn mt-2">Adotar</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            }
+                        }
+                        else
+                        {
+                            <p class="text-center">Nenhum cão disponível para adoção no momento.</p>
                         }
                     </div>
                 </div>
@@ -576,6 +590,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/~/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.js"></script>
     <script src="~/js/login-register.js"></script>
+    <script src="~/js/scripts.js"></script>
+    <script src="~/js/resgiter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

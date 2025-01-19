@@ -20,9 +20,6 @@ namespace BuscaPatasFinal.Models
         [StringLength(50)]
         public string Sex { get; set; }
 
-        [StringLength(20)]
-        public string AgeRange { get; set; }
-
         public int Age { get; set; }
 
         public DateTime? Birthday { get; set; } // Nullable since it is optional
@@ -38,12 +35,6 @@ namespace BuscaPatasFinal.Models
 
         [StringLength(50)]
         public string HealthStatus { get; set; }
-
-        [StringLength(200)]
-        public string Diet { get; set; }
-
-        [StringLength(50)]
-        public string Care { get; set; }
 
         [StringLength(50)]
         public string Location { get; set; }
