@@ -1,9 +1,12 @@
 // Coordinates and information for each marker
 const markerData = [
-    { coords: [-9.1734425, 38.7402514], info: 'União Zoófila', link: 'https://example.com/shelter1' },
+    { coords: [-9.1734425, 38.7402514], info: 'União Zoófila', link: 'https://www.uniaozoofila.org/' },
     { coords: [-8.611, 41.14961], info: 'Shelter 2', link: 'https://example.com/shelter2' },
+    { coords: [-9.026012876658726, 38.6643997631585], info: 'O Abrigo da Mãozinhas', link: 'https://www.facebook.com/VoluntariosAAAAMoita/' },
+    { coords: [-9.184845114390965, 38.724408387134254], info: 'Casa dos Animais de Lisboa', link: 'https://informacoeseservicos.lisboa.pt/contactos/diretorio-da-cidade/casa-dos-animais-de-lisboa' },
+    { coords: [-9.203821076041395, 38.78131788051613], info: 'Parque dos Bichos', link: 'https://www.cm-odivelas.pt/areas-de-intervencao/veterinaria/parque-dos-bichos' },
     { coords: [-7.9118, 37.0194], info: 'Shelter 3', link: 'https://example.com/shelter3' }
-];
+]; 
 
 // Create features for each marker
 const markerFeatures = markerData.map(data => {
