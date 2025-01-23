@@ -81,12 +81,21 @@
                             <li>
                                 <a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
-                                    <li><a href="./breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="./breed-info.html">Raças & Cui-dados</a></li>
                                     <li><a href="./faq.html">Perguntas Frequentes</a></li>
                                 </ul>
                             </li>
                             <li><a href="./partners.html">Parceiros</a></li>
                             <li><a href="./ajuda.html">Apoiar</a></li>
+                            <li id="adminLink1" class="admin-link" style="display: none;">
+                                <a href="/Admin/AdminManagement">Admin</a>
+                            </li>
+                            <li id="adminLink2" class="admin-link" style="display: none;">
+                                <a href="/shelter-formulario.html">Submeter Abrigos</a>
+                            </li>
+                            <li id="adminLink3" class="admin-link" style="display: none;">
+                                <a href="/animal-formulario.html">Submeter Animais</a>
+                            </li>
 
                         </ul>
                     </nav>
@@ -97,13 +106,12 @@
 
                             <li><span class="icon_search search-switch"></span></li>
                             <li>
-                                <a href="#">
+                                <a href="/likes/favorites" id="favoritesIcon">
                                     <span class="icon_heart_alt"></span>
-                                    <div class="tip">2</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="javascript:void(0);" onclick="checkUserProfileAccess(  )">
                                     <span class="icon_profile" data-bs-toggle="modal"
                                           data-bs-target="#authModal"></span>
                                 </a>

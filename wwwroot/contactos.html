@@ -36,12 +36,16 @@
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__close">+</div>
         <ul class="offcanvas__widget">
-            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
+            <li>
+                <a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
             </li>
             <li><span class="icon_search search-switch"></span></li>
-            <li><a href="#"><span class="icon_heart_alt"></span>
+            <li>
+                <a href="#">
+                    <span class="icon_heart_alt"></span>
                     <div class="tip">2</div>
-                </a></li>
+                </a>
+            </li>
         </ul>
         <div class="offcanvas__logo">
             <a href="./index.html"><img src="img/logo.png" alt=""></a>
@@ -52,7 +56,6 @@
         </div>
     </div>
     <!-- Offcanvas Menu End -->
-
     <!-- Header Section Begin -->
     <header class="header">
         <div class="container-fluid">
@@ -65,7 +68,8 @@
                 <div class="col-xl-9 col-lg-9">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                            <li>
+                                <a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
                                     <li><a href="/Sheltered/AdoptionList?speciesId=1">Cães</a></li>
                                     <li><a href="/Sheltered/AdoptionList?speciesId=2">Gatos</a></li>
@@ -74,10 +78,11 @@
                             </li>
                             <li><a href="./entrega-animal.html">Entrega Animal</a></li>
                             <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
-                            <li><a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                            <li>
+                                <a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
-                                <li><a href="./breed-info.html">Raças & Cuidados</a></li>
-                                <li><a href="./faq.html">Perguntas Frequentes</a></li>
+                                    <li><a href="./breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="./faq.html">Perguntas Frequentes</a></li>
                                 </ul>
                             </li>
                             <li><a href="./partners.html">Parceiros</a></li>
@@ -89,6 +94,7 @@
                 <div class="col-lg-2">
                     <div class="header__right">
                         <ul class="header__right__widget">
+
                             <li><span class="icon_search search-switch"></span></li>
                             <li>
                                 <a href="/likes/favorites" id="favoritesIcon">
@@ -100,61 +106,6 @@
                                     <span class="icon_profile" data-bs-toggle="modal"
                                           data-bs-target="#authModal"></span>
                                 </a>
-                                <script>
-                                    function checkUserProfileAccess() {
-                                        fetch('/Account/IsLoggedIn', {
-                                            method: 'GET',
-                                            headers: {
-                                                'Accept': 'application/json',
-                                            },
-                                        })
-                                            .then(response => {
-                                                if (!response.ok) {
-                                                    throw new Error(`HTTP error! Status: ${response.status}`);
-                                                }
-                                                return response.json();
-                                            })
-                                            .then(data => {
-                                                if (data.isLoggedIn) {
-                                                    // Se o usuário está logado, redireciona para o perfil
-                                                    window.location.href = '/Account/UserProfile';
-                                                } else {
-                                                    // Se não está logado, exibe o modal de login
-                                                    $('#authModal').modal('show');
-                                                }
-                                            })
-                                            .catch(error => {
-                                                console.error('Erro ao verificar o acesso ao perfil:', error);
-                                                alert('Erro ao verificar o acesso ao perfil do usuário.');
-                                            });
-                                    }
-
-                                </script>
-                                <script>
-                                    $(document).ready(function () {
-                                        $("#favoritesIcon").click(function (e) {
-                                            e.preventDefault();
-
-                                            // Faz uma chamada AJAX para verificar login
-                                            $.ajax({
-                                                url: '/Account/IsLoggedIn', // Endpoint para verificar login
-                                                method: 'GET',
-                                                success: function (response) {
-                                                    if (response.isLoggedIn) {
-                                                        // Redireciona para a página de favoritos
-                                                        window.location.href = "/Adotar/Favorito";
-                                                    } else {
-                                                        // Exibe o modal de login
-                                                        $("#authModal").modal('show');
-                                                    }
-                                                },
-                                                error: function () {
-                                                    alert('Erro ao verificar login.');
-                                                }
-                                            });
-                                        });
-                                    });
-                                </script>
                             </li>
                         </ul>
                     </div>
@@ -165,7 +116,6 @@
             </div>
         </div>
     </header>
-    <!-- Header Section End -->
 
     <!-- Login and Register Modal -->
     <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
@@ -173,7 +123,9 @@
             <div class="modal-content modal-header">
                 <div class="modal-body d-flex p-0">
                     <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
-                        aria-label="Close">&times;</button>
+                            aria-label="Close">
+                        &times;
+                    </button>
 
                     <!-- Left Side - Login/Register Form -->
                     <div class="w-50 p-5">
@@ -183,12 +135,12 @@
                             <div class="mb-3">
                                 <label for="email" class="form-label">Endereço de Email</label>
                                 <input type="email" class="form-control" id="email" placeholder="Insira o seu email"
-                                    required>
+                                       required>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Palavra-passe</label>
                                 <input type="password" class="form-control" id="password"
-                                    placeholder="Insira a sua palavra-passe" required>
+                                       placeholder="Insira a sua palavra-passe" required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Entrar</button>
                             <div class="text-center mt-3">
@@ -201,17 +153,17 @@
                             <div class="mb-3">
                                 <label for="registerName" class="form-label">Nome Completo</label>
                                 <input type="text" class="form-control" id="registerName"
-                                    placeholder="Insira o seu nome completo" required>
+                                       placeholder="Insira o seu nome completo" required>
                             </div>
                             <div class="mb-3">
                                 <label for="registerEmail" class="form-label">Endereço de Email</label>
                                 <input type="email" class="form-control" id="registerEmail"
-                                    placeholder="Insira o seu email" required>
+                                       placeholder="Insira o seu email" required>
                             </div>
                             <div class="mb-3">
                                 <label for="registerPassword" class="form-label">Palavra-passe</label>
                                 <input type="password" class="form-control" id="registerPassword"
-                                    placeholder="Crie uma palavra-passe" required>
+                                       placeholder="Crie uma palavra-passe" required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Registar</button>
                             <div class="text-center mt-3">
@@ -225,18 +177,17 @@
                     <!-- Right Side - Image -->
                     <div class="w-50 d-none d-md-block">
                         <img src="img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
-                            style="object-fit: cover;">
+                             style="object-fit: cover;">
                     </div>
                 </div>
 
                 <!-- Custom Close Button -->
                 <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+                        aria-label="Close"></button>
             </div>
         </div>
     </div>
     <!-- Login Register Model Ends -->
-
     <!-- Breadcrumb Begin -->
     <div class="breadcrumb-option">
         <div class="container">
@@ -251,7 +202,6 @@
         </div>
     </div>
     <!-- Breadcrumb End -->
-
     <!-- Contact Section Begin -->
     <section class="contact spad">
         <div class="container">
@@ -289,10 +239,9 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="contact__map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250818.62242141776!2d-9.306231889620862!3d38.73694697959865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19331b2c231c3b%3A0x400ebbde49036d0!2sLisboa!5e0!3m2!1sen!2spt!4v1699477399991!5m2!1sen!2spt"
-                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250818.62242141776!2d-9.306231889620862!3d38.73694697959865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19331b2c231c3b%3A0x400ebbde49036d0!2sLisboa!5e0!3m2!1sen!2spt!4v1699477399991!5m2!1sen!2spt"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
 
@@ -302,7 +251,6 @@
         </div>
     </section>
     <!-- Contact Section End -->
-
     <!-- Footer Section Begin -->
     <footer class="footer">
         <div class="container">
@@ -341,24 +289,14 @@
                         <h6>Apoio</h6>
                         <ul>
                             <li><a href="ajuda.html">Ajuda</a></li>
-                            <li><a href="abrigos.html">Abrigos</a></li>
                             <li><a href="merch.html">Merchandise</a></li>
                         </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-8 col-sm-8">
-                    <div class="footer__newsletter">
-                        <div class="footer__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
     <!-- Footer Section End -->
-
     <!-- Search Begin -->
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
@@ -369,7 +307,6 @@
         </div>
     </div>
     <!-- Search End -->
-
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

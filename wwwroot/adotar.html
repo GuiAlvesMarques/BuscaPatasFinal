@@ -94,6 +94,7 @@
                 <div class="col-lg-2">
                     <div class="header__right">
                         <ul class="header__right__widget">
+
                             <li><span class="icon_search search-switch"></span></li>
                             <li>
                                 <a href="/likes/favorites" id="favoritesIcon">
@@ -105,61 +106,6 @@
                                     <span class="icon_profile" data-bs-toggle="modal"
                                           data-bs-target="#authModal"></span>
                                 </a>
-                                <script>
-                                    function checkUserProfileAccess() {
-                                        fetch('/Account/IsLoggedIn', {
-                                            method: 'GET',
-                                            headers: {
-                                                'Accept': 'application/json',
-                                            },
-                                        })
-                                            .then(response => {
-                                                if (!response.ok) {
-                                                    throw new Error(`HTTP error! Status: ${response.status}`);
-                                                }
-                                                return response.json();
-                                            })
-                                            .then(data => {
-                                                if (data.isLoggedIn) {
-                                                    // Se o usuário está logado, redireciona para o perfil
-                                                    window.location.href = '/Account/UserProfile';
-                                                } else {
-                                                    // Se não está logado, exibe o modal de login
-                                                    $('#authModal').modal('show');
-                                                }
-                                            })
-                                            .catch(error => {
-                                                console.error('Erro ao verificar o acesso ao perfil:', error);
-                                                alert('Erro ao verificar o acesso ao perfil do usuário.');
-                                            });
-                                    }
-
-                                </script>
-                                <script>
-                                    $(document).ready(function () {
-                                        $("#favoritesIcon").click(function (e) {
-                                            e.preventDefault();
-
-                                            // Faz uma chamada AJAX para verificar login
-                                            $.ajax({
-                                                url: '/Account/IsLoggedIn', // Endpoint para verificar login
-                                                method: 'GET',
-                                                success: function (response) {
-                                                    if (response.isLoggedIn) {
-                                                        // Redireciona para a página de favoritos
-                                                        window.location.href = "/Adotar/Favorito";
-                                                    } else {
-                                                        // Exibe o modal de login
-                                                        $("#authModal").modal('show');
-                                                    }
-                                                },
-                                                error: function () {
-                                                    alert('Erro ao verificar login.');
-                                                }
-                                            });
-                                        });
-                                    });
-                                </script>
                             </li>
                         </ul>
                     </div>
@@ -170,7 +116,6 @@
             </div>
         </div>
     </header>
-    <!-- Header Section End -->
     <!-- Login and Register Modal -->
     <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -416,17 +361,8 @@
                         <h6>Apoio</h6>
                         <ul>
                             <li><a href="ajuda.html">Ajuda</a></li>
-                            <li><a href="abrigos.html">Abrigos</a></li>
                             <li><a href="merch.html">Merchandise</a></li>
                         </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-8 col-sm-8">
-                    <div class="footer__newsletter">
-                        <div class="footer__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>

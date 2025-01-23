@@ -37,12 +37,16 @@
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__close">+</div>
         <ul class="offcanvas__widget">
-            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
+            <li>
+                <a href="#"><span class="icon_profile" data-bs-toggle="modal" data-bs-target="#authModal"></span></a>
             </li>
             <li><span class="icon_search search-switch"></span></li>
-            <li><a href="#"><span class="icon_heart_alt"></span>
+            <li>
+                <a href="#">
+                    <span class="icon_heart_alt"></span>
                     <div class="tip">2</div>
-                </a></li>
+                </a>
+            </li>
         </ul>
         <div class="offcanvas__logo">
             <a href="./index.html"><img src="img/logo.png" alt=""></a>
@@ -53,7 +57,6 @@
         </div>
     </div>
     <!-- Offcanvas Menu End -->
-
     <!-- Header Section Begin -->
     <header class="header">
         <div class="container-fluid">
@@ -66,7 +69,8 @@
                 <div class="col-xl-9 col-lg-9">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                            <li>
+                                <a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
                                     <li><a href="/Sheltered/AdoptionList?speciesId=1">Cães</a></li>
                                     <li><a href="/Sheltered/AdoptionList?speciesId=2">Gatos</a></li>
@@ -75,7 +79,8 @@
                             </li>
                             <li><a href="./entrega-animal.html">Entrega Animal</a></li>
                             <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
-                            <li><a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                            <li>
+                                <a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
                                     <li><a href="./breed-info.html">Raças & Cuidados</a></li>
                                     <li><a href="./faq.html">Perguntas Frequentes</a></li>
@@ -90,12 +95,19 @@
                 <div class="col-lg-2">
                     <div class="header__right">
                         <ul class="header__right__widget">
+
                             <li><span class="icon_search search-switch"></span></li>
-                            <li><a href="#" ><span class="icon_heart_alt"></span>
-                                    <div class="tip">2</div>
-                                </a></li>
-                            <li><a href="#"><span class="icon_profile" data-bs-toggle="modal"
-                                        data-bs-target="#authModal"></span></a></li>
+                            <li>
+                                <a href="/likes/favorites" id="favoritesIcon">
+                                    <span class="icon_heart_alt"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" onclick="checkUserProfileAccess()">
+                                    <span class="icon_profile" data-bs-toggle="modal"
+                                          data-bs-target="#authModal"></span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -105,7 +117,6 @@
             </div>
         </div>
     </header>
-    <!-- Header Section End -->
 
     <!-- Login and Register Modal -->
     <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
@@ -113,7 +124,9 @@
             <div class="modal-content">
                 <div class="modal-body d-flex p-0">
                     <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
-                        aria-label="Close">&times;</button>
+                            aria-label="Close">
+                        &times;
+                    </button>
 
                     <!-- Left Side - Login/Register Form -->
                     <div class="w-50 p-5">
@@ -123,12 +136,12 @@
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email Address</label>
                                 <input type="email" class="form-control" id="email" placeholder="Enter your email"
-                                    required>
+                                       required>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password" class="form-control" id="password"
-                                    placeholder="Enter your password" required>
+                                       placeholder="Enter your password" required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Login</button>
                             <div class="text-center mt-3">
@@ -141,17 +154,17 @@
                             <div class="mb-3">
                                 <label for="registerName" class="form-label">Full Name</label>
                                 <input type="text" class="form-control" id="registerName"
-                                    placeholder="Enter your full name" required>
+                                       placeholder="Enter your full name" required>
                             </div>
                             <div class="mb-3">
                                 <label for="registerEmail" class="form-label">Email Address</label>
                                 <input type="email" class="form-control" id="registerEmail"
-                                    placeholder="Enter your email" required>
+                                       placeholder="Enter your email" required>
                             </div>
                             <div class="mb-3">
                                 <label for="registerPassword" class="form-label">Password</label>
                                 <input type="password" class="form-control" id="registerPassword"
-                                    placeholder="Create a password" required>
+                                       placeholder="Create a password" required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Register</button>
                             <div class="text-center mt-3">
@@ -163,18 +176,17 @@
                     <!-- Right Side - Image -->
                     <div class="w-50 d-none d-md-block">
                         <img src="img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
-                            style="object-fit: cover;">
+                             style="object-fit: cover;">
                     </div>
                 </div>
 
                 <!-- Custom Close Button -->
                 <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+                        aria-label="Close"></button>
             </div>
         </div>
     </div>
     <!-- Login Register Model Ends -->
-
     <!-- Breadcrumb Begin -->
     <div class="breadcrumb-option">
         <div class="container">
@@ -190,7 +202,7 @@
                 <div class="col-lg-6">
                     <div class="cart_icon">
                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
                         </svg>
                         <span>0</span>
                     </div>
@@ -199,7 +211,6 @@
         </div>
     </div>
     <!-- Breadcrumb End -->
-
     <!--Shopping cart Begin-->
     <div class="cartTab">
         <h1 id="TitleCart">Shopping Cart</h1>
@@ -220,7 +231,7 @@
                     <span class="plus">></span>
                 </div>-->
             </div>
-            
+
         </div>
         <div class="cartTotal">
             <h3>Total Cost: 0 €</h3>
@@ -231,7 +242,6 @@
         </div>
     </div>
     <!--Shopping cart End-->
-
     <!-- Shop Section Begin -->
     <!-- Adoption Section Begin -->
     <section class="adoption spad">
@@ -255,15 +265,19 @@
                                     <div class="card">
                                         <div class="card-heading">
                                             <a class="collapse-trigger" data-toggle="collapse" href="#collapseClothe"
-                                                role="button" aria-expanded="true" aria-controls="collapseClothe">Roupa</a>
+                                               role="button" aria-expanded="true" aria-controls="collapseClothe">Roupa</a>
                                         </div>
                                         <div id="collapseClothe" class="collapse show" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="clothe"
-                                                            value="Adulto"> Adulto </li>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="clothe"
-                                                            value="Criança">Criança</li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="clothe"
+                                                               value="Adulto"> Adulto
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="clothe"
+                                                               value="Criança">Criança
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -272,18 +286,24 @@
                                     <div class="card">
                                         <div class="card-heading">
                                             <a class="collapse-trigger" data-toggle="collapse" href="#collapseAccessorie"
-                                                role="button" aria-expanded="true"
-                                                aria-controls="collapseAccessorie">Acessórios</a>
+                                               role="button" aria-expanded="true"
+                                               aria-controls="collapseAccessorie">Acessórios</a>
                                         </div>
                                         <div id="collapseAccessorie" class="collapse" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="accessorie"
-                                                            value="Cão"> Cão</li>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="accessorie"
-                                                            value="Gato"> Gato</li>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="accessorie"
-                                                            value="Outros"> Outros</li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="accessorie"
+                                                               value="Cão"> Cão
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="accessorie"
+                                                               value="Gato"> Gato
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="accessorie"
+                                                               value="Outros"> Outros
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -292,18 +312,24 @@
                                     <div class="card">
                                         <div class="card-heading">
                                             <a class="collapse-trigger" data-toggle="collapse" href="#collapseToy"
-                                                role="button" aria-expanded="true"
-                                                aria-controls="collapseToy">Brinquedos</a>
+                                               role="button" aria-expanded="true"
+                                               aria-controls="collapseToy">Brinquedos</a>
                                         </div>
                                         <div id="collapseToy" class="collapse" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="toy"
-                                                            value="Cão"> Cão</li>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="toy"
-                                                            value="Gato"> Gato</li>
-                                                    <li><input type="checkbox" class="filter-checkbox" data-type="toy"
-                                                            value="Outros"> Outros</li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="toy"
+                                                               value="Cão"> Cão
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="toy"
+                                                               value="Gato"> Gato
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" class="filter-checkbox" data-type="toy"
+                                                               value="Outros"> Outros
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -341,14 +367,15 @@
                                     <div class="product__price">59,0 €</div>
                                     <button class="buy-btn">Comprar</button>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 product-item" data-clothe="Adulto">
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/Merch2.png">
                                     <ul class="product__hover">
-                                        <li><a href="img/Merch2.png" class="image-popup"><span class="arrow_expand"></span></a>
+                                        <li>
+                                            <a href="img/Merch2.png" class="image-popup"><span class="arrow_expand"></span></a>
                                         </li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                         <li><a href="#"><span class="icon_bag_alt"></span></a></li>
@@ -374,7 +401,8 @@
                                 <div class="product__item__pic set-bg" data-setbg="img/Merch3.png">
                                     <div class="label stockout">Esgotado</div>
                                     <ul class="product__hover">
-                                        <li><a href="img/Merch3.png" class="image-popup"><span class="arrow_expand"></span></a>
+                                        <li>
+                                            <a href="img/Merch3.png" class="image-popup"><span class="arrow_expand"></span></a>
                                         </li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                         <li><a href="#"><span class="icon_bag_alt"></span></a></li>
@@ -399,7 +427,8 @@
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/Merch4.png">
                                     <ul class="product__hover">
-                                        <li><a href="img/Merch4.png" class="image-popup"><span class="arrow_expand"></span></a>
+                                        <li>
+                                            <a href="img/Merch4.png" class="image-popup"><span class="arrow_expand"></span></a>
                                         </li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                         <li><a href="#"><span class="icon_bag_alt"></span></a></li>
@@ -424,7 +453,8 @@
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/child_clothes1.png">
                                     <ul class="product__hover">
-                                        <li><a href="img/child_clothes1.png" class="image-popup"><span class="arrow_expand"></span></a>
+                                        <li>
+                                            <a href="img/child_clothes1.png" class="image-popup"><span class="arrow_expand"></span></a>
                                         </li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                         <li><a href="#"><span class="icon_bag_alt"></span></a></li>
@@ -449,7 +479,8 @@
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/child_clothes2.png">
                                     <ul class="product__hover">
-                                        <li><a href="img/child_clothes2.png" class="image-popup"><span class="arrow_expand"></span></a>
+                                        <li>
+                                            <a href="img/child_clothes2.png" class="image-popup"><span class="arrow_expand"></span></a>
                                         </li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                         <li><a href="#"><span class="icon_bag_alt"></span></a></li>
@@ -470,11 +501,12 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 product-item" data-accessorie = "Gato">
+                        <div class="col-lg-4 col-md-6 product-item" data-accessorie="Gato">
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/Merch5.png">
                                     <ul class="product__hover">
-                                        <li><a href="img/Merch5.png" class="image-popup"><span class="arrow_expand"></span></a>
+                                        <li>
+                                            <a href="img/Merch5.png" class="image-popup"><span class="arrow_expand"></span></a>
                                         </li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                         <li><a href="#"><span class="icon_bag_alt"></span></a></li>
@@ -494,12 +526,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 product-item"  data-accessorie = "Cão">
+                        <div class="col-lg-4 col-md-6 product-item" data-accessorie="Cão">
                             <div class="product__item sale">
                                 <div class="product__item__pic set-bg" data-setbg="img/Merch7.png">
                                     <div class="label sale">Promoção</div>
                                     <ul class="product__hover">
-                                        <li><a href="img/Merch7.png" class="image-popup"><span class="arrow_expand"></span></a>
+                                        <li>
+                                            <a href="img/Merch7.png" class="image-popup"><span class="arrow_expand"></span></a>
                                         </li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                         <li><a href="#"><span class="icon_bag_alt"></span></a></li>
@@ -519,11 +552,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 product-item"  data-toy="Gato">
+                        <div class="col-lg-4 col-md-6 product-item" data-toy="Gato">
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="img/Merch6.png">
                                     <ul class="product__hover">
-                                        <li><a href="img/Merch6.png" class="image-popup"><span class="arrow_expand"></span></a>
+                                        <li>
+                                            <a href="img/Merch6.png" class="image-popup"><span class="arrow_expand"></span></a>
                                         </li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                         <li><a href="#"><span class="icon_bag_alt"></span></a></li>
@@ -543,12 +577,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 product-item"  data-toy="Cão">
+                        <div class="col-lg-4 col-md-6 product-item" data-toy="Cão">
                             <div class="product__item sale">
                                 <div class="product__item__pic set-bg" data-setbg="img/Merch8.png">
                                     <div class="label">Promoção</div>
                                     <ul class="product__hover">
-                                        <li><a href="img/Merch8.png" class="image-popup"><span class="arrow_expand"></span></a>
+                                        <li>
+                                            <a href="img/Merch8.png" class="image-popup"><span class="arrow_expand"></span></a>
                                         </li>
                                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                         <li><a href="#"><span class="icon_bag_alt"></span></a></li>
@@ -573,9 +608,7 @@
             </div>
     </section>
     <!-- Adoption Section End -->
-
     <!-- Shop Section End -->
-
     <!-- Footer Section Begin -->
     <footer class="footer">
         <div class="container">
@@ -614,24 +647,15 @@
                         <h6>Apoio</h6>
                         <ul>
                             <li><a href="ajuda.html">Ajuda</a></li>
-                            <li><a href="abrigos.html">Abrigos</a></li>
                             <li><a href="merch.html">Merchandise</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-8 col-sm-8">
-                    <div class="footer__newsletter">
-                        <div class="footer__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </footer>
     <!-- Footer Section End -->
-
     <!-- Search Begin -->
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
@@ -642,8 +666,6 @@
         </div>
     </div>
     <!-- Search End -->
-
-
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
