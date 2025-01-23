@@ -80,7 +80,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="~/entrega-animal.html">Entrega Animal</a></li>
-                                <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
+                                <li><a href="~/perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
                                 <li>
                                     <a href="~/learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
@@ -119,18 +119,18 @@
             </div>
         </header>
         <!-- Header Section End -->
-    <!-- Login and Register Modal -->
-    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content modal-header">
-                <div class="modal-body d-flex p-0">
-                    <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
-                            aria-label="Close">
-                        &times;
-                    </button>
+        <!-- Login and Register Modal -->
+        <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content modal-header">
+                    <div class="modal-body d-flex p-0">
+                        <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
+                                aria-label="Close">
+                            &times;
+                        </button>
 
-                    <!-- Left Side - Login/Register Form -->
-                    <div class="w-50 p-5">
+                        <!-- Left Side - Login/Register Form -->
+                        <div class="w-50 p-5">
 
                         <form id="loginForm" method="post" action="/Account/Login">
                             <h3 class="mb-4 text-center" id="authModalLabel">Iniciar Sessão</h3>
@@ -178,27 +178,22 @@
                                 <small>Já tem conta? <a href="#" id="switchToLogin">Login</a></small>
                             </div>
                         </form>
+                        </div>
 
-                        <!-- Placeholder for Popup -->
-                        <div id="popupMessage" class="alert alert-danger d-none"></div>
-
-
+                        <!-- Right Side - Image -->
+                        <div class="w-50 d-none d-md-block">
+                            <img src="~/img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
+                                 style="object-fit: cover;">
+                        </div>
                     </div>
 
-                    <!-- Right Side - Image -->
-                    <div class="w-50 d-none d-md-block">
-                        <img src="~/img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
-                             style="object-fit: cover;">
-                    </div>
+                    <!-- Custom Close Button -->
+                    <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                 </div>
-
-                <!-- Custom Close Button -->
-                <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
             </div>
         </div>
-    </div>
-    <!-- Login Register Model Ends -->
+        <!-- Login Register Model Ends -->
 
         <!-- Breadcrumb Begin -->
         <div class="breadcrumb-option">
@@ -276,9 +271,7 @@
                                 <h6>Personalidade</h6>
                                 <p>@Model.Personality</p>
                                 <h6>Estado de Saude</h6>
-                                <p>@Model.History</p>
-                                
-
+                                <p>@Model.History</p>                               
                             </div>
                         </div>
                     </div>
@@ -379,8 +372,6 @@
             });
         });
         </script>
-
-
         <script src="~/js/jquery-3.3.1.min.js"></script>
         <script src="~/js/bootstrap.min.js"></script>
         <script src="~/js/jquery.magnific-popup.min.js"></script>
@@ -400,8 +391,6 @@
         <script src="~/js/resgiter.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-
-        
     </body>
 
 </html>

@@ -1,6 +1,9 @@
-﻿using BuscaPatasFinal.Data;
+﻿using Microsoft.AspNetCore.Mvc;
+using BuscaPatasFinal.Data;
 using BuscaPatasFinal.Models;
-using Microsoft.AspNetCore.Mvc;
+using System;
+using System.IO;
+using System.Linq;
 
 namespace BuscaPatasFinal.Controllers
 {

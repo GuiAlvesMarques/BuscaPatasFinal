@@ -59,14 +59,40 @@
             </div>
         </div>
         <!-- Offcanvas Menu End -->
+        <!-- Header Section Begin -->
+        <header class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-1 col-lg-1">
+                        <div class="header__logo">
+                            <a href="~/index.html"><img src="~/img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9">
+                        <nav class="header__menu">
+                            <ul>
+                                <li>
+                                    <a href="~/adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="~/page-caes.html">C�es</a></li>
+                                        <li><a href="~/page-gatos.html">Gatos</a></li>
+                                        <li><a href="~/matchmaking.html">Matchmaking</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="~/entrega-animal.html">Entrega Animal</a></li>
+                                <li><a href="~/perdidos-e-encontrados.html">Perdidos e Encontrados</a></li>
+                                <li>
+                                    <a href="~/learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="~/breed-info.html">Ra�as & Cuidados</a></li>
+                                        <li><a href="~/faq.html">Perguntas Frequentes</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="~/partners.html">Parceiros</a></li>
+                                <li><a href="~/ajuda.html">Apoiar</a></li>
 
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-1 col-lg-1">
-                    <div class="header__logo">
-                        <a href="~/index.html"><img src="~/img/logo.png" alt=""></a>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-9">
@@ -113,25 +139,24 @@
                         </ul>
                     </div>
                 </div>
+                <div class="canvas__open">
+                    <i class="fa fa-bars"></i>
+                </div>
             </div>
-            <div class="canvas__open">
-                <i class="fa fa-bars"></i>
-            </div>
-        </div>
-    </header>
-    <!-- Header Section End -->
-    <!-- Login and Register Modal -->
-    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content modal-header">
-                <div class="modal-body d-flex p-0">
-                    <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
-                            aria-label="Close">
-                        &times;
-                    </button>
+        </header>
+        <!-- Header Section End -->
+        <!-- Login and Register Modal -->
+        <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content modal-header">
+                    <div class="modal-body d-flex p-0">
+                        <button type="button" class="custom-close-btn" data-bs-dismiss="modal"
+                                aria-label="Close">
+                            &times;
+                        </button>
 
-                    <!-- Left Side - Login/Register Form -->
-                    <div class="w-50 p-5">
+                        <!-- Left Side - Login/Register Form -->
+                        <div class="w-50 p-5">
 
                         <form id="loginForm" method="post" action="/Account/Login">
                             <h3 class="mb-4 text-center" id="authModalLabel">Iniciar Sessão</h3>
@@ -180,26 +205,23 @@
                             </div>
                         </form>
 
-                        <!-- Placeholder for Popup -->
-                        <div id="popupMessage" class="alert alert-danger d-none"></div>
 
+                        </div>
 
+                        <!-- Right Side - Image -->
+                        <div class="w-50 d-none d-md-block">
+                            <img src="~/img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
+                                 style="object-fit: cover;">
+                        </div>
                     </div>
 
-                    <!-- Right Side - Image -->
-                    <div class="w-50 d-none d-md-block">
-                        <img src="~/img/splitscreen/cao-adotar.jpg" alt="Side Image" class="img-fluid h-100 w-100"
-                             style="object-fit: cover;">
-                    </div>
+                    <!-- Custom Close Button -->
+                    <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                 </div>
-
-                <!-- Custom Close Button -->
-                <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
             </div>
         </div>
-    </div>
-    <!-- Login Register Model Ends -->
+        <!-- Login Register Model Ends -->
 
         <!-- Breadcrumb Begin -->
         <div class="breadcrumb-option">

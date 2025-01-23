@@ -1,6 +1,6 @@
-using BuscaPatasFinal.Data;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
+using BuscaPatasFinal.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

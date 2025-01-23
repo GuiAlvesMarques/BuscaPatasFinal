@@ -1,6 +1,6 @@
-﻿using BuscaPatasFinal.Data;
+﻿using Microsoft.AspNetCore.Mvc;
 using BuscaPatasFinal.Models;
-using Microsoft.AspNetCore.Mvc;
+using BuscaPatasFinal.Data;
 
 namespace BuscaPatasFinal.Controllers
 {
@@ -61,15 +61,23 @@ namespace BuscaPatasFinal.Controllers
         {
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                return Json(new { success = false, message = "Email e senha são obrigatórios." });
+                return BadRequest(new { error = "Email and password are required." });
             }
 
             try
             {
+                // Find the user in the database by email
                 var user = _context.Users.FirstOrDefault(u => u.Email == email);
-                if (user == null || user.Password != password)
+
+                if (user == null)
                 {
-                    return Json(new { success = false, message = "Credenciais inválidas. Por favor, tente novamente." });
+                    return Unauthorized(new { error = "Invalid email or password." });
+                }
+
+                // Verify the password (assuming it's stored securely as a hash)
+                if (!VerifyPassword(password, user.Password))
+                {
+                    return Unauthorized(new { error = "Invalid email or password." });
                 }
 
                 // Save user data in session
@@ -79,7 +87,7 @@ namespace BuscaPatasFinal.Controllers
                 HttpContext.Session.SetString("PhoneNumber", user.PhoneNumber);
                 HttpContext.Session.SetString("Type", user.Type);
 
-                return Json(new { success = true, message = "Login efetuado com sucesso!" });
+                return RedirectToAction("UserProfile", "Account");
             }
             catch (Exception ex)
             {
@@ -108,43 +116,23 @@ namespace BuscaPatasFinal.Controllers
             // Redirect to login page
             return RedirectToAction("Index", "Home");
         }
-        [HttpGet]
 
         public IActionResult UserProfile()
         {
             var userId = HttpContext.Session.GetString("UserId");
             if (string.IsNullOrEmpty(userId))
             {
+                // Usuário não está logado, redirecione para a página de login
                 return RedirectToAction("Index", "Home");
             }
 
-            int parsedUserId = int.Parse(userId);
-
-            var userFavorites = from like in _context.Likes
-                                join sheltered in _context.Sheltered
-                                on like.IDAnimal equals sheltered.IDAnimal
-                                where like.IDUser == parsedUserId
-                                select new
-                                {
-                                    IDAnimal = sheltered.IDAnimal,
-                                    IDSpecies = like.IDSpecies, // Add this
-                                    AnimalName = sheltered.AnimalName ?? "Unknown",
-                                    Breed = sheltered.Breed ?? "Unknown",
-                                    AgeRange = sheltered.AgeRange ?? "Unknown",
-                                    Location = sheltered.Location ?? "Not provided",
-                                    Image = sheltered.Image != null ? Convert.ToBase64String(sheltered.Image) : null
-                                };
-
-
-            ViewBag.Favorites = userFavorites.ToList(); // Adicionando favoritos ao ViewBag
-
-            ViewBag.UserName = HttpContext.Session.GetString("Username") ?? "Usuário Desconhecido";
-            ViewBag.UserEmail = HttpContext.Session.GetString("Email") ?? "Email Não Informado";
-            ViewBag.UserPhone = HttpContext.Session.GetString("PhoneNumber") ?? "Telefone Não Informado";
+            ViewBag.UserId = userId; // Pass UserId to the frontend
+            ViewBag.UserName = HttpContext.Session.GetString("Username") ?? "Unknown User";
+            ViewBag.UserEmail = HttpContext.Session.GetString("Email") ?? "No Email";
+            ViewBag.UserPhone = HttpContext.Session.GetString("PhoneNumber") ?? "No Phone";
 
             return View();
         }
-
 
         [HttpGet]
         public IActionResult IsLoggedIn()

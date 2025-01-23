@@ -1,5 +1,5 @@
-using BuscaPatasFinal.Data;
 using Microsoft.AspNetCore.Mvc;
+using BuscaPatasFinal.Data;
 
 public class HomeController : Controller
 {

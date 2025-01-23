@@ -57,11 +57,6 @@ namespace BuscaPatasFinal.Controllers
                     }
                 }
 
-                // Verifica se IDShelter é válido
-                if (!_context.Shelter.Any(s => s.IDShelter == registoanimal.IDShelter))
-                {
-                    return Json(new { error = "The specified shelter does not exist." });
-                }
 
                 // Salva os dados no banco de dados
                 _context.Sheltered.Add(registoanimal);
@@ -159,6 +154,7 @@ namespace BuscaPatasFinal.Controllers
             // Retorna a View com o animal encontrado
             return View("~/Views/Adotar/Details.cshtml", animal);
         }
+
 
         [HttpPost]
         [Route("Sheltered/SubmitSurrender")]
