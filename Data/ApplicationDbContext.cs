@@ -22,6 +22,8 @@ namespace BuscaPatasFinal.Data
 
         public DbSet<AnimalList> AnimalList { get; set; }
 
+        public DbSet<Donation> Donations { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

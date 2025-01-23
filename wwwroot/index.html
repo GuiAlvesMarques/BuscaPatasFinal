@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Buscapatas</title>
+    <title>BuscaPatas | Home</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -85,7 +85,16 @@
                             </li>
                             <li><a href="./partners.html">Parceiros</a></li>
                             <li><a href="./ajuda.html">Apoiar</a></li>
-                            <li id="adminLink" style="visibility: hidden;"><a href="/Admin/AdminManagement">Admins</a></li>
+                            <li id="adminLink1" class="admin-link" style="display: none;">
+                                <a href="/Admin/AdminManagement">Admin</a>
+                            </li>
+                            <li id="adminLink2" class="admin-link" style="display: none;">
+                                <a href="/shelter-formulario.html">Submeter Abrigos</a>
+                            </li>
+                            <li id="adminLink3" class="admin-link" style="display: none;">
+                                <a href="/animal-formulario.html">Submeter Animais</a>
+                            </li>
+
                         </ul>
                     </nav>
                 </div>
@@ -219,7 +228,7 @@
                                 <label for="phoneNumber" class="form-label">Phone Number</label>
                                 <input type="text" class="form-control" id="phoneNumber" name="PhoneNumber" placeholder="Enter your phone number" required>
                             </div>
-                            <div class="mb-3">
+                           <div class="mb-3">
                                 <label for="type" class="form-label">Type</label>
                                 <select class="form-control" id="type" name="Type">
                                     <option value="User">User</option>
@@ -325,9 +334,10 @@
                             Filtrar por
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Abrigos</a></li>
-                            <li><a class="dropdown-item" href="#">Pet Shops</a></li>
-                            <li><a class="dropdown-item" href="#">Hospitais Veterinários</a></li>
+                            <li><a class="dropdown-item filter-option" href="#" data-filter="all">Todos</a></li>
+                            <li><a class="dropdown-item filter-option" href="#" data-filter="Abrigo">Abrigos</a></li>
+                            <li><a class="dropdown-item filter-option" href="#" data-filter="Petshop">Pet Shops</a></li>
+                            <li><a class="dropdown-item filter-option" href="#" data-filter="Hospital Veterinário">Hospitais Veterinários</a></li>
                         </ul>
                     </div>
                 </div>
@@ -385,6 +395,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Mais Velhos -->
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="suggestion__content">
                         <div class="section-title">
@@ -422,6 +433,9 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Mais Novos -->
+
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="suggestion__content">
                         <div class="section-title">
@@ -463,6 +477,7 @@
         </div>
     </section>
     <!-- Suggestions Section End -->
+
     <!-- Footer Section Begin -->
     <footer class="footer">
         <div class="container">
@@ -528,6 +543,75 @@
         </div>
     </div>
     <!-- Search End -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fetch data from the server
+            fetch('/Sheltered/GetSuggestions')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Renderiza as listas em cada seção
+                    renderSuggestions(data.newEntries, "new-entries");
+                    renderSuggestions(data.oldest, "oldest");
+                    renderSuggestions(data.youngest, "youngest");
+                })
+                .catch(error => console.error("Erro ao buscar sugestões:", error));
+        });
+
+        // Função para renderizar os itens em cada seção
+        function renderSuggestions(animals, containerId) {
+            console.log(`Renderizando para o container: ${containerId}`);
+            console.log("Animais recebidos:", animals);
+
+            const container = document.getElementById(containerId);
+
+            if (!container) {
+                console.error(`Elemento com ID '${containerId}' não encontrado.`);
+                return;
+            }
+
+            container.innerHTML = ""; // Limpa conteúdo existente
+
+            // Valide o array de animais
+            if (!animals || !Array.isArray(animals) || animals.length === 0) {
+                container.innerHTML = `<p>Sem sugestões disponíveis no momento.</p>`;
+                return;
+            }
+
+            // Renderize cada animal
+            animals.forEach(animal => {
+                const animalDiv = document.createElement("div");
+                animalDiv.classList.add("suggestion__item");
+
+                let imgSrc;
+                if (animal.image) {
+                    // Converte a imagem base64
+                    imgSrc = `data:image/jpeg;base64,${animal.image}`;
+                } else {
+                    // Imagem padrão
+                    imgSrc = "/img/img-adotar.png";
+                }
+
+                animalDiv.innerHTML = `
+                <div class="suggestion__item__pic">
+                    <img src="${imgSrc}" alt="${animal.animalName}" class="img-fluid">
+                </div>
+                <div class="suggestion__item__text">
+                    <h6>${animal.animalName}</h6>
+                    <a href="/Sheltered/Details/${animal.idAnimal}">
+                        <button class="btn btn_sug">Ver</button>
+                    </a>
+                </div>
+        `;
+                container.appendChild(animalDiv);
+            });
+        }
+
+    </script>
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -544,39 +628,10 @@
     <script type="module" src="js/map.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Check user type and display Admin link if applicable
-            function checkUserType() {
-                fetch('/Account/IsLoggedIn', {
-                    method: 'GET',
-                    headers: {
-                        'Accept': 'application/json',
-                    },
-                })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(`HTTP error! Status: ${response.status}`);
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        console.log(data); // Debug: Log the response
-                        if (data.isLoggedIn && data.userType === "Admin") {
-                            // Show the Admin link if the user is an Admin
-                            document.getElementById('adminLink').style.visibility = 'visible';
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error checking user type:', error);
-                    });
-            }
-
-            // Call the function to check the user type
-            checkUserType();
-        });
-    </script>
+    <script src="js/scripts.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

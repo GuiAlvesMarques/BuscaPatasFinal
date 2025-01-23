@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Entrega Animal</title>
+    <title>BuscaPatas | Abrigo</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -83,12 +83,21 @@
                             <li>
                                 <a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
-                                    <li><a href="./breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="./breed-info.html">Raças & Cui-dados</a></li>
                                     <li><a href="./faq.html">Perguntas Frequentes</a></li>
                                 </ul>
                             </li>
                             <li><a href="./partners.html">Parceiros</a></li>
                             <li><a href="./ajuda.html">Apoiar</a></li>
+                            <li id="adminLink1" class="admin-link" style="display: none;">
+                                <a href="/Admin/AdminManagement">Admin</a>
+                            </li>
+                            <li id="adminLink2" class="admin-link" style="display: none;">
+                                <a href="/shelter-formulario.html">Submeter Abrigos</a>
+                            </li>
+                            <li id="adminLink3" class="admin-link" style="display: none;">
+                                <a href="/animal-formulario.html">Submeter Animais</a>
+                            </li>
 
                         </ul>
                     </nav>
@@ -99,13 +108,12 @@
 
                             <li><span class="icon_search search-switch"></span></li>
                             <li>
-                                <a href="#">
+                                <a href="/likes/favorites" id="favoritesIcon">
                                     <span class="icon_heart_alt"></span>
-                                    <div class="tip">2</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="javascript:void(0);" onclick="checkUserProfileAccess()">
                                     <span class="icon_profile" data-bs-toggle="modal"
                                           data-bs-target="#authModal"></span>
                                 </a>
@@ -439,6 +447,9 @@
     <script src="js/login-register.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <
     <!-- Owl Carousel -->
     <!-- Select2 -->

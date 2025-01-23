@@ -7,7 +7,7 @@
     <meta name="keywords" content="BuscaPatas, Perdidos, encontrados, Animais">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BuscaPatas</title>
+    <title>BuscaPatas | Perdido</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -96,13 +96,12 @@
 
                             <li><span class="icon_search search-switch"></span></li>
                             <li>
-                                <a href="#">
+                                <a href="/likes/favorites" id="favoritesIcon">
                                     <span class="icon_heart_alt"></span>
-                                    <div class="tip">2</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="javascript:void(0);" onclick="checkUserProfileAccess()">
                                     <span class="icon_profile" data-bs-toggle="modal"
                                           data-bs-target="#authModal"></span>
                                 </a>
@@ -116,7 +115,6 @@
             </div>
         </div>
     </header>
-    <!-- Header Section End -->
     <!-- Login and Register Modal -->
     <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -216,11 +214,6 @@
         </p>
         <form action="/LostFound/RegisterLost" method="post" id="lostForm" enctype="multipart/form-data">
             <div class="row lost-form-row">
-                <div class="col-lg-6">
-                    <label for="id_animal">Animal (ID)</label>
-                    <input type="number" name="IDAnimal" id="id_animal" placeholder="ID do Animal"
-                           required>
-                </div>
                 <div class="col-md-6">
                     <label for="lostPetType" class="lost-form-label">Tipo de Animal</label>
                     <select name="IDSpecies" id="lostPetType" class="form-select" required>
@@ -337,17 +330,8 @@
                         <h6>Apoio</h6>
                         <ul>
                             <li><a href="ajuda.html">Ajuda</a></li>
-                            <li><a href="abrigos.html">Abrigos</a></li>
                             <li><a href="merch.html">Merchandise</a></li>
                         </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-8 col-sm-8">
-                    <div class="footer__newsletter">
-                        <div class="footer__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -379,6 +363,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="js/login-register.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

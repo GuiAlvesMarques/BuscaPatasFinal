@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Entrega Animal</title>
+    <title>BuscaPatas | Entrega Animal</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -63,32 +63,31 @@
             <div class="row">
                 <div class="col-xl-1 col-lg-1">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="/index.html"><img src="/img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-9">
                     <nav class="header__menu">
                         <ul>
                             <li>
-                                <a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
+                                <a href="/adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
                                     <li><a href="/Sheltered/AdoptionList?speciesId=1">Cães</a></li>
                                     <li><a href="/Sheltered/AdoptionList?speciesId=2">Gatos</a></li>
-                                    <li><a href="./matchmaking.html">Matchmaking</a></li>
+                                    <li><a href="/matchmaking.html">Matchmaking</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="/entrega-animal.html">Entrega Animal</a></li>
                             <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
                             <li>
-                                <a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                                <a href="/learn.html">Aprender <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
-                                    <li><a href="./breed-info.html">Raças & Cuidados</a></li>
-                                    <li><a href="./faq.html">Perguntas Frequentes</a></li>
+                                    <li><a href="/breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="/faq.html">Perguntas Frequentes</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./partners.html">Parceiros</a></li>
-                            <li><a href="./ajuda.html">Apoiar</a></li>
-
+                            <li><a href="/partners.html">Parceiros</a></li>
+                            <li><a href="/ajuda.html">Apoiar</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -98,13 +97,12 @@
 
                             <li><span class="icon_search search-switch"></span></li>
                             <li>
-                                <a href="#">
+                                <a href="/likes/favorites" id="favoritesIcon">
                                     <span class="icon_heart_alt"></span>
-                                    <div class="tip">2</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="javascript:void(0);" onclick="checkUserProfileAccess()">
                                     <span class="icon_profile" data-bs-toggle="modal"
                                           data-bs-target="#authModal"></span>
                                 </a>
@@ -222,7 +220,7 @@
                                 <div class="col-lg-6">
                                     <input type="text" name="AnimalName" placeholder="Nome do Animal" required>
                                 </div>
-                                <div class="col-lg-6">                                  
+                                <div class="col-lg-6">
                                     <select name="IDSpecies" id="IDSpecies" required>
                                         <option value="" disabled selected>Espécie</option>
                                         <option value="1" id="dog">Cão</option>
@@ -238,13 +236,10 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-6">
-                                    <select name="Size" required>
-                                        <option value="" disabled selected>Porte</option>
-                                        <option value="mini">Mini (até 5kg)</option>
-                                        <option value="pequeno">Pequeno (5-10kg)</option>
-                                        <option value="medio">Médio (10-20kg)</option>
-                                        <option value="grande">Grande (20-35kg)</option>
-                                        <option value="gigante">Gigante (acima de 35kg)</option>
+
+                                    <select id="size_select" name="Size" class="form-control" required>
+                                        <option value="" disabled selected>Selecione o porte</option>
+                                        <!-- As opções serão preenchidas dinamicamente -->
                                     </select>
                                 </div>
                                 <div class="col-lg-6">
@@ -502,6 +497,9 @@
     <script src="js/login-register.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <
     <!-- Owl Carousel -->
     <!-- Select2 -->
@@ -514,51 +512,69 @@
             });
         });
 
+        const size = {
+            1: [ // Cães (value 1)
+                { value: "mini", text: "Mini (até 5kg)" },
+                { value: "pequeno", text: "Pequeno (5-10kg)" },
+                { value: "medio", text: "Médio (10-20kg)" },
+                { value: "grande", text: "Grande (20-35kg)" },
+                { value: "gigante", text: "Gigante (acima de 35kg)" }
+            ],
+            2: [ // Gatos (value 2)
+                { value: "pequeno", text: "Pequeno (até 3kg)" },
+                { value: "medio", text: "Médio (3-5kg)" },
+                { value: "grande", text: "Grande (5-7kg)" },
+                { value: "gigante", text: "Gigante (acima de 7kg)" }
+            ]
+        };
+
         const breeds = {
             1: [ // Cães (value 1)
-                { value: "srd", text: "SRD (Sem Raça Definida)" },
-                { value: "golden_retriever", text: "Golden Retriever" },
-                { value: "pastor_alemao", text: "Pastor Alemão" },
-                { value: "labrador", text: "Labrador" },
-                { value: "bulldog", text: "Bulldog" },
-                { value: "beagle", text: "Beagle" },
-                { value: "rottweiler", text: "Rottweiler" },
-                { value: "poodle", text: "Poodle" },
-                { value: "boxer", text: "Boxer" },
-                { value: "teckel", text: "Teckel" },
-                { value: "chihuahua", text: "Chihuahua" },
-                { value: "doberman", text: "Doberman" },
-                { value: "border_collie", text: "Border Collie" },
-                { value: "akita", text: "Akita" },
-                { value: "cocker_spaniel", text: "Cocker Spaniel" },
-                { value: "husky_siberiano", text: "Husky Siberiano" },
-                { value: "dalmata", text: "Dálmata" },
-                { value: "bulterrier", text: "Bull Terrier" },
-                { value: "cavalier_king_charles", text: "Cavalier King Charles" },
-                { value: "staffordshire", text: "Staffordshire" },
-                { value: "weimaraner", text: "Weimaraner" },
+                { value: "SRD", text: "SRD (Sem Raça Definida)" },
+                { value: "Golden_Retriever", text: "Golden Retriever" },
+                { value: "Pastor_Alemao", text: "Pastor Alemão" },
+                { value: "Labrador", text: "Labrador" },
+                { value: "Bulldog", text: "Bulldog" },
+                { value: "Beagle", text: "Beagle" },
+                { value: "Rottweiler", text: "Rottweiler" },
+                { value: "Poodle", text: "Poodle" },
+                { value: "Boxer", text: "Boxer" },
+                { value: "Teckel", text: "Teckel" },
+                { value: "Chihuahua", text: "Chihuahua" },
+                { value: "Doberman", text: "Doberman" },
+                { value: "Dorder_collie", text: "Border Collie" },
+                { value: "Akita", text: "Akita" },
+                { value: "Cocker_spaniel", text: "Cocker Spaniel" },
+                { value: "Gusky_siberiano", text: "Husky Siberiano" },
+                { value: "Dalmata", text: "Dálmata" },
+                { value: "Bulterrier", text: "Bull Terrier" },
+                { value: "Cavalier_king_charles", text: "Cavalier King Charles" },
+                { value: "Staffordshire", text: "Staffordshire" },
+                { value: "Weimaraner", text: "Weimaraner" },
+                { value: "Outro", text: "Outro" },
                 // Adicione mais raças de cães aqui se necessário
             ],
             2: [ // Gatos (value 2)
-                { value: "srd", text: "SRD (Sem Raça Definida)" },
-                { value: "persa", text: "Persa" },
-                { value: "siames", text: "Siamês" },
-                { value: "maine_coon", text: "Maine Coon" },
-                { value: "ragdoll", text: "Ragdoll" },
-                { value: "sphynx", text: "Sphynx" },
-                { value: "bengal", text: "Bengal" },
-                { value: "britanico_pelo_curto", text: "Britânico de Pelo Curto" },
-                { value: "floresta_norueguesa", text: "Floresta Norueguesa" },
-                { value: "abissinio", text: "Abissínio" },
-                { value: "burmes", text: "Burmês" },
-                { value: "siames_tailandes", text: "Siamês Tailandês" },
-                { value: "angora_turco", text: "Angorá Turco" },
-                { value: "bombaim", text: "Bombaim" },
-                { value: "chartreux", text: "Chartreux" },
-                { value: "birmano", text: "Birmano" },
-                { value: "exotico_pelo_curto", text: "Exótico de Pelo Curto" },
-                { value: "azul_russo", text: "Azul Russo" },
-                { value: "korat", text: "Korat" },
+                { value: "SRD", text: "SRD (Sem Raça Definida)" },
+                { value: "Persa", text: "Persa" },
+                { value: "Siames", text: "Siamês" },
+                { value: "Maine_coon", text: "Maine Coon" },
+                { value: "Eagdoll", text: "Ragdoll" },
+                { value: "Sphynx", text: "Sphynx" },
+                { value: "Bengal", text: "Bengal" },
+                { value: "Britanico_Pelo_Curto", text: "Britânico de Pelo Curto" },
+                { value: "Floresta_Norueguesa", text: "Floresta Norueguesa" },
+                { value: "Abissinio", text: "Abissínio" },
+                { value: "Burmes", text: "Burmês" },
+                { value: "Siames_Tailandes", text: "Siamês Tailandês" },
+                { value: "Angora_Turco", text: "Angorá Turco" },
+                { value: "Bombaim", text: "Bombaim" },
+                { value: "Chartreux", text: "Chartreux" },
+                { value: "Birmano", text: "Birmano" },
+                { value: "Exotico_pelo_Curto", text: "Exótico de Pelo Curto" },
+                { value: "Azul_Russo", text: "Azul Russo" },
+                { value: "Korat", text: "Korat" },
+                { value: "Outro", text: "Outro" },
                 // Adicione mais raças de gatos aqui se necessário
             ],
         };
@@ -586,6 +602,17 @@
 
         document.getElementById("IDSpecies").addEventListener("change", function () {
             const selectedSpecies = this.value; // Pega o value (1 ou 2)
+
+            const sizeSelect = document.getElementById("size_select");
+            sizeSelect.innerHTML = '<option value="" disabled selected>Selecione o porte</option>';
+            if (size[selectedSpecies]) {
+                size[selectedSpecies].forEach((size) => {
+                    const option = document.createElement("option");
+                    option.value = size.value;
+                    option.textContent = size.text;
+                    sizeSelect.appendChild(option);
+                });
+            }
 
             // Atualizar o campo de raças
             const breedSelect = document.getElementById("breed_select");

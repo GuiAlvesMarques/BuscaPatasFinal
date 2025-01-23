@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rendição</title>
+    <title>BuscaPatas | Entrega Animal</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -37,9 +37,12 @@
         <div class="offcanvas__close">+</div>
         <ul class="offcanvas__widget">
             <li><span class="icon_search search-switch"></span></li>
-            <li><a href="#"><span class="icon_heart_alt"></span>
-                <div class="tip">2</div>
-            </a></li>
+            <li>
+                <a href="#">
+                    <span class="icon_heart_alt"></span>
+                    <div class="tip">2</div>
+                </a>
+            </li>
         </ul>
         <div class="offcanvas__logo">
             <a href="./index.html"><img src="img/logo.png" alt=""></a>
@@ -51,46 +54,57 @@
         </div>
     </div>
     <!-- Offcanvas Menu End -->
-
     <!-- Header Section Begin -->
     <header class="header">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-3 col-lg-2">
+                <div class="col-xl-1 col-lg-1">
                     <div class="header__logo">
                         <a href="./index.html"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-7">
+                <div class="col-xl-9 col-lg-9">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./adotar.html">Adotar</a>
+                            <li>
+                                <a href="./adotar.html">Adotar <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
-                                    <li><a href="./page-caes.html">Cães</a></li>
-                                    <li><a href="./page-gatos.html">Gatos</a></li>
+                                    <li><a href="/Sheltered/AdoptionList?speciesId=1">Cães</a></li>
+                                    <li><a href="/Sheltered/AdoptionList?speciesId=2">Gatos</a></li>
+                                    <li><a href="./matchmaking.html">Matchmaking</a></li>
                                 </ul>
                             </li>
-
-                            <li class="active"><a href="./rendicao.html">Rendição</a></li>
-                            <li><a href="abrigos.html">Abrigos</a></li>
-                            <li><a href="./perdidos-e-achados.html">Perdidos e Achados</a></li>
-                            <li><a href="./contatos.html">Contato</a></li>
+                            <li><a href="./entrega-animal.html">Entrega Animal</a></li>
+                            <li><a href="/LostFound/Perdidos">Perdidos e Encontrados</a></li>
+                            <li>
+                                <a href="./learn.html">Aprender <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="./breed-info.html">Raças & Cuidados</a></li>
+                                    <li><a href="./faq.html">Perguntas Frequentes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./partners.html">Parceiros</a></li>
+                            <li><a href="./ajuda.html">Apoiar</a></li>
 
                         </ul>
                     </nav>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-2">
                     <div class="header__right">
-                        <div class="header__right__auth">
-                            <a href="#">Login</a>
-                            <a href="#">Register</a>
-                        </div>
                         <ul class="header__right__widget">
+
                             <li><span class="icon_search search-switch"></span></li>
-                            <li><a href="#"><span class="icon_heart_alt"></span>
-                                <div class="tip">2</div>
-                            </a></li>
+                            <li>
+                                <a href="/likes/favorites" id="favoritesIcon">
+                                    <span class="icon_heart_alt"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" onclick="checkUserProfileAccess()">
+                                    <span class="icon_profile" data-bs-toggle="modal"
+                                          data-bs-target="#authModal"></span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -100,7 +114,6 @@
             </div>
         </div>
     </header>
-    <!-- Header Section End -->
 
     <!-- Breadcrumb Begin -->
     <div class="breadcrumb-option">
@@ -116,7 +129,6 @@
         </div>
     </div>
     <!-- Breadcrumb End -->
-
     <!-- Shop Section Begin -->
     <section class="spad">
         <div class="container">
@@ -153,7 +165,6 @@
         </div>
     </section>
     <!-- Shop Section End -->
-
     <!-- Instagram Begin -->
     <div class="instagram">
         <div class="container-fluid">
@@ -210,7 +221,6 @@
         </div>
     </div>
     <!-- Instagram End -->
-
     <!-- Footer Section Begin -->
     <footer class="footer">
         <div class="container">
@@ -220,8 +230,10 @@
                         <div class="footer__logo">
                             <a href="./index.html"><img src="img/logo.png" alt=""></a>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        cilisis.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            cilisis.
+                        </p>
                         <div class="footer__payment">
                             <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
                             <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
@@ -274,7 +286,8 @@
                 <div class="col-lg-12">
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     <div class="footer__copyright__text">
-                        <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                        <p>Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
                     </div>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </div>
@@ -282,7 +295,6 @@
         </div>
     </footer>
     <!-- Footer Section End -->
-
     <!-- Search Begin -->
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
@@ -293,7 +305,6 @@
         </div>
     </div>
     <!-- Search End -->
-
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -305,6 +316,9 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
