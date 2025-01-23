@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using BuscaPatasFinal.Models;
 
 namespace BuscaPatasFinal.Models
 {
@@ -34,5 +35,11 @@ namespace BuscaPatasFinal.Models
         [MaxLength(100)]
         [Column("Username")] // Map to the column name in the database
         public string Username { get; set; }
+
+        // New: Navigation property for quiz attempts
+        public virtual ICollection<QuizAttempt> QuizAttempts { get; set; } = new List<QuizAttempt>();
+
+        // New: Navigation property for matched animals
+        public virtual ICollection<Sheltered> MatchedAnimals { get; set; } = new List<Sheltered>();
     }
 }

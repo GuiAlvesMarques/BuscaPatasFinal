@@ -1,0 +1,91 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BuscaPatasFinal_master
+build_property.RootNamespace = BuscaPatasFinal_master
+build_property.ProjectDir = C:\Users\rafae\source\repos\BuscaPatasFinal-master\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\rafae\source\repos\BuscaPatasFinal-master
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Account/UserProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2VyUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Admin/AdminManagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5NYW5hZ2VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Adotar/Caes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRvdGFyXENhZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Adotar/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRvdGFyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Adotar/DetailsFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRvdGFyXERldGFpbHNGb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Adotar/DetailsLost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRvdGFyXERldGFpbHNMb3N0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Adotar/Favorito.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRvdGFyXEZhdm9yaXRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Adotar/Gatos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRvdGFyXEdhdG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Adotar/perdidos-e-encontrados.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRvdGFyXHBlcmRpZG9zLWUtZW5jb250cmFkb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Matchmaking/AnimalList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0Y2htYWtpbmdcQW5pbWFsTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Matchmaking/MatchmakingPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0Y2htYWtpbmdcTWF0Y2htYWtpbmdQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/source/repos/BuscaPatasFinal-master/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-h2oaielkr6

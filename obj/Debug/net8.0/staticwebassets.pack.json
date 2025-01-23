@@ -1,0 +1,1685 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BuscaPatasFinal-master.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BuscaPatasFinal-master.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\.idea\\libraries\\Source.xml",
+      "PackagePath": "staticwebassets\\.idea\\libraries\\Source.xml"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\.idea\\misc.xml",
+      "PackagePath": "staticwebassets\\.idea\\misc.xml"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\.idea\\modules.xml",
+      "PackagePath": "staticwebassets\\.idea\\modules.xml"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\.idea\\vcs.xml",
+      "PackagePath": "staticwebassets\\.idea\\vcs.xml"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\.vscode\\settings.json",
+      "PackagePath": "staticwebassets\\.vscode\\settings.json"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_about-us.html",
+      "PackagePath": "staticwebassets\\Admin_about-us.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_abrigos.html",
+      "PackagePath": "staticwebassets\\Admin_abrigos.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_adotar.html",
+      "PackagePath": "staticwebassets\\Admin_adotar.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_ajuda.html",
+      "PackagePath": "staticwebassets\\Admin_ajuda.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_blog-details.html",
+      "PackagePath": "staticwebassets\\Admin_blog-details.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_blog.html",
+      "PackagePath": "staticwebassets\\Admin_blog.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_breed-info.html",
+      "PackagePath": "staticwebassets\\Admin_breed-info.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_checkout.html",
+      "PackagePath": "staticwebassets\\Admin_checkout.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_contactos.html",
+      "PackagePath": "staticwebassets\\Admin_contactos.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_details-abrigo.html",
+      "PackagePath": "staticwebassets\\Admin_details-abrigo.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_details-cao-lost.html",
+      "PackagePath": "staticwebassets\\Admin_details-cao-lost.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_details-cao.html",
+      "PackagePath": "staticwebassets\\Admin_details-cao.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_details-merch.html",
+      "PackagePath": "staticwebassets\\Admin_details-merch.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_entrega-animal.html",
+      "PackagePath": "staticwebassets\\Admin_entrega-animal.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_faq.html",
+      "PackagePath": "staticwebassets\\Admin_faq.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_favorito.html",
+      "PackagePath": "staticwebassets\\Admin_favorito.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_index.html",
+      "PackagePath": "staticwebassets\\Admin_index.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_learn.html",
+      "PackagePath": "staticwebassets\\Admin_learn.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_main.html",
+      "PackagePath": "staticwebassets\\Admin_main.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_matchmaking.html",
+      "PackagePath": "staticwebassets\\Admin_matchmaking.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_merch-cover.html",
+      "PackagePath": "staticwebassets\\Admin_merch-cover.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_merch.html",
+      "PackagePath": "staticwebassets\\Admin_merch.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_page-caes.html",
+      "PackagePath": "staticwebassets\\Admin_page-caes.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_page-gatos.html",
+      "PackagePath": "staticwebassets\\Admin_page-gatos.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_partners.html",
+      "PackagePath": "staticwebassets\\Admin_partners.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_perdidos-e-encontrados.html",
+      "PackagePath": "staticwebassets\\Admin_perdidos-e-encontrados.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_reportar-encontrado.html",
+      "PackagePath": "staticwebassets\\Admin_reportar-encontrado.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_reportar-perdido.html",
+      "PackagePath": "staticwebassets\\Admin_reportar-perdido.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_search-result.html",
+      "PackagePath": "staticwebassets\\Admin_search-result.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_shop-cart.html",
+      "PackagePath": "staticwebassets\\Admin_shop-cart.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_shop.html",
+      "PackagePath": "staticwebassets\\Admin_shop.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_team.html",
+      "PackagePath": "staticwebassets\\Admin_team.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_termos-politicas.html",
+      "PackagePath": "staticwebassets\\Admin_termos-politicas.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_thankyou.html",
+      "PackagePath": "staticwebassets\\Admin_thankyou.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Admin_user-profile.html",
+      "PackagePath": "staticwebassets\\Admin_user-profile.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_about-us.html",
+      "PackagePath": "staticwebassets\\S-in_about-us.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_abrigos.html",
+      "PackagePath": "staticwebassets\\S-in_abrigos.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_adotar.html",
+      "PackagePath": "staticwebassets\\S-in_adotar.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_ajuda.html",
+      "PackagePath": "staticwebassets\\S-in_ajuda.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_blog-details.html",
+      "PackagePath": "staticwebassets\\S-in_blog-details.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_blog.html",
+      "PackagePath": "staticwebassets\\S-in_blog.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_breed-info.html",
+      "PackagePath": "staticwebassets\\S-in_breed-info.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_checkout.html",
+      "PackagePath": "staticwebassets\\S-in_checkout.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_contactos.html",
+      "PackagePath": "staticwebassets\\S-in_contactos.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_details-abrigo.html",
+      "PackagePath": "staticwebassets\\S-in_details-abrigo.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_details-cao-lost.html",
+      "PackagePath": "staticwebassets\\S-in_details-cao-lost.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_details-cao.html",
+      "PackagePath": "staticwebassets\\S-in_details-cao.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_details-merch.html",
+      "PackagePath": "staticwebassets\\S-in_details-merch.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_entrega-animal.html",
+      "PackagePath": "staticwebassets\\S-in_entrega-animal.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_faq.html",
+      "PackagePath": "staticwebassets\\S-in_faq.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_favorito.html",
+      "PackagePath": "staticwebassets\\S-in_favorito.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_index.html",
+      "PackagePath": "staticwebassets\\S-in_index.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_learn.html",
+      "PackagePath": "staticwebassets\\S-in_learn.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_main.html",
+      "PackagePath": "staticwebassets\\S-in_main.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_matchmaking.html",
+      "PackagePath": "staticwebassets\\S-in_matchmaking.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_merch-cover.html",
+      "PackagePath": "staticwebassets\\S-in_merch-cover.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_merch.html",
+      "PackagePath": "staticwebassets\\S-in_merch.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_page-caes.html",
+      "PackagePath": "staticwebassets\\S-in_page-caes.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_page-gatos.html",
+      "PackagePath": "staticwebassets\\S-in_page-gatos.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_partners.html",
+      "PackagePath": "staticwebassets\\S-in_partners.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_perdidos-e-encontrados.html",
+      "PackagePath": "staticwebassets\\S-in_perdidos-e-encontrados.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_reportar-encontrado.html",
+      "PackagePath": "staticwebassets\\S-in_reportar-encontrado.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_reportar-perdido.html",
+      "PackagePath": "staticwebassets\\S-in_reportar-perdido.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_search-result.html",
+      "PackagePath": "staticwebassets\\S-in_search-result.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_shop-cart.html",
+      "PackagePath": "staticwebassets\\S-in_shop-cart.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_shop.html",
+      "PackagePath": "staticwebassets\\S-in_shop.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_team.html",
+      "PackagePath": "staticwebassets\\S-in_team.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_termos-politicas.html",
+      "PackagePath": "staticwebassets\\S-in_termos-politicas.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_thankyou.html",
+      "PackagePath": "staticwebassets\\S-in_thankyou.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\S-in_user-profile.html",
+      "PackagePath": "staticwebassets\\S-in_user-profile.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Source\\Magnific-Popup-master.zip",
+      "PackagePath": "staticwebassets\\Source\\Magnific-Popup-master.zip"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Source\\OwlCarousel2-2.3.4.zip",
+      "PackagePath": "staticwebassets\\Source\\OwlCarousel2-2.3.4.zip"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Source\\SlickNav-master.zip",
+      "PackagePath": "staticwebassets\\Source\\SlickNav-master.zip"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Source\\barfiller-master.zip",
+      "PackagePath": "staticwebassets\\Source\\barfiller-master.zip"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Source\\bootstrap-4.2.1-dist.zip",
+      "PackagePath": "staticwebassets\\Source\\bootstrap-4.2.1-dist.zip"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Source\\font-awesome-4.7.0.zip",
+      "PackagePath": "staticwebassets\\Source\\font-awesome-4.7.0.zip"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\Source\\jQuery.countdown-master.zip",
+      "PackagePath": "staticwebassets\\Source\\jQuery.countdown-master.zip"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\about-us.html",
+      "PackagePath": "staticwebassets\\about-us.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\abrigos.html",
+      "PackagePath": "staticwebassets\\abrigos.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\adotar.html",
+      "PackagePath": "staticwebassets\\adotar.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\ajuda.html",
+      "PackagePath": "staticwebassets\\ajuda.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\blog-details.html",
+      "PackagePath": "staticwebassets\\blog-details.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\blog.html",
+      "PackagePath": "staticwebassets\\blog.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\breed-info.html",
+      "PackagePath": "staticwebassets\\breed-info.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\checkout.html",
+      "PackagePath": "staticwebassets\\checkout.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\contactos.html",
+      "PackagePath": "staticwebassets\\contactos.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\contatos.html",
+      "PackagePath": "staticwebassets\\contatos.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\css\\elegant-icons.css",
+      "PackagePath": "staticwebassets\\css\\elegant-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\css\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\css\\quiz.css",
+      "PackagePath": "staticwebassets\\css\\quiz.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\css\\slicknav.min.css",
+      "PackagePath": "staticwebassets\\css\\slicknav.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\details-abrigo.html",
+      "PackagePath": "staticwebassets\\details-abrigo.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\details-cao-lost.html",
+      "PackagePath": "staticwebassets\\details-cao-lost.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\details-cao.html",
+      "PackagePath": "staticwebassets\\details-cao.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\details-merch.html",
+      "PackagePath": "staticwebassets\\details-merch.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\entrega-animal.html",
+      "PackagePath": "staticwebassets\\entrega-animal.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\faq.html",
+      "PackagePath": "staticwebassets\\faq.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\favorito.html",
+      "PackagePath": "staticwebassets\\favorito.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\fonts\\ElegantIcons.eot",
+      "PackagePath": "staticwebassets\\fonts\\ElegantIcons.eot"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\fonts\\ElegantIcons.svg",
+      "PackagePath": "staticwebassets\\fonts\\ElegantIcons.svg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\fonts\\ElegantIcons.ttf",
+      "PackagePath": "staticwebassets\\fonts\\ElegantIcons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\fonts\\ElegantIcons.woff",
+      "PackagePath": "staticwebassets\\fonts\\ElegantIcons.woff"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\fonts\\Nunito-Italic-VariableFont_wght.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Nunito-Italic-VariableFont_wght.ttf"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\fonts\\Nunito-VariableFont_wght.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Nunito-VariableFont_wght.ttf"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\Cat 1.png",
+      "PackagePath": "staticwebassets\\img\\Cat 1.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\Cat 2.png",
+      "PackagePath": "staticwebassets\\img\\Cat 2.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\Dinflux.png",
+      "PackagePath": "staticwebassets\\img\\Dinflux.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\Dog 1.png",
+      "PackagePath": "staticwebassets\\img\\Dog 1.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\Dog 2.png",
+      "PackagePath": "staticwebassets\\img\\Dog 2.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\Merch1.png",
+      "PackagePath": "staticwebassets\\img\\Merch1.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\Merch2.png",
+      "PackagePath": "staticwebassets\\img\\Merch2.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\Merch3.png",
+      "PackagePath": "staticwebassets\\img\\Merch3.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\Merch4.png",
+      "PackagePath": "staticwebassets\\img\\Merch4.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\Merch5.png",
+      "PackagePath": "staticwebassets\\img\\Merch5.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\Merch6.png",
+      "PackagePath": "staticwebassets\\img\\Merch6.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\Merch7.png",
+      "PackagePath": "staticwebassets\\img\\Merch7.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\Merch8.png",
+      "PackagePath": "staticwebassets\\img\\Merch8.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\background2.png",
+      "PackagePath": "staticwebassets\\img\\background2.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\banner\\Adoption_Banner_Mobile.png",
+      "PackagePath": "staticwebassets\\img\\banner\\Adoption_Banner_Mobile.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\banner\\LostNFound_Banner_Mobile.png",
+      "PackagePath": "staticwebassets\\img\\banner\\LostNFound_Banner_Mobile.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\banner\\Matchmaking_Banner_Mobile.png",
+      "PackagePath": "staticwebassets\\img\\banner\\Matchmaking_Banner_Mobile.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\banner\\Surrender_Banner_Mobile.png",
+      "PackagePath": "staticwebassets\\img\\banner\\Surrender_Banner_Mobile.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\banner\\Welcome_Banner.png",
+      "PackagePath": "staticwebassets\\img\\banner\\Welcome_Banner.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\banner\\Welcome_Banner_Mobile.png",
+      "PackagePath": "staticwebassets\\img\\banner\\Welcome_Banner_Mobile.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\banner\\adoption_banner.png",
+      "PackagePath": "staticwebassets\\img\\banner\\adoption_banner.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\banner\\banner-1.jpg",
+      "PackagePath": "staticwebassets\\img\\banner\\banner-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\banner\\banner-2.jpg",
+      "PackagePath": "staticwebassets\\img\\banner\\banner-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\banner\\banner-3.jpg",
+      "PackagePath": "staticwebassets\\img\\banner\\banner-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\banner\\lostnfound_banner.png",
+      "PackagePath": "staticwebassets\\img\\banner\\lostnfound_banner.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\banner\\matchmaking_banner.png",
+      "PackagePath": "staticwebassets\\img\\banner\\matchmaking_banner.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\banner\\surrender_banner.png",
+      "PackagePath": "staticwebassets\\img\\banner\\surrender_banner.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\black_cat_peaking.png",
+      "PackagePath": "staticwebassets\\img\\black_cat_peaking.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\blog-1.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\blog-10.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\blog-2.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\blog-3.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\blog-4.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\blog-5.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\blog-6.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\blog-7.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\blog-8.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\blog-9.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\details\\blog-details.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\details\\blog-details.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\details\\comment-1.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\details\\comment-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\details\\comment-2.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\details\\comment-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\details\\comment-3.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\details\\comment-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\sidebar\\fp-1.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\sidebar\\fp-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\sidebar\\fp-2.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\sidebar\\fp-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\blog\\sidebar\\fp-3.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\sidebar\\fp-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\breed.png",
+      "PackagePath": "staticwebassets\\img\\breed.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\cat 3.png",
+      "PackagePath": "staticwebassets\\img\\cat 3.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\cat_looking_up.png",
+      "PackagePath": "staticwebassets\\img\\cat_looking_up.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\cat_peaking.png",
+      "PackagePath": "staticwebassets\\img\\cat_peaking.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\categories\\category-1.jpg",
+      "PackagePath": "staticwebassets\\img\\categories\\category-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\categories\\category-2.jpg",
+      "PackagePath": "staticwebassets\\img\\categories\\category-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\categories\\category-3.jpg",
+      "PackagePath": "staticwebassets\\img\\categories\\category-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\categories\\category-4.jpg",
+      "PackagePath": "staticwebassets\\img\\categories\\category-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\categories\\category-5.jpg",
+      "PackagePath": "staticwebassets\\img\\categories\\category-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\cats\\bengal.png",
+      "PackagePath": "staticwebassets\\img\\cats\\bengal.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\cats\\maine-coon.png",
+      "PackagePath": "staticwebassets\\img\\cats\\maine-coon.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\cats\\persa.png",
+      "PackagePath": "staticwebassets\\img\\cats\\persa.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\cats\\siames.png",
+      "PackagePath": "staticwebassets\\img\\cats\\siames.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\child_clothes1.png",
+      "PackagePath": "staticwebassets\\img\\child_clothes1.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\child_clothes2.png",
+      "PackagePath": "staticwebassets\\img\\child_clothes2.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\discount.jpg",
+      "PackagePath": "staticwebassets\\img\\discount.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\dog 3.png",
+      "PackagePath": "staticwebassets\\img\\dog 3.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\dog_peaking.png",
+      "PackagePath": "staticwebassets\\img\\dog_peaking.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\dogtest.jpeg",
+      "PackagePath": "staticwebassets\\img\\dogtest.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\dogtest2.jpeg",
+      "PackagePath": "staticwebassets\\img\\dogtest2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\dogtest3.jpeg",
+      "PackagePath": "staticwebassets\\img\\dogtest3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\dogtest4.jpeg",
+      "PackagePath": "staticwebassets\\img\\dogtest4.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\faq.jpg",
+      "PackagePath": "staticwebassets\\img\\faq.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\img-adotar.png",
+      "PackagePath": "staticwebassets\\img\\img-adotar.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\insta1.png",
+      "PackagePath": "staticwebassets\\img\\insta1.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\insta2.png",
+      "PackagePath": "staticwebassets\\img\\insta2.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\insta3.png",
+      "PackagePath": "staticwebassets\\img\\insta3.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\insta4.png",
+      "PackagePath": "staticwebassets\\img\\insta4.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\insta5.png",
+      "PackagePath": "staticwebassets\\img\\insta5.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\insta6.png",
+      "PackagePath": "staticwebassets\\img\\insta6.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\instagram\\insta-1.jpg",
+      "PackagePath": "staticwebassets\\img\\instagram\\insta-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\instagram\\insta-2.jpg",
+      "PackagePath": "staticwebassets\\img\\instagram\\insta-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\instagram\\insta-3.jpg",
+      "PackagePath": "staticwebassets\\img\\instagram\\insta-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\instagram\\insta-4.jpg",
+      "PackagePath": "staticwebassets\\img\\instagram\\insta-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\instagram\\insta-5.jpg",
+      "PackagePath": "staticwebassets\\img\\instagram\\insta-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\instagram\\insta-6.jpg",
+      "PackagePath": "staticwebassets\\img\\instagram\\insta-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\lost_Found.png",
+      "PackagePath": "staticwebassets\\img\\lost_Found.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\lost_Found2.png",
+      "PackagePath": "staticwebassets\\img\\lost_Found2.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\lost_dog.png",
+      "PackagePath": "staticwebassets\\img\\lost_dog.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\map\\shelter-map.png",
+      "PackagePath": "staticwebassets\\img\\map\\shelter-map.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\map_paw_pin.png",
+      "PackagePath": "staticwebassets\\img\\map_paw_pin.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\merch-cover-background1.png",
+      "PackagePath": "staticwebassets\\img\\merch-cover-background1.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\merch-cover-background2-1.png",
+      "PackagePath": "staticwebassets\\img\\merch-cover-background2-1.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\parceiro1.png",
+      "PackagePath": "staticwebassets\\img\\parceiro1.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\parceiro2.png",
+      "PackagePath": "staticwebassets\\img\\parceiro2.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\parceiro3.png",
+      "PackagePath": "staticwebassets\\img\\parceiro3.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\parceiro4.png",
+      "PackagePath": "staticwebassets\\img\\parceiro4.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\paw-icon.png",
+      "PackagePath": "staticwebassets\\img\\paw-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\payment\\payment-1.png",
+      "PackagePath": "staticwebassets\\img\\payment\\payment-1.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\payment\\payment-2.png",
+      "PackagePath": "staticwebassets\\img\\payment\\payment-2.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\payment\\payment-3.png",
+      "PackagePath": "staticwebassets\\img\\payment\\payment-3.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\payment\\payment-4.png",
+      "PackagePath": "staticwebassets\\img\\payment\\payment-4.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\payment\\payment-5.png",
+      "PackagePath": "staticwebassets\\img\\payment\\payment-5.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\payment_methods.png",
+      "PackagePath": "staticwebassets\\img\\payment_methods.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\beagle.png",
+      "PackagePath": "staticwebassets\\img\\product\\details\\beagle.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\bulldog.png",
+      "PackagePath": "staticwebassets\\img\\product\\details\\bulldog.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\dachshund.png",
+      "PackagePath": "staticwebassets\\img\\product\\details\\dachshund.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\dogtest.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\dogtest.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\dogtest2.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\dogtest2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\dogtest3.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\dogtest3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\dogtest4.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\dogtest4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\dogtest5.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\dogtest5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\dogtest6.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\dogtest6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\dogtest7.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\dogtest7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\gato.png",
+      "PackagePath": "staticwebassets\\img\\product\\details\\gato.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\golden.png",
+      "PackagePath": "staticwebassets\\img\\product\\details\\golden.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\husky.png",
+      "PackagePath": "staticwebassets\\img\\product\\details\\husky.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\luna1.png",
+      "PackagePath": "staticwebassets\\img\\product\\details\\luna1.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\luna2.png",
+      "PackagePath": "staticwebassets\\img\\product\\details\\luna2.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\luna3.png",
+      "PackagePath": "staticwebassets\\img\\product\\details\\luna3.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\luna4.png",
+      "PackagePath": "staticwebassets\\img\\product\\details\\luna4.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\product-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\product-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\product-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\product-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\product-3.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\product-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\product-4.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\product-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\pug.png",
+      "PackagePath": "staticwebassets\\img\\product\\details\\pug.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\thumb-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\thumb-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\thumb-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\thumb-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\thumb-3.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\thumb-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\details\\thumb-4.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\thumb-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\product-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\product-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\product-3.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\product-4.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\product-5.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\product-6.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\product-7.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\product-8.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\related\\rp-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\related\\rp-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\related\\rp-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\related\\rp-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\related\\rp-3.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\related\\rp-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\product\\related\\rp-4.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\related\\rp-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\sausagebutton1.png",
+      "PackagePath": "staticwebassets\\img\\sausagebutton1.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shelters\\logos\\abrigo.jpg",
+      "PackagePath": "staticwebassets\\img\\shelters\\logos\\abrigo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shelters\\logos\\abrigo2.jpg",
+      "PackagePath": "staticwebassets\\img\\shelters\\logos\\abrigo2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shelters\\logos\\abrigo3.jpg",
+      "PackagePath": "staticwebassets\\img\\shelters\\logos\\abrigo3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shelters\\logos\\abrigo4.jpg",
+      "PackagePath": "staticwebassets\\img\\shelters\\logos\\abrigo4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shelters\\logos\\abrigo5.jpg",
+      "PackagePath": "staticwebassets\\img\\shelters\\logos\\abrigo5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shelters\\logos\\parceiro1.png",
+      "PackagePath": "staticwebassets\\img\\shelters\\logos\\parceiro1.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shelters\\logos\\parceiro2.png",
+      "PackagePath": "staticwebassets\\img\\shelters\\logos\\parceiro2.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shelters\\logos\\parceiro3.png",
+      "PackagePath": "staticwebassets\\img\\shelters\\logos\\parceiro3.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shelters\\logos\\parceiro4.png",
+      "PackagePath": "staticwebassets\\img\\shelters\\logos\\parceiro4.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shop-cart\\cp-1.jpg",
+      "PackagePath": "staticwebassets\\img\\shop-cart\\cp-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shop-cart\\cp-2.jpg",
+      "PackagePath": "staticwebassets\\img\\shop-cart\\cp-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shop-cart\\cp-3.jpg",
+      "PackagePath": "staticwebassets\\img\\shop-cart\\cp-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shop-cart\\cp-4.jpg",
+      "PackagePath": "staticwebassets\\img\\shop-cart\\cp-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shop\\shop-1.jpg",
+      "PackagePath": "staticwebassets\\img\\shop\\shop-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shop\\shop-2.jpg",
+      "PackagePath": "staticwebassets\\img\\shop\\shop-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shop\\shop-3.jpg",
+      "PackagePath": "staticwebassets\\img\\shop\\shop-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shop\\shop-4.jpg",
+      "PackagePath": "staticwebassets\\img\\shop\\shop-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shop\\shop-5.jpg",
+      "PackagePath": "staticwebassets\\img\\shop\\shop-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shop\\shop-6.jpg",
+      "PackagePath": "staticwebassets\\img\\shop\\shop-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shop\\shop-7.jpg",
+      "PackagePath": "staticwebassets\\img\\shop\\shop-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shop\\shop-8.jpg",
+      "PackagePath": "staticwebassets\\img\\shop\\shop-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\shop\\shop-9.jpg",
+      "PackagePath": "staticwebassets\\img\\shop\\shop-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\splitscreen\\cao-adotar.jpg",
+      "PackagePath": "staticwebassets\\img\\splitscreen\\cao-adotar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\splitscreen\\gato-adotar.jpg",
+      "PackagePath": "staticwebassets\\img\\splitscreen\\gato-adotar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\team\\antonio.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\antonio.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\team\\guilherme.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\guilherme.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\team\\luiza.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\luiza.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\team\\rafael.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\rafael.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\trend\\bs-1.jpg",
+      "PackagePath": "staticwebassets\\img\\trend\\bs-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\trend\\bs-2.jpg",
+      "PackagePath": "staticwebassets\\img\\trend\\bs-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\trend\\bs-3.jpg",
+      "PackagePath": "staticwebassets\\img\\trend\\bs-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\trend\\f-1.jpg",
+      "PackagePath": "staticwebassets\\img\\trend\\f-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\trend\\f-2.jpg",
+      "PackagePath": "staticwebassets\\img\\trend\\f-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\trend\\f-3.jpg",
+      "PackagePath": "staticwebassets\\img\\trend\\f-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\trend\\ht-1.jpg",
+      "PackagePath": "staticwebassets\\img\\trend\\ht-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\trend\\ht-2.jpg",
+      "PackagePath": "staticwebassets\\img\\trend\\ht-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\img\\trend\\ht-3.jpg",
+      "PackagePath": "staticwebassets\\img\\trend\\ht-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\donation.js",
+      "PackagePath": "staticwebassets\\js\\donation.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\jquery.countdown.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.countdown.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\jquery.nicescroll.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.nicescroll.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\jquery.slicknav.js",
+      "PackagePath": "staticwebassets\\js\\jquery.slicknav.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\login-register.js",
+      "PackagePath": "staticwebassets\\js\\login-register.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\map.js",
+      "PackagePath": "staticwebassets\\js\\map.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\matchmaking.js",
+      "PackagePath": "staticwebassets\\js\\matchmaking.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\merch.js",
+      "PackagePath": "staticwebassets\\js\\merch.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\mixitup.min.js",
+      "PackagePath": "staticwebassets\\js\\mixitup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\quiz.js",
+      "PackagePath": "staticwebassets\\js\\quiz.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\register.js",
+      "PackagePath": "staticwebassets\\js\\register.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\json\\products.json",
+      "PackagePath": "staticwebassets\\json\\products.json"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\learn.html",
+      "PackagePath": "staticwebassets\\learn.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\main.html",
+      "PackagePath": "staticwebassets\\main.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\matchmaking.html",
+      "PackagePath": "staticwebassets\\matchmaking.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\merch-cover.html",
+      "PackagePath": "staticwebassets\\merch-cover.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\merch.html",
+      "PackagePath": "staticwebassets\\merch.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\page-caes.html",
+      "PackagePath": "staticwebassets\\page-caes.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\page-gatos.html",
+      "PackagePath": "staticwebassets\\page-gatos.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\partners.html",
+      "PackagePath": "staticwebassets\\partners.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\perdidos-e-achados.html",
+      "PackagePath": "staticwebassets\\perdidos-e-achados.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\perdidos-e-encontrados.html",
+      "PackagePath": "staticwebassets\\perdidos-e-encontrados.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\rendicao.html",
+      "PackagePath": "staticwebassets\\rendicao.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\reportar-encontrado.html",
+      "PackagePath": "staticwebassets\\reportar-encontrado.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\reportar-perdido.html",
+      "PackagePath": "staticwebassets\\reportar-perdido.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_base.scss",
+      "PackagePath": "staticwebassets\\sass\\_base.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_blog-details.scss",
+      "PackagePath": "staticwebassets\\sass\\_blog-details.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_blog-sidebar.scss",
+      "PackagePath": "staticwebassets\\sass\\_blog-sidebar.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_blog.scss",
+      "PackagePath": "staticwebassets\\sass\\_blog.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\sass\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_categories.scss",
+      "PackagePath": "staticwebassets\\sass\\_categories.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_checkout.scss",
+      "PackagePath": "staticwebassets\\sass\\_checkout.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_contact.scss",
+      "PackagePath": "staticwebassets\\sass\\_contact.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_footer.scss",
+      "PackagePath": "staticwebassets\\sass\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_header.scss",
+      "PackagePath": "staticwebassets\\sass\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_home-page.scss",
+      "PackagePath": "staticwebassets\\sass\\_home-page.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_mixins.scss",
+      "PackagePath": "staticwebassets\\sass\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_product-details.scss",
+      "PackagePath": "staticwebassets\\sass\\_product-details.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_product.scss",
+      "PackagePath": "staticwebassets\\sass\\_product.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_responsive.scss",
+      "PackagePath": "staticwebassets\\sass\\_responsive.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_shop-cart.scss",
+      "PackagePath": "staticwebassets\\sass\\_shop-cart.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_shop.scss",
+      "PackagePath": "staticwebassets\\sass\\_shop.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\_variable.scss",
+      "PackagePath": "staticwebassets\\sass\\_variable.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\sass\\style.scss",
+      "PackagePath": "staticwebassets\\sass\\style.scss"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\search-result.html",
+      "PackagePath": "staticwebassets\\search-result.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\shelters-formulario.html",
+      "PackagePath": "staticwebassets\\shelters-formulario.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\shop-cart.html",
+      "PackagePath": "staticwebassets\\shop-cart.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\shop.html",
+      "PackagePath": "staticwebassets\\shop.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\team.html",
+      "PackagePath": "staticwebassets\\team.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\termos-politicas.html",
+      "PackagePath": "staticwebassets\\termos-politicas.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\thankyou.html",
+      "PackagePath": "staticwebassets\\thankyou.html"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\wwwroot\\user-profile.html",
+      "PackagePath": "staticwebassets\\user-profile.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BuscaPatasFinal-master.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BuscaPatasFinal-master.props",
+      "PackagePath": "build\\BuscaPatasFinal-master.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BuscaPatasFinal-master.props",
+      "PackagePath": "buildMultiTargeting\\BuscaPatasFinal-master.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BuscaPatasFinal-master.props",
+      "PackagePath": "buildTransitive\\BuscaPatasFinal-master.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

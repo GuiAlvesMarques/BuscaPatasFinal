@@ -1,4 +1,6 @@
-﻿namespace BuscaPatasFinal.Models
+﻿using System.Collections.Generic;
+
+namespace BuscaPatasFinal.Models
 {
     public class LostFoundViewModel
     {

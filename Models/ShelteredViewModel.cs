@@ -9,11 +9,10 @@ namespace BuscaPatasFinal.Models
         [Key]
         public int IDAnimal { get; set; } // Primary key
         public int IDSpecies { get; set; } // Species identifier
-        public int IDEditor { get; set; } // Editor identifier
+       // public int IDEditor { get; set; } // Editor identifier
 
-        [ForeignKey("IDShelter")]
-      
-        public int IDShelter { get; set; } // Foreign Key associada a Shelter
+       // [ForeignKey("IDShelter")]
+       // public int IDShelter { get; set; } // Foreign Key associada a Shelter
         public string IDSector { get; set; }
 
         public string? History { get; set; } // Animal's history
@@ -35,7 +34,7 @@ namespace BuscaPatasFinal.Models
         public bool Diet { get; set; } // Dietary requirements
         public bool Care { get; set; } // Special care needs
         public string? Location { get; set; } // Shelter location
-        public bool Shedding { get; set; } // Shedding characteristics
+        public bool? Shedding { get; set; } // Shedding characteristics
         public string Energy { get; set; } // Energy level (1-5)
         public string Furtype { get; set; } // Type of fur
         public bool IsBlind { get; set; } // Is the animal blind?
@@ -63,7 +62,7 @@ namespace BuscaPatasFinal.Models
         public IFormFile UploadedImage { get; set; } // Para o arquivo enviado
         public byte[]? Image { get; set; }           // Para armazenar no banco
 
-        [ForeignKey("IDShelter")]
-        public Shelter? Shelter { get; set; } // Propriedade de navegação
+        // Navigation property for matched users
+        public virtual ICollection<User> MatchedUsers { get; set; } = new List<User>();
     }
 }

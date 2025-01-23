@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BuscaPatasFinal-master.props" />
+</Project>
