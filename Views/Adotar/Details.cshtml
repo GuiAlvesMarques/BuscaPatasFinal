@@ -250,6 +250,7 @@
                         <h5><strong>Raça:</strong> <span>@(string.IsNullOrEmpty(Model.Breed) ? "SRD (Sem Raça Definida)" : Model.Breed)</span></h5>
                         <h5><strong>Porte:</strong> <span>@(Model.Size != null ? Model.Size.ToUpper() : "Não especificado")</span></h5>
                         <h5><strong>Disponível para adoção:</strong> <span>@(Model.IsForAdoption ? "Sim" : "Não")</span></h5>
+                        <h5><strong>Setor:</strong> <span>@Model.IDSector</span></h5>
                             <div class="product__details__adotar">
                             <!-- Botão funcional -->
                             <button onclick="window.location.href='/Shelter/Details/@Model.IDShelter'" class="adopt-btn-details">Adotar</button>
