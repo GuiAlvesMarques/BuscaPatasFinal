@@ -62,6 +62,9 @@ namespace BuscaPatasFinal.Models
         public IFormFile UploadedImage { get; set; } // Para o arquivo enviado
         public byte[]? Image { get; set; }           // Para armazenar no banco
 
+        [ForeignKey("IDShelter")]
+        public Shelter? Shelter { get; set; } // Propriedade de navegação
+
         // Navigation property for matched users
         public virtual ICollection<User> MatchedUsers { get; set; } = new List<User>();
     }
