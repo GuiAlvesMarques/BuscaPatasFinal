@@ -598,19 +598,21 @@ document.addEventListener("DOMContentLoaded", function () {
             size: []
         };
 
+        // Armazenar os filtros ativos
         checkboxes.forEach((checkbox) => {
             if (checkbox.checked) {
-                const type = checkbox.dataset.type;
-                activeFilters[type].push(checkbox.value);
+                const type = checkbox.dataset.type.toLowerCase(); // Garantir que o tipo está em minúsculas
+                activeFilters[type].push(checkbox.value.toLowerCase()); // Garantir que o valor está em minúsculas
             }
         });
 
+        // Atualizar a visibilidade dos produtos
         products.forEach((product) => {
             let isVisible = true;
 
             const productAge = parseInt(product.dataset.age, 10);
-            const productBreed = product.dataset.breed;
-            const productSize = product.dataset.size;
+            const productBreed = product.dataset.breed?.toLowerCase(); // Garantir que o valor está em minúsculas
+            const productSize = product.dataset.size?.toLowerCase(); // Garantir que o valor está em minúsculas
 
             // Verificar filtro de idade
             if (activeFilters.age.length > 0) {
@@ -628,6 +630,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (!activeFilters.size.includes(productSize)) isVisible = false;
             }
 
+            // Aplicar a visibilidade ao produto
             product.style.display = isVisible ? "block" : "none";
         });
     };

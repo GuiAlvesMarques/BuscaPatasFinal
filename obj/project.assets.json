@@ -3646,23 +3646,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rafae\\.nuget\\packages\\": {},
+    "C:\\Users\\Antono Santos\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\BuscaPatasFinal-master.csproj",
-      "projectName": "BuscaPatasFinal-master",
-      "projectPath": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\BuscaPatasFinal-master.csproj",
-      "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rafae\\source\\repos\\BuscaPatasFinal-master\\obj\\",
+      "projectUniqueName": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\BuscaPatasFinal.csproj",
+      "projectName": "BuscaPatasFinal",
+      "projectPath": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\BuscaPatasFinal.csproj",
+      "packagesPath": "C:\\Users\\Antono Santos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Antono Santos\\Source\\Repos\\BuscaPatasFinal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Antono Santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

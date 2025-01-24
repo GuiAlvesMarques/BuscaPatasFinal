@@ -61,23 +61,15 @@ namespace BuscaPatasFinal.Controllers
         {
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                return BadRequest(new { error = "Email and password are required." });
+                return Json(new { success = false, message = "Email e senha são obrigatórios." });
             }
 
             try
             {
-                // Find the user in the database by email
                 var user = _context.Users.FirstOrDefault(u => u.Email == email);
-
-                if (user == null)
+                if (user == null || user.Password != password)
                 {
-                    return Unauthorized(new { error = "Invalid email or password." });
-                }
-
-                // Verify the password (assuming it's stored securely as a hash)
-                if (!VerifyPassword(password, user.Password))
-                {
-                    return Unauthorized(new { error = "Invalid email or password." });
+                    return Json(new { success = false, message = "Credenciais inválidas. Por favor, tente novamente." });
                 }
 
                 // Save user data in session
@@ -87,7 +79,7 @@ namespace BuscaPatasFinal.Controllers
                 HttpContext.Session.SetString("PhoneNumber", user.PhoneNumber);
                 HttpContext.Session.SetString("Type", user.Type);
 
-                return RedirectToAction("UserProfile", "Account");
+                return Json(new { success = true, message = "Login efetuado com sucesso!" });
             }
             catch (Exception ex)
             {
